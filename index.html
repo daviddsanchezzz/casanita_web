@@ -47,6 +47,17 @@ img{display:block;max-width:100%}
 .cn-arrow::after{content:"";position:absolute;right:.08em;top:50%;width:.42em;height:.42em;border-top:1.7px solid currentColor;border-right:1.7px solid currentColor;transform:translateY(-50%) rotate(45deg)}
 .cn-arrow--external{width:.9em;height:.9em;transform:rotate(-45deg)}
 .cn-arrow--back{transform:rotate(180deg)}
+@media (min-width:820px) and (max-height:900px),(min-width:820px) and (max-width:1440px){
+  [data-screen-label="Header"]>div{height:66px!important}
+  [data-screen-label="Header"] img{width:128px!important}
+  [data-screen-label="Hero"]{min-height:92vh!important;padding-top:100px!important}
+  [data-screen-label="Hero"] h1{font-size:clamp(54px,7.3vw,104px)!important}
+  [data-screen-label="Manifiesto"]{padding-top:220px!important;padding-bottom:96px!important}
+  [data-screen-label="Manifiesto"] p{font-size:clamp(28px,3.2vw,46px)!important}
+  [data-screen-label="Platos de la casa"],[data-screen-label="Para cada momento"],[data-screen-label="Nuestra historia"],[data-screen-label="Reseñas"],[data-screen-label="Grupos"],[data-screen-label="Reserva"],[data-screen-label="Preguntas frecuentes"],[data-screen-label="Visítanos"]{padding-top:72px!important;padding-bottom:72px!important}
+  section[data-screen-label] h2{font-size:clamp(42px,5vw,76px)!important}
+  [data-screen-label="Para llevar"] h2{font-size:clamp(34px,3.2vw,46px)!important}
+}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none !important;animation:none !important}}
 </style>
 </helmet>

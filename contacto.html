@@ -43,6 +43,14 @@ input,select,textarea,button{font:inherit}
 .cn-arrow::before{content:"";position:absolute;left:.05em;right:.08em;top:50%;border-top:1.7px solid currentColor}
 .cn-arrow::after{content:"";position:absolute;right:.08em;top:50%;width:.42em;height:.42em;border-top:1.7px solid currentColor;border-right:1.7px solid currentColor;transform:translateY(-50%) rotate(45deg)}
 .cn-arrow--back{transform:rotate(180deg)}
+@media (min-width:820px) and (max-height:900px),(min-width:820px) and (max-width:1440px){
+  [data-screen-label="Header"]>div{height:66px!important}
+  [data-screen-label="Header"] img{width:128px!important}
+  [data-screen-label="Contacto · cabecera"]{padding-top:108px!important;padding-bottom:58px!important}
+  [data-screen-label="Contacto · cabecera"] h1{font-size:clamp(58px,7vw,98px)!important}
+  [data-screen-label="Contacto · formulario"],[data-screen-label="Trabaja con nosotros"]{padding-top:72px!important;padding-bottom:72px!important}
+  [data-screen-label="Contacto · formulario"] h2,[data-screen-label="Trabaja con nosotros"] h2{font-size:clamp(42px,5vw,72px)!important}
+}
 :focus-visible{outline:3px solid #EFE7C7;outline-offset:3px;box-shadow:0 0 0 6px #1E1414}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none !important}}
 </style>
