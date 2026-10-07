@@ -125,7 +125,7 @@ input,select,textarea,button{font:inherit}
       <sc-if value="{{ sentContact }}">
         <div role="status" style="display:flex; flex-direction:column; gap:16px; align-items:flex-start; padding:24px 0;">
           <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(40px,4vw,56px); line-height:.9; color:#7C1126;">¡GRACIAS, {{ firstName }}!</span>
-          <p style="margin:0; font-size:17px; line-height:1.55;">Hemos recibido tu mensaje. Te respondemos lo antes posible [PLAZO DE RESPUESTA]. Si es urgente, llámanos al {{ phoneDisplay }}.</p>
+          <p style="margin:0; font-size:17px; line-height:1.55;">Hemos recibido tu mensaje. Te respondemos lo antes posible. Si es urgente, llámanos al {{ phoneDisplay }}.</p>
           <button type="button" onClick="{{ resetContact }}" style="min-height:44px; padding:0; background:none; border:0; border-bottom:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; cursor:pointer;">ENVIAR OTRO MENSAJE</button>
         </div>
       </sc-if>
@@ -140,7 +140,7 @@ input,select,textarea,button{font:inherit}
             </div>
           </fieldset>
           <sc-if value="{{ isGroupTopic }}">
-            <p style="margin:0; padding:14px 16px; background:#EFE7C7; border-radius:12px; font-size:15px; line-height:1.5;">Para grupos, cuéntanos fecha, hora aproximada y cuántos seréis. Cabemos hasta [CAPACIDAD MÁXIMA DE GRUPO].</p>
+            <p style="margin:0; padding:14px 16px; background:#EFE7C7; border-radius:12px; font-size:15px; line-height:1.5;">Para grupos, cuéntanos fecha, hora aproximada y cuántos seréis.</p>
           </sc-if>
           <sc-if value="{{ isJobTopic }}">
             <p style="margin:0; padding:14px 16px; background:#EFE7C7; border-radius:12px; font-size:15px; line-height:1.5;">¿Quieres trabajar con nosotros? Usa el formulario de <a href="#trabaja" style="font-weight:700; text-decoration:underline;">Trabaja con nosotros</a>, más abajo: ahí puedes adjuntar tu CV.</p>
@@ -164,7 +164,7 @@ input,select,textarea,button{font:inherit}
           </label>
           <label style="display:flex; align-items:flex-start; gap:12px; font-size:14px; line-height:1.5; cursor:pointer;">
             <input type="checkbox" name="privacidad" checked="{{ c.privacidad }}" onChange="{{ setC }}" style="width:22px; height:22px; margin:0; flex-shrink:0; accent-color:#7C1126;">
-            <span>He leído y acepto la <a href="#" style="font-weight:700; text-decoration:underline;">política de privacidad</a>.</span>
+            <span>He leído y acepto la <a href="/privacidad" target="_blank" style="font-weight:700; text-decoration:underline;">política de privacidad</a>.</span>
           </label>
           <sc-if value="{{ e.privacidad }}"><span style="margin-top:-12px; font-size:14px; font-weight:600; color:#7C1126;">Necesitamos que aceptes la política de privacidad.</span></sc-if>
           <button type="submit" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; border:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; cursor:pointer; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; gap:18px;">ENVIAR MENSAJE <span class="cn-arrow" aria-hidden="true"></span></button>
@@ -236,7 +236,7 @@ input,select,textarea,button{font:inherit}
           </label>
           <label style="display:flex; align-items:flex-start; gap:12px; font-size:14px; line-height:1.5; cursor:pointer;">
             <input type="checkbox" name="privacidad" checked="{{ j.privacidad }}" onChange="{{ setJ }}" style="width:22px; height:22px; margin:0; flex-shrink:0; accent-color:#7C1126;">
-            <span>Acepto que Casanita guarde mis datos para procesos de selección, según la <a href="#" style="font-weight:700; text-decoration:underline;">política de privacidad</a>.</span>
+            <span>Acepto que Casanita guarde mis datos para procesos de selección, según la <a href="/privacidad" target="_blank" style="font-weight:700; text-decoration:underline;">política de privacidad</a>.</span>
           </label>
           <sc-if value="{{ je.privacidad }}"><span style="margin-top:-12px; font-size:14px; font-weight:600; color:#7C1126;">Necesitamos que lo aceptes para guardar tu candidatura.</span></sc-if>
           <button type="submit" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; border:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; cursor:pointer; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; gap:18px;">ENVIAR CANDIDATURA <span class="cn-arrow" aria-hidden="true"></span></button>
@@ -251,9 +251,9 @@ input,select,textarea,button{font:inherit}
   <div style="max-width:1240px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px 32px; font-size:14px;">
     <img src="assets/logo-beige.png" alt="Casanita" loading="lazy" style="width:130px; height:auto;">
     <div style="display:flex; flex-wrap:wrap; gap:4px 20px;">
-      <a href="#" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Privacidad</a>
-      <a href="#" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Cookies</a>
-      <a href="#" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Aviso legal</a>
+      <a href="/privacidad" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Privacidad</a>
+      <a href="/cookies" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Cookies</a>
+      <a href="/aviso-legal" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Aviso legal</a>
     </div>
     <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:22px;">COMIDAS, CENAS Y BUEN BEBER.</span>
   </div>

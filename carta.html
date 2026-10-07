@@ -101,7 +101,7 @@ img{display:block;max-width:100%}
       <div style="display:flex; flex-wrap:wrap; gap:14px 24px; align-items:center;">
         <a href="/reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">RESERVAR MESA <span class="cn-arrow" aria-hidden="true"></span></a>
         <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:44px; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #EFE7C7;" style-hover="color:#FAF6EA;">LLAMAR · {{ phoneDisplay }}</a>
-        <a href="#" data-track="click_glovo" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; min-height:44px; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #EFE7C7;" style-hover="color:#FAF6EA;">PEDIR PARA LLEVAR <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a>
+        <a href="{{ glovoUrl }}" data-track="click_glovo" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; min-height:44px; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #EFE7C7;" style-hover="color:#FAF6EA;">PEDIR PARA LLEVAR <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a>
       </div>
     </div>
     <div style="position:relative; justify-self:center; width:min(100%,440px); aspect-ratio:1/1;">
@@ -196,7 +196,7 @@ img{display:block;max-width:100%}
   <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:28px;">
     <div style="display:flex; flex-direction:column; gap:10px;">
       <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.16em; color:#7C1126;">SIN GLUTEN Y SIN LACTOSA</span>
-      <p style="margin:0; font-size:16px; line-height:1.55;">Todas las pizzas, con masa sin gluten o con queso sin lactosa (de coco). El coulant de praliné es sin gluten. Si tienes alguna alergia, cuéntanoslo al llegar. [INFORMACIÓN DE ALÉRGENOS]</p>
+      <p style="margin:0; font-size:16px; line-height:1.55;">Todas las pizzas, con masa sin gluten o con queso sin lactosa (de coco). El coulant de praliné es sin gluten. Si tienes alguna alergia, cuéntanoslo al llegar.</p>
     </div>
     <div style="display:flex; flex-direction:column; gap:10px;">
       <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.16em; color:#7C1126;">FUERA DE CARTA</span>
@@ -204,7 +204,7 @@ img{display:block;max-width:100%}
     </div>
     <div style="display:flex; flex-direction:column; gap:10px;">
       <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.16em; color:#7C1126;">PARA LLEVAR</span>
-      <p style="margin:0; font-size:16px; line-height:1.55;">Recogida en el local o a domicilio. <a href="#" data-track="click_glovo" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:7px; font-weight:700; text-decoration:underline;">Pedir en Glovo <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a></p>
+      <p style="margin:0; font-size:16px; line-height:1.55;">Recogida en el local o a domicilio. <a href="{{ glovoUrl }}" data-track="click_glovo" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:7px; font-weight:700; text-decoration:underline;">Pedir en Glovo <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a></p>
     </div>
   </div>
 </section>
@@ -244,6 +244,7 @@ const FALLBACK = {
   address: "Carrer de Ca l'Aduana, 69, 08340 Vilassar de Mar",
   mapsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Carrer+de+ca+l%27Aduana+69,+08340+Vilassar+de+Mar',
   reserveUrl: 'https://vetrareserve.com/casanita-vilassar',
+  glovoUrl: 'https://glovoapp.com/en/es/masnou/stores/casanita-vilassar-masnou',
 };
 function phoneDisplayFmt(tel) {
   const d = (tel || '').replace(/^\+34/, '');
@@ -409,6 +410,7 @@ class Component extends DCLogic {
       email: b.email || FALLBACK.email,
       address: b.address || FALLBACK.address,
       mapsUrl: safeUrl(b.mapsUrl || FALLBACK.mapsUrl, FALLBACK.mapsUrl, 'google.com'),
+      glovoUrl: safeUrl(FALLBACK.glovoUrl, FALLBACK.glovoUrl, 'glovoapp.com'),
     };
   }
   renderVals() {
