@@ -1,0 +1,260 @@
+{
+  "common": {
+    "idiomaLabel": "Idioma",
+    "nav": { "carta": "Carta", "grupos": "Grupos", "visitanos": "Visítanos", "contacto": "Contacto" },
+    "cta": {
+      "reservar": "Reservar",
+      "reservarMesa": "Reservar mesa",
+      "llamar": "Llamar",
+      "llamarPrefix": "Llamar",
+      "abrirMenu": "Abrir menú",
+      "menu": "Menú",
+      "menuMovil": "Menú móvil",
+      "volverInicio": "Volver al inicio"
+    },
+    "footer": {
+      "taglineLine1": "Comidas, cenas",
+      "taglineLine2": "y buen beber.",
+      "contacto": "Contacto",
+      "horario": "Horario",
+      "siguenos": "Síguenos",
+      "instagram": "Instagram",
+      "pedirGlovo": "Pedir en Glovo",
+      "privacidad": "Privacidad",
+      "cookies": "Cookies",
+      "avisoLegal": "Aviso legal",
+      "trabajaConNosotros": "Trabaja con nosotros"
+    },
+    "loading": { "reservas": "Cargando reservas…", "mapa": "Cargando mapa…" },
+    "days": { "short": ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"] },
+    "open": {
+      "nowShort": "ABIERTO AHORA",
+      "closedShort": "CERRADO AHORA",
+      "closed": "CERRADO",
+      "opensPrefix": "CERRADO · ABRE",
+      "atTime": "A LAS",
+      "today": "HOY",
+      "tomorrow": "MAÑANA"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "Casanita · Trattoria en Vilassar de Mar",
+      "description": "Cocina mediterránea con alma italiana en el centro de Vilassar de Mar. Comidas, cenas, cócteles y terraza. Reserva tu mesa en un minuto."
+    },
+    "hero": {
+      "titleLine1": "Siéntate.",
+      "titleLine2": "Estás en casa.",
+      "subtitle": "Cocina mediterránea con alma italiana en el centro de Vilassar de Mar. Comidas, cenas y buen beber.",
+      "scroll": "Desliza",
+      "ring": "CARBONARA · BURRATA · CROQUETAS · VERMUT · SOBREMESA · CÓCTELES · CARBONARA · BURRATA · CROQUETAS · VERMUT · TERRAZA · BUEN BEBER ·",
+      "reseñas": "RESEÑAS",
+      "enGoogle": "EN GOOGLE"
+    },
+    "manifesto": {
+      "eyebrow": "LA CASA",
+      "text": "En Casanita el chef sale a tu mesa, te cuenta qué hay hoy fuera de carta y se acuerda de cómo te gustó la carbonara. Aquí cabe el que quiere pizza y el que no, los niños, los abuelos y el amigo que siempre llega tarde. Y cuando acabas, la terraza y un cóctel te recuerdan que no hay ninguna prisa.",
+      "cta": "CONOCE LA CASA"
+    },
+    "marquee": ["CARBONARA", "VERMUT", "SOBREMESA", "CÓCTELES", "TERRAZA", "CROQUETAS", "BUEN BEBER"],
+    "platos": {
+      "headingLine1": "LOS QUE NOS PIDEN",
+      "headingLine2": "UNA Y OTRA VEZ.",
+      "hechoEnCasaLine1": "HECHO",
+      "hechoEnCasaLine2": "EN CASA",
+      "ctaVerCarta": "VER LA CARTA COMPLETA",
+      "dishes": [
+        { "name": "CARBONARA", "desc": "Sin nata, como debe ser." },
+        { "name": "CROQUETAS DE RABO DE TORO", "desc": "Caseras. También de langostinos, chipirones o espinacas con idiazábal." },
+        { "name": "RAVIOLIS DE FOIE", "desc": "Con crema de idiazábal, aceite de trufa y manzana verde." },
+        { "name": "BURRATA", "desc": "En ensalada, con rúcula, cherrys, rábanos y aceite de albahaca." },
+        { "name": "PORCHETTA", "desc": "Panceta de cerdo a baja temperatura sobre patata crujiente." },
+        { "name": "TIRAMISÚ", "desc": "El final de siempre. Si prefieres, lemon pie." }
+      ]
+    },
+    "momentos": {
+      "headingLine1": "PARA CADA",
+      "headingLine2": "MOMENTO.",
+      "comidas": { "label": "MEDIODÍA · 12:00–16:00", "title": "COMIDAS", "desc": "Luz de mediodía, platos al centro y sobremesa sin mirar el reloj." },
+      "cenas": { "label": "NOCHE · 19:00–23:00", "title": "CENAS", "desc": "La plaza tranquila, una vela en la mesa y lo que el chef tenga hoy fuera de carta." },
+      "buenBeber": { "title": "BUEN BEBER", "desc": "Cócteles, vermut y sobremesa en la terraza. Vacaciones sin salir del pueblo." },
+      "terrazaPrefix": "TERRAZA ·",
+      "terrazaDefault": "EN HORARIO DE COCINA",
+      "cta": "ELIGE TU MOMENTO Y RESERVA"
+    },
+    "paraLlevar": {
+      "eyebrow": "PARA LLEVAR",
+      "heading": "¿HOY MEJOR EN CASA?",
+      "desc": "La misma cocina, en tu mesa. Pide por Glovo o llámanos y pasa a recogerlo.",
+      "ctaGlovo": "PEDIR EN GLOVO",
+      "ctaLlamar": "LLAMAR PARA RECOGER"
+    },
+    "historia": {
+      "eyebrow": "DESDE 2020 EN VILASSAR DE MAR",
+      "heading": "UNA FAMILIA QUE COCINA PARA LA TUYA.",
+      "text": "Antes de Vilassar hubo una vida entera en la hostelería: temporadas en Formentera, años en Barcelona y una etapa en Brasil. En verano de 2020 abrimos Casanita en esta plaza, frente al parque, con una idea sencilla: que quien entre por la puerta se sienta uno más. Te recibimos como parte de nuestra familia.",
+      "signature": "— BENJA, CHEF Y ANFITRIÓN",
+      "cta": "VEN A CONOCERNOS",
+      "photoAlt": "Foto pendiente: el chef y el equipo de Casanita",
+      "photoPlaceholder": "[FOTO CHEF Y EQUIPO · MÁSCARA EN ARCO]",
+      "sinceLabel": "DESDE"
+    },
+    "resenas": {
+      "heading": "LO DICEN MEJOR ELLOS.",
+      "reseñasEnGoogle": "reseñas en Google",
+      "ctaLeerTodas": "LEER TODAS EN GOOGLE"
+    },
+    "grupos": {
+      "eyebrow": "GRUPOS Y CELEBRACIONES",
+      "heading": "¿SOIS MUCHOS? MEJOR.",
+      "desc": "Cumpleaños, comidas familiares y reencuentros. Ponemos los platos al centro y hay opciones para cada uno: el que quiere pizza, el que no, los niños y los abuelos. Cuéntanos cuántos sois y lo preparamos a tu medida.",
+      "ctaReservarGrupo": "RESERVAR PARA UN GRUPO",
+      "fueraDeCartaLine1": "FUERA",
+      "fueraDeCartaLine2": "DE CARTA",
+      "photoAlt": "Foto pendiente: mesa larga de grupo vista desde arriba",
+      "photoPlaceholder": "[FOTO MESA COMPARTIDA DESDE ARRIBA]"
+    },
+    "reserva": {
+      "heading": "RESERVA TU MESA.",
+      "descPrefix": "En menos de un minuto. Si prefieres hablar con nosotros, llámanos al",
+      "widgetLabel": "CASANITA · RESERVA ONLINE",
+      "helpGroup": "¿Venís en grupo grande? Llámanos y lo preparamos juntos."
+    },
+    "faq": {
+      "heading": "LO QUE SIEMPRE NOS PREGUNTÁIS.",
+      "items": [
+        ["¿Tenéis opciones sin gluten?", "Sí. Todas las pizzas se pueden pedir con masa sin gluten o con queso sin lactosa (de coco), y el coulant de praliné es sin gluten. Para el resto de platos, pregúntanos."],
+        ["¿Hay platos para niños?", "No tenemos carta infantil."],
+        ["¿Puedo venir con un grupo grande?", "Claro. Reserva indicando cuántos sois o llámanos al 605 25 12 87 y lo preparamos juntos."],
+        ["¿Se puede reservar en la terraza?", "Sí, puedes reservar en la terraza. Indícalo al hacer tu reserva."],
+        ["¿Dónde aparco?", "Hay un parking en la misma plaza. Estamos justo delante del parque."],
+        ["¿Hacéis comida para llevar o a domicilio?", "Sí. Puedes recoger tu pedido en el local o pedirlo a domicilio por Glovo."],
+        ["¿Hacéis catering?", "Sí. Escríbenos a info@casanitavilassar.com o llámanos y te contamos. [DETALLES DEL SERVICIO DE CATERING]"]
+      ]
+    },
+    "visitanos": {
+      "heading": "VISÍTANOS.",
+      "parkingNote": "En la plaza, con un parque enfrente y aparcamiento cerca.",
+      "escribenos": "Escríbenos",
+      "horarioLabel": "HORARIO",
+      "ctaComoLlegar": "CÓMO LLEGAR",
+      "mapTitlePrefix": "Mapa: Casanita en"
+    }
+  },
+  "carta": {
+    "hero": {
+      "eyebrow": "COCINA MEDITERRÁNEA CON ALMA ITALIANA", "title": "LA CARTA.",
+      "desc": "Mucho más que pizza. Platos para compartir en el centro de la mesa, pasta como debe ser y algo rico para cada uno. Pregunta siempre por el fuera de carta: el chef te lo cuenta en la mesa.",
+      "stickerLine1": "PREGUNTA", "stickerLine2": "POR EL FUERA", "stickerLine3": "DE CARTA", "ctaLlevar": "PEDIR PARA LLEVAR"
+    },
+    "chipsAriaLabel": "Secciones de la carta",
+    "hintMobile": "Los platos subrayados tienen foto: tócalos para verla.",
+    "hintDesktop": "Los platos subrayados tienen foto: pasa el cursor para verla o haz clic para dejarla abierta.",
+    "pillLabelPrefix": "Ver foto:",
+    "sections": [
+      { "label": "ENTRANTES", "title": "ENTRANTES.", "intro": "Para el centro de la mesa y que cada uno pique lo suyo.", "note": "", "groups": [{ "sub": "", "items": [
+        { "name": "Focaccia", "desc": "Con cebolla, olivas, tomatitos, ajo y romero.", "tag": "" },
+        { "name": "Croquetas caseras", "desc": "Langostinos, chipirones con alioli, espinacas con idiazábal o rabo de toro.", "tag": "DE LA CASA" },
+        { "name": "Porchetta", "desc": "Panceta de cerdo cocinada a baja temperatura sobre una base de patata crujiente.", "tag": "DE LA CASA" },
+        { "name": "Ensalada de burrata", "desc": "Burrata con rúcula, cherrys, rábanos y aceite de albahaca.", "tag": "" },
+        { "name": "Ensalada tricolor", "desc": "Tomates con olivas, ajo, lima, menta, cilantro y rúcula.", "tag": "" },
+        { "name": "Plato de mortadela de Bolonia", "desc": "Con aceite de trufa, parmesano y cebollino.", "tag": "" },
+        { "name": "Steak tartar", "desc": "Solomillo de Girona picado a cuchillo al momento, con nuestro aliño casero.", "tag": "" },
+        { "name": "Provolone", "desc": "Fundido al horno, con orégano y tostadas. Ideal para compartir.", "tag": "" },
+        { "name": "Carpaccio de gamba de Palamós", "desc": "Con nuestro aceite infusionado con jengibre y citronela, perlas de sésamo y wasabi y rabanitos.", "tag": "" },
+        { "name": "Jamón 100 % ibérico D.O. Guijuelo", "desc": "100 g cortados a mano, con pan de coca del Maresme con tomate.", "tag": "" }
+      ] }] },
+      { "label": "PASTAS", "title": "PASTAS.", "intro": "Como en casa, sin atajos.", "note": "", "groups": [{ "sub": "", "items": [
+        { "name": "Tagliatelle carbonara", "desc": "La auténtica, a la romana: huevo, pecorino y guanciale. Sin nata, como debe ser.", "tag": "LA AUTÉNTICA" },
+        { "name": "Ravioli al foie", "desc": "Con crema de idiazábal, aceite de trufa y manzana verde.", "tag": "DE LA CASA" },
+        { "name": "Tortiglioni boloñesa", "desc": "La receta de la abuela, 3 h 30 min a fuego lento.", "tag": "" },
+        { "name": "Pasta primavera", "desc": "Tortiglioni con mantequilla de albahaca, espárragos verdes y tomatitos cherry.", "tag": "" },
+        { "name": "Tortiglioni al pesto rojo o verde", "desc": "Con salsa al pesto y parmesano.", "tag": "" },
+        { "name": "Lasaña de carne o de verduras", "desc": "Con pesto rojo y mozzarella.", "tag": "" }
+      ] }] },
+      { "label": "PIZZAS", "title": "PIZZAS.", "intro": "Para el que quiere pizza, que siempre hay alguno.", "note": "Todas nuestras pizzas, también con masa sin gluten o con queso sin lactosa (de coco).", "groups": [
+        { "sub": "CLÁSICAS", "items": [
+          { "name": "Margherita", "desc": "Tomate, mozzarella y orégano.", "tag": "" },
+          { "name": "Da Giorgio", "desc": "Tomate, mozzarella, albahaca y salsa Casanita (aceite infusionado de ajo, lima y albahaca).", "tag": "" },
+          { "name": "Jamón dulce", "desc": "Tomate, mozzarella, jamón dulce y orégano.", "tag": "" },
+          { "name": "Atún y cebolla", "desc": "Tomate, mozzarella, atún, cebolla y orégano.", "tag": "" },
+          { "name": "5 quesos", "desc": "Tomate, mozzarella, parmesano, pecorino, gorgonzola, stracchino y emmental.", "tag": "" },
+          { "name": "Pesto verde o rojo", "desc": "Tomate, mozzarella, pesto, tomates cherry y orégano.", "tag": "" },
+          { "name": "Jamón serrano", "desc": "Tomate, mozzarella, jamón serrano y orégano.", "tag": "" },
+          { "name": "Pepperoni", "desc": "Tomate, mozzarella, pepperoni picante, tomates cherry y orégano.", "tag": "" },
+          { "name": "Salsiccia, rucola e cipolla", "desc": "Tomate, mozzarella, salchicha, cebolla y rúcula.", "tag": "" }
+        ] },
+        { "sub": "PREMIUM", "items": [
+          { "name": "Patatine, crema e tartufata", "desc": "Sin tomate: crema de trufa, mozzarella, patata y romero.", "tag": "" },
+          { "name": "Burrata y mortadela", "desc": "Tomate, mozzarella, burrata, mortadela, parmesano, cebollino y aceite de trufa.", "tag": "" },
+          { "name": "Porchetta", "desc": "Tomate, mozzarella, porchetta y tomatitos cherry.", "tag": "" },
+          { "name": "Verduras de temporada", "desc": "Tomate, mozzarella, pimiento rojo y verde, calabacín, berenjena, cebolla, champiñones y tomatitos cherry.", "tag": "" },
+          { "name": "Boloñesa", "desc": "Tomate, mozzarella, nuestra boloñesa y parmesano.", "tag": "" },
+          { "name": "Carbonara", "desc": "Tomate, mozzarella, nuestra carbonara, guanciale y cebollino.", "tag": "" }
+        ] }
+      ] },
+      { "label": "CARNES", "title": "CARNES.", "intro": "Para los que vienen con hambre.", "note": "", "groups": [{ "sub": "", "items": [
+        { "name": "Tagliata", "desc": "Solomillo de cerdo a baja temperatura, con rúcula, cherrys, higos y parmesano.", "tag": "PLATO ESTRELLA" },
+        { "name": "Milanesa napolitana", "desc": "Escalope de ternera con nuestro rebozado original, salsa de tomate casera, jamón dulce y mozzarella.", "tag": "" },
+        { "name": "Milanesa a caballo", "desc": "Lo mismo, con un par de huevos.", "tag": "" },
+        { "name": "Solomillo al foie", "desc": "Solomillo de ternera de Girona con cebolla caramelizada y foie.", "tag": "" }
+      ] }] },
+      { "label": "PESCADOS", "title": "PESCADOS.", "intro": "Del mar, que lo tenemos a dos calles.", "note": "", "groups": [{ "sub": "", "items": [
+        { "name": "Vieiras con guacamole y pico de gallo", "desc": "Menos es más.", "tag": "" },
+        { "name": "Salmón a la Gongo", "desc": "Con guanciale y verduras salteadas, lacado con salsa hoisin.", "tag": "" }
+      ] }] },
+      { "label": "POSTRES", "title": "POSTRES.", "intro": "Para alargar la sobremesa.", "note": "", "groups": [{ "sub": "", "items": [
+        { "name": "Tiramisú", "desc": "", "tag": "" },
+        { "name": "Tarta de queso idiazábal", "desc": "", "tag": "" },
+        { "name": "Lemon pie", "desc": "", "tag": "" },
+        { "name": "Coulant de praliné", "desc": "", "tag": "SIN GLUTEN" }
+      ] }] }
+    ],
+    "cocteles": { "label": "CÓCTELES", "eyebrowWord": "BUEN BEBER", "title": "CÓCTELES.", "intro": "Para la terraza, para la sobremesa o para empezar la noche sin prisa." },
+    "cocktailNames": ["Aperol Spritz", "Mojito de fresa", "Mojito de piña", "Caipirinha", "Caipiroska de mango", "Margarita", "Shakerato"],
+    "alergenos": {
+      "glutenLabel": "SIN GLUTEN Y SIN LACTOSA", "glutenText": "Todas las pizzas, con masa sin gluten o con queso sin lactosa (de coco). El coulant de praliné es sin gluten. Si tienes alguna alergia, cuéntanoslo al llegar.",
+      "fueraLabel": "FUERA DE CARTA", "fueraText": "Cada semana hay platos que no están aquí. Pregunta al chef: te los cuenta en la mesa.",
+      "llevarLabel": "PARA LLEVAR", "llevarText": "Recogida en el local o a domicilio.", "pedirGlovo": "Pedir en Glovo"
+    },
+    "reservarCta": { "heading": "¿YA SABES QUÉ VAS A PEDIR?", "descPrefix": "Reserva en menos de un minuto o llámanos al", "ctaReservar": "RESERVAR MESA", "ctaLlamar": "LLAMAR" }
+  },
+  "contacto": {
+    "hero": { "eyebrow": "CONTACTO", "title": "HABLEMOS.", "desc": "Para reservar mesa, lo más rápido es la reserva online o una llamada. Para todo lo demás (grupos, catering, prensa o trabajar con nosotros), escríbenos aquí y te respondemos." },
+    "formulario": {
+      "heading": "ESCRÍBENOS.", "telefonoLabel": "TELÉFONO", "emailLabel": "EMAIL", "direccionLabel": "DIRECCIÓN", "horarioLink": "Horario y cómo llegar",
+      "topicsLegend": "¿DE QUÉ QUIERES HABLAR?", "topics": ["GRUPOS Y CELEBRACIONES", "CATERING", "PEDIDOS PARA LLEVAR", "TRABAJO", "OTRO"],
+      "groupNote": "Para grupos, cuéntanos fecha, hora aproximada y cuántos seréis.",
+      "jobNotePrefix": "¿Quieres trabajar con nosotros? Usa el formulario de", "jobNoteLink": "Trabaja con nosotros", "jobNoteSuffix": ", más abajo: ahí puedes adjuntar tu CV.",
+      "nombreLabel": "Nombre", "nombreError": "Dinos tu nombre.", "telefonoFieldLabel": "Teléfono", "opcional": "(opcional)",
+      "emailFieldLabel": "Email", "emailError": "Revisa el email, parece que falta algo.", "mensajeLabel": "Mensaje", "mensajeError": "Cuéntanos algo, aunque sea corto.",
+      "privacidadPrefix": "He leído y acepto la", "privacidadLink": "política de privacidad", "privacidadError": "Necesitamos que aceptes la política de privacidad.",
+      "submit": "ENVIAR MENSAJE",
+      "thanksPrefix": "¡GRACIAS,", "thanksSuffix": "!", "thanksBody": "Hemos recibido tu mensaje. Te respondemos lo antes posible. Si es urgente, llámanos al", "ctaOtroMensaje": "ENVIAR OTRO MENSAJE"
+    },
+    "trabaja": {
+      "eyebrow": "TRABAJA CON NOSOTROS", "heading": "¿TE SIENTAS CON NOSOTROS, PERO DEL OTRO LADO?",
+      "desc": "Somos una casa pequeña y familiar. Buscamos gente a la que le guste tratar a cada cliente por su nombre. [PUESTOS ABIERTOS AHORA / TEXTO SOBRE EL EQUIPO]",
+      "photoPlaceholder": "[FOTO EQUIPO TRABAJANDO]",
+      "rolesLegend": "¿DÓNDE TE VES?", "roles": ["SALA", "COCINA", "BARRA Y CÓCTELES", "AYUDANTE"], "rolesError": "Elige al menos un puesto.",
+      "nombreLabel": "Nombre y apellidos", "telefonoLabel": "Teléfono", "telefonoError": "Necesitamos un teléfono para llamarte.",
+      "disponibilidadLabel": "Disponibilidad", "dispCompleta": "Jornada completa", "dispParcial": "Media jornada", "dispFindes": "Fines de semana", "dispTemporada": "Temporada de verano",
+      "cvLabel": "CV", "cvHint": "(PDF, máx. 5 MB, opcional)", "adjuntar": "ADJUNTAR", "noFile": "Ningún archivo seleccionado",
+      "mensajeLabel": "Cuéntanos un poco de ti", "opcional": "(opcional)",
+      "privacidadPrefix": "Acepto que Casanita guarde mis datos para procesos de selección, según la", "privacidadError": "Necesitamos que lo aceptes para guardar tu candidatura.",
+      "submit": "ENVIAR CANDIDATURA",
+      "thanksHeading": "¡RECIBIDO!", "thanksBody": "Gracias por querer formar parte de la casa. Guardamos tu candidatura y te llamamos si encaja con lo que buscamos.", "ctaOtra": "ENVIAR OTRA CANDIDATURA"
+    }
+  },
+  "reserva": {
+    "title": "RESERVA TU MESA.", "descPrefix": "En menos de un minuto. Si prefieres hablar con nosotros, llámanos al",
+    "widgetLabel": "CASANITA · RESERVA ONLINE",
+    "grupoBadge": "¿SOIS MUCHOS?", "grupoHeading": "MEJOR LLÁMANOS Y LO PREPARAMOS JUNTOS.", "grupoDesc": "Cumpleaños, comidas familiares y reencuentros. Llámanos y lo preparamos a tu medida.",
+    "horarioLabel": "HORARIO", "ctaComoLlegar": "Cómo llegar",
+    "antesLabel": "ANTES DE RESERVAR",
+    "faq1Q": "¿Se puede reservar en la terraza?", "faq1A": "Sí, indícalo al hacer tu reserva.",
+    "faq2Q": "¿Opciones sin gluten?", "faq2A": "Todas las pizzas, con masa sin gluten o queso sin lactosa.",
+    "ctaVerCarta": "Ver la carta",
+    "mobilePrefijoLlamar": "¿PREFIERES LLAMAR?"
+  }
+}

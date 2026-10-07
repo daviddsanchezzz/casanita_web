@@ -1,0 +1,260 @@
+{
+  "common": {
+    "idiomaLabel": "Language",
+    "nav": { "carta": "Menu", "grupos": "Groups", "visitanos": "Visit us", "contacto": "Contact" },
+    "cta": {
+      "reservar": "Book",
+      "reservarMesa": "Book a table",
+      "llamar": "Call",
+      "llamarPrefix": "Call",
+      "abrirMenu": "Open menu",
+      "menu": "Menu",
+      "menuMovil": "Mobile menu",
+      "volverInicio": "Back to home"
+    },
+    "footer": {
+      "taglineLine1": "Lunches, dinners",
+      "taglineLine2": "and good drinks.",
+      "contacto": "Contact",
+      "horario": "Hours",
+      "siguenos": "Follow us",
+      "instagram": "Instagram",
+      "pedirGlovo": "Order on Glovo",
+      "privacidad": "Privacy",
+      "cookies": "Cookies",
+      "avisoLegal": "Legal notice",
+      "trabajaConNosotros": "Work with us"
+    },
+    "loading": { "reservas": "Loading bookings…", "mapa": "Loading map…" },
+    "days": { "short": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] },
+    "open": {
+      "nowShort": "OPEN NOW",
+      "closedShort": "CLOSED NOW",
+      "closed": "CLOSED",
+      "opensPrefix": "CLOSED · OPENS",
+      "atTime": "AT",
+      "today": "TODAY",
+      "tomorrow": "TOMORROW"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "Casanita · Trattoria in Vilassar de Mar",
+      "description": "Mediterranean cooking with an Italian soul in the heart of Vilassar de Mar. Lunch, dinner, cocktails and a terrace. Book your table in a minute."
+    },
+    "hero": {
+      "titleLine1": "Sit down.",
+      "titleLine2": "You're home.",
+      "subtitle": "Mediterranean cooking with an Italian soul in the heart of Vilassar de Mar. Lunch, dinner and good drinks.",
+      "scroll": "Scroll",
+      "ring": "CARBONARA · BURRATA · CROQUETTES · VERMOUTH · SOBREMESA · COCKTAILS · CARBONARA · BURRATA · CROQUETTES · VERMOUTH · TERRACE · GOOD DRINKS ·",
+      "reseñas": "REVIEWS",
+      "enGoogle": "ON GOOGLE"
+    },
+    "manifesto": {
+      "eyebrow": "THE HOUSE",
+      "text": "At Casanita the chef comes out to your table, tells you what's off the menu today and remembers how much you liked the carbonara. There's room here for the one who wants pizza and the one who doesn't, the kids, the grandparents and the friend who's always late. And when you're done, the terrace and a cocktail remind you there's no rush at all.",
+      "cta": "GET TO KNOW THE HOUSE"
+    },
+    "marquee": ["CARBONARA", "VERMOUTH", "SOBREMESA", "COCKTAILS", "TERRACE", "CROQUETTES", "GOOD DRINKS"],
+    "platos": {
+      "headingLine1": "THE ONES THEY ASK FOR",
+      "headingLine2": "AGAIN AND AGAIN.",
+      "hechoEnCasaLine1": "HOME",
+      "hechoEnCasaLine2": "MADE",
+      "ctaVerCarta": "SEE THE FULL MENU",
+      "dishes": [
+        { "name": "CARBONARA", "desc": "No cream, the way it should be." },
+        { "name": "OXTAIL CROQUETTES", "desc": "Homemade. Also available with prawns, baby squid or spinach with idiazábal cheese." },
+        { "name": "FOIE RAVIOLI", "desc": "With idiazábal cream, truffle oil and green apple." },
+        { "name": "BURRATA", "desc": "Salad style, with rocket, cherry tomatoes, radishes and basil oil." },
+        { "name": "PORCHETTA", "desc": "Slow-cooked pork belly over crispy potato." },
+        { "name": "TIRAMISÙ", "desc": "The usual ending. Or lemon pie, if you prefer." }
+      ]
+    },
+    "momentos": {
+      "headingLine1": "FOR EVERY",
+      "headingLine2": "MOMENT.",
+      "comidas": { "label": "LUNCH · 12:00–4:00 PM", "title": "LUNCH", "desc": "Midday light, dishes at the centre of the table and a lazy chat with no eye on the clock." },
+      "cenas": { "label": "DINNER · 7:00–11:00 PM", "title": "DINNER", "desc": "The quiet square, a candle on the table and whatever the chef has off the menu today." },
+      "buenBeber": { "title": "GOOD DRINKS", "desc": "Cocktails, vermouth and good chat on the terrace. A holiday without leaving town." },
+      "terrazaPrefix": "TERRACE ·",
+      "terrazaDefault": "DURING KITCHEN HOURS",
+      "cta": "PICK YOUR MOMENT AND BOOK"
+    },
+    "paraLlevar": {
+      "eyebrow": "TAKEAWAY",
+      "heading": "BETTER AT HOME TODAY?",
+      "desc": "The same kitchen, at your table. Order on Glovo or call us and swing by to pick it up.",
+      "ctaGlovo": "ORDER ON GLOVO",
+      "ctaLlamar": "CALL FOR PICKUP"
+    },
+    "historia": {
+      "eyebrow": "SINCE 2020 IN VILASSAR DE MAR",
+      "heading": "A FAMILY COOKING FOR YOURS.",
+      "text": "Before Vilassar there was a whole life in hospitality: seasons in Formentera, years in Barcelona and a stretch in Brazil. In the summer of 2020 we opened Casanita on this square, facing the park, with a simple idea: that whoever walks through the door feels like one of the family. We welcome you as part of ours.",
+      "signature": "— BENJA, CHEF AND HOST",
+      "cta": "COME MEET US",
+      "photoAlt": "Photo pending: the chef and the Casanita team",
+      "photoPlaceholder": "[PHOTO: CHEF AND TEAM · ARCH MASK]",
+      "sinceLabel": "SINCE"
+    },
+    "resenas": {
+      "heading": "THEY SAY IT BETTER THAN WE DO.",
+      "reseñasEnGoogle": "reviews on Google",
+      "ctaLeerTodas": "READ THEM ALL ON GOOGLE"
+    },
+    "grupos": {
+      "eyebrow": "GROUPS AND CELEBRATIONS",
+      "heading": "A LARGE GROUP? EVEN BETTER.",
+      "desc": "Birthdays, family lunches and reunions. We put the dishes in the middle and there's something for everyone: the one who wants pizza, the one who doesn't, the kids and the grandparents. Tell us how many you are and we'll tailor it to you.",
+      "ctaReservarGrupo": "BOOK FOR A GROUP",
+      "fueraDeCartaLine1": "OFF",
+      "fueraDeCartaLine2": "THE MENU",
+      "photoAlt": "Photo pending: long group table seen from above",
+      "photoPlaceholder": "[PHOTO: SHARED TABLE FROM ABOVE]"
+    },
+    "reserva": {
+      "heading": "BOOK YOUR TABLE.",
+      "descPrefix": "In under a minute. If you'd rather talk to us, call us at",
+      "widgetLabel": "CASANITA · ONLINE BOOKING",
+      "helpGroup": "Coming as a large group? Call us and we'll sort it out together."
+    },
+    "faq": {
+      "heading": "WHAT YOU ALWAYS ASK US.",
+      "items": [
+        ["Do you have gluten-free options?", "Yes. All pizzas can be ordered with gluten-free dough or lactose-free cheese (coconut-based), and the praline coulant is gluten-free. For other dishes, just ask us."],
+        ["Do you have a kids' menu?", "We don't have a specific kids' menu."],
+        ["Can I come with a large group?", "Of course. Book stating how many you are or call us on 605 25 12 87 and we'll sort it out together."],
+        ["Can I book the terrace?", "Yes, you can book the terrace. Just mention it when you book."],
+        ["Where can I park?", "There's parking right on the square. We're directly across from the park."],
+        ["Do you do takeaway or delivery?", "Yes. You can pick up your order at the restaurant or have it delivered through Glovo."],
+        ["Do you do catering?", "Yes. Email us at info@casanitavilassar.com or call us and we'll tell you all about it. [DETALLES DEL SERVICIO DE CATERING]"]
+      ]
+    },
+    "visitanos": {
+      "heading": "VISIT US.",
+      "parkingNote": "On the square, with a park across the street and parking nearby.",
+      "escribenos": "Write to us",
+      "horarioLabel": "HOURS",
+      "ctaComoLlegar": "GET DIRECTIONS",
+      "mapTitlePrefix": "Map: Casanita at"
+    }
+  },
+  "carta": {
+    "hero": {
+      "eyebrow": "MEDITERRANEAN COOKING WITH AN ITALIAN SOUL", "title": "THE MENU.",
+      "desc": "Much more than pizza. Dishes to share at the centre of the table, pasta the way it should be, and something good for everyone. Always ask about what's off the menu: the chef will tell you at the table.",
+      "stickerLine1": "ASK ABOUT", "stickerLine2": "WHAT'S OFF", "stickerLine3": "THE MENU", "ctaLlevar": "ORDER TAKEAWAY"
+    },
+    "chipsAriaLabel": "Menu sections",
+    "hintMobile": "Underlined dishes have a photo: tap them to see it.",
+    "hintDesktop": "Underlined dishes have a photo: hover to see it, or click to keep it open.",
+    "pillLabelPrefix": "See photo:",
+    "sections": [
+      { "label": "STARTERS", "title": "STARTERS.", "intro": "For the centre of the table, so everyone can pick.", "note": "", "groups": [{ "sub": "", "items": [
+        { "name": "Focaccia", "desc": "With onion, olives, cherry tomatoes, garlic and rosemary.", "tag": "" },
+        { "name": "Homemade croquettes", "desc": "Prawns, baby squid with alioli, spinach with idiazábal cheese, or oxtail.", "tag": "HOUSE SPECIALTY" },
+        { "name": "Porchetta", "desc": "Slow-cooked pork belly on a bed of crispy potato.", "tag": "HOUSE SPECIALTY" },
+        { "name": "Burrata salad", "desc": "Burrata with rocket, cherry tomatoes, radishes and basil oil.", "tag": "" },
+        { "name": "Tricolor salad", "desc": "Tomatoes with olives, garlic, lime, mint, coriander and rocket.", "tag": "" },
+        { "name": "Bologna mortadella plate", "desc": "With truffle oil, parmesan and chives.", "tag": "" },
+        { "name": "Steak tartare", "desc": "Girona sirloin, hand-chopped to order, with our homemade dressing.", "tag": "" },
+        { "name": "Provolone", "desc": "Oven-melted, with oregano and toasts. Great to share.", "tag": "" },
+        { "name": "Palamós prawn carpaccio", "desc": "With our ginger and lemongrass-infused oil, sesame and wasabi pearls and radishes.", "tag": "" },
+        { "name": "100% Ibérico D.O. Guijuelo ham", "desc": "100 g hand-carved, with Maresme coca bread and tomato.", "tag": "" }
+      ] }] },
+      { "label": "PASTA", "title": "PASTA.", "intro": "Like home, no shortcuts.", "note": "", "groups": [{ "sub": "", "items": [
+        { "name": "Tagliatelle carbonara", "desc": "The real deal, Roman style: egg, pecorino and guanciale. No cream, the way it should be.", "tag": "THE REAL DEAL" },
+        { "name": "Foie ravioli", "desc": "With idiazábal cream, truffle oil and green apple.", "tag": "HOUSE SPECIALTY" },
+        { "name": "Tortiglioni bolognese", "desc": "Grandma's recipe, slow-cooked for 3 hours 30 minutes.", "tag": "" },
+        { "name": "Pasta primavera", "desc": "Tortiglioni with basil butter, green asparagus and cherry tomatoes.", "tag": "" },
+        { "name": "Tortiglioni with red or green pesto", "desc": "With pesto sauce and parmesan.", "tag": "" },
+        { "name": "Meat or vegetable lasagne", "desc": "With red pesto and mozzarella.", "tag": "" }
+      ] }] },
+      { "label": "PIZZAS", "title": "PIZZAS.", "intro": "For the one who wants pizza, because there's always one.", "note": "All our pizzas also available with gluten-free dough or lactose-free (coconut) cheese.", "groups": [
+        { "sub": "CLASSICS", "items": [
+          { "name": "Margherita", "desc": "Tomato, mozzarella and oregano.", "tag": "" },
+          { "name": "Da Giorgio", "desc": "Tomato, mozzarella, basil and Casanita sauce (garlic, lime and basil-infused oil).", "tag": "" },
+          { "name": "Honey-roast ham", "desc": "Tomato, mozzarella, honey-roast ham and oregano.", "tag": "" },
+          { "name": "Tuna and onion", "desc": "Tomato, mozzarella, tuna, onion and oregano.", "tag": "" },
+          { "name": "5 cheeses", "desc": "Tomato, mozzarella, parmesan, pecorino, gorgonzola, stracchino and emmental.", "tag": "" },
+          { "name": "Green or red pesto", "desc": "Tomato, mozzarella, pesto, cherry tomatoes and oregano.", "tag": "" },
+          { "name": "Serrano ham", "desc": "Tomato, mozzarella, serrano ham and oregano.", "tag": "" },
+          { "name": "Pepperoni", "desc": "Tomato, mozzarella, spicy pepperoni, cherry tomatoes and oregano.", "tag": "" },
+          { "name": "Salsiccia, rucola e cipolla", "desc": "Tomato, mozzarella, sausage, onion and rocket.", "tag": "" }
+        ] },
+        { "sub": "PREMIUM", "items": [
+          { "name": "Patatine, crema e tartufata", "desc": "No tomato: truffle cream, mozzarella, potato and rosemary.", "tag": "" },
+          { "name": "Burrata and mortadella", "desc": "Tomato, mozzarella, burrata, mortadella, parmesan, chives and truffle oil.", "tag": "" },
+          { "name": "Porchetta", "desc": "Tomato, mozzarella, porchetta and cherry tomatoes.", "tag": "" },
+          { "name": "Seasonal vegetables", "desc": "Tomato, mozzarella, red and green pepper, courgette, aubergine, onion, mushrooms and cherry tomatoes.", "tag": "" },
+          { "name": "Bolognese", "desc": "Tomato, mozzarella, our bolognese and parmesan.", "tag": "" },
+          { "name": "Carbonara", "desc": "Tomato, mozzarella, our carbonara, guanciale and chives.", "tag": "" }
+        ] }
+      ] },
+      { "label": "MEAT", "title": "MEAT.", "intro": "For those who come hungry.", "note": "", "groups": [{ "sub": "", "items": [
+        { "name": "Tagliata", "desc": "Slow-cooked pork sirloin, with rocket, cherry tomatoes, figs and parmesan.", "tag": "SIGNATURE DISH" },
+        { "name": "Neapolitan milanesa", "desc": "Veal escalope with our original breading, homemade tomato sauce, honey-roast ham and mozzarella.", "tag": "" },
+        { "name": "Milanesa a caballo", "desc": "The same, with a couple of fried eggs on top.", "tag": "" },
+        { "name": "Foie sirloin", "desc": "Girona beef sirloin with caramelised onion and foie.", "tag": "" }
+      ] }] },
+      { "label": "FISH", "title": "FISH.", "intro": "From the sea, just two streets away.", "note": "", "groups": [{ "sub": "", "items": [
+        { "name": "Scallops with guacamole and pico de gallo", "desc": "Less is more.", "tag": "" },
+        { "name": "Salmon à la Gongo", "desc": "With guanciale and sautéed vegetables, glazed with hoisin sauce.", "tag": "" }
+      ] }] },
+      { "label": "DESSERTS", "title": "DESSERTS.", "intro": "To make the sobremesa last longer.", "note": "", "groups": [{ "sub": "", "items": [
+        { "name": "Tiramisù", "desc": "", "tag": "" },
+        { "name": "Idiazábal cheesecake", "desc": "", "tag": "" },
+        { "name": "Lemon pie", "desc": "", "tag": "" },
+        { "name": "Praline coulant", "desc": "", "tag": "GLUTEN-FREE" }
+      ] }] }
+    ],
+    "cocteles": { "label": "COCKTAILS", "eyebrowWord": "GOOD DRINKS", "title": "COCKTAILS.", "intro": "For the terrace, for the sobremesa, or to start the night unhurried." },
+    "cocktailNames": ["Aperol Spritz", "Strawberry mojito", "Pineapple mojito", "Caipirinha", "Mango caipiroska", "Margarita", "Shakerato"],
+    "alergenos": {
+      "glutenLabel": "GLUTEN-FREE AND LACTOSE-FREE", "glutenText": "All pizzas available with gluten-free dough or lactose-free (coconut) cheese. The praline coulant is gluten-free. If you have any allergy, let us know when you arrive.",
+      "fueraLabel": "OFF THE MENU", "fueraText": "Every week there are dishes that aren't listed here. Ask the chef: he'll tell you at the table.",
+      "llevarLabel": "TAKEAWAY", "llevarText": "Pick up at the restaurant or get it delivered.", "pedirGlovo": "Order on Glovo"
+    },
+    "reservarCta": { "heading": "ALREADY KNOW WHAT YOU'LL ORDER?", "descPrefix": "Book in under a minute or call us at", "ctaReservar": "BOOK A TABLE", "ctaLlamar": "CALL" }
+  },
+  "contacto": {
+    "hero": { "eyebrow": "CONTACT", "title": "LET'S TALK.", "desc": "To book a table, the fastest way is the online booking or a call. For everything else (groups, catering, press or working with us), write to us here and we'll get back to you." },
+    "formulario": {
+      "heading": "WRITE TO US.", "telefonoLabel": "PHONE", "emailLabel": "EMAIL", "direccionLabel": "ADDRESS", "horarioLink": "Hours and directions",
+      "topicsLegend": "WHAT WOULD YOU LIKE TO TALK ABOUT?", "topics": ["GROUPS AND CELEBRATIONS", "CATERING", "TAKEAWAY ORDERS", "JOBS", "OTHER"],
+      "groupNote": "For groups, tell us the date, approximate time and how many you'll be.",
+      "jobNotePrefix": "Want to work with us? Use the", "jobNoteLink": "Work with us", "jobNoteSuffix": "form below: you can attach your CV there.",
+      "nombreLabel": "Name", "nombreError": "Tell us your name.", "telefonoFieldLabel": "Phone", "opcional": "(optional)",
+      "emailFieldLabel": "Email", "emailError": "Check your email, something seems to be missing.", "mensajeLabel": "Message", "mensajeError": "Tell us something, even if it's short.",
+      "privacidadPrefix": "I have read and accept the", "privacidadLink": "privacy policy", "privacidadError": "We need you to accept the privacy policy.",
+      "submit": "SEND MESSAGE",
+      "thanksPrefix": "THANK YOU,", "thanksSuffix": "!", "thanksBody": "We've received your message. We'll get back to you as soon as possible. If it's urgent, call us at", "ctaOtroMensaje": "SEND ANOTHER MESSAGE"
+    },
+    "trabaja": {
+      "eyebrow": "WORK WITH US", "heading": "FANCY SITTING WITH US, BUT ON THE OTHER SIDE?",
+      "desc": "We're a small, family-run place. We're looking for people who like calling every customer by name. [CURRENT OPENINGS / TEXT ABOUT THE TEAM]",
+      "photoPlaceholder": "[PHOTO: TEAM AT WORK]",
+      "rolesLegend": "WHERE DO YOU SEE YOURSELF?", "roles": ["FLOOR", "KITCHEN", "BAR AND COCKTAILS", "ASSISTANT"], "rolesError": "Choose at least one role.",
+      "nombreLabel": "Full name", "telefonoLabel": "Phone", "telefonoError": "We need a phone number to call you.",
+      "disponibilidadLabel": "Availability", "dispCompleta": "Full time", "dispParcial": "Part time", "dispFindes": "Weekends", "dispTemporada": "Summer season",
+      "cvLabel": "CV", "cvHint": "(PDF, max 5 MB, optional)", "adjuntar": "ATTACH", "noFile": "No file selected",
+      "mensajeLabel": "Tell us a bit about yourself", "opcional": "(optional)",
+      "privacidadPrefix": "I agree that Casanita stores my data for recruitment purposes, in accordance with the", "privacidadError": "We need you to accept this to save your application.",
+      "submit": "SEND APPLICATION",
+      "thanksHeading": "GOT IT!", "thanksBody": "Thanks for wanting to join the team. We'll keep your application on file and call you if it's a good fit.", "ctaOtra": "SEND ANOTHER APPLICATION"
+    }
+  },
+  "reserva": {
+    "title": "BOOK YOUR TABLE.", "descPrefix": "In under a minute. If you'd rather talk to us, call us at",
+    "widgetLabel": "CASANITA · ONLINE BOOKING",
+    "grupoBadge": "A LARGE GROUP?", "grupoHeading": "BETTER TO CALL US AND SORT IT OUT TOGETHER.", "grupoDesc": "Birthdays, family lunches and reunions. Call us and we'll tailor it to you.",
+    "horarioLabel": "HOURS", "ctaComoLlegar": "Get directions",
+    "antesLabel": "BEFORE YOU BOOK",
+    "faq1Q": "Can I book the terrace?", "faq1A": "Yes, just mention it when you book.",
+    "faq2Q": "Gluten-free options?", "faq2A": "All pizzas, with gluten-free dough or lactose-free cheese.",
+    "ctaVerCarta": "See the menu",
+    "mobilePrefijoLlamar": "PREFER TO CALL?"
+  }
+}

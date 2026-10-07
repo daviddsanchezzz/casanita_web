@@ -3,20 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<script src="/support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
 <title>Reservar mesa · Casanita Vilassar</title>
 <meta name="description" content="Reserva tu mesa en Casanita, Vilassar de Mar, en menos de un minuto. O llámanos al 605 25 12 87.">
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/favicon.png">
 <link rel="canonical" href="https://casanitavilassar.com/reserva">
-<link rel="alternate" hreflang="es" href="https://casanitavilassar.com/es/reserva">
+<link rel="alternate" hreflang="es" href="https://casanitavilassar.com/reserva">
 <link rel="alternate" hreflang="ca" href="https://casanitavilassar.com/ca/reserva">
 <link rel="alternate" hreflang="en" href="https://casanitavilassar.com/en/reserva">
-<link rel="alternate" hreflang="x-default" href="https://casanitavilassar.com/es/reserva">
+<link rel="alternate" hreflang="fr" href="https://casanitavilassar.com/fr/reserva">
+<link rel="alternate" hreflang="x-default" href="https://casanitavilassar.com/reserva">
 <meta property="og:type" content="restaurant">
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="Casanita Vilassar">
@@ -56,26 +57,26 @@ img{display:block;max-width:100%}
 
 <header data-screen-label="Header" style="position:sticky; top:0; z-index:50; background:#7C1126;">
   <div style="max-width:1440px; margin:0 auto; height:76px; padding:0 clamp(16px,3vw,40px); display:flex; align-items:center; justify-content:space-between; gap:24px;">
-    <a href="/" aria-label="Casanita, inicio" style="display:flex; flex-direction:column; align-items:center; gap:3px; flex-shrink:0;">
-      <img src="assets/logo-beige.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;">
+    <a href="{{ localePrefix }}/" aria-label="Casanita, inicio" style="display:flex; flex-direction:column; align-items:center; gap:3px; flex-shrink:0;">
+      <img src="/assets/logo-beige.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;">
       <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:9px; letter-spacing:.42em; padding-left:.42em; color:#EFE7C7;">VILASSAR</span>
     </a>
     <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
       <nav aria-label="Principal" style="display:flex; align-items:center; gap:clamp(18px,2.4vw,36px);">
-        <a href="/carta" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">CARTA</a>
-        <a href="/#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">GRUPOS</a>
-        <a href="/#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">VISÍTANOS</a>
+        <a href="{{ localePrefix }}/carta" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">{{ t.common.nav.carta }}</a>
+        <a href="{{ localePrefix }}/#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">{{ t.common.nav.grupos }}</a>
+        <a href="{{ localePrefix }}/#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">{{ t.common.nav.visitanos }}</a>
       </nav>
     </sc-if>
     <div style="display:flex; align-items:center; gap:clamp(10px,1.6vw,22px);">
       <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
-        <div role="group" aria-label="Idioma" style="display:flex; align-items:center; gap:2px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.08em; color:#EFE7C7;">
-          <button type="button" aria-pressed="true" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer; text-decoration:underline; text-underline-offset:4px;">ES</button><span aria-hidden="true">·</span>
-          <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">CA</button><span aria-hidden="true">·</span>
-          <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">EN</button>
+        <div role="group" aria-label="{{ t.common.idiomaLabel }}" style="display:flex; align-items:center; gap:2px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.08em; color:#EFE7C7;">
+          <sc-for list="{{ langLinks }}" as="lg" hint-placeholder-count="4">
+            <a href="{{ lg.href }}" aria-current="{{ lg.current }}" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer; text-decoration:{{ lg.deco }}; text-underline-offset:4px;">{{ lg.code }}</a>
+          </sc-for>
         </div>
       </sc-if>
-      <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); border:2px solid #EFE7C7; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease;" style-hover="background:#EFE7C7; color:#7C1126;">LLAMAR</a>
+      <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); border:2px solid #EFE7C7; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease;" style-hover="background:#EFE7C7; color:#7C1126;">{{ t.common.cta.llamar }}</a>
     </div>
   </div>
 </header>
@@ -85,49 +86,49 @@ img{display:block;max-width:100%}
   <div aria-hidden="true" style="position:absolute; left:50%; top:30%; width:120vw; height:120vw; margin-left:-60vw; border:clamp(40px,6vw,96px) solid #6C0E21; border-radius:50%;"></div>
   <div style="position:relative; max-width:900px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:18px;">
     <span style="display:flex; align-items:center; gap:8px; padding:6px 14px; border-radius:999px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.12em;"><span style="width:8px; height:8px; border-radius:50%; background:#7C1126;"></span>{{ openLabel }}</span>
-    <h1 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(60px,9vw,130px); line-height:.86; letter-spacing:-.015em; text-wrap:balance;">RESERVA TU MESA.</h1>
-    <p style="margin:0; max-width:520px; font-size:clamp(16px,1.35vw,19px); line-height:1.55; text-wrap:pretty;">En menos de un minuto. Si prefieres hablar con nosotros, llámanos al <a href="tel:{{ phoneTel }}" style="color:#EFE7C7; font-weight:700; text-decoration:underline; text-underline-offset:3px;">{{ phoneDisplay }}</a>.</p>
+    <h1 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(60px,9vw,130px); line-height:.86; letter-spacing:-.015em; text-wrap:balance;">{{ t.reserva.title }}</h1>
+    <p style="margin:0; max-width:520px; font-size:clamp(16px,1.35vw,19px); line-height:1.55; text-wrap:pretty;">{{ t.reserva.descPrefix }} <a href="tel:{{ phoneTel }}" style="color:#EFE7C7; font-weight:700; text-decoration:underline; text-underline-offset:3px;">{{ phoneDisplay }}</a>.</p>
   </div>
 </section>
 
 <section data-screen-label="Reserva · módulo" style="position:relative; z-index:2; margin-top:calc(-1 * clamp(110px,12vw,170px)); padding:0 clamp(0px,3vw,40px);">
   <div style="max-width:720px; margin:0 auto; background:#FAF6EA; border:3px solid #7C1126; border-radius:{{ frameRadius }}; overflow:hidden;">
     <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 20px; background:#7C1126; color:#EFE7C7; border-bottom:3px solid #4E0B18; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.12em;">
-      <span>CASANITA · RESERVA ONLINE</span>
+      <span>{{ t.reserva.widgetLabel }}</span>
       <span>CA L'ADUANA, 69</span>
     </div>
-    <div role="region" aria-label="Módulo de reserva" style="background:#FFFFFF; padding:clamp(16px,3vw,32px);"><iframe id="vetra-reservas" src="{{ reserveEmbedUrl }}" style="width:100%; height:560px; border:none; display:block;"></iframe></div>
+    <div role="region" aria-label="{{ t.reserva.widgetLabel }}" style="background:#FFFFFF; padding:clamp(16px,3vw,32px);"><iframe id="vetra-reservas" src="{{ reserveEmbedUrl }}" style="width:100%; height:560px; border:none; display:block;"></iframe></div>
   </div>
 </section>
 
 <section data-screen-label="Reserva · ayuda" style="padding:clamp(56px,7vw,96px) clamp(20px,4vw,48px) clamp(72px,8vw,120px);">
   <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:16px;">
     <div style="display:flex; flex-direction:column; gap:12px; padding:28px; background:#7C1126; color:#EFE7C7; border-radius:22px;">
-      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em;">¿SOIS MUCHOS?</span>
-      <p style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(28px,2.6vw,36px); line-height:.95;">MEJOR LLÁMANOS Y LO PREPARAMOS JUNTOS.</p>
-      <p style="margin:0; font-size:15px; line-height:1.5;">Cumpleaños, comidas familiares y reencuentros. Llámanos y lo preparamos a tu medida.</p>
-      <a href="tel:{{ phoneTel }}" style="margin-top:auto; align-self:flex-start; display:flex; align-items:center; gap:10px; min-height:48px; padding:0 22px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:gap .25s ease;" style-hover="gap:16px; color:#7C1126;">LLAMAR <span class="cn-arrow" aria-hidden="true"></span></a>
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em;">{{ t.reserva.grupoBadge }}</span>
+      <p style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(28px,2.6vw,36px); line-height:.95;">{{ t.reserva.grupoHeading }}</p>
+      <p style="margin:0; font-size:15px; line-height:1.5;">{{ t.reserva.grupoDesc }}</p>
+      <a href="tel:{{ phoneTel }}" style="margin-top:auto; align-self:flex-start; display:flex; align-items:center; gap:10px; min-height:48px; padding:0 22px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:gap .25s ease;" style-hover="gap:16px; color:#7C1126;">{{ t.common.cta.llamar }} <span class="cn-arrow" aria-hidden="true"></span></a>
     </div>
     <div style="display:flex; flex-direction:column; gap:12px; padding:28px; background:#FAF6EA; border-radius:22px;">
-      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">HORARIO</span>
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">{{ t.reserva.horarioLabel }}</span>
       <div style="display:flex; flex-direction:column; gap:4px; font-size:16px; line-height:1.5;">
         <sc-for list="{{ hours }}" as="h" hint-placeholder-count="7">
           <span>{{ h.day }}: {{ h.txt }}</span>
         </sc-for>
       </div>
-      <a href="/#visitanos" style="display:inline-flex; align-items:center; gap:8px; margin-top:auto; font-weight:700; font-size:15px;">Cómo llegar <span class="cn-arrow" aria-hidden="true"></span></a>
+      <a href="{{ localePrefix }}/#visitanos" style="display:inline-flex; align-items:center; gap:8px; margin-top:auto; font-weight:700; font-size:15px;">{{ t.reserva.ctaComoLlegar }} <span class="cn-arrow" aria-hidden="true"></span></a>
     </div>
     <div style="display:flex; flex-direction:column; gap:14px; padding:28px; background:#FAF6EA; border-radius:22px;">
-      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">ANTES DE RESERVAR</span>
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">{{ t.reserva.antesLabel }}</span>
       <div style="display:flex; flex-direction:column; gap:4px;">
-        <strong style="font-size:16px;">¿Se puede reservar en la terraza?</strong>
-        <span style="font-size:15px; line-height:1.5;">Sí, indícalo al hacer tu reserva.</span>
+        <strong style="font-size:16px;">{{ t.reserva.faq1Q }}</strong>
+        <span style="font-size:15px; line-height:1.5;">{{ t.reserva.faq1A }}</span>
       </div>
       <div style="display:flex; flex-direction:column; gap:4px;">
-        <strong style="font-size:16px;">¿Opciones sin gluten?</strong>
-        <span style="font-size:15px; line-height:1.5;">Todas las pizzas, con masa sin gluten o queso sin lactosa.</span>
+        <strong style="font-size:16px;">{{ t.reserva.faq2Q }}</strong>
+        <span style="font-size:15px; line-height:1.5;">{{ t.reserva.faq2A }}</span>
       </div>
-      <a href="/carta" style="display:inline-flex; align-items:center; gap:8px; margin-top:auto; font-weight:700; font-size:15px;">Ver la carta <span class="cn-arrow" aria-hidden="true"></span></a>
+      <a href="{{ localePrefix }}/carta" style="display:inline-flex; align-items:center; gap:8px; margin-top:auto; font-weight:700; font-size:15px;">{{ t.reserva.ctaVerCarta }} <span class="cn-arrow" aria-hidden="true"></span></a>
     </div>
   </div>
 </section>
@@ -135,15 +136,15 @@ img{display:block;max-width:100%}
 
 <footer style="background:#7C1126; color:#EFE7C7; padding:40px clamp(20px,4vw,48px) {{ footPad }};">
   <div style="max-width:1240px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px 32px; font-size:14px;">
-    <img src="assets/logo-beige.png" alt="Casanita" loading="lazy" style="width:130px; height:auto;">
+    <img src="/assets/logo-beige.png" alt="Casanita" loading="lazy" style="width:130px; height:auto;">
     <span>{{ address }} · <a href="tel:{{ phoneTel }}" style="color:#EFE7C7;">{{ phoneDisplay }}</a></span>
-    <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:22px;">COMIDAS, CENAS Y BUEN BEBER.</span>
+    <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:22px;">{{ t.common.footer.tagline }}</span>
   </div>
 </footer>
 
 <sc-if value="{{ isMobile }}">
   <div role="navigation" aria-label="Acciones rápidas" style="position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1fr; padding:10px 12px calc(10px + env(safe-area-inset-bottom)); background:#FAF6EA; border-top:2px solid #7C1126;">
-    <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; justify-content:center; min-height:52px; background:#EFE7C7; color:#7C1126; border:2px solid #7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">¿PREFIERES LLAMAR? {{ phoneDisplay }}</a>
+    <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; justify-content:center; min-height:52px; background:#EFE7C7; color:#7C1126; border:2px solid #7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">{{ t.reserva.mobilePrefijoLlamar }} {{ phoneDisplay }}</a>
   </div>
 </sc-if>
 </x-dc>
@@ -175,16 +176,51 @@ function scheduleFromLive(live) {
   live.openingHours.forEach(({ day, ranges }) => { sched[day] = (ranges || []).map(r => [r.open, r.close]); });
   return sched;
 }
-const DAYS = ['DOMINGO','LUNES','MARTES','MIÉRCOLES','JUEVES','VIERNES','SÁBADO'];
 const toMin = s => { const [h, m] = s.split(':').map(Number); return h * 60 + m; };
+function deepMerge(base, over) {
+  if (over === undefined || over === null) return base;
+  if (Array.isArray(base) || Array.isArray(over)) return over;
+  if (base && typeof base === 'object' && over && typeof over === 'object') {
+    const out = { ...base };
+    for (const k in over) out[k] = deepMerge(base[k], over[k]);
+    return out;
+  }
+  return over;
+}
+const LOCALES = ['ca', 'en', 'fr'];
+function detectLocale() {
+  const m = (typeof location !== 'undefined' ? location.pathname : '').match(/^\/(ca|en|fr)(\/|$)/);
+  return m ? m[1] : 'es';
+}
+const T_ES = {
+  common: {
+    idiomaLabel: 'Idioma',
+    nav: { carta: 'Carta', grupos: 'Grupos', visitanos: 'Visítanos', contacto: 'Contacto' },
+    cta: { reservar: 'Reservar', reservarMesa: 'Reservar mesa', llamar: 'Llamar', llamarPrefix: 'Llamar', volverInicio: 'Volver al inicio' },
+    footer: { tagline: 'Comidas, cenas y buen beber.' },
+    days: { short: ['DOMINGO', 'LUNES', 'MARTES', 'MIÉRCOLES', 'JUEVES', 'VIERNES', 'SÁBADO'] },
+    open: { nowShort: 'ABIERTO AHORA', closedShort: 'CERRADO AHORA', closed: 'CERRADO', opensPrefix: 'CERRADO · ABRE', atTime: 'A LAS', today: 'HOY', tomorrow: 'MAÑANA' },
+  },
+  reserva: {
+    title: 'RESERVA TU MESA.', descPrefix: 'En menos de un minuto. Si prefieres hablar con nosotros, llámanos al',
+    widgetLabel: 'CASANITA · RESERVA ONLINE',
+    grupoBadge: '¿SOIS MUCHOS?', grupoHeading: 'MEJOR LLÁMANOS Y LO PREPARAMOS JUNTOS.', grupoDesc: 'Cumpleaños, comidas familiares y reencuentros. Llámanos y lo preparamos a tu medida.',
+    horarioLabel: 'HORARIO', ctaComoLlegar: 'Cómo llegar',
+    antesLabel: 'ANTES DE RESERVAR',
+    faq1Q: '¿Se puede reservar en la terraza?', faq1A: 'Sí, indícalo al hacer tu reserva.',
+    faq2Q: '¿Opciones sin gluten?', faq2A: 'Todas las pizzas, con masa sin gluten o queso sin lactosa.',
+    ctaVerCarta: 'Ver la carta',
+    mobilePrefijoLlamar: '¿PREFIERES LLAMAR?',
+  },
+};
 
 class Component extends DCLogic {
   trackSetup() {
     window.dataLayer = window.dataLayer || [];
-    document.documentElement.lang = 'es';
+    document.documentElement.lang = this.state.locale;
     this.onTrack = e => {
       const a = e.target.closest && e.target.closest('a,button'); if (!a) return;
-      const href = a.getAttribute('href') || '';
+      const href = (a.getAttribute('href') || '').replace(/^\/(ca|en|fr)(?=\/|$)/, '');
       let ev = a.dataset.track;
       if (!ev) {
         if (/^\/reserva(#|$)|#reserva$/.test(href)) ev = 'click_reservar';
@@ -196,10 +232,13 @@ class Component extends DCLogic {
     };
     document.addEventListener('click', this.onTrack, true);
   }
-  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, now: new Date(), live: null };
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, now: new Date(), live: null, locale: detectLocale(), t: T_ES };
   componentDidMount() {
     this.trackSetup();
     fetch(LIVE_API).then(r => (r.ok ? r.json() : Promise.reject())).then(data => this.setState({ live: data })).catch(() => {});
+    if (this.state.locale !== 'es') {
+      fetch('/i18n/' + this.state.locale + '.json').then(r => (r.ok ? r.json() : Promise.reject())).then(data => this.setState({ t: deepMerge(T_ES, data) })).catch(() => {});
+    }
     this.onResize = () => this.setState({ w: window.innerWidth });
     window.addEventListener('resize', this.onResize);
     this.clock = setInterval(() => this.setState({ now: new Date() }), 60000);
@@ -215,15 +254,17 @@ class Component extends DCLogic {
   componentWillUnmount() { document.removeEventListener('click', this.onTrack, true); window.removeEventListener('resize', this.onResize); window.removeEventListener('message', this.onVetraMsg); clearInterval(this.clock); }
   openLabel() {
     const live = this.state.live;
-    if (live && live.today && live.today.closed && live.today.closureReason) return `CERRADO · ${live.today.closureReason.toUpperCase()}`;
+    const o = this.state.t.common.open;
+    const days = this.state.t.common.days.short;
+    if (live && live.today && live.today.closed && live.today.closureReason) return `${o.closed} · ${live.today.closureReason.toUpperCase()}`;
     const schedule = scheduleFromLive(live);
     const d = this.state.now, day = d.getDay(), mins = d.getHours() * 60 + d.getMinutes();
-    if ((schedule[day] || []).some(([a, b]) => mins >= toMin(a) && mins < toMin(b))) return 'ABIERTO AHORA';
+    if ((schedule[day] || []).some(([a, b]) => mins >= toMin(a) && mins < toMin(b))) return o.nowShort;
     for (let k = 0; k < 8; k++) {
       const dd = (day + k) % 7, slot = (schedule[dd] || []).find(([a]) => k > 0 || toMin(a) > mins);
-      if (slot) return `CERRADO · ABRE ${k === 0 ? 'HOY' : k === 1 ? 'MAÑANA' : DAYS[dd]} A LAS ${slot[0]}`;
+      if (slot) return `${o.opensPrefix} ${k === 0 ? o.today : k === 1 ? o.tomorrow : days[dd]} ${o.atTime} ${slot[0]}`;
     }
-    return 'CERRADO';
+    return o.closed;
   }
   biz() {
     const live = this.state.live;
@@ -236,20 +277,28 @@ class Component extends DCLogic {
       address: b.address || FALLBACK.address,
       mapsUrl: safeUrl(b.mapsUrl || FALLBACK.mapsUrl, FALLBACK.mapsUrl, 'google.com'),
       instagramUrl: ig ? safeUrl(ig.url, '#', 'instagram.com') : '#',
-      reserveEmbedUrl: safeUrl((live && live.reservations && live.reservations.url) || FALLBACK.reserveUrl, FALLBACK.reserveUrl, 'vetrareserve.com') + '?embed=1&lang=es',
+      reserveEmbedUrl: safeUrl((live && live.reservations && live.reservations.url) || FALLBACK.reserveUrl, FALLBACK.reserveUrl, 'vetrareserve.com') + '?embed=1&lang=' + this.state.locale,
     };
   }
   hours() {
     const schedule = scheduleFromLive(this.state.live);
     const today = this.state.now.getDay();
+    const t = this.state.t;
     return [1, 2, 3, 4, 5, 6, 0].map(d => ({
-      day: DAYS[d] + (d === today ? ' · HOY' : ''),
-      txt: (schedule[d] || []).length ? schedule[d].map(s => s.join('–')).join(' · ') : 'Cerrado',
+      day: t.common.days.short[d] + (d === today ? ' · ' + t.common.open.today : ''),
+      txt: (schedule[d] || []).length ? schedule[d].map(s => s.join('–')).join(' · ') : t.common.open.closed,
     }));
   }
   renderVals() {
     const isMobile = this.state.w < 820;
-    return { isMobile, isDesktop: !isMobile, openLabel: this.openLabel(), frameRadius: isMobile ? '0px' : '20px', footPad: isMobile ? '110px' : '40px', hours: this.hours(), ...this.biz() };
+    const t = this.state.t;
+    const locale = this.state.locale;
+    const LANG_BASE = { es: '/', ca: '/ca/', en: '/en/', fr: '/fr/' };
+    const langLinks = ['es', 'ca', 'en', 'fr'].map(code => ({
+      code: code.toUpperCase(), href: LANG_BASE[code] + 'reserva', current: code === locale ? 'page' : 'false',
+      deco: code === locale ? 'underline' : 'none',
+    }));
+    return { t, localePrefix: locale === 'es' ? '' : '/' + locale, langLinks, isMobile, isDesktop: !isMobile, openLabel: this.openLabel(), frameRadius: isMobile ? '0px' : '20px', footPad: isMobile ? '110px' : '40px', hours: this.hours(), ...this.biz() };
   }
 }
 </script>

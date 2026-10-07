@@ -1,0 +1,260 @@
+{
+  "common": {
+    "idiomaLabel": "Idioma",
+    "nav": { "carta": "Carta", "grupos": "Grups", "visitanos": "Visita'ns", "contacto": "Contacte" },
+    "cta": {
+      "reservar": "Reserva",
+      "reservarMesa": "Reserva taula",
+      "llamar": "Truca'ns",
+      "llamarPrefix": "Truca'ns",
+      "abrirMenu": "Obrir menú",
+      "menu": "Menú",
+      "menuMovil": "Menú mòbil",
+      "volverInicio": "Tornar a l'inici"
+    },
+    "footer": {
+      "taglineLine1": "Dinars, sopars",
+      "taglineLine2": "i bon beure.",
+      "contacto": "Contacte",
+      "horario": "Horari",
+      "siguenos": "Segueix-nos",
+      "instagram": "Instagram",
+      "pedirGlovo": "Demana a Glovo",
+      "privacidad": "Privacitat",
+      "cookies": "Cookies",
+      "avisoLegal": "Avís legal",
+      "trabajaConNosotros": "Treballa amb nosaltres"
+    },
+    "loading": { "reservas": "Carregant reserves…", "mapa": "Carregant mapa…" },
+    "days": { "short": ["Diumenge", "Dilluns", "Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte"] },
+    "open": {
+      "nowShort": "OBERT ARA",
+      "closedShort": "TANCAT ARA",
+      "closed": "TANCAT",
+      "opensPrefix": "TANCAT · OBRE",
+      "atTime": "A LES",
+      "today": "AVUI",
+      "tomorrow": "DEMÀ"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "Casanita · Trattoria a Vilassar de Mar",
+      "description": "Cuina mediterrània amb ànima italiana al centre de Vilassar de Mar. Dinars, sopars, còctels i terrassa. Reserva la teva taula en un minut."
+    },
+    "hero": {
+      "titleLine1": "Seu.",
+      "titleLine2": "Ets a casa.",
+      "subtitle": "Cuina mediterrània amb ànima italiana al centre de Vilassar de Mar. Dinars, sopars i bon beure.",
+      "scroll": "Llisca",
+      "ring": "CARBONARA · BURRATA · CROQUETES · VERMUT · SOBRETAULA · CÒCTELS · CARBONARA · BURRATA · CROQUETES · VERMUT · TERRASSA · BON BEURE ·",
+      "reseñas": "RESSENYES",
+      "enGoogle": "A GOOGLE"
+    },
+    "manifesto": {
+      "eyebrow": "LA CASA",
+      "text": "A Casanita el xef surt a la teva taula, t'explica què hi ha avui fora de carta i es recorda de com et va agradar la carbonara. Aquí hi cap qui vol pizza i qui no, els nens, els avis i l'amic que sempre arriba tard. I quan acabes, la terrassa i un còctel et recorden que no hi ha cap pressa.",
+      "cta": "CONEIX LA CASA"
+    },
+    "marquee": ["CARBONARA", "VERMUT", "SOBRETAULA", "CÒCTELS", "TERRASSA", "CROQUETES", "BON BEURE"],
+    "platos": {
+      "headingLine1": "ELS QUE ENS DEMANEN",
+      "headingLine2": "UNA I ALTRA VEGADA.",
+      "hechoEnCasaLine1": "FET",
+      "hechoEnCasaLine2": "A CASA",
+      "ctaVerCarta": "VEURE LA CARTA COMPLETA",
+      "dishes": [
+        { "name": "CARBONARA", "desc": "Sense nata, com ha de ser." },
+        { "name": "CROQUETES DE CUA DE BRAU", "desc": "Casolanes. També de llagostins, calamarsets o espinacs amb idiazàbal." },
+        { "name": "RAVIOLIS DE FOIE", "desc": "Amb crema d'idiazàbal, oli de tòfona i poma verda." },
+        { "name": "BURRATA", "desc": "En amanida, amb rúcula, tomàquets cherry, ravenets i oli d'alfàbrega." },
+        { "name": "PORCHETTA", "desc": "Panxa de porc a baixa temperatura sobre patata cruixent." },
+        { "name": "TIRAMISÚ", "desc": "El final de sempre. Si ho prefereixes, lemon pie." }
+      ]
+    },
+    "momentos": {
+      "headingLine1": "PER A CADA",
+      "headingLine2": "MOMENT.",
+      "comidas": { "label": "MIGDIA · 12:00–16:00", "title": "DINARS", "desc": "Llum de migdia, plats al centre i sobretaula sense mirar el rellotge." },
+      "cenas": { "label": "NIT · 19:00–23:00", "title": "SOPARS", "desc": "La plaça tranquil·la, una espelma a la taula i el que el xef tingui avui fora de carta." },
+      "buenBeber": { "title": "BON BEURE", "desc": "Còctels, vermut i sobretaula a la terrassa. Vacances sense sortir del poble." },
+      "terrazaPrefix": "TERRASSA ·",
+      "terrazaDefault": "EN HORARI DE CUINA",
+      "cta": "TRIA EL TEU MOMENT I RESERVA"
+    },
+    "paraLlevar": {
+      "eyebrow": "PER EMPORTAR",
+      "heading": "AVUI MILLOR A CASA?",
+      "desc": "La mateixa cuina, a la teva taula. Demana per Glovo o truca'ns i passa a recollir-ho.",
+      "ctaGlovo": "DEMANA A GLOVO",
+      "ctaLlamar": "TRUCA PER RECOLLIR"
+    },
+    "historia": {
+      "eyebrow": "DES DE 2020 A VILASSAR DE MAR",
+      "heading": "UNA FAMÍLIA QUE CUINA PER A LA TEVA.",
+      "text": "Abans de Vilassar hi va haver tota una vida a l'hostaleria: temporades a Formentera, anys a Barcelona i una etapa al Brasil. A l'estiu de 2020 vam obrir Casanita en aquesta plaça, davant del parc, amb una idea senzilla: que qui entri per la porta se senti un més. Et rebem com a part de la nostra família.",
+      "signature": "— BENJA, XEF I AMFITRIÓ",
+      "cta": "VINE A CONÈIXER-NOS",
+      "photoAlt": "Foto pendent: el xef i l'equip de Casanita",
+      "photoPlaceholder": "[FOTO XEF I EQUIP · MÀSCARA EN ARC]",
+      "sinceLabel": "DES DE"
+    },
+    "resenas": {
+      "heading": "ELLS HO DIUEN MILLOR.",
+      "reseñasEnGoogle": "ressenyes a Google",
+      "ctaLeerTodas": "LLEGEIX-LES TOTES A GOOGLE"
+    },
+    "grupos": {
+      "eyebrow": "GRUPS I CELEBRACIONS",
+      "heading": "SOU MOLTS? MILLOR.",
+      "desc": "Aniversaris, dinars familiars i retrobaments. Posem els plats al centre i hi ha opcions per a tothom: qui vol pizza, qui no, els nens i els avis. Digues-nos quants sou i ho preparem a la teva mida.",
+      "ctaReservarGrupo": "RESERVA PER A UN GRUP",
+      "fueraDeCartaLine1": "FORA",
+      "fueraDeCartaLine2": "DE CARTA",
+      "photoAlt": "Foto pendent: taula llarga de grup vista des de dalt",
+      "photoPlaceholder": "[FOTO TAULA COMPARTIDA DES DE DALT]"
+    },
+    "reserva": {
+      "heading": "RESERVA LA TEVA TAULA.",
+      "descPrefix": "En menys d'un minut. Si prefereixes parlar amb nosaltres, truca'ns al",
+      "widgetLabel": "CASANITA · RESERVA ONLINE",
+      "helpGroup": "Veniu en grup gran? Truqueu-nos i ho preparem junts."
+    },
+    "faq": {
+      "heading": "EL QUE SEMPRE ENS PREGUNTEU.",
+      "items": [
+        ["Teniu opcions sense gluten?", "Sí. Totes les pizzes es poden demanar amb massa sense gluten o amb formatge sense lactosa (de coco), i el coulant de pralinè és sense gluten. Per a la resta de plats, pregunta'ns."],
+        ["Hi ha plats per a nens?", "No tenim carta infantil."],
+        ["Puc venir amb un grup gran?", "És clar. Reserva indicant quants sou o truqueu-nos al 605 25 12 87 i ho preparem junts."],
+        ["Es pot reservar a la terrassa?", "Sí, pots reservar a la terrassa. Indica-ho en fer la reserva."],
+        ["On aparco?", "Hi ha un pàrquing a la mateixa plaça. Som just davant del parc."],
+        ["Feu menjar per emportar o a domicili?", "Sí. Pots recollir la comanda al local o demanar-la a domicili per Glovo."],
+        ["Feu càtering?", "Sí. Escriu-nos a info@casanitavilassar.com o truca'ns i t'ho expliquem. [DETALLES DEL SERVICIO DE CATERING]"]
+      ]
+    },
+    "visitanos": {
+      "heading": "VISITA'NS.",
+      "parkingNote": "A la plaça, amb un parc al davant i aparcament a prop.",
+      "escribenos": "Escriu-nos",
+      "horarioLabel": "HORARI",
+      "ctaComoLlegar": "COM ARRIBAR-HI",
+      "mapTitlePrefix": "Mapa: Casanita a"
+    }
+  },
+  "carta": {
+    "hero": {
+      "eyebrow": "CUINA MEDITERRÀNIA AMB ÀNIMA ITALIANA", "title": "LA CARTA.",
+      "desc": "Molt més que pizza. Plats per compartir al centre de la taula, pasta com ha de ser i alguna cosa bona per a tothom. Pregunta sempre pel fora de carta: el xef t'ho explica a la taula.",
+      "stickerLine1": "PREGUNTA", "stickerLine2": "PEL FORA", "stickerLine3": "DE CARTA", "ctaLlevar": "DEMANA PER EMPORTAR"
+    },
+    "chipsAriaLabel": "Seccions de la carta",
+    "hintMobile": "Els plats subratllats tenen foto: toca'ls per veure-la.",
+    "hintDesktop": "Els plats subratllats tenen foto: passa el cursor per veure-la o fes clic per deixar-la oberta.",
+    "pillLabelPrefix": "Veure foto:",
+    "sections": [
+      { "label": "ENTRANTS", "title": "ENTRANTS.", "intro": "Per al centre de la taula i que cadascú piqui el seu.", "note": "", "groups": [{ "sub": "", "items": [
+        { "name": "Focaccia", "desc": "Amb ceba, olives, tomàquets, all i romaní.", "tag": "" },
+        { "name": "Croquetes casolanes", "desc": "Llagostins, calamarsets amb allioli, espinacs amb idiazàbal o cua de brau.", "tag": "DE LA CASA" },
+        { "name": "Porchetta", "desc": "Panxa de porc cuinada a baixa temperatura sobre una base de patata cruixent.", "tag": "DE LA CASA" },
+        { "name": "Amanida de burrata", "desc": "Burrata amb rúcula, tomàquets cherry, ravenets i oli d'alfàbrega.", "tag": "" },
+        { "name": "Amanida tricolor", "desc": "Tomàquets amb olives, all, llima, menta, coriandre i rúcula.", "tag": "" },
+        { "name": "Plat de mortadel·la de Bolonya", "desc": "Amb oli de tòfona, parmesà i cibulet.", "tag": "" },
+        { "name": "Steak tartar", "desc": "Filet de Girona picat a ganivet al moment, amb el nostre amaniment casolà.", "tag": "" },
+        { "name": "Provolone", "desc": "Fos al forn, amb orenga i torrades. Ideal per compartir.", "tag": "" },
+        { "name": "Carpaccio de gamba de Palamós", "desc": "Amb el nostre oli infusionat amb gingebre i citronel·la, perles de sèsam i wasabi i ravenets.", "tag": "" },
+        { "name": "Pernil 100 % ibèric D.O. Guijuelo", "desc": "100 g tallats a mà, amb pa de coca del Maresme amb tomàquet.", "tag": "" }
+      ] }] },
+      { "label": "PASTES", "title": "PASTES.", "intro": "Com a casa, sense dreceres.", "note": "", "groups": [{ "sub": "", "items": [
+        { "name": "Tagliatelle carbonara", "desc": "L'autèntica, a la romana: ou, pecorino i guanciale. Sense nata, com ha de ser.", "tag": "L'AUTÈNTICA" },
+        { "name": "Raviolis al foie", "desc": "Amb crema d'idiazàbal, oli de tòfona i poma verda.", "tag": "DE LA CASA" },
+        { "name": "Tortiglioni a la bolonyesa", "desc": "La recepta de l'àvia, 3 h 30 min a foc lent.", "tag": "" },
+        { "name": "Pasta primavera", "desc": "Tortiglioni amb mantega d'alfàbrega, espàrrecs verds i tomàquets cherry.", "tag": "" },
+        { "name": "Tortiglioni al pesto vermell o verd", "desc": "Amb salsa al pesto i parmesà.", "tag": "" },
+        { "name": "Lasanya de carn o de verdures", "desc": "Amb pesto vermell i mozzarella.", "tag": "" }
+      ] }] },
+      { "label": "PIZZES", "title": "PIZZES.", "intro": "Per a qui vol pizza, que sempre n'hi ha algun.", "note": "Totes les nostres pizzes, també amb massa sense gluten o amb formatge sense lactosa (de coco).", "groups": [
+        { "sub": "CLÀSSIQUES", "items": [
+          { "name": "Margherita", "desc": "Tomàquet, mozzarella i orenga.", "tag": "" },
+          { "name": "Da Giorgio", "desc": "Tomàquet, mozzarella, alfàbrega i salsa Casanita (oli infusionat d'all, llima i alfàbrega).", "tag": "" },
+          { "name": "Pernil dolç", "desc": "Tomàquet, mozzarella, pernil dolç i orenga.", "tag": "" },
+          { "name": "Tonyina i ceba", "desc": "Tomàquet, mozzarella, tonyina, ceba i orenga.", "tag": "" },
+          { "name": "5 formatges", "desc": "Tomàquet, mozzarella, parmesà, pecorino, gorgonzola, stracchino i emmental.", "tag": "" },
+          { "name": "Pesto verd o vermell", "desc": "Tomàquet, mozzarella, pesto, tomàquets cherry i orenga.", "tag": "" },
+          { "name": "Pernil salat", "desc": "Tomàquet, mozzarella, pernil salat i orenga.", "tag": "" },
+          { "name": "Pepperoni", "desc": "Tomàquet, mozzarella, pepperoni picant, tomàquets cherry i orenga.", "tag": "" },
+          { "name": "Salsiccia, rucola e cipolla", "desc": "Tomàquet, mozzarella, salsitxa, ceba i rúcula.", "tag": "" }
+        ] },
+        { "sub": "PREMIUM", "items": [
+          { "name": "Patatine, crema e tartufata", "desc": "Sense tomàquet: crema de tòfona, mozzarella, patata i romaní.", "tag": "" },
+          { "name": "Burrata i mortadel·la", "desc": "Tomàquet, mozzarella, burrata, mortadel·la, parmesà, cibulet i oli de tòfona.", "tag": "" },
+          { "name": "Porchetta", "desc": "Tomàquet, mozzarella, porchetta i tomàquets cherry.", "tag": "" },
+          { "name": "Verdures de temporada", "desc": "Tomàquet, mozzarella, pebrot vermell i verd, carbassó, albergínia, ceba, xampinyons i tomàquets cherry.", "tag": "" },
+          { "name": "Bolonyesa", "desc": "Tomàquet, mozzarella, la nostra bolonyesa i parmesà.", "tag": "" },
+          { "name": "Carbonara", "desc": "Tomàquet, mozzarella, la nostra carbonara, guanciale i cibulet.", "tag": "" }
+        ] }
+      ] },
+      { "label": "CARNS", "title": "CARNS.", "intro": "Per als qui venen amb gana.", "note": "", "groups": [{ "sub": "", "items": [
+        { "name": "Tagliata", "desc": "Filet de porc a baixa temperatura, amb rúcula, tomàquets cherry, figues i parmesà.", "tag": "PLAT ESTRELLA" },
+        { "name": "Milanesa napolitana", "desc": "Escalopa de vedella amb el nostre arrebossat original, salsa de tomàquet casolana, pernil dolç i mozzarella.", "tag": "" },
+        { "name": "Milanesa a cavall", "desc": "El mateix, amb un parell d'ous.", "tag": "" },
+        { "name": "Filet al foie", "desc": "Filet de vedella de Girona amb ceba caramel·litzada i foie.", "tag": "" }
+      ] }] },
+      { "label": "PEIXOS", "title": "PEIXOS.", "intro": "Del mar, que el tenim a dos carrers.", "note": "", "groups": [{ "sub": "", "items": [
+        { "name": "Vieires amb guacamole i pico de gallo", "desc": "Menys és més.", "tag": "" },
+        { "name": "Salmó a la Gongo", "desc": "Amb guanciale i verdures saltejades, laccat amb salsa hoisin.", "tag": "" }
+      ] }] },
+      { "label": "POSTRES", "title": "POSTRES.", "intro": "Per allargar la sobretaula.", "note": "", "groups": [{ "sub": "", "items": [
+        { "name": "Tiramisú", "desc": "", "tag": "" },
+        { "name": "Pastís de formatge idiazàbal", "desc": "", "tag": "" },
+        { "name": "Lemon pie", "desc": "", "tag": "" },
+        { "name": "Coulant de pralinè", "desc": "", "tag": "SENSE GLUTEN" }
+      ] }] }
+    ],
+    "cocteles": { "label": "CÒCTELS", "eyebrowWord": "BON BEURE", "title": "CÒCTELS.", "intro": "Per a la terrassa, per a la sobretaula o per començar la nit sense presses." },
+    "cocktailNames": ["Aperol Spritz", "Mojito de maduixa", "Mojito de pinya", "Caipirinha", "Caipiroska de mango", "Margarita", "Shakerato"],
+    "alergenos": {
+      "glutenLabel": "SENSE GLUTEN I SENSE LACTOSA", "glutenText": "Totes les pizzes, amb massa sense gluten o amb formatge sense lactosa (de coco). El coulant de pralinè és sense gluten. Si tens alguna al·lèrgia, digues-nos-ho en arribar.",
+      "fueraLabel": "FORA DE CARTA", "fueraText": "Cada setmana hi ha plats que no hi són. Pregunta al xef: te'ls explica a la taula.",
+      "llevarLabel": "PER EMPORTAR", "llevarText": "Recollida al local o a domicili.", "pedirGlovo": "Demana a Glovo"
+    },
+    "reservarCta": { "heading": "JA SAPS QUÈ DEMANARÀS?", "descPrefix": "Reserva en menys d'un minut o truca'ns al", "ctaReservar": "RESERVA TAULA", "ctaLlamar": "TRUCA'NS" }
+  },
+  "contacto": {
+    "hero": { "eyebrow": "CONTACTE", "title": "PARLEM.", "desc": "Per reservar taula, el més ràpid és la reserva online o una trucada. Per a tota la resta (grups, càtering, premsa o treballar amb nosaltres), escriu-nos aquí i et responem." },
+    "formulario": {
+      "heading": "ESCRIU-NOS.", "telefonoLabel": "TELÈFON", "emailLabel": "CORREU", "direccionLabel": "ADREÇA", "horarioLink": "Horari i com arribar-hi",
+      "topicsLegend": "DE QUÈ VOLS PARLAR?", "topics": ["GRUPS I CELEBRACIONS", "CÀTERING", "COMANDES PER EMPORTAR", "FEINA", "ALTRES"],
+      "groupNote": "Per a grups, digues-nos data, hora aproximada i quants sereu.",
+      "jobNotePrefix": "Vols treballar amb nosaltres? Fes servir el formulari de", "jobNoteLink": "Treballa amb nosaltres", "jobNoteSuffix": ", més avall: allà pots adjuntar el teu CV.",
+      "nombreLabel": "Nom", "nombreError": "Digue'ns el teu nom.", "telefonoFieldLabel": "Telèfon", "opcional": "(opcional)",
+      "emailFieldLabel": "Correu", "emailError": "Revisa el correu, sembla que falta alguna cosa.", "mensajeLabel": "Missatge", "mensajeError": "Explica'ns alguna cosa, encara que sigui curta.",
+      "privacidadPrefix": "He llegit i accepto la", "privacidadLink": "política de privacitat", "privacidadError": "Necessitem que acceptis la política de privacitat.",
+      "submit": "ENVIA EL MISSATGE",
+      "thanksPrefix": "GRÀCIES,", "thanksSuffix": "!", "thanksBody": "Hem rebut el teu missatge. Et responem com més aviat millor. Si és urgent, truca'ns al", "ctaOtroMensaje": "ENVIA UN ALTRE MISSATGE"
+    },
+    "trabaja": {
+      "eyebrow": "TREBALLA AMB NOSALTRES", "heading": "T'ASSEUS AMB NOSALTRES, PERÒ DE L'ALTRE COSTAT?",
+      "desc": "Som una casa petita i familiar. Busquem gent a qui li agradi tractar cada client pel seu nom. [LLOCS OBERTS ARA / TEXT SOBRE L'EQUIP]",
+      "photoPlaceholder": "[FOTO EQUIP TREBALLANT]",
+      "rolesLegend": "ON ET VEUS?", "roles": ["SALA", "CUINA", "BARRA I CÒCTELS", "AJUDANT"], "rolesError": "Tria almenys un lloc.",
+      "nombreLabel": "Nom i cognoms", "telefonoLabel": "Telèfon", "telefonoError": "Necessitem un telèfon per trucar-te.",
+      "disponibilidadLabel": "Disponibilitat", "dispCompleta": "Jornada completa", "dispParcial": "Mitja jornada", "dispFindes": "Caps de setmana", "dispTemporada": "Temporada d'estiu",
+      "cvLabel": "CV", "cvHint": "(PDF, màx. 5 MB, opcional)", "adjuntar": "ADJUNTAR", "noFile": "Cap fitxer seleccionat",
+      "mensajeLabel": "Explica'ns una mica sobre tu", "opcional": "(opcional)",
+      "privacidadPrefix": "Accepto que Casanita guardi les meves dades per a processos de selecció, segons la", "privacidadError": "Necessitem que ho acceptis per guardar la teva candidatura.",
+      "submit": "ENVIA LA CANDIDATURA",
+      "thanksHeading": "REBUT!", "thanksBody": "Gràcies per voler formar part de la casa. Guardem la teva candidatura i et truquem si encaixa amb el que busquem.", "ctaOtra": "ENVIA UNA ALTRA CANDIDATURA"
+    }
+  },
+  "reserva": {
+    "title": "RESERVA LA TEVA TAULA.", "descPrefix": "En menys d'un minut. Si prefereixes parlar amb nosaltres, truca'ns al",
+    "widgetLabel": "CASANITA · RESERVA ONLINE",
+    "grupoBadge": "SOU MOLTS?", "grupoHeading": "MILLOR TRUCA'NS I HO PREPAREM JUNTS.", "grupoDesc": "Aniversaris, dinars familiars i retrobaments. Truca'ns i ho preparem a la teva mida.",
+    "horarioLabel": "HORARI", "ctaComoLlegar": "Com arribar-hi",
+    "antesLabel": "ABANS DE RESERVAR",
+    "faq1Q": "Es pot reservar a la terrassa?", "faq1A": "Sí, indica-ho en fer la reserva.",
+    "faq2Q": "Opcions sense gluten?", "faq2A": "Totes les pizzes, amb massa sense gluten o formatge sense lactosa.",
+    "ctaVerCarta": "Veure la carta",
+    "mobilePrefijoLlamar": "PREFEREIXES TRUCAR?"
+  }
+}

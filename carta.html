@@ -3,20 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<script src="/support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
 <title>La carta · Casanita Vilassar</title>
 <meta name="description" content="Entrantes, pastas, pizzas (también sin gluten), carnes, pescados, postres y cócteles. La carta de Casanita en Vilassar de Mar.">
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/favicon.png">
 <link rel="canonical" href="https://casanitavilassar.com/carta">
-<link rel="alternate" hreflang="es" href="https://casanitavilassar.com/es/carta">
+<link rel="alternate" hreflang="es" href="https://casanitavilassar.com/carta">
 <link rel="alternate" hreflang="ca" href="https://casanitavilassar.com/ca/carta">
 <link rel="alternate" hreflang="en" href="https://casanitavilassar.com/en/carta">
-<link rel="alternate" hreflang="x-default" href="https://casanitavilassar.com/es/carta">
+<link rel="alternate" hreflang="fr" href="https://casanitavilassar.com/fr/carta">
+<link rel="alternate" hreflang="x-default" href="https://casanitavilassar.com/carta">
 <meta property="og:type" content="restaurant">
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="Casanita Vilassar">
@@ -62,29 +63,29 @@ img{display:block;max-width:100%}
 
 <header data-screen-label="Header" style="position:fixed; top:0; left:0; right:0; z-index:50; transition:background-color .3s ease; background-color:{{ hdrBg }};">
   <div style="max-width:1440px; margin:0 auto; height:76px; padding:0 clamp(16px,3vw,40px); display:flex; align-items:center; justify-content:space-between; gap:24px;">
-    <a href="/" aria-label="Casanita, inicio" style="display:flex; flex-direction:column; align-items:center; gap:3px; flex-shrink:0;">
-      <sc-if value="{{ logoBeige }}" hint-placeholder-val="{{ true }}"><img src="assets/logo-beige.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;"></sc-if>
-      <sc-if value="{{ logoGranate }}"><img src="assets/logo-granate.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;"></sc-if>
+    <a href="{{ localePrefix }}/" aria-label="Casanita, inicio" style="display:flex; flex-direction:column; align-items:center; gap:3px; flex-shrink:0;">
+      <sc-if value="{{ logoBeige }}" hint-placeholder-val="{{ true }}"><img src="/assets/logo-beige.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;"></sc-if>
+      <sc-if value="{{ logoGranate }}"><img src="/assets/logo-granate.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;"></sc-if>
       <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:9px; letter-spacing:.42em; padding-left:.42em; color:{{ hdrFg }};">VILASSAR</span>
     </a>
     <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
       <nav aria-label="Principal" style="display:flex; align-items:center; gap:clamp(18px,2.4vw,36px);">
-        <a href="/carta" aria-current="page" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0; text-decoration:underline; text-underline-offset:6px; text-decoration-thickness:2px;">CARTA</a>
-        <a href="/#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">GRUPOS</a>
-        <a href="/#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">VISÍTANOS</a>
+        <a href="{{ localePrefix }}/carta" aria-current="page" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0; text-decoration:underline; text-underline-offset:6px; text-decoration-thickness:2px;">{{ t.common.nav.carta }}</a>
+        <a href="{{ localePrefix }}/#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">{{ t.common.nav.grupos }}</a>
+        <a href="{{ localePrefix }}/#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">{{ t.common.nav.visitanos }}</a>
       </nav>
     </sc-if>
     <div style="display:flex; align-items:center; gap:clamp(10px,1.6vw,22px);">
       <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
-        <div role="group" aria-label="Idioma" style="display:flex; align-items:center; gap:2px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.08em; color:{{ hdrFg }};">
-          <button type="button" aria-pressed="true" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer; text-decoration:underline; text-underline-offset:4px;">ES</button><span aria-hidden="true">·</span>
-          <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">CA</button><span aria-hidden="true">·</span>
-          <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">EN</button>
+        <div role="group" aria-label="{{ t.common.idiomaLabel }}" style="display:flex; align-items:center; gap:2px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.08em; color:{{ hdrFg }};">
+          <sc-for list="{{ langLinks }}" as="lg" hint-placeholder-count="4">
+            <a href="{{ lg.href }}" aria-current="{{ lg.current }}" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer; text-decoration:{{ lg.deco }}; text-underline-offset:4px;">{{ lg.code }}</a>
+          </sc-for>
         </div>
       </sc-if>
-      <a href="/reserva" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); background:{{ hdrBtnBg }}; color:{{ hdrBtnFg }}; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="gap:16px;">RESERVAR <span class="cn-arrow" aria-hidden="true"></span></a>
+      <a href="{{ localePrefix }}/reserva" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); background:{{ hdrBtnBg }}; color:{{ hdrBtnFg }}; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="gap:16px;">{{ t.common.cta.reservar }} <span class="cn-arrow" aria-hidden="true"></span></a>
       <sc-if value="{{ isMobile }}">
-        <a href="/" aria-label="Volver al inicio" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; border:2px solid {{ hdrFg }}; color:{{ hdrFg }}; border-radius:2px; font-size:20px;"><span class="cn-arrow cn-arrow--back" aria-hidden="true"></span></a>
+        <a href="{{ localePrefix }}/" aria-label="{{ t.common.cta.volverInicio }}" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; border:2px solid {{ hdrFg }}; color:{{ hdrFg }}; border-radius:2px; font-size:20px;"><span class="cn-arrow cn-arrow--back" aria-hidden="true"></span></a>
       </sc-if>
     </div>
   </div>
@@ -95,29 +96,29 @@ img{display:block;max-width:100%}
   <div aria-hidden="true" style="position:absolute; right:-14vw; top:-10vw; width:52vw; height:52vw; border:clamp(40px,6vw,96px) solid #6C0E21; border-radius:50%;"></div>
   <div style="position:relative; max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr)); gap:clamp(40px,5vw,72px); align-items:center;">
     <div style="display:flex; flex-direction:column; gap:22px;">
-      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.2em;">COCINA MEDITERRÁNEA CON ALMA ITALIANA</span>
-      <h1 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(72px,11vw,160px); line-height:.86; letter-spacing:-.015em;">LA CARTA.</h1>
-      <p style="margin:0; max-width:500px; font-size:clamp(16px,1.35vw,19px); line-height:1.55; text-wrap:pretty;">Mucho más que pizza. Platos para compartir en el centro de la mesa, pasta como debe ser y algo rico para cada uno. Pregunta siempre por el fuera de carta: el chef te lo cuenta en la mesa.</p>
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.2em;">{{ t.carta.hero.eyebrow }}</span>
+      <h1 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(72px,11vw,160px); line-height:.86; letter-spacing:-.015em;">{{ t.carta.hero.title }}</h1>
+      <p style="margin:0; max-width:500px; font-size:clamp(16px,1.35vw,19px); line-height:1.55; text-wrap:pretty;">{{ t.carta.hero.desc }}</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px 24px; align-items:center;">
-        <a href="/reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">RESERVAR MESA <span class="cn-arrow" aria-hidden="true"></span></a>
-        <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:44px; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #EFE7C7;" style-hover="color:#FAF6EA;">LLAMAR · {{ phoneDisplay }}</a>
-        <a href="{{ glovoUrl }}" data-track="click_glovo" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; min-height:44px; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #EFE7C7;" style-hover="color:#FAF6EA;">PEDIR PARA LLEVAR <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a>
+        <a href="{{ localePrefix }}/reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">{{ t.common.cta.reservarMesa }} <span class="cn-arrow" aria-hidden="true"></span></a>
+        <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:44px; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #EFE7C7;" style-hover="color:#FAF6EA;">{{ t.common.cta.llamarPrefix }} · {{ phoneDisplay }}</a>
+        <a href="{{ glovoUrl }}" data-track="click_glovo" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; min-height:44px; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #EFE7C7;" style-hover="color:#FAF6EA;">{{ t.carta.hero.ctaLlevar }} <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a>
       </div>
     </div>
     <div style="position:relative; justify-self:center; width:min(100%,440px); aspect-ratio:1/1;">
-      <div style="position:absolute; inset:0; border-radius:50%; background:#FAF6EA; padding:4.5%;"><img src="assets/carbonara-plato.webp" alt="Tagliatelle carbonara de Casanita" style="width:100%; height:100%; border-radius:50%;"></div>
+      <div style="position:absolute; inset:0; border-radius:50%; background:#FAF6EA; padding:4.5%;"><img src="/assets/carbonara-plato.webp" alt="Tagliatelle carbonara de Casanita" style="width:100%; height:100%; border-radius:50%;"></div>
       <div style="position:absolute; left:-4%; bottom:4%; width:clamp(122px,11vw,154px); aspect-ratio:1/1; transform:rotate(-10deg); filter:drop-shadow(5px 5px 0 #4E0B18); transition:transform .35s cubic-bezier(.3,1.6,.5,1);" style-hover="transform:rotate(2deg) scale(1.06);">
         <div style="position:absolute; inset:0; background:#EFE7C7; border-radius:24%;"></div>
         <div style="position:absolute; inset:0; background:#EFE7C7; border-radius:24%; transform:rotate(30deg);"></div>
         <div style="position:absolute; inset:0; background:#EFE7C7; border-radius:24%; transform:rotate(60deg);"></div>
-        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:20px; line-height:.95;">PREGUNTA<br>POR EL FUERA<br>DE CARTA</div>
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:20px; line-height:.95;">{{ t.carta.hero.stickerLine1 }}<br>{{ t.carta.hero.stickerLine2 }}<br>{{ t.carta.hero.stickerLine3 }}</div>
       </div>
     </div>
   </div>
 </section>
 
 <div data-menu-nav="" style="position:sticky; top:{{ chipsTop }}; z-index:40; background:#EFE7C7; border-bottom:2px solid #7C1126;">
-  <nav ref="{{ chipsRef }}" aria-label="Secciones de la carta" class="cn-scroller" style="max-width:1240px; margin:0 auto; padding:12px clamp(16px,4vw,48px); display:flex; gap:8px; overflow-x:auto; scrollbar-width:none;">
+  <nav ref="{{ chipsRef }}" aria-label="{{ t.carta.chipsAriaLabel }}" class="cn-scroller" style="max-width:1240px; margin:0 auto; padding:12px clamp(16px,4vw,48px); display:flex; gap:8px; overflow-x:auto; scrollbar-width:none;">
     <sc-for list="{{ cats }}" as="c" hint-placeholder-count="8">
       <a href="#{{ c.id }}" data-chip="{{ c.id }}" aria-current="{{ c.cur }}" style="flex-shrink:0; display:flex; align-items:center; min-height:44px; padding:0 18px; border:2px solid #7C1126; border-radius:999px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.08em; white-space:nowrap; transition:background-color .2s ease, color .2s ease; background:{{ c.bg }}; color:{{ c.fg }};">{{ c.label }}</a>
     </sc-for>
@@ -175,10 +176,10 @@ img{display:block;max-width:100%}
 <section id="cocteles" data-cat="cocteles" data-screen-label="Carta · cócteles" style="scroll-margin-top:140px; background:#7C1126; color:#EFE7C7; padding:clamp(80px,9vw,130px) 0;">
   <div style="max-width:1240px; margin:0 auto; padding:0 clamp(20px,4vw,48px); display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:20px;">
     <div style="display:flex; flex-direction:column; gap:16px;">
-      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.2em;">07 · BUEN BEBER</span>
-      <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(56px,7vw,104px); line-height:.88; letter-spacing:-.01em;">CÓCTELES.</h2>
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.2em;">07 · {{ t.carta.cocteles.eyebrowWord }}</span>
+      <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(56px,7vw,104px); line-height:.88; letter-spacing:-.01em;">{{ t.carta.cocteles.title }}</h2>
     </div>
-    <p style="margin:0; max-width:380px; font-size:16px; line-height:1.55;">Para la terraza, para la sobremesa o para empezar la noche sin prisa.</p>
+    <p style="margin:0; max-width:380px; font-size:16px; line-height:1.55;">{{ t.carta.cocteles.intro }}</p>
   </div>
   <div class="cn-scroller" style="max-width:1240px; margin:clamp(36px,4vw,56px) auto 0; padding:0 clamp(20px,4vw,48px) 6px; display:grid; grid-auto-flow:{{ cocFlow }}; grid-auto-columns:{{ cocCols }}; grid-template-columns:{{ cocTpl }}; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none;">
     <sc-for list="{{ cocktails }}" as="k" hint-placeholder-count="7">
@@ -195,27 +196,27 @@ img{display:block;max-width:100%}
 <section data-screen-label="Carta · alérgenos" style="background:#FAF6EA; padding:clamp(56px,6vw,88px) clamp(20px,4vw,48px);">
   <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:28px;">
     <div style="display:flex; flex-direction:column; gap:10px;">
-      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.16em; color:#7C1126;">SIN GLUTEN Y SIN LACTOSA</span>
-      <p style="margin:0; font-size:16px; line-height:1.55;">Todas las pizzas, con masa sin gluten o con queso sin lactosa (de coco). El coulant de praliné es sin gluten. Si tienes alguna alergia, cuéntanoslo al llegar.</p>
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.16em; color:#7C1126;">{{ t.carta.alergenos.glutenLabel }}</span>
+      <p style="margin:0; font-size:16px; line-height:1.55;">{{ t.carta.alergenos.glutenText }}</p>
     </div>
     <div style="display:flex; flex-direction:column; gap:10px;">
-      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.16em; color:#7C1126;">FUERA DE CARTA</span>
-      <p style="margin:0; font-size:16px; line-height:1.55;">Cada semana hay platos que no están aquí. Pregunta al chef: te los cuenta en la mesa.</p>
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.16em; color:#7C1126;">{{ t.carta.alergenos.fueraLabel }}</span>
+      <p style="margin:0; font-size:16px; line-height:1.55;">{{ t.carta.alergenos.fueraText }}</p>
     </div>
     <div style="display:flex; flex-direction:column; gap:10px;">
-      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.16em; color:#7C1126;">PARA LLEVAR</span>
-      <p style="margin:0; font-size:16px; line-height:1.55;">Recogida en el local o a domicilio. <a href="{{ glovoUrl }}" data-track="click_glovo" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:7px; font-weight:700; text-decoration:underline;">Pedir en Glovo <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a></p>
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.16em; color:#7C1126;">{{ t.carta.alergenos.llevarLabel }}</span>
+      <p style="margin:0; font-size:16px; line-height:1.55;">{{ t.carta.alergenos.llevarText }} <a href="{{ glovoUrl }}" data-track="click_glovo" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:7px; font-weight:700; text-decoration:underline;">{{ t.carta.alergenos.pedirGlovo }} <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a></p>
     </div>
   </div>
 </section>
 
 <section data-screen-label="Carta · reservar" style="background:#EFE7C7; padding:clamp(80px,9vw,130px) clamp(20px,4vw,48px); text-align:center;">
   <div style="max-width:900px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:24px;">
-    <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(52px,7vw,104px); line-height:.9; letter-spacing:-.01em; color:#7C1126;">¿YA SABES QUÉ VAS A PEDIR?</h2>
-    <p style="margin:0; font-size:clamp(16px,1.3vw,18px); line-height:1.55;">Reserva en menos de un minuto o llámanos al {{ phoneDisplay }}.</p>
+    <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(52px,7vw,104px); line-height:.9; letter-spacing:-.01em; color:#7C1126;">{{ t.carta.reservarCta.heading }}</h2>
+    <p style="margin:0; font-size:clamp(16px,1.3vw,18px); line-height:1.55;">{{ t.carta.reservarCta.descPrefix }} {{ phoneDisplay }}.</p>
     <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:14px;">
-      <a href="/reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">RESERVAR MESA <span class="cn-arrow" aria-hidden="true"></span></a>
-      <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:52px; padding:0 24px; border:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease;" style-hover="background:#7C1126; color:#EFE7C7;">LLAMAR</a>
+      <a href="{{ localePrefix }}/reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">{{ t.carta.reservarCta.ctaReservar }} <span class="cn-arrow" aria-hidden="true"></span></a>
+      <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:52px; padding:0 24px; border:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease;" style-hover="background:#7C1126; color:#EFE7C7;">{{ t.carta.reservarCta.ctaLlamar }}</a>
     </div>
   </div>
 </section>
@@ -223,9 +224,9 @@ img{display:block;max-width:100%}
 
 <footer style="background:#7C1126; color:#EFE7C7; padding:40px clamp(20px,4vw,48px);">
   <div style="max-width:1240px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px 32px; font-size:14px;">
-    <img src="assets/logo-beige.png" alt="Casanita" loading="lazy" style="width:130px; height:auto;">
+    <img src="/assets/logo-beige.png" alt="Casanita" loading="lazy" style="width:130px; height:auto;">
     <span>{{ address }} · <a href="tel:{{ phoneTel }}" style="color:#EFE7C7;">{{ phoneDisplay }}</a></span>
-    <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:22px;">COMIDAS, CENAS Y BUEN BEBER.</span>
+    <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:22px;">{{ t.common.footer.tagline }}</span>
   </div>
 </footer>
 
@@ -260,113 +261,174 @@ function safeUrl(url, fallback, hostSuffix) {
   } catch { return fallback; }
 }
 const SECTIONS = [
-  { id: 'entrantes', label: 'ENTRANTES', title: 'ENTRANTES.', intro: 'Para el centro de la mesa y que cada uno pique lo suyo.', groups: [{ items: [
-    ['Focaccia', '5,90 €', 'Con cebolla, olivas, tomatitos, ajo y romero.'],
-    ['Croquetas caseras', '12,50 €', 'Langostinos, chipirones con alioli, espinacas con idiazábal o rabo de toro.', 'DE LA CASA'],
-    ['Porchetta', '13,50 €', 'Panceta de cerdo cocinada a baja temperatura sobre una base de patata crujiente.', 'DE LA CASA'],
-    ['Ensalada de burrata', '11,50 €', 'Burrata con rúcula, cherrys, rábanos y aceite de albahaca.'],
-    ['Ensalada tricolor', '9,50 €', 'Tomates con olivas, ajo, lima, menta, cilantro y rúcula.'],
-    ['Plato de mortadela de Bolonia', '10,50 €', 'Con aceite de trufa, parmesano y cebollino.'],
-    ['Steak tartar', '16,50 €', 'Solomillo de Girona picado a cuchillo al momento, con nuestro aliño casero.'],
-    ['Provolone', '12,50 €', 'Fundido al horno, con orégano y tostadas. Ideal para compartir.'],
-    ['Carpaccio de gamba de Palamós', '22,50 €', 'Con nuestro aceite infusionado con jengibre y citronela, perlas de sésamo y wasabi y rabanitos.'],
-    ['Jamón 100 % ibérico D.O. Guijuelo', '25 €', '100 g cortados a mano, con pan de coca del Maresme con tomate.'],
+  { id: 'entrantes', groups: [{ items: [
+    { price: '5,90 €', img: '/assets/focaccia.webp' },
+    { price: '12,50 €', img: '/assets/croquetas.webp' },
+    { price: '13,50 €', img: '/assets/porchetta.webp' },
+    { price: '11,50 €', img: '/assets/burrata.webp' },
+    { price: '9,50 €', img: '/assets/tricolor.webp' },
+    { price: '10,50 €', img: '/assets/mortadela.webp' },
+    { price: '16,50 €', img: '/assets/tartar.webp' },
+    { price: '12,50 €', img: '/assets/provolone.webp' },
+    { price: '22,50 €', img: '/assets/carpaccio.webp' },
+    { price: '25 €', img: '/assets/jamon-iberico.webp' },
   ]}]},
-  { id: 'pastas', label: 'PASTAS', title: 'PASTAS.', intro: 'Como en casa, sin atajos.', groups: [{ items: [
-    ['Tagliatelle carbonara', '15,90 €', 'La auténtica, a la romana: huevo, pecorino y guanciale. Sin nata, como debe ser.', 'LA AUTÉNTICA'],
-    ['Ravioli al foie', '17,50 €', 'Con crema de idiazábal, aceite de trufa y manzana verde.', 'DE LA CASA'],
-    ['Tortiglioni boloñesa', '13,90 €', 'La receta de la abuela, 3 h 30 min a fuego lento.'],
-    ['Pasta primavera', '15,50 €', 'Tortiglioni con mantequilla de albahaca, espárragos verdes y tomatitos cherry.'],
-    ['Tortiglioni al pesto rojo o verde', '13,90 €', 'Con salsa al pesto y parmesano.'],
-    ['Lasaña de carne o de verduras', '15,50 €', 'Con pesto rojo y mozzarella.'],
+  { id: 'pastas', groups: [{ items: [
+    { price: '15,90 €', img: '/assets/carbonara.webp', pill: '/assets/carbonara-plato.webp', pos: '58% 50%' },
+    { price: '17,50 €', img: '/assets/raviolis.webp' },
+    { price: '13,90 €', img: '/assets/bolonyesa.webp' },
+    { price: '15,50 €', img: '/assets/primavera.webp' },
+    { price: '13,90 €', img: '/assets/pesto.webp' },
+    { price: '15,50 €', img: '/assets/lasanya.webp' },
   ]}]},
-  { id: 'pizzas', label: 'PIZZAS', title: 'PIZZAS.', intro: 'Para el que quiere pizza, que siempre hay alguno.', note: 'Todas nuestras pizzas, también con masa sin gluten o con queso sin lactosa (de coco).', groups: [
-    { sub: 'CLÁSICAS', items: [
-      ['Margherita', '10,50 €', 'Tomate, mozzarella y orégano.'],
-      ['Da Giorgio', '11,90 €', 'Tomate, mozzarella, albahaca y salsa Casanita (aceite infusionado de ajo, lima y albahaca).'],
-      ['Jamón dulce', '11,90 €', 'Tomate, mozzarella, jamón dulce y orégano.'],
-      ['Atún y cebolla', '11,90 €', 'Tomate, mozzarella, atún, cebolla y orégano.'],
-      ['5 quesos', '12,50 €', 'Tomate, mozzarella, parmesano, pecorino, gorgonzola, stracchino y emmental.'],
-      ['Pesto verde o rojo', '11,50 €', 'Tomate, mozzarella, pesto, tomates cherry y orégano.'],
-      ['Jamón serrano', '12,50 €', 'Tomate, mozzarella, jamón serrano y orégano.'],
-      ['Pepperoni', '12,90 €', 'Tomate, mozzarella, pepperoni picante, tomates cherry y orégano.'],
-      ['Salsiccia, rucola e cipolla', '11,90 €', 'Tomate, mozzarella, salchicha, cebolla y rúcula.'],
+  { id: 'pizzas', groups: [
+    { items: [
+      { price: '10,50 €', img: '/assets/margherita.webp' },
+      { price: '11,90 €' },
+      { price: '11,90 €', img: '/assets/jamon-dulce.webp' },
+      { price: '11,90 €', img: '/assets/atun-cebolla.webp' },
+      { price: '12,50 €', img: '/assets/5-quesos.webp' },
+      { price: '11,50 €' },
+      { price: '12,50 €' },
+      { price: '12,90 €', img: '/assets/pepperoni.webp' },
+      { price: '11,90 €' },
     ]},
-    { sub: 'PREMIUM', items: [
-      ['Patatine, crema e tartufata', '12,50 €', 'Sin tomate: crema de trufa, mozzarella, patata y romero.'],
-      ['Burrata y mortadela', '14,50 €', 'Tomate, mozzarella, burrata, mortadela, parmesano, cebollino y aceite de trufa.'],
-      ['Porchetta', '14,50 €', 'Tomate, mozzarella, porchetta y tomatitos cherry.'],
-      ['Verduras de temporada', '14,50 €', 'Tomate, mozzarella, pimiento rojo y verde, calabacín, berenjena, cebolla, champiñones y tomatitos cherry.'],
-      ['Boloñesa', '13,90 €', 'Tomate, mozzarella, nuestra boloñesa y parmesano.'],
-      ['Carbonara', '15,90 €', 'Tomate, mozzarella, nuestra carbonara, guanciale y cebollino.'],
+    { items: [
+      { price: '12,50 €', img: '/assets/patatine.webp' },
+      { price: '14,50 €', ph: '[FOTO PIZZA BURRATA Y MORTADELA]' },
+      { price: '14,50 €' },
+      { price: '14,50 €', img: '/assets/verduras.webp' },
+      { price: '13,90 €' },
+      { price: '15,90 €' },
     ]},
   ]},
-  { id: 'carnes', label: 'CARNES', title: 'CARNES.', intro: 'Para los que vienen con hambre.', groups: [{ items: [
-    ['Tagliata', '38,50 € · 500 g', 'Solomillo de cerdo a baja temperatura, con rúcula, cherrys, higos y parmesano.', 'PLATO ESTRELLA'],
-    ['Milanesa napolitana', '16,50 €', 'Escalope de ternera con nuestro rebozado original, salsa de tomate casera, jamón dulce y mozzarella.'],
-    ['Milanesa a caballo', '19,50 €', 'Lo mismo, con un par de huevos.'],
-    ['Solomillo al foie', '29,50 € · 250 g', 'Solomillo de ternera de Girona con cebolla caramelizada y foie.'],
+  { id: 'carnes', groups: [{ items: [
+    { price: '38,50 € · 500 g', img: '/assets/tagliata.webp' },
+    { price: '16,50 €', img: '/assets/milanesa.webp' },
+    { price: '19,50 €', img: '/assets/milanesa-caballo.webp' },
+    { price: '29,50 € · 250 g', img: '/assets/solomillo.webp' },
   ]}]},
-  { id: 'pescados', label: 'PESCADOS', title: 'PESCADOS.', intro: 'Del mar, que lo tenemos a dos calles.', groups: [{ items: [
-    ['Vieiras con guacamole y pico de gallo', '19,50 € · 3 ud.', 'Menos es más.'],
-    ['Salmón a la Gongo', '19,50 €', 'Con guanciale y verduras salteadas, lacado con salsa hoisin.'],
+  { id: 'pescados', groups: [{ items: [
+    { price: '19,50 € · 3 ud.', img: '/assets/vieiras.webp' },
+    { price: '19,50 €', img: '/assets/salmon.webp' },
   ]}]},
-  { id: 'postres', label: 'POSTRES', title: 'POSTRES.', intro: 'Para alargar la sobremesa.', groups: [{ items: [
-    ['Tiramisú', '6,50 €', ''],
-    ['Tarta de queso idiazábal', '6,50 €', ''],
-    ['Lemon pie', '6,50 €', ''],
-    ['Coulant de praliné', '6,90 €', '', 'SIN GLUTEN'],
+  { id: 'postres', groups: [{ items: [
+    { price: '6,50 €', img: '/assets/tiramisu.webp' },
+    { price: '6,50 €', img: '/assets/tarta-queso.webp' },
+    { price: '6,50 €', img: '/assets/lemon-pie.webp' },
+    { price: '6,90 €', img: '/assets/coulant.webp' },
   ]}]},
 ];
-const COCKTAILS = [
-  ['Aperol Spritz', 'aperol-spritz'], ['Mojito de fresa', 'mojito-fresa'], ['Mojito de piña', 'mojito-pina'], ['Caipirinha', 'caipirinha'],
-  ['Caipiroska de mango', 'caipiroska-mango'], ['Margarita', 'margarita'], ['Shakerato', 'shakerato'],
-];
-const FEAT = { // platos con foto destacada
-  'entrantes:Focaccia': { img: 'assets/focaccia.webp' },
-  'entrantes:Croquetas caseras': { img: 'assets/croquetas.webp' },
-  'entrantes:Porchetta': { img: 'assets/porchetta.webp' },
-  'entrantes:Ensalada de burrata': { img: 'assets/burrata.webp' },
-  'entrantes:Plato de mortadela de Bolonia': { img: 'assets/mortadela.webp' },
-  'entrantes:Steak tartar': { img: 'assets/tartar.webp' },
-  'entrantes:Provolone': { img: 'assets/provolone.webp' },
-  'entrantes:Carpaccio de gamba de Palamós': { img: 'assets/carpaccio.webp' },
-  'entrantes:Jamón 100 % ibérico D.O. Guijuelo': { img: 'assets/jamon-iberico.webp' },
-  'entrantes:Ensalada tricolor': { img: 'assets/tricolor.webp' },
-  'pastas:Tagliatelle carbonara': { img: 'assets/carbonara.webp', pill: 'assets/carbonara-plato.webp', pos: '58% 50%' },
-  'pastas:Ravioli al foie': { img: 'assets/raviolis.webp' },
-  'pastas:Tortiglioni boloñesa': { img: 'assets/bolonyesa.webp' },
-  'pastas:Pasta primavera': { img: 'assets/primavera.webp' },
-  'pastas:Tortiglioni al pesto rojo o verde': { img: 'assets/pesto.webp' },
-  'pastas:Lasaña de carne o de verduras': { img: 'assets/lasanya.webp' },
-  'pizzas:Margherita': { img: 'assets/margherita.webp' },
-  'pizzas:Jamón dulce': { img: 'assets/jamon-dulce.webp' },
-  'pizzas:Atún y cebolla': { img: 'assets/atun-cebolla.webp' },
-  'pizzas:5 quesos': { img: 'assets/5-quesos.webp' },
-  'pizzas:Pepperoni': { img: 'assets/pepperoni.webp' },
-  'pizzas:Patatine, crema e tartufata': { img: 'assets/patatine.webp' },
-  'pizzas:Burrata y mortadela': { ph: '[FOTO PIZZA BURRATA Y MORTADELA]' },
-  'pizzas:Verduras de temporada': { img: 'assets/verduras.webp' },
-  'carnes:Tagliata': { img: 'assets/tagliata.webp' },
-  'carnes:Milanesa napolitana': { img: 'assets/milanesa.webp' },
-  'carnes:Milanesa a caballo': { img: 'assets/milanesa-caballo.webp' },
-  'carnes:Solomillo al foie': { img: 'assets/solomillo.webp' },
-  'pescados:Vieiras con guacamole y pico de gallo': { img: 'assets/vieiras.webp' },
-  'pescados:Salmón a la Gongo': { img: 'assets/salmon.webp' },
-  'postres:Tiramisú': { img: 'assets/tiramisu.webp' },
-  'postres:Tarta de queso idiazábal': { img: 'assets/tarta-queso.webp' },
-  'postres:Lemon pie': { img: 'assets/lemon-pie.webp' },
-  'postres:Coulant de praliné': { img: 'assets/coulant.webp' },
+const COCKTAIL_IDS = ['aperol-spritz', 'mojito-fresa', 'mojito-pina', 'caipirinha', 'caipiroska-mango', 'margarita', 'shakerato'];
+function deepMerge(base, over) {
+  if (over === undefined || over === null) return base;
+  if (Array.isArray(base) || Array.isArray(over)) return over;
+  if (base && typeof base === 'object' && over && typeof over === 'object') {
+    const out = { ...base };
+    for (const k in over) out[k] = deepMerge(base[k], over[k]);
+    return out;
+  }
+  return over;
+}
+const LOCALES = ['ca', 'en', 'fr'];
+function detectLocale() {
+  const m = (typeof location !== 'undefined' ? location.pathname : '').match(/^\/(ca|en|fr)(\/|$)/);
+  return m ? m[1] : 'es';
+}
+const T_ES = {
+  common: {
+    idiomaLabel: 'Idioma',
+    nav: { carta: 'Carta', grupos: 'Grupos', visitanos: 'Visítanos', contacto: 'Contacto' },
+    cta: { reservar: 'Reservar', reservarMesa: 'Reservar mesa', llamar: 'Llamar', llamarPrefix: 'Llamar', volverInicio: 'Volver al inicio' },
+    footer: { tagline: 'Comidas, cenas y buen beber.' },
+  },
+  carta: {
+    hero: {
+      eyebrow: 'COCINA MEDITERRÁNEA CON ALMA ITALIANA', title: 'LA CARTA.',
+      desc: 'Mucho más que pizza. Platos para compartir en el centro de la mesa, pasta como debe ser y algo rico para cada uno. Pregunta siempre por el fuera de carta: el chef te lo cuenta en la mesa.',
+      stickerLine1: 'PREGUNTA', stickerLine2: 'POR EL FUERA', stickerLine3: 'DE CARTA', ctaLlevar: 'PEDIR PARA LLEVAR',
+    },
+    chipsAriaLabel: 'Secciones de la carta',
+    hintMobile: 'Los platos subrayados tienen foto: tócalos para verla.',
+    hintDesktop: 'Los platos subrayados tienen foto: pasa el cursor para verla o haz clic para dejarla abierta.',
+    pillLabelPrefix: 'Ver foto:',
+    sections: [
+      { label: 'ENTRANTES', title: 'ENTRANTES.', intro: 'Para el centro de la mesa y que cada uno pique lo suyo.', note: '', groups: [{ sub: '', items: [
+        { name: 'Focaccia', desc: 'Con cebolla, olivas, tomatitos, ajo y romero.', tag: '' },
+        { name: 'Croquetas caseras', desc: 'Langostinos, chipirones con alioli, espinacas con idiazábal o rabo de toro.', tag: 'DE LA CASA' },
+        { name: 'Porchetta', desc: 'Panceta de cerdo cocinada a baja temperatura sobre una base de patata crujiente.', tag: 'DE LA CASA' },
+        { name: 'Ensalada de burrata', desc: 'Burrata con rúcula, cherrys, rábanos y aceite de albahaca.', tag: '' },
+        { name: 'Ensalada tricolor', desc: 'Tomates con olivas, ajo, lima, menta, cilantro y rúcula.', tag: '' },
+        { name: 'Plato de mortadela de Bolonia', desc: 'Con aceite de trufa, parmesano y cebollino.', tag: '' },
+        { name: 'Steak tartar', desc: 'Solomillo de Girona picado a cuchillo al momento, con nuestro aliño casero.', tag: '' },
+        { name: 'Provolone', desc: 'Fundido al horno, con orégano y tostadas. Ideal para compartir.', tag: '' },
+        { name: 'Carpaccio de gamba de Palamós', desc: 'Con nuestro aceite infusionado con jengibre y citronela, perlas de sésamo y wasabi y rabanitos.', tag: '' },
+        { name: 'Jamón 100 % ibérico D.O. Guijuelo', desc: '100 g cortados a mano, con pan de coca del Maresme con tomate.', tag: '' },
+      ] }] },
+      { label: 'PASTAS', title: 'PASTAS.', intro: 'Como en casa, sin atajos.', note: '', groups: [{ sub: '', items: [
+        { name: 'Tagliatelle carbonara', desc: 'La auténtica, a la romana: huevo, pecorino y guanciale. Sin nata, como debe ser.', tag: 'LA AUTÉNTICA' },
+        { name: 'Ravioli al foie', desc: 'Con crema de idiazábal, aceite de trufa y manzana verde.', tag: 'DE LA CASA' },
+        { name: 'Tortiglioni boloñesa', desc: 'La receta de la abuela, 3 h 30 min a fuego lento.', tag: '' },
+        { name: 'Pasta primavera', desc: 'Tortiglioni con mantequilla de albahaca, espárragos verdes y tomatitos cherry.', tag: '' },
+        { name: 'Tortiglioni al pesto rojo o verde', desc: 'Con salsa al pesto y parmesano.', tag: '' },
+        { name: 'Lasaña de carne o de verduras', desc: 'Con pesto rojo y mozzarella.', tag: '' },
+      ] }] },
+      { label: 'PIZZAS', title: 'PIZZAS.', intro: 'Para el que quiere pizza, que siempre hay alguno.', note: 'Todas nuestras pizzas, también con masa sin gluten o con queso sin lactosa (de coco).', groups: [
+        { sub: 'CLÁSICAS', items: [
+          { name: 'Margherita', desc: 'Tomate, mozzarella y orégano.', tag: '' },
+          { name: 'Da Giorgio', desc: 'Tomate, mozzarella, albahaca y salsa Casanita (aceite infusionado de ajo, lima y albahaca).', tag: '' },
+          { name: 'Jamón dulce', desc: 'Tomate, mozzarella, jamón dulce y orégano.', tag: '' },
+          { name: 'Atún y cebolla', desc: 'Tomate, mozzarella, atún, cebolla y orégano.', tag: '' },
+          { name: '5 quesos', desc: 'Tomate, mozzarella, parmesano, pecorino, gorgonzola, stracchino y emmental.', tag: '' },
+          { name: 'Pesto verde o rojo', desc: 'Tomate, mozzarella, pesto, tomates cherry y orégano.', tag: '' },
+          { name: 'Jamón serrano', desc: 'Tomate, mozzarella, jamón serrano y orégano.', tag: '' },
+          { name: 'Pepperoni', desc: 'Tomate, mozzarella, pepperoni picante, tomates cherry y orégano.', tag: '' },
+          { name: 'Salsiccia, rucola e cipolla', desc: 'Tomate, mozzarella, salchicha, cebolla y rúcula.', tag: '' },
+        ] },
+        { sub: 'PREMIUM', items: [
+          { name: 'Patatine, crema e tartufata', desc: 'Sin tomate: crema de trufa, mozzarella, patata y romero.', tag: '' },
+          { name: 'Burrata y mortadela', desc: 'Tomate, mozzarella, burrata, mortadela, parmesano, cebollino y aceite de trufa.', tag: '' },
+          { name: 'Porchetta', desc: 'Tomate, mozzarella, porchetta y tomatitos cherry.', tag: '' },
+          { name: 'Verduras de temporada', desc: 'Tomate, mozzarella, pimiento rojo y verde, calabacín, berenjena, cebolla, champiñones y tomatitos cherry.', tag: '' },
+          { name: 'Boloñesa', desc: 'Tomate, mozzarella, nuestra boloñesa y parmesano.', tag: '' },
+          { name: 'Carbonara', desc: 'Tomate, mozzarella, nuestra carbonara, guanciale y cebollino.', tag: '' },
+        ] },
+      ] },
+      { label: 'CARNES', title: 'CARNES.', intro: 'Para los que vienen con hambre.', note: '', groups: [{ sub: '', items: [
+        { name: 'Tagliata', desc: 'Solomillo de cerdo a baja temperatura, con rúcula, cherrys, higos y parmesano.', tag: 'PLATO ESTRELLA' },
+        { name: 'Milanesa napolitana', desc: 'Escalope de ternera con nuestro rebozado original, salsa de tomate casera, jamón dulce y mozzarella.', tag: '' },
+        { name: 'Milanesa a caballo', desc: 'Lo mismo, con un par de huevos.', tag: '' },
+        { name: 'Solomillo al foie', desc: 'Solomillo de ternera de Girona con cebolla caramelizada y foie.', tag: '' },
+      ] }] },
+      { label: 'PESCADOS', title: 'PESCADOS.', intro: 'Del mar, que lo tenemos a dos calles.', note: '', groups: [{ sub: '', items: [
+        { name: 'Vieiras con guacamole y pico de gallo', desc: 'Menos es más.', tag: '' },
+        { name: 'Salmón a la Gongo', desc: 'Con guanciale y verduras salteadas, lacado con salsa hoisin.', tag: '' },
+      ] }] },
+      { label: 'POSTRES', title: 'POSTRES.', intro: 'Para alargar la sobremesa.', note: '', groups: [{ sub: '', items: [
+        { name: 'Tiramisú', desc: '', tag: '' },
+        { name: 'Tarta de queso idiazábal', desc: '', tag: '' },
+        { name: 'Lemon pie', desc: '', tag: '' },
+        { name: 'Coulant de praliné', desc: '', tag: 'SIN GLUTEN' },
+      ] }] },
+    ],
+    cocteles: { label: 'CÓCTELES', eyebrowWord: 'BUEN BEBER', title: 'CÓCTELES.', intro: 'Para la terraza, para la sobremesa o para empezar la noche sin prisa.' },
+    cocktailNames: ['Aperol Spritz', 'Mojito de fresa', 'Mojito de piña', 'Caipirinha', 'Caipiroska de mango', 'Margarita', 'Shakerato'],
+    alergenos: {
+      glutenLabel: 'SIN GLUTEN Y SIN LACTOSA', glutenText: 'Todas las pizzas, con masa sin gluten o con queso sin lactosa (de coco). El coulant de praliné es sin gluten. Si tienes alguna alergia, cuéntanoslo al llegar.',
+      fueraLabel: 'FUERA DE CARTA', fueraText: 'Cada semana hay platos que no están aquí. Pregunta al chef: te los cuenta en la mesa.',
+      llevarLabel: 'PARA LLEVAR', llevarText: 'Recogida en el local o a domicilio.', pedirGlovo: 'Pedir en Glovo',
+    },
+    reservarCta: { heading: '¿YA SABES QUÉ VAS A PEDIR?', descPrefix: 'Reserva en menos de un minuto o llámanos al', ctaReservar: 'RESERVAR MESA', ctaLlamar: 'LLAMAR' },
+  },
 };
-const CATS = [...SECTIONS.map(s => [s.id, s.label]), ['cocteles', 'CÓCTELES']];
 
 class Component extends DCLogic {
   trackSetup() {
     window.dataLayer = window.dataLayer || [];
-    document.documentElement.lang = 'es';
+    document.documentElement.lang = this.state.locale;
     this.onTrack = e => {
       const a = e.target.closest && e.target.closest('a,button'); if (!a) return;
-      const href = a.getAttribute('href') || '';
+      const href = (a.getAttribute('href') || '').replace(/^\/(ca|en|fr)(?=\/|$)/, '');
       let ev = a.dataset.track;
       if (!ev) {
         if (/^\/reserva(#|$)|#reserva$/.test(href)) ev = 'click_reservar';
@@ -378,11 +440,14 @@ class Component extends DCLogic {
     };
     document.addEventListener('click', this.onTrack, true);
   }
-  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, scrolled: false, active: 'entrantes', open: null, pv: null, live: null };
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, scrolled: false, active: 'entrantes', open: null, pv: null, live: null, locale: detectLocale(), t: T_ES };
   chipsRef = React.createRef(); floatRef = React.createRef();
   componentDidMount() {
     this.trackSetup();
     fetch(LIVE_API).then(r => (r.ok ? r.json() : Promise.reject())).then(data => this.setState({ live: data })).catch(() => {});
+    if (this.state.locale !== 'es') {
+      fetch('/i18n/' + this.state.locale + '.json').then(r => (r.ok ? r.json() : Promise.reject())).then(data => this.setState({ t: deepMerge(T_ES, data) })).catch(() => {});
+    }
     this.onResize = () => this.setState({ w: window.innerWidth });
     this.onScroll = () => {
       const s = window.scrollY > 40;
@@ -415,37 +480,51 @@ class Component extends DCLogic {
   }
   renderVals() {
     const { w, scrolled, active } = this.state;
+    const t = this.state.t;
+    const locale = this.state.locale;
     const isMobile = w < 820;
     const prices = this.props.mostrarPrecios !== false;
+    const tSections = t.carta.sections;
+    const LANG_BASE = { es: '/', ca: '/ca/', en: '/en/', fr: '/fr/' };
+    const langLinks = ['es', 'ca', 'en', 'fr'].map(code => ({
+      code: code.toUpperCase(), href: LANG_BASE[code] + 'carta', current: code === locale ? 'page' : 'false',
+      deco: code === locale ? 'underline' : 'none',
+    }));
     return {
       ...this.biz(),
+      t, localePrefix: locale === 'es' ? '' : '/' + locale, langLinks,
       isMobile, isDesktop: !isMobile,
       logoBeige: !scrolled, logoGranate: scrolled,
       hdrBg: scrolled ? '#EFE7C7' : 'transparent', hdrFg: scrolled ? '#7C1126' : '#EFE7C7',
       hdrBtnBg: scrolled ? '#7C1126' : '#EFE7C7', hdrBtnFg: scrolled ? '#EFE7C7' : '#7C1126',
       chipsTop: '76px', chipsRef: this.chipsRef,
-      cats: CATS.map(([id, label]) => ({ id, label, cur: id === active ? 'true' : 'false', bg: id === active ? '#7C1126' : 'transparent', fg: id === active ? '#EFE7C7' : '#7C1126' })),
-      sections: SECTIONS.map((s, i) => ({
-        ...s, num: String(i + 1).padStart(2, '0') + ' · ' + s.label, note: s.note || '',
-        groups: s.groups.map(g => {
-          const all = g.items.map(([name, price, desc, tag]) => ({ name, price, desc: desc || '', tag: tag || '', showPrice: prices, img: (FEAT[s.id + ':' + name] || {}).img || '', ph: (FEAT[s.id + ':' + name] || {}).ph || '', pos: (FEAT[s.id + ':' + name] || {}).pos || '50% 50%' }));
-          return { sub: g.sub || '', items: all.map(d => {
-            const key = s.id + ':' + d.name, f = FEAT[key];
-            if (!f) return { ...d, hasPhoto: false, noPhoto: true, expanded: false };
-            return { ...d, hasPhoto: true, noPhoto: false, pill: f.pill || f.img || '', pillLabel: 'Ver foto: ' + d.name, expanded: this.state.open === key,
-              toggle: e => { e.stopPropagation(); this.setState(st => ({ open: st.open === key ? null : key, pv: null })); },
-              enter: isMobile ? undefined : () => { if (this.state.open !== key) this.setState({ pv: { img: f.img || '', ph: f.ph || '', pos: f.pos || '50% 50%' } }); } };
-          }) };
-        }),
-      })),
-      cocktails: COCKTAILS.map(([name, f]) => ({ name, img: `assets/coctel-${f}.png` })),
+      cats: [...SECTIONS.map((s, i) => [s.id, tSections[i].label]), ['cocteles', t.carta.cocteles.label]].map(([id, label]) => ({ id, label, cur: id === active ? 'true' : 'false', bg: id === active ? '#7C1126' : 'transparent', fg: id === active ? '#EFE7C7' : '#7C1126' })),
+      sections: SECTIONS.map((s, si) => {
+        const ts = tSections[si];
+        return {
+          id: s.id, num: String(si + 1).padStart(2, '0') + ' · ' + ts.label, title: ts.title, intro: ts.intro, note: ts.note || '',
+          groups: s.groups.map((g, gi) => {
+            const tg = ts.groups[gi];
+            return { sub: tg.sub || '', items: g.items.map((d, ii) => {
+              const td = tg.items[ii];
+              const key = s.id + ':' + gi + ':' + ii;
+              const base = { name: td.name, desc: td.desc || '', tag: td.tag || '', price: d.price, showPrice: prices };
+              if (!d.img && !d.ph) return { ...base, hasPhoto: false, noPhoto: true, expanded: false };
+              return { ...base, hasPhoto: true, noPhoto: false, pill: d.pill || d.img || '', pillLabel: t.carta.pillLabelPrefix + ' ' + td.name, expanded: this.state.open === key,
+                toggle: e => { e.stopPropagation(); this.setState(st => ({ open: st.open === key ? null : key, pv: null })); },
+                enter: isMobile ? undefined : () => { if (this.state.open !== key) this.setState({ pv: { img: d.img || '', ph: d.ph || '', pos: d.pos || '50% 50%' } }); } };
+            }) };
+          }),
+        };
+      }),
+      cocktails: COCKTAIL_IDS.map((id, i) => ({ name: t.carta.cocktailNames[i], img: `/assets/coctel-${id}.png` })),
       cocFlow: isMobile ? 'column' : 'row', cocCols: isMobile ? '62%' : 'auto', cocTpl: isMobile ? 'none' : 'repeat(4, minmax(0,1fr))',
       floatRef: this.floatRef,
       onMove: e => { const el = this.floatRef.current; if (el) el.style.transform = `translate(${Math.min(e.clientX + 28, window.innerWidth - 340)}px, ${Math.max(90, e.clientY - 130)}px)`; },
       leave: () => { if (this.state.pv) this.setState({ pv: null }); },
       pvOpacity: this.state.pv && !isMobile ? 1 : 0,
       pvImg: this.state.pv ? this.state.pv.img : '', pvPh: this.state.pv ? this.state.pv.ph : '', pvPos: this.state.pv ? this.state.pv.pos : '50% 50%',
-      hintText: isMobile ? 'Los platos subrayados tienen foto: tócalos para verla.' : 'Los platos subrayados tienen foto: pasa el cursor para verla o haz clic para dejarla abierta.',
+      hintText: isMobile ? t.carta.hintMobile : t.carta.hintDesktop,
     };
   }
 }

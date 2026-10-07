@@ -3,20 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<script src="/support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
 <title>Contacto · Casanita Vilassar</title>
 <meta name="description" content="Escríbenos para grupos, catering o pedidos, o envíanos tu candidatura para trabajar en Casanita, Vilassar de Mar.">
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/favicon.png">
 <link rel="canonical" href="https://casanitavilassar.com/contacto">
-<link rel="alternate" hreflang="es" href="https://casanitavilassar.com/es/contacto">
+<link rel="alternate" hreflang="es" href="https://casanitavilassar.com/contacto">
 <link rel="alternate" hreflang="ca" href="https://casanitavilassar.com/ca/contacto">
 <link rel="alternate" hreflang="en" href="https://casanitavilassar.com/en/contacto">
-<link rel="alternate" hreflang="x-default" href="https://casanitavilassar.com/es/contacto">
+<link rel="alternate" hreflang="fr" href="https://casanitavilassar.com/fr/contacto">
+<link rel="alternate" hreflang="x-default" href="https://casanitavilassar.com/contacto">
 <meta property="og:type" content="restaurant">
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="Casanita Vilassar">
@@ -58,29 +59,29 @@ input,select,textarea,button{font:inherit}
 
 <header data-screen-label="Header" style="position:fixed; top:0; left:0; right:0; z-index:50; transition:background-color .3s ease; background-color:{{ hdrBg }};">
   <div style="max-width:1440px; margin:0 auto; height:76px; padding:0 clamp(16px,3vw,40px); display:flex; align-items:center; justify-content:space-between; gap:24px;">
-    <a href="/" aria-label="Casanita, inicio" style="display:flex; flex-direction:column; align-items:center; gap:3px; flex-shrink:0;">
-      <sc-if value="{{ logoBeige }}" hint-placeholder-val="{{ true }}"><img src="assets/logo-beige.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;"></sc-if>
-      <sc-if value="{{ logoGranate }}"><img src="assets/logo-granate.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;"></sc-if>
+    <a href="{{ localePrefix }}/" aria-label="Casanita, inicio" style="display:flex; flex-direction:column; align-items:center; gap:3px; flex-shrink:0;">
+      <sc-if value="{{ logoBeige }}" hint-placeholder-val="{{ true }}"><img src="/assets/logo-beige.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;"></sc-if>
+      <sc-if value="{{ logoGranate }}"><img src="/assets/logo-granate.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;"></sc-if>
       <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:9px; letter-spacing:.42em; padding-left:.42em; color:{{ hdrFg }};">VILASSAR</span>
     </a>
     <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
       <nav aria-label="Principal" style="display:flex; align-items:center; gap:clamp(18px,2.4vw,36px);">
-        <a href="/carta" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">CARTA</a>
-        <a href="/#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">GRUPOS</a>
-        <a href="/#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">VISÍTANOS</a>
+        <a href="{{ localePrefix }}/carta" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">{{ t.common.nav.carta }}</a>
+        <a href="{{ localePrefix }}/#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">{{ t.common.nav.grupos }}</a>
+        <a href="{{ localePrefix }}/#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">{{ t.common.nav.visitanos }}</a>
       </nav>
     </sc-if>
     <div style="display:flex; align-items:center; gap:clamp(10px,1.6vw,22px);">
       <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
-        <div role="group" aria-label="Idioma" style="display:flex; align-items:center; gap:2px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.08em; color:{{ hdrFg }};">
-          <button type="button" aria-pressed="true" style="background:none; border:0; color:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer; text-decoration:underline; text-underline-offset:4px;">ES</button><span aria-hidden="true">·</span>
-          <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">CA</button><span aria-hidden="true">·</span>
-          <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">EN</button>
+        <div role="group" aria-label="{{ t.common.idiomaLabel }}" style="display:flex; align-items:center; gap:2px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.08em; color:{{ hdrFg }};">
+          <sc-for list="{{ langLinks }}" as="lg" hint-placeholder-count="4">
+            <a href="{{ lg.href }}" aria-current="{{ lg.current }}" style="background:none; border:0; color:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer; text-decoration:{{ lg.deco }}; text-underline-offset:4px;">{{ lg.code }}</a>
+          </sc-for>
         </div>
       </sc-if>
-      <a href="/reserva" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); background:{{ hdrBtnBg }}; color:{{ hdrBtnFg }}; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="gap:16px;">RESERVAR <span class="cn-arrow" aria-hidden="true"></span></a>
+      <a href="{{ localePrefix }}/reserva" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); background:{{ hdrBtnBg }}; color:{{ hdrBtnFg }}; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="gap:16px;">{{ t.common.cta.reservar }} <span class="cn-arrow" aria-hidden="true"></span></a>
       <sc-if value="{{ isMobile }}">
-        <a href="/" aria-label="Volver al inicio" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; border:2px solid {{ hdrFg }}; color:{{ hdrFg }}; border-radius:2px; font-size:20px;"><span class="cn-arrow cn-arrow--back" aria-hidden="true"></span></a>
+        <a href="{{ localePrefix }}/" aria-label="{{ t.common.cta.volverInicio }}" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; border:2px solid {{ hdrFg }}; color:{{ hdrFg }}; border-radius:2px; font-size:20px;"><span class="cn-arrow cn-arrow--back" aria-hidden="true"></span></a>
       </sc-if>
     </div>
   </div>
@@ -90,12 +91,12 @@ input,select,textarea,button{font:inherit}
 <section data-screen-label="Contacto · cabecera" style="position:relative; background:#7C1126; color:#EFE7C7; padding:clamp(130px,16vw,190px) clamp(20px,4vw,48px) clamp(64px,7vw,100px); overflow:hidden;">
   <div aria-hidden="true" style="position:absolute; right:-16vw; bottom:-26vw; width:56vw; height:56vw; border:clamp(40px,6vw,96px) solid #6C0E21; border-radius:50%;"></div>
   <div style="position:relative; max-width:1240px; margin:0 auto; display:flex; flex-direction:column; gap:22px;">
-    <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.2em;">CONTACTO</span>
-    <h1 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(64px,10vw,150px); line-height:.86; letter-spacing:-.015em; max-width:1000px;">HABLEMOS.</h1>
-    <p style="margin:0; max-width:560px; font-size:clamp(16px,1.35vw,19px); line-height:1.55; text-wrap:pretty;">Para reservar mesa, lo más rápido es la reserva online o una llamada. Para todo lo demás (grupos, catering, prensa o trabajar con nosotros), escríbenos aquí y te respondemos.</p>
+    <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.2em;">{{ t.contacto.hero.eyebrow }}</span>
+    <h1 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(64px,10vw,150px); line-height:.86; letter-spacing:-.015em; max-width:1000px;">{{ t.contacto.hero.title }}</h1>
+    <p style="margin:0; max-width:560px; font-size:clamp(16px,1.35vw,19px); line-height:1.55; text-wrap:pretty;">{{ t.contacto.hero.desc }}</p>
     <div style="display:flex; flex-wrap:wrap; gap:14px;">
-      <a href="/reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">RESERVAR MESA <span class="cn-arrow" aria-hidden="true"></span></a>
-      <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:52px; padding:0 24px; border:2px solid #EFE7C7; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease;" style-hover="background:#EFE7C7; color:#7C1126;">LLAMAR · {{ phoneDisplay }}</a>
+      <a href="{{ localePrefix }}/reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">{{ t.common.cta.reservarMesa }} <span class="cn-arrow" aria-hidden="true"></span></a>
+      <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:52px; padding:0 24px; border:2px solid #EFE7C7; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease;" style-hover="background:#EFE7C7; color:#7C1126;">{{ t.common.cta.llamarPrefix }} · {{ phoneDisplay }}</a>
     </div>
   </div>
 </section>
@@ -103,20 +104,20 @@ input,select,textarea,button{font:inherit}
 <section id="escribenos" data-screen-label="Contacto · formulario" style="padding:clamp(72px,9vw,130px) clamp(20px,4vw,48px); scroll-margin-top:80px;">
   <div style="max-width:1240px; margin:0 auto; display:flex; flex-wrap:wrap; gap:clamp(40px,6vw,96px); align-items:flex-start;">
     <div style="flex:1 1 300px; display:flex; flex-direction:column; gap:28px;">
-      <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,6vw,88px); line-height:.9; letter-spacing:-.01em; color:#7C1126;">ESCRÍBENOS.</h2>
+      <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,6vw,88px); line-height:.9; letter-spacing:-.01em; color:#7C1126;">{{ t.contacto.formulario.heading }}</h2>
       <div style="display:flex; flex-direction:column; gap:18px; font-size:17px; line-height:1.5;">
         <div style="display:flex; flex-direction:column; gap:2px;">
-          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">TELÉFONO</span>
+          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">{{ t.contacto.formulario.telefonoLabel }}</span>
           <a href="tel:{{ phoneTel }}" style="font-weight:700; color:#1E1414;">{{ phoneDisplay }}</a>
         </div>
         <div style="display:flex; flex-direction:column; gap:2px;">
-          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">EMAIL</span>
+          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">{{ t.contacto.formulario.emailLabel }}</span>
           <a href="mailto:{{ email }}" style="font-weight:700; color:#1E1414;">{{ email }}</a>
         </div>
         <div style="display:flex; flex-direction:column; gap:2px;">
-          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">DIRECCIÓN</span>
+          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">{{ t.contacto.formulario.direccionLabel }}</span>
           <span>{{ addressStreet }}<br>{{ addressCity }}</span>
-          <a href="/#visitanos" style="display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:15px;">Horario y cómo llegar <span class="cn-arrow" aria-hidden="true"></span></a>
+          <a href="{{ localePrefix }}/#visitanos" style="display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:15px;">{{ t.contacto.formulario.horarioLink }} <span class="cn-arrow" aria-hidden="true"></span></a>
         </div>
       </div>
     </div>
@@ -124,50 +125,50 @@ input,select,textarea,button{font:inherit}
     <div style="flex:2 1 520px; min-width:0; background:#FAF6EA; border:2px solid #7C1126; border-radius:24px; padding:clamp(24px,3.5vw,44px);">
       <sc-if value="{{ sentContact }}">
         <div role="status" style="display:flex; flex-direction:column; gap:16px; align-items:flex-start; padding:24px 0;">
-          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(40px,4vw,56px); line-height:.9; color:#7C1126;">¡GRACIAS, {{ firstName }}!</span>
-          <p style="margin:0; font-size:17px; line-height:1.55;">Hemos recibido tu mensaje. Te respondemos lo antes posible. Si es urgente, llámanos al {{ phoneDisplay }}.</p>
-          <button type="button" onClick="{{ resetContact }}" style="min-height:44px; padding:0; background:none; border:0; border-bottom:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; cursor:pointer;">ENVIAR OTRO MENSAJE</button>
+          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(40px,4vw,56px); line-height:.9; color:#7C1126;">{{ t.contacto.formulario.thanksPrefix }} {{ firstName }}{{ t.contacto.formulario.thanksSuffix }}</span>
+          <p style="margin:0; font-size:17px; line-height:1.55;">{{ t.contacto.formulario.thanksBody }} {{ phoneDisplay }}.</p>
+          <button type="button" onClick="{{ resetContact }}" style="min-height:44px; padding:0; background:none; border:0; border-bottom:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; cursor:pointer;">{{ t.contacto.formulario.ctaOtroMensaje }}</button>
         </div>
       </sc-if>
       <sc-if value="{{ showContactForm }}" hint-placeholder-val="{{ true }}">
         <form onSubmit="{{ submitContact }}" novalidate="" style="display:flex; flex-direction:column; gap:22px;">
           <fieldset style="border:0; margin:0; padding:0; display:flex; flex-direction:column; gap:12px;">
-            <legend style="padding:0; margin-bottom:12px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.14em; color:#7C1126;">¿DE QUÉ QUIERES HABLAR?</legend>
+            <legend style="padding:0; margin-bottom:12px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.14em; color:#7C1126;">{{ t.contacto.formulario.topicsLegend }}</legend>
             <div style="display:flex; flex-wrap:wrap; gap:8px;">
-              <sc-for list="{{ topics }}" as="t" hint-placeholder-count="5">
-                <button type="button" onClick="{{ t.pick }}" aria-pressed="{{ t.on }}" style="min-height:44px; padding:0 18px; border:2px solid #7C1126; border-radius:999px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.08em; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ t.bg }}; color:{{ t.fg }};">{{ t.label }}</button>
+              <sc-for list="{{ topics }}" as="tp" hint-placeholder-count="5">
+                <button type="button" onClick="{{ tp.pick }}" aria-pressed="{{ tp.on }}" style="min-height:44px; padding:0 18px; border:2px solid #7C1126; border-radius:999px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.08em; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ tp.bg }}; color:{{ tp.fg }};">{{ tp.label }}</button>
               </sc-for>
             </div>
           </fieldset>
           <sc-if value="{{ isGroupTopic }}">
-            <p style="margin:0; padding:14px 16px; background:#EFE7C7; border-radius:12px; font-size:15px; line-height:1.5;">Para grupos, cuéntanos fecha, hora aproximada y cuántos seréis.</p>
+            <p style="margin:0; padding:14px 16px; background:#EFE7C7; border-radius:12px; font-size:15px; line-height:1.5;">{{ t.contacto.formulario.groupNote }}</p>
           </sc-if>
           <sc-if value="{{ isJobTopic }}">
-            <p style="margin:0; padding:14px 16px; background:#EFE7C7; border-radius:12px; font-size:15px; line-height:1.5;">¿Quieres trabajar con nosotros? Usa el formulario de <a href="#trabaja" style="font-weight:700; text-decoration:underline;">Trabaja con nosotros</a>, más abajo: ahí puedes adjuntar tu CV.</p>
+            <p style="margin:0; padding:14px 16px; background:#EFE7C7; border-radius:12px; font-size:15px; line-height:1.5;">{{ t.contacto.formulario.jobNotePrefix }} <a href="#trabaja" style="font-weight:700; text-decoration:underline;">{{ t.contacto.formulario.jobNoteLink }}</a>{{ t.contacto.formulario.jobNoteSuffix }}</p>
           </sc-if>
           <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:16px;">
-            <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Nombre
+            <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">{{ t.contacto.formulario.nombreLabel }}
               <input name="nombre" autocomplete="given-name" value="{{ c.nombre }}" onChange="{{ setC }}" aria-invalid="{{ e.nombre }}" style="min-height:52px; padding:0 16px; background:#FFFFFF; border:2px solid {{ e.nombreB }}; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400;">
-              <sc-if value="{{ e.nombre }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">Dinos tu nombre.</span></sc-if>
+              <sc-if value="{{ e.nombre }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">{{ t.contacto.formulario.nombreError }}</span></sc-if>
             </label>
-            <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Teléfono <span style="font-weight:400; font-size:13px;">(opcional)</span>
+            <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">{{ t.contacto.formulario.telefonoFieldLabel }} <span style="font-weight:400; font-size:13px;">{{ t.contacto.formulario.opcional }}</span>
               <input name="telefono" type="tel" autocomplete="tel" value="{{ c.telefono }}" onChange="{{ setC }}" style="min-height:52px; padding:0 16px; background:#FFFFFF; border:2px solid #C9B98F; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400;">
             </label>
           </div>
-          <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Email
+          <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">{{ t.contacto.formulario.emailFieldLabel }}
             <input name="email" type="email" autocomplete="email" value="{{ c.email }}" onChange="{{ setC }}" aria-invalid="{{ e.email }}" style="min-height:52px; padding:0 16px; background:#FFFFFF; border:2px solid {{ e.emailB }}; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400;">
-            <sc-if value="{{ e.email }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">Revisa el email, parece que falta algo.</span></sc-if>
+            <sc-if value="{{ e.email }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">{{ t.contacto.formulario.emailError }}</span></sc-if>
           </label>
-          <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Mensaje
+          <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">{{ t.contacto.formulario.mensajeLabel }}
             <textarea name="mensaje" rows="5" value="{{ c.mensaje }}" onChange="{{ setC }}" aria-invalid="{{ e.mensaje }}" style="padding:14px 16px; background:#FFFFFF; border:2px solid {{ e.mensajeB }}; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400; line-height:1.5; resize:vertical;"></textarea>
-            <sc-if value="{{ e.mensaje }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">Cuéntanos algo, aunque sea corto.</span></sc-if>
+            <sc-if value="{{ e.mensaje }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">{{ t.contacto.formulario.mensajeError }}</span></sc-if>
           </label>
           <label style="display:flex; align-items:flex-start; gap:12px; font-size:14px; line-height:1.5; cursor:pointer;">
             <input type="checkbox" name="privacidad" checked="{{ c.privacidad }}" onChange="{{ setC }}" style="width:22px; height:22px; margin:0; flex-shrink:0; accent-color:#7C1126;">
-            <span>He leído y acepto la <a href="/privacidad" target="_blank" style="font-weight:700; text-decoration:underline;">política de privacidad</a>.</span>
+            <span>{{ t.contacto.formulario.privacidadPrefix }} <a href="/privacidad" target="_blank" style="font-weight:700; text-decoration:underline;">{{ t.contacto.formulario.privacidadLink }}</a>.</span>
           </label>
-          <sc-if value="{{ e.privacidad }}"><span style="margin-top:-12px; font-size:14px; font-weight:600; color:#7C1126;">Necesitamos que aceptes la política de privacidad.</span></sc-if>
-          <button type="submit" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; border:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; cursor:pointer; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; gap:18px;">ENVIAR MENSAJE <span class="cn-arrow" aria-hidden="true"></span></button>
+          <sc-if value="{{ e.privacidad }}"><span style="margin-top:-12px; font-size:14px; font-weight:600; color:#7C1126;">{{ t.contacto.formulario.privacidadError }}</span></sc-if>
+          <button type="submit" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; border:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; cursor:pointer; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; gap:18px;">{{ t.contacto.formulario.submit }} <span class="cn-arrow" aria-hidden="true"></span></button>
         </form>
       </sc-if>
     </div>
@@ -178,68 +179,68 @@ input,select,textarea,button{font:inherit}
   <div aria-hidden="true" style="position:absolute; left:-12vw; top:-20vw; width:50vw; height:50vw; border:clamp(40px,6vw,96px) solid #6C0E21; border-radius:50%;"></div>
   <div style="position:relative; max-width:1240px; margin:0 auto; display:flex; flex-wrap:wrap; gap:clamp(40px,6vw,96px); align-items:flex-start;">
     <div style="flex:1 1 300px; display:flex; flex-direction:column; gap:22px;">
-      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.2em;">TRABAJA CON NOSOTROS</span>
-      <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,6vw,88px); line-height:.9; letter-spacing:-.01em;">¿TE SIENTAS CON NOSOTROS, PERO DEL OTRO LADO?</h2>
-      <p style="margin:0; max-width:440px; font-size:clamp(16px,1.3vw,18px); line-height:1.6; text-wrap:pretty;">Somos una casa pequeña y familiar. Buscamos gente a la que le guste tratar a cada cliente por su nombre. [PUESTOS ABIERTOS AHORA / TEXTO SOBRE EL EQUIPO]</p>
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.2em;">{{ t.contacto.trabaja.eyebrow }}</span>
+      <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,6vw,88px); line-height:.9; letter-spacing:-.01em;">{{ t.contacto.trabaja.heading }}</h2>
+      <p style="margin:0; max-width:440px; font-size:clamp(16px,1.3vw,18px); line-height:1.6; text-wrap:pretty;">{{ t.contacto.trabaja.desc }}</p>
       <div style="position:relative; width:min(100%,360px); aspect-ratio:4/5; border-radius:999px 999px 24px 24px; overflow:hidden; background:repeating-linear-gradient(135deg,#6C0E21 0 10px,#741024 10px 20px); display:flex; align-items:center; justify-content:center; padding:24px; text-align:center;">
-        <span style="font-family:ui-monospace,Menlo,monospace; font-size:12px; color:#EFE7C7;">[FOTO EQUIPO TRABAJANDO]</span>
+        <span style="font-family:ui-monospace,Menlo,monospace; font-size:12px; color:#EFE7C7;">{{ t.contacto.trabaja.photoPlaceholder }}</span>
       </div>
     </div>
 
     <div style="flex:2 1 520px; min-width:0; background:#EFE7C7; color:#1E1414; border-radius:24px; padding:clamp(24px,3.5vw,44px);">
       <sc-if value="{{ sentJob }}">
         <div role="status" style="display:flex; flex-direction:column; gap:16px; align-items:flex-start; padding:24px 0;">
-          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(40px,4vw,56px); line-height:.9; color:#7C1126;">¡RECIBIDO!</span>
-          <p style="margin:0; font-size:17px; line-height:1.55;">Gracias por querer formar parte de la casa. Guardamos tu candidatura y te llamamos si encaja con lo que buscamos.</p>
-          <button type="button" onClick="{{ resetJob }}" style="min-height:44px; padding:0; background:none; border:0; border-bottom:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; cursor:pointer;">ENVIAR OTRA CANDIDATURA</button>
+          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(40px,4vw,56px); line-height:.9; color:#7C1126;">{{ t.contacto.trabaja.thanksHeading }}</span>
+          <p style="margin:0; font-size:17px; line-height:1.55;">{{ t.contacto.trabaja.thanksBody }}</p>
+          <button type="button" onClick="{{ resetJob }}" style="min-height:44px; padding:0; background:none; border:0; border-bottom:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; cursor:pointer;">{{ t.contacto.trabaja.ctaOtra }}</button>
         </div>
       </sc-if>
       <sc-if value="{{ showJobForm }}" hint-placeholder-val="{{ true }}">
         <form onSubmit="{{ submitJob }}" novalidate="" style="display:flex; flex-direction:column; gap:22px;">
           <fieldset style="border:0; margin:0; padding:0;">
-            <legend style="padding:0; margin-bottom:12px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.14em; color:#7C1126;">¿DÓNDE TE VES?</legend>
+            <legend style="padding:0; margin-bottom:12px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.14em; color:#7C1126;">{{ t.contacto.trabaja.rolesLegend }}</legend>
             <div style="display:flex; flex-wrap:wrap; gap:8px;">
               <sc-for list="{{ roles }}" as="r" hint-placeholder-count="4">
                 <button type="button" onClick="{{ r.pick }}" aria-pressed="{{ r.on }}" style="min-height:44px; padding:0 18px; border:2px solid #7C1126; border-radius:999px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.08em; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ r.bg }}; color:{{ r.fg }};">{{ r.label }}</button>
               </sc-for>
             </div>
-            <sc-if value="{{ je.roles }}"><span style="display:block; margin-top:8px; font-size:14px; font-weight:600; color:#7C1126;">Elige al menos un puesto.</span></sc-if>
+            <sc-if value="{{ je.roles }}"><span style="display:block; margin-top:8px; font-size:14px; font-weight:600; color:#7C1126;">{{ t.contacto.trabaja.rolesError }}</span></sc-if>
           </fieldset>
           <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:16px;">
-            <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Nombre y apellidos
+            <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">{{ t.contacto.trabaja.nombreLabel }}
               <input name="nombre" autocomplete="name" value="{{ j.nombre }}" onChange="{{ setJ }}" aria-invalid="{{ je.nombre }}" style="min-height:52px; padding:0 16px; background:#FFFFFF; border:2px solid {{ je.nombreB }}; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400;">
-              <sc-if value="{{ je.nombre }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">Dinos tu nombre.</span></sc-if>
+              <sc-if value="{{ je.nombre }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">{{ t.contacto.formulario.nombreError }}</span></sc-if>
             </label>
-            <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Teléfono
+            <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">{{ t.contacto.trabaja.telefonoLabel }}
               <input name="telefono" type="tel" autocomplete="tel" value="{{ j.telefono }}" onChange="{{ setJ }}" aria-invalid="{{ je.telefono }}" style="min-height:52px; padding:0 16px; background:#FFFFFF; border:2px solid {{ je.telefonoB }}; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400;">
-              <sc-if value="{{ je.telefono }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">Necesitamos un teléfono para llamarte.</span></sc-if>
+              <sc-if value="{{ je.telefono }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">{{ t.contacto.trabaja.telefonoError }}</span></sc-if>
             </label>
           </div>
-          <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Disponibilidad
+          <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">{{ t.contacto.trabaja.disponibilidadLabel }}
             <select name="disponibilidad" value="{{ j.disponibilidad }}" onChange="{{ setJ }}" style="min-height:52px; padding:0 14px; background:#FFFFFF; border:2px solid #C9B98F; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400;">
-              <option value="completa">Jornada completa</option>
-              <option value="parcial">Media jornada</option>
-              <option value="findes">Fines de semana</option>
-              <option value="temporada">Temporada de verano</option>
+              <option value="completa">{{ t.contacto.trabaja.dispCompleta }}</option>
+              <option value="parcial">{{ t.contacto.trabaja.dispParcial }}</option>
+              <option value="findes">{{ t.contacto.trabaja.dispFindes }}</option>
+              <option value="temporada">{{ t.contacto.trabaja.dispTemporada }}</option>
             </select>
           </label>
           <div style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">
-            <span>CV <span style="font-weight:400; font-size:13px;">(PDF, máx. 5 MB, opcional)</span></span>
+            <span>{{ t.contacto.trabaja.cvLabel }} <span style="font-weight:400; font-size:13px;">{{ t.contacto.trabaja.cvHint }}</span></span>
             <label style="display:flex; align-items:center; gap:14px; min-height:64px; padding:12px 16px; background:#FFFFFF; border:2px dashed #7C1126; border-radius:8px; cursor:pointer; font-weight:400;" style-hover="background:#FAF6EA;">
               <input type="file" accept=".pdf,.doc,.docx" onChange="{{ pickFile }}" style="position:absolute; width:1px; height:1px; opacity:0;">
-              <span style="flex-shrink:0; padding:8px 14px; background:#7C1126; color:#EFE7C7; border-radius:2px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.08em;">ADJUNTAR</span>
+              <span style="flex-shrink:0; padding:8px 14px; background:#7C1126; color:#EFE7C7; border-radius:2px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.08em;">{{ t.contacto.trabaja.adjuntar }}</span>
               <span style="font-size:15px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{{ fileLabel }}</span>
             </label>
           </div>
-          <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Cuéntanos un poco de ti <span style="font-weight:400; font-size:13px;">(opcional)</span>
+          <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">{{ t.contacto.trabaja.mensajeLabel }} <span style="font-weight:400; font-size:13px;">{{ t.contacto.trabaja.opcional }}</span>
             <textarea name="mensaje" rows="4" value="{{ j.mensaje }}" onChange="{{ setJ }}" style="padding:14px 16px; background:#FFFFFF; border:2px solid #C9B98F; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400; line-height:1.5; resize:vertical;"></textarea>
           </label>
           <label style="display:flex; align-items:flex-start; gap:12px; font-size:14px; line-height:1.5; cursor:pointer;">
             <input type="checkbox" name="privacidad" checked="{{ j.privacidad }}" onChange="{{ setJ }}" style="width:22px; height:22px; margin:0; flex-shrink:0; accent-color:#7C1126;">
-            <span>Acepto que Casanita guarde mis datos para procesos de selección, según la <a href="/privacidad" target="_blank" style="font-weight:700; text-decoration:underline;">política de privacidad</a>.</span>
+            <span>{{ t.contacto.trabaja.privacidadPrefix }} <a href="/privacidad" target="_blank" style="font-weight:700; text-decoration:underline;">{{ t.contacto.formulario.privacidadLink }}</a>.</span>
           </label>
-          <sc-if value="{{ je.privacidad }}"><span style="margin-top:-12px; font-size:14px; font-weight:600; color:#7C1126;">Necesitamos que lo aceptes para guardar tu candidatura.</span></sc-if>
-          <button type="submit" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; border:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; cursor:pointer; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; gap:18px;">ENVIAR CANDIDATURA <span class="cn-arrow" aria-hidden="true"></span></button>
+          <sc-if value="{{ je.privacidad }}"><span style="margin-top:-12px; font-size:14px; font-weight:600; color:#7C1126;">{{ t.contacto.trabaja.privacidadError }}</span></sc-if>
+          <button type="submit" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; border:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; cursor:pointer; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; gap:18px;">{{ t.contacto.trabaja.submit }} <span class="cn-arrow" aria-hidden="true"></span></button>
         </form>
       </sc-if>
     </div>
@@ -249,20 +250,20 @@ input,select,textarea,button{font:inherit}
 
 <footer style="background:#7C1126; color:#EFE7C7; border-top:2px solid #4E0B18; padding:40px clamp(20px,4vw,48px) {{ footPad }};">
   <div style="max-width:1240px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px 32px; font-size:14px;">
-    <img src="assets/logo-beige.png" alt="Casanita" loading="lazy" style="width:130px; height:auto;">
+    <img src="/assets/logo-beige.png" alt="Casanita" loading="lazy" style="width:130px; height:auto;">
     <div style="display:flex; flex-wrap:wrap; gap:4px 20px;">
-      <a href="/privacidad" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Privacidad</a>
-      <a href="/cookies" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Cookies</a>
-      <a href="/aviso-legal" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Aviso legal</a>
+      <a href="/privacidad" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">{{ t.common.footer.privacidad }}</a>
+      <a href="/cookies" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">{{ t.common.footer.cookies }}</a>
+      <a href="/aviso-legal" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">{{ t.common.footer.avisoLegal }}</a>
     </div>
-    <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:22px;">COMIDAS, CENAS Y BUEN BEBER.</span>
+    <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:22px;">{{ t.common.footer.tagline }}</span>
   </div>
 </footer>
 
 <sc-if value="{{ isMobile }}">
   <div role="navigation" aria-label="Acciones rápidas" style="position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1.4fr 1fr; gap:8px; padding:10px 12px calc(10px + env(safe-area-inset-bottom)); background:#FAF6EA; border-top:2px solid #7C1126;">
-    <a href="/reserva" style="display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">RESERVAR <span class="cn-arrow" aria-hidden="true"></span></a>
-    <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; justify-content:center; min-height:52px; background:#EFE7C7; color:#7C1126; border:2px solid #7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">LLAMAR</a>
+    <a href="{{ localePrefix }}/reserva" style="display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">{{ t.common.cta.reservar }} <span class="cn-arrow" aria-hidden="true"></span></a>
+    <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; justify-content:center; min-height:52px; background:#EFE7C7; color:#7C1126; border:2px solid #7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">{{ t.common.cta.llamar }}</a>
   </div>
 </sc-if>
 </x-dc>
@@ -292,18 +293,66 @@ function splitAddress(full) {
   if (parts.length >= 3) return { street: `${parts[0]}, ${parts[1]}`, city: parts.slice(2).join(', ') };
   return { street: full || '', city: '' };
 }
-const TOPICS = ['GRUPOS Y CELEBRACIONES', 'CATERING', 'PEDIDOS PARA LLEVAR', 'TRABAJO', 'OTRO'];
-const ROLES = ['SALA', 'COCINA', 'BARRA Y CÓCTELES', 'AYUDANTE'];
 const emptyC = () => ({ nombre: '', telefono: '', email: '', mensaje: '', privacidad: false });
 const emptyJ = () => ({ nombre: '', telefono: '', disponibilidad: 'completa', mensaje: '', privacidad: false });
+function deepMerge(base, over) {
+  if (over === undefined || over === null) return base;
+  if (Array.isArray(base) || Array.isArray(over)) return over;
+  if (base && typeof base === 'object' && over && typeof over === 'object') {
+    const out = { ...base };
+    for (const k in over) out[k] = deepMerge(base[k], over[k]);
+    return out;
+  }
+  return over;
+}
+const LOCALES = ['ca', 'en', 'fr'];
+function detectLocale() {
+  const m = (typeof location !== 'undefined' ? location.pathname : '').match(/^\/(ca|en|fr)(\/|$)/);
+  return m ? m[1] : 'es';
+}
+const T_ES = {
+  common: {
+    idiomaLabel: 'Idioma',
+    nav: { carta: 'Carta', grupos: 'Grupos', visitanos: 'Visítanos', contacto: 'Contacto' },
+    cta: { reservar: 'Reservar', reservarMesa: 'Reservar mesa', llamar: 'Llamar', llamarPrefix: 'Llamar', volverInicio: 'Volver al inicio' },
+    footer: { tagline: 'Comidas, cenas y buen beber.', privacidad: 'Privacidad', cookies: 'Cookies', avisoLegal: 'Aviso legal' },
+  },
+  contacto: {
+    hero: { eyebrow: 'CONTACTO', title: 'HABLEMOS.', desc: 'Para reservar mesa, lo más rápido es la reserva online o una llamada. Para todo lo demás (grupos, catering, prensa o trabajar con nosotros), escríbenos aquí y te respondemos.' },
+    formulario: {
+      heading: 'ESCRÍBENOS.', telefonoLabel: 'TELÉFONO', emailLabel: 'EMAIL', direccionLabel: 'DIRECCIÓN', horarioLink: 'Horario y cómo llegar',
+      topicsLegend: '¿DE QUÉ QUIERES HABLAR?', topics: ['GRUPOS Y CELEBRACIONES', 'CATERING', 'PEDIDOS PARA LLEVAR', 'TRABAJO', 'OTRO'],
+      groupNote: 'Para grupos, cuéntanos fecha, hora aproximada y cuántos seréis.',
+      jobNotePrefix: '¿Quieres trabajar con nosotros? Usa el formulario de', jobNoteLink: 'Trabaja con nosotros', jobNoteSuffix: ', más abajo: ahí puedes adjuntar tu CV.',
+      nombreLabel: 'Nombre', nombreError: 'Dinos tu nombre.', telefonoFieldLabel: 'Teléfono', opcional: '(opcional)',
+      emailFieldLabel: 'Email', emailError: 'Revisa el email, parece que falta algo.', mensajeLabel: 'Mensaje', mensajeError: 'Cuéntanos algo, aunque sea corto.',
+      privacidadPrefix: 'He leído y acepto la', privacidadLink: 'política de privacidad', privacidadError: 'Necesitamos que aceptes la política de privacidad.',
+      submit: 'ENVIAR MENSAJE',
+      thanksPrefix: '¡GRACIAS,', thanksSuffix: '!', thanksBody: 'Hemos recibido tu mensaje. Te respondemos lo antes posible. Si es urgente, llámanos al', ctaOtroMensaje: 'ENVIAR OTRO MENSAJE',
+    },
+    trabaja: {
+      eyebrow: 'TRABAJA CON NOSOTROS', heading: '¿TE SIENTAS CON NOSOTROS, PERO DEL OTRO LADO?',
+      desc: 'Somos una casa pequeña y familiar. Buscamos gente a la que le guste tratar a cada cliente por su nombre. [PUESTOS ABIERTOS AHORA / TEXTO SOBRE EL EQUIPO]',
+      photoPlaceholder: '[FOTO EQUIPO TRABAJANDO]',
+      rolesLegend: '¿DÓNDE TE VES?', roles: ['SALA', 'COCINA', 'BARRA Y CÓCTELES', 'AYUDANTE'], rolesError: 'Elige al menos un puesto.',
+      nombreLabel: 'Nombre y apellidos', telefonoLabel: 'Teléfono', telefonoError: 'Necesitamos un teléfono para llamarte.',
+      disponibilidadLabel: 'Disponibilidad', dispCompleta: 'Jornada completa', dispParcial: 'Media jornada', dispFindes: 'Fines de semana', dispTemporada: 'Temporada de verano',
+      cvLabel: 'CV', cvHint: '(PDF, máx. 5 MB, opcional)', adjuntar: 'ADJUNTAR', noFile: 'Ningún archivo seleccionado',
+      mensajeLabel: 'Cuéntanos un poco de ti', opcional: '(opcional)',
+      privacidadPrefix: 'Acepto que Casanita guarde mis datos para procesos de selección, según la', privacidadError: 'Necesitamos que lo aceptes para guardar tu candidatura.',
+      submit: 'ENVIAR CANDIDATURA',
+      thanksHeading: '¡RECIBIDO!', thanksBody: 'Gracias por querer formar parte de la casa. Guardamos tu candidatura y te llamamos si encaja con lo que buscamos.', ctaOtra: 'ENVIAR OTRA CANDIDATURA',
+    },
+  },
+};
 
 class Component extends DCLogic {
   trackSetup() {
     window.dataLayer = window.dataLayer || [];
-    document.documentElement.lang = 'es';
+    document.documentElement.lang = this.state.locale;
     this.onTrack = e => {
       const a = e.target.closest && e.target.closest('a,button'); if (!a) return;
-      const href = a.getAttribute('href') || '';
+      const href = (a.getAttribute('href') || '').replace(/^\/(ca|en|fr)(?=\/|$)/, '');
       let ev = a.dataset.track;
       if (!ev) {
         if (/^\/reserva(#|$)|#reserva$/.test(href)) ev = 'click_reservar';
@@ -315,10 +364,13 @@ class Component extends DCLogic {
     };
     document.addEventListener('click', this.onTrack, true);
   }
-  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, scrolled: false, topic: 0, roles: [], c: emptyC(), j: emptyJ(), ce: {}, jeErr: {}, sentC: false, sentJ: false, file: '', live: null };
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, scrolled: false, topic: 0, roles: [], c: emptyC(), j: emptyJ(), ce: {}, jeErr: {}, sentC: false, sentJ: false, file: '', live: null, locale: detectLocale(), t: T_ES };
   componentDidMount() {
     this.trackSetup();
     fetch(LIVE_API).then(r => (r.ok ? r.json() : Promise.reject())).then(data => this.setState({ live: data })).catch(() => {});
+    if (this.state.locale !== 'es') {
+      fetch('/i18n/' + this.state.locale + '.json').then(r => (r.ok ? r.json() : Promise.reject())).then(data => this.setState({ t: deepMerge(T_ES, data) })).catch(() => {});
+    }
     this.onResize = () => this.setState({ w: window.innerWidth });
     this.onScroll = () => { const s = window.scrollY > 40; if (s !== this.state.scrolled) this.setState({ scrolled: s }); };
     window.addEventListener('resize', this.onResize);
@@ -345,16 +397,24 @@ class Component extends DCLogic {
   }
   renderVals() {
     const { w, scrolled, c, j, ce, jeErr } = this.state;
+    const t = this.state.t;
+    const locale = this.state.locale;
     const isMobile = w < 820;
     const b = (bad) => bad ? '#7C1126' : '#C9B98F';
+    const LANG_BASE = { es: '/', ca: '/ca/', en: '/en/', fr: '/fr/' };
+    const langLinks = ['es', 'ca', 'en', 'fr'].map(code => ({
+      code: code.toUpperCase(), href: LANG_BASE[code] + 'contacto', current: code === locale ? 'page' : 'false',
+      deco: code === locale ? 'underline' : 'none',
+    }));
     return {
       ...this.biz(),
+      t, localePrefix: locale === 'es' ? '' : '/' + locale, langLinks,
       isMobile, isDesktop: !isMobile,
       logoBeige: !scrolled, logoGranate: scrolled,
       hdrBg: scrolled ? '#EFE7C7' : 'transparent', hdrFg: scrolled ? '#7C1126' : '#EFE7C7',
       hdrBtnBg: scrolled ? '#7C1126' : '#EFE7C7', hdrBtnFg: scrolled ? '#EFE7C7' : '#7C1126',
       footPad: isMobile ? '110px' : '40px',
-      topics: TOPICS.map((label, i) => ({ label, on: this.state.topic === i ? 'true' : 'false', bg: this.state.topic === i ? '#7C1126' : 'transparent', fg: this.state.topic === i ? '#EFE7C7' : '#7C1126', pick: () => this.setState({ topic: i }) })),
+      topics: t.contacto.formulario.topics.map((label, i) => ({ label, on: this.state.topic === i ? 'true' : 'false', bg: this.state.topic === i ? '#7C1126' : 'transparent', fg: this.state.topic === i ? '#EFE7C7' : '#7C1126', pick: () => this.setState({ topic: i }) })),
       isGroupTopic: this.state.topic === 0, isJobTopic: this.state.topic === 3,
       c, setC: e => this.field('c', e),
       e: { nombre: !!ce.nombre, email: !!ce.email, mensaje: !!ce.mensaje, privacidad: !!ce.privacidad, nombreB: b(ce.nombre), emailB: b(ce.email), mensajeB: b(ce.mensaje) },
@@ -367,11 +427,11 @@ class Component extends DCLogic {
       sentContact: this.state.sentC, showContactForm: !this.state.sentC,
       firstName: (c.nombre.trim().split(' ')[0] || '').toUpperCase(),
       resetContact: () => this.setState({ sentC: false, c: emptyC() }),
-      roles: ROLES.map(label => { const on = this.state.roles.includes(label); return { label, on: on ? 'true' : 'false', bg: on ? '#7C1126' : 'transparent', fg: on ? '#EFE7C7' : '#7C1126', pick: () => this.setState(s => ({ roles: on ? s.roles.filter(r => r !== label) : [...s.roles, label] })) }; }),
+      roles: t.contacto.trabaja.roles.map(label => { const on = this.state.roles.includes(label); return { label, on: on ? 'true' : 'false', bg: on ? '#7C1126' : 'transparent', fg: on ? '#EFE7C7' : '#7C1126', pick: () => this.setState(s => ({ roles: on ? s.roles.filter(r => r !== label) : [...s.roles, label] })) }; }),
       j, setJ: e => this.field('j', e),
       je: { roles: !!jeErr.roles, nombre: !!jeErr.nombre, telefono: !!jeErr.telefono, privacidad: !!jeErr.privacidad, nombreB: b(jeErr.nombre), telefonoB: b(jeErr.telefono) },
       pickFile: e => { const f = e.target.files && e.target.files[0]; this.setState({ file: f ? f.name : '' }); },
-      fileLabel: this.state.file || 'Ningún archivo seleccionado',
+      fileLabel: this.state.file || t.contacto.trabaja.noFile,
       submitJob: ev => {
         ev.preventDefault();
         const err = { roles: !this.state.roles.length, nombre: !j.nombre.trim(), telefono: j.telefono.replace(/\D/g, '').length < 9, privacidad: !j.privacidad };
