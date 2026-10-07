@@ -50,17 +50,24 @@ export default async function middleware(request) {
 
   const { title, description } = seo[locale];
   const localizedUrl = url.toString();
+  const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const escAttr = esc(title), escDesc = esc(description), escUrl = esc(localizedUrl);
 
-  const rewriter = new HTMLRewriter()
-    .on('title', { element(el) { el.setInnerContent(title); } })
-    .on('html', { element(el) { el.setAttribute('lang', locale); } })
-    .on('meta[name="description"]', { element(el) { el.setAttribute('content', description); } })
-    .on('meta[property="og:title"]', { element(el) { el.setAttribute('content', title); } })
-    .on('meta[property="og:description"]', { element(el) { el.setAttribute('content', description); } })
-    .on('meta[property="og:url"]', { element(el) { el.setAttribute('content', localizedUrl); } })
-    .on('meta[name="twitter:title"]', { element(el) { el.setAttribute('content', title); } })
-    .on('meta[name="twitter:description"]', { element(el) { el.setAttribute('content', description); } })
-    .on('link[rel="canonical"]', { element(el) { el.setAttribute('href', localizedUrl); } });
+  let html = await originResponse.text();
+  html = html
+    .replace(/<title>[^<]*<\/title>/, `<title>${escAttr}</title>`)
+    .replace('<html>', `<html lang="${locale}">`)
+    .replace(/(<meta name="description" content=")[^"]*(")/, `$1${escDesc}$2`)
+    .replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${escAttr}$2`)
+    .replace(/(<meta property="og:description" content=")[^"]*(")/, `$1${escDesc}$2`)
+    .replace(/(<meta property="og:url" content=")[^"]*(")/, `$1${escUrl}$2`)
+    .replace(/(<meta name="twitter:title" content=")[^"]*(")/, `$1${escAttr}$2`)
+    .replace(/(<meta name="twitter:description" content=")[^"]*(")/, `$1${escDesc}$2`)
+    .replace(/(<link rel="canonical" href=")[^"]*(")/, `$1${escUrl}$2`);
 
-  return rewriter.transform(originResponse);
+  const headers = new Headers(originResponse.headers);
+  headers.delete('content-length');
+  headers.delete('content-encoding');
+
+  return new Response(html, { status: originResponse.status, headers });
 }
