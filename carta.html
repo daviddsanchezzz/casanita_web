@@ -46,16 +46,16 @@ img{display:block;max-width:100%}
 
 <header data-screen-label="Header" style="position:fixed; top:0; left:0; right:0; z-index:50; transition:background-color .3s ease; background-color:{{ hdrBg }};">
   <div style="max-width:1440px; margin:0 auto; height:76px; padding:0 clamp(16px,3vw,40px); display:flex; align-items:center; justify-content:space-between; gap:24px;">
-    <a href="Casanita Home.dc.html" aria-label="Casanita, inicio" style="display:flex; flex-direction:column; align-items:center; gap:3px; flex-shrink:0;">
+    <a href="/" aria-label="Casanita, inicio" style="display:flex; flex-direction:column; align-items:center; gap:3px; flex-shrink:0;">
       <sc-if value="{{ logoBeige }}" hint-placeholder-val="{{ true }}"><img src="assets/logo-beige.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;"></sc-if>
       <sc-if value="{{ logoGranate }}"><img src="assets/logo-granate.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;"></sc-if>
       <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:9px; letter-spacing:.42em; padding-left:.42em; color:{{ hdrFg }};">VILASSAR</span>
     </a>
     <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
       <nav aria-label="Principal" style="display:flex; align-items:center; gap:clamp(18px,2.4vw,36px);">
-        <a href="Casanita Carta.dc.html" aria-current="page" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0; text-decoration:underline; text-underline-offset:6px; text-decoration-thickness:2px;">CARTA</a>
-        <a href="Casanita Home.dc.html#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">GRUPOS</a>
-        <a href="Casanita Home.dc.html#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">VISÍTANOS</a>
+        <a href="/carta" aria-current="page" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0; text-decoration:underline; text-underline-offset:6px; text-decoration-thickness:2px;">CARTA</a>
+        <a href="/#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">GRUPOS</a>
+        <a href="/#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">VISÍTANOS</a>
       </nav>
     </sc-if>
     <div style="display:flex; align-items:center; gap:clamp(10px,1.6vw,22px);">
@@ -66,9 +66,9 @@ img{display:block;max-width:100%}
           <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">EN</button>
         </div>
       </sc-if>
-      <a href="Casanita Reserva.dc.html" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); background:{{ hdrBtnBg }}; color:{{ hdrBtnFg }}; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="gap:16px;">RESERVAR <span aria-hidden="true">→</span></a>
+      <a href="/reserva" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); background:{{ hdrBtnBg }}; color:{{ hdrBtnFg }}; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="gap:16px;">RESERVAR <span aria-hidden="true">→</span></a>
       <sc-if value="{{ isMobile }}">
-        <a href="Casanita Home.dc.html" aria-label="Volver al inicio" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; border:2px solid {{ hdrFg }}; color:{{ hdrFg }}; border-radius:2px; font-size:20px;">←</a>
+        <a href="/" aria-label="Volver al inicio" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; border:2px solid {{ hdrFg }}; color:{{ hdrFg }}; border-radius:2px; font-size:20px;">←</a>
       </sc-if>
     </div>
   </div>
@@ -83,7 +83,7 @@ img{display:block;max-width:100%}
       <h1 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(72px,11vw,160px); line-height:.86; letter-spacing:-.015em;">LA CARTA.</h1>
       <p style="margin:0; max-width:500px; font-size:clamp(16px,1.35vw,19px); line-height:1.55; text-wrap:pretty;">Mucho más que pizza. Platos para compartir en el centro de la mesa, pasta como debe ser y algo rico para cada uno. Pregunta siempre por el fuera de carta: el chef te lo cuenta en la mesa.</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px 24px; align-items:center;">
-        <a href="Casanita Reserva.dc.html" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">RESERVAR MESA <span aria-hidden="true">→</span></a>
+        <a href="/reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">RESERVAR MESA <span aria-hidden="true">→</span></a>
         <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:44px; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #EFE7C7;" style-hover="color:#FAF6EA;">LLAMAR · {{ phoneDisplay }}</a>
         <a href="#" data-track="click_glovo" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; min-height:44px; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #EFE7C7;" style-hover="color:#FAF6EA;">PEDIR PARA LLEVAR <span aria-hidden="true">↗</span></a>
       </div>
@@ -198,7 +198,7 @@ img{display:block;max-width:100%}
     <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(52px,7vw,104px); line-height:.9; letter-spacing:-.01em; color:#7C1126;">¿YA SABES QUÉ VAS A PEDIR?</h2>
     <p style="margin:0; font-size:clamp(16px,1.3vw,18px); line-height:1.55;">Reserva en menos de un minuto o llámanos al {{ phoneDisplay }}.</p>
     <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:14px;">
-      <a href="Casanita Reserva.dc.html" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">RESERVAR MESA <span aria-hidden="true">→</span></a>
+      <a href="/reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">RESERVAR MESA <span aria-hidden="true">→</span></a>
       <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:52px; padding:0 24px; border:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease;" style-hover="background:#7C1126; color:#EFE7C7;">LLAMAR</a>
     </div>
   </div>
@@ -222,7 +222,7 @@ img{display:block;max-width:100%}
 
 <sc-if value="{{ isMobile }}">
   <div role="navigation" aria-label="Acciones rápidas" style="position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1.4fr 1fr; gap:8px; padding:10px 12px calc(10px + env(safe-area-inset-bottom)); background:#FAF6EA; border-top:2px solid #7C1126;">
-    <a href="Casanita Reserva.dc.html" style="display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">RESERVAR <span aria-hidden="true">→</span></a>
+    <a href="/reserva" style="display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">RESERVAR <span aria-hidden="true">→</span></a>
     <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; justify-content:center; min-height:52px; background:#EFE7C7; color:#7C1126; border:2px solid #7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">LLAMAR</a>
   </div>
 </sc-if>
@@ -239,6 +239,14 @@ function phoneDisplayFmt(tel) {
   const d = (tel || '').replace(/^\+34/, '');
   const m = d.match(/^(\d{3})(\d{2})(\d{2})(\d{2})$/);
   return m ? `${m[1]} ${m[2]} ${m[3]} ${m[4]}` : d;
+}
+function safeUrl(url, fallback, hostSuffix) {
+  try {
+    const u = new URL(url, 'https://invalid.invalid');
+    if (u.protocol !== 'https:' && u.protocol !== 'http:') return fallback;
+    if (hostSuffix && u.hostname !== hostSuffix && !u.hostname.endsWith('.' + hostSuffix)) return fallback;
+    return url;
+  } catch { return fallback; }
 }
 const SECTIONS = [
   { id: 'entrantes', label: 'ENTRANTES', title: 'ENTRANTES.', intro: 'Para el centro de la mesa y que cada uno pique lo suyo.', groups: [{ items: [
@@ -350,10 +358,10 @@ class Component extends DCLogic {
       const href = a.getAttribute('href') || '';
       let ev = a.dataset.track;
       if (!ev) {
-        if (/#reserva$|Reserva\.dc\.html/.test(href)) ev = 'click_reservar';
+        if (/^\/reserva(#|$)|#reserva$/.test(href)) ev = 'click_reservar';
         else if (href.startsWith('tel:')) ev = 'click_llamar';
         else if (/google\.com\/maps/.test(href)) ev = 'click_como_llegar';
-        else if (/Carta\.dc\.html/.test(href)) ev = 'click_ver_carta';
+        else if (/^\/carta/.test(href)) ev = 'click_ver_carta';
       }
       if (ev) window.dataLayer.push({ event: ev, link_text: (a.textContent || '').trim().slice(0, 60), page: location.pathname });
     };
@@ -390,7 +398,7 @@ class Component extends DCLogic {
       phoneDisplay: phoneDisplayFmt(b.phone || FALLBACK.phone),
       email: b.email || FALLBACK.email,
       address: b.address || FALLBACK.address,
-      mapsUrl: b.mapsUrl || FALLBACK.mapsUrl,
+      mapsUrl: safeUrl(b.mapsUrl || FALLBACK.mapsUrl, FALLBACK.mapsUrl, 'google.com'),
     };
   }
   renderVals() {

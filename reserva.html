@@ -45,15 +45,15 @@ img{display:block;max-width:100%}
 
 <header data-screen-label="Header" style="position:sticky; top:0; z-index:50; background:#7C1126;">
   <div style="max-width:1440px; margin:0 auto; height:76px; padding:0 clamp(16px,3vw,40px); display:flex; align-items:center; justify-content:space-between; gap:24px;">
-    <a href="Casanita Home.dc.html" aria-label="Casanita, inicio" style="display:flex; flex-direction:column; align-items:center; gap:3px; flex-shrink:0;">
+    <a href="/" aria-label="Casanita, inicio" style="display:flex; flex-direction:column; align-items:center; gap:3px; flex-shrink:0;">
       <img src="assets/logo-beige.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;">
       <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:9px; letter-spacing:.42em; padding-left:.42em; color:#EFE7C7;">VILASSAR</span>
     </a>
     <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
       <nav aria-label="Principal" style="display:flex; align-items:center; gap:clamp(18px,2.4vw,36px);">
-        <a href="Casanita Carta.dc.html" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">CARTA</a>
-        <a href="Casanita Home.dc.html#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">GRUPOS</a>
-        <a href="Casanita Home.dc.html#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">VISÍTANOS</a>
+        <a href="/carta" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">CARTA</a>
+        <a href="/#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">GRUPOS</a>
+        <a href="/#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">VISÍTANOS</a>
       </nav>
     </sc-if>
     <div style="display:flex; align-items:center; gap:clamp(10px,1.6vw,22px);">
@@ -104,7 +104,7 @@ img{display:block;max-width:100%}
           <span>{{ h.day }}: {{ h.txt }}</span>
         </sc-for>
       </div>
-      <a href="Casanita Home.dc.html#visitanos" style="margin-top:auto; font-weight:700; font-size:15px;">Cómo llegar →</a>
+      <a href="/#visitanos" style="margin-top:auto; font-weight:700; font-size:15px;">Cómo llegar →</a>
     </div>
     <div style="display:flex; flex-direction:column; gap:14px; padding:28px; background:#FAF6EA; border-radius:22px;">
       <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">ANTES DE RESERVAR</span>
@@ -116,7 +116,7 @@ img{display:block;max-width:100%}
         <strong style="font-size:16px;">¿Opciones sin gluten?</strong>
         <span style="font-size:15px; line-height:1.5;">Todas las pizzas, con masa sin gluten o queso sin lactosa.</span>
       </div>
-      <a href="Casanita Carta.dc.html" style="margin-top:auto; font-weight:700; font-size:15px;">Ver la carta →</a>
+      <a href="/carta" style="margin-top:auto; font-weight:700; font-size:15px;">Ver la carta →</a>
     </div>
   </div>
 </section>
@@ -150,6 +150,14 @@ function phoneDisplayFmt(tel) {
   const m = d.match(/^(\d{3})(\d{2})(\d{2})(\d{2})$/);
   return m ? `${m[1]} ${m[2]} ${m[3]} ${m[4]}` : d;
 }
+function safeUrl(url, fallback, hostSuffix) {
+  try {
+    const u = new URL(url, 'https://invalid.invalid');
+    if (u.protocol !== 'https:' && u.protocol !== 'http:') return fallback;
+    if (hostSuffix && u.hostname !== hostSuffix && !u.hostname.endsWith('.' + hostSuffix)) return fallback;
+    return url;
+  } catch { return fallback; }
+}
 function scheduleFromLive(live) {
   if (!live || !Array.isArray(live.openingHours)) return FALLBACK.schedule;
   const sched = {};
@@ -168,10 +176,10 @@ class Component extends DCLogic {
       const href = a.getAttribute('href') || '';
       let ev = a.dataset.track;
       if (!ev) {
-        if (/#reserva$|Reserva\.dc\.html/.test(href)) ev = 'click_reservar';
+        if (/^\/reserva(#|$)|#reserva$/.test(href)) ev = 'click_reservar';
         else if (href.startsWith('tel:')) ev = 'click_llamar';
         else if (/google\.com\/maps/.test(href)) ev = 'click_como_llegar';
-        else if (/Carta\.dc\.html/.test(href)) ev = 'click_ver_carta';
+        else if (/^\/carta/.test(href)) ev = 'click_ver_carta';
       }
       if (ev) window.dataLayer.push({ event: ev, link_text: (a.textContent || '').trim().slice(0, 60), page: location.pathname });
     };
@@ -185,10 +193,11 @@ class Component extends DCLogic {
     window.addEventListener('resize', this.onResize);
     this.clock = setInterval(() => this.setState({ now: new Date() }), 60000);
     this.onVetraMsg = e => {
-      if (e.data && e.data.type === 'VETRA_HEIGHT') {
-        const el = document.getElementById('vetra-reservas');
-        if (el) el.style.height = e.data.height + 'px';
-      }
+      if (!/^https:\/\/([a-z0-9-]+\.)?vetrareserve\.com$/.test(e.origin)) return;
+      const h = e.data && e.data.type === 'VETRA_HEIGHT' ? Number(e.data.height) : NaN;
+      if (!Number.isFinite(h)) return;
+      const el = document.getElementById('vetra-reservas');
+      if (el) el.style.height = h + 'px';
     };
     window.addEventListener('message', this.onVetraMsg);
   }
@@ -214,9 +223,9 @@ class Component extends DCLogic {
       phoneDisplay: phoneDisplayFmt(b.phone || FALLBACK.phone),
       email: b.email || FALLBACK.email,
       address: b.address || FALLBACK.address,
-      mapsUrl: b.mapsUrl || FALLBACK.mapsUrl,
-      instagramUrl: (ig && ig.url) || '#',
-      reserveEmbedUrl: ((live && live.reservations && live.reservations.url) || FALLBACK.reserveUrl) + '?embed=1&lang=es',
+      mapsUrl: safeUrl(b.mapsUrl || FALLBACK.mapsUrl, FALLBACK.mapsUrl, 'google.com'),
+      instagramUrl: ig ? safeUrl(ig.url, '#', 'instagram.com') : '#',
+      reserveEmbedUrl: safeUrl((live && live.reservations && live.reservations.url) || FALLBACK.reserveUrl, FALLBACK.reserveUrl, 'vetrareserve.com') + '?embed=1&lang=es',
     };
   }
   hours() {

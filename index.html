@@ -2,11 +2,845 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=./Casanita%20Home.dc.html">
-<title>Casanita Vilassar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
 <body>
-<p>Redirigiendo a <a href="./Casanita%20Home.dc.html">Casanita Home</a>...</p>
-<script>location.replace("./Casanita%20Home.dc.html");</script>
+<x-dc>
+<helmet>
+<title>Casanita · Trattoria en Vilassar de Mar</title>
+<meta name="description" content="Cocina mediterránea con alma italiana en el centro de Vilassar de Mar. Comidas, cenas, cócteles y terraza. Reserva tu mesa en un minuto.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="canonical" href="https://casanitavilassar.com/">
+<link rel="alternate" hreflang="es" href="https://casanitavilassar.com/es/">
+<link rel="alternate" hreflang="ca" href="https://casanitavilassar.com/ca/">
+<link rel="alternate" hreflang="en" href="https://casanitavilassar.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://casanitavilassar.com/es/">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Casanita Vilassar">
+<meta property="og:title" content="Casanita · Trattoria en Vilassar de Mar">
+<meta property="og:description" content="Cocina mediterránea con alma italiana en el centro de Vilassar de Mar. Comidas, cenas, cócteles y terraza. Reserva tu mesa en un minuto.">
+<meta property="og:url" content="https://casanitavilassar.com/">
+<meta property="og:image" content="https://casanitavilassar.com/assets/fachada-dia-vespa.jpg">
+<meta property="og:image:alt" content="Fachada de Casanita en Vilassar de Mar, con la Vespa blanca y flores">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Casanita · Trattoria en Vilassar de Mar">
+<meta name="twitter:description" content="Cocina mediterránea con alma italiana en el centro de Vilassar de Mar. Comidas, cenas, cócteles y terraza. Reserva tu mesa en un minuto.">
+<meta name="twitter:image" content="https://casanitavilassar.com/assets/fachada-dia-vespa.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=DM+Sans:opsz,wght@9..40,400..700&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#EFE7C7;color:#1E1414;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#7C1126;text-decoration:none}
+a:hover{color:#4E0B18}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid #EFE7C7;outline-offset:3px;box-shadow:0 0 0 6px #1E1414}
+.cn-scroller::-webkit-scrollbar{display:none}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none !important;animation:none !important}}
+</style>
+</helmet>
+
+<header data-screen-label="Header" style="position:fixed; top:0; left:0; right:0; z-index:50; transition:background-color .3s ease, box-shadow .3s ease; background-color:{{ hdrBg }}; box-shadow:{{ hdrShadow }};">
+  <div style="max-width:1440px; margin:0 auto; height:76px; padding:0 clamp(16px,3vw,40px); display:flex; align-items:center; justify-content:space-between; gap:24px;">
+    <a href="#inicio" aria-label="Casanita, inicio" style="display:flex; flex-direction:column; align-items:center; gap:3px; flex-shrink:0;">
+      <sc-if value="{{ logoBeige }}" hint-placeholder-val="{{ true }}">
+        <img src="assets/logo-beige.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;">
+      </sc-if>
+      <sc-if value="{{ logoGranate }}">
+        <img src="assets/logo-granate.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;">
+      </sc-if>
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:9px; letter-spacing:.42em; padding-left:.42em; color:{{ hdrFg }};">VILASSAR</span>
+    </a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Principal" style="display:flex; align-items:center; gap:clamp(18px,2.4vw,36px);">
+        <a href="/carta" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">CARTA</a>
+        <a href="#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">GRUPOS</a>
+        <a href="#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">VISÍTANOS</a>
+      </nav>
+    </sc-if>
+    <div style="display:flex; align-items:center; gap:clamp(10px,1.6vw,22px);">
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+        <div role="group" aria-label="Idioma" style="display:flex; align-items:center; gap:2px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.08em; color:{{ hdrFg }};">
+          <button type="button" aria-pressed="true" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer; text-decoration:underline; text-underline-offset:4px;">ES</button>
+          <span aria-hidden="true">·</span>
+          <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">CA</button>
+          <span aria-hidden="true">·</span>
+          <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">EN</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <a href="#reserva" onClick="{{ closeMenu }}" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); background:{{ hdrBtnBg }}; color:{{ hdrBtnFg }}; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="gap:16px;">RESERVAR <span aria-hidden="true">→</span></a>
+      </sc-if>
+      <sc-if value="{{ isMobile }}">
+        <button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuOpen }}" aria-label="Abrir menú" style="width:44px; height:44px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; background:none; border:2px solid {{ hdrFg }}; border-radius:2px; cursor:pointer; padding:0;">
+          <span style="display:block; width:20px; height:2px; background:{{ hdrFg }};"></span>
+          <span style="display:block; width:20px; height:2px; background:{{ hdrFg }};"></span>
+        </button>
+      </sc-if>
+    </div>
+  </div>
+</header>
+
+<sc-if value="{{ menuOpen }}">
+  <div role="dialog" aria-label="Menú" style="position:fixed; inset:0; z-index:45; background:#7C1126; padding:110px 24px 120px; display:flex; flex-direction:column; justify-content:space-between; overflow:auto;">
+    <nav aria-label="Menú móvil" style="display:flex; flex-direction:column; gap:4px;">
+      <a href="/carta" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">CARTA</a>
+      
+      <a href="#grupos" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">GRUPOS</a>
+      <a href="#visitanos" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">VISÍTANOS</a>
+      <a href="/contacto" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">CONTACTO</a>
+    </nav>
+    <div style="display:flex; flex-direction:column; gap:18px; color:#EFE7C7;">
+      <div style="display:flex; gap:8px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:16px; letter-spacing:.1em;">
+        <button type="button" style="min-width:48px; min-height:44px; background:#EFE7C7; color:#7C1126; border:0; font:inherit; letter-spacing:inherit; border-radius:2px;">ES</button>
+        <button type="button" style="min-width:48px; min-height:44px; background:none; color:#EFE7C7; border:2px solid #EFE7C7; font:inherit; letter-spacing:inherit; border-radius:2px;">CA</button>
+        <button type="button" style="min-width:48px; min-height:44px; background:none; color:#EFE7C7; border:2px solid #EFE7C7; font:inherit; letter-spacing:inherit; border-radius:2px;">EN</button>
+      </div>
+      <a href="#reserva" onClick="{{ closeMenu }}" style="display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">RESERVAR MESA <span aria-hidden="true">→</span></a>
+      <a href="tel:{{ phoneTel }}" style="color:#EFE7C7; font-size:16px;">Llamar · {{ phoneDisplay }}</a>
+      <p style="margin:0; font-size:15px; color:#EFE7C7;">{{ address }}</p>
+    </div>
+  </div>
+</sc-if>
+
+<main>
+
+<section id="inicio" data-screen-label="Hero" style="position:relative; z-index:3; background:#7C1126; min-height:100vh; padding:clamp(120px,15vh,170px) clamp(16px,3vw,40px) 0; display:flex; flex-direction:column; align-items:center; overflow-x:clip;">
+  <div aria-hidden="true" style="position:absolute; left:-12vw; top:28%; width:62vw; height:62vw; border:clamp(40px,6vw,96px) solid #6C0E21; border-radius:50%; pointer-events:none;"></div>
+  <div aria-hidden="true" style="position:absolute; right:-18vw; top:6%; width:46vw; height:80vw; border:clamp(40px,6vw,96px) solid #6C0E21; border-bottom:0; border-radius:999px 999px 0 0; pointer-events:none;"></div>
+  <div ref="{{ heroText }}" style="position:relative; display:flex; flex-direction:column; align-items:center; text-align:center; gap:clamp(18px,2.4vw,28px); max-width:1200px;">
+    <h1 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(58px,9.8vw,140px); line-height:.9; letter-spacing:-.01em; color:#EFE7C7; text-wrap:balance;">SIÉNTATE.<br>ESTÁS EN CASA.</h1>
+    <p style="margin:0; max-width:560px; font-size:clamp(16px,1.35vw,19px); line-height:1.5; color:#EFE7C7; text-wrap:pretty;">Cocina mediterránea con alma italiana en el centro de Vilassar de Mar. Comidas, cenas y buen beber.</p>
+    <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:14px 28px;">
+      <a href="#reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; gap:18px; color:#7C1126;">RESERVAR MESA <span aria-hidden="true">→</span></a>
+      <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:44px; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:16px; letter-spacing:.08em; border-bottom:2px solid #EFE7C7;" style-hover="color:#FAF6EA;">LLAMAR · {{ phoneDisplay }}</a>
+    </div>
+  </div>
+
+  <div style="position:relative; margin-top:clamp(28px,4vw,48px); width:clamp(330px,44vw,640px); aspect-ratio:1/1; margin-bottom:clamp(-280px,-19vw,-140px); flex-shrink:0;">
+    <svg ref="{{ ribbon }}" viewBox="0 0 600 600" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; overflow:visible;">
+      <defs><path id="cn-ring" d="M300,300 m-271,0 a271,271 0 1,1 542,0 a271,271 0 1,1 -542,0"></path></defs>
+      <circle cx="300" cy="300" r="281" fill="none" stroke="#4E0B18" stroke-width="48"></circle>
+      <text style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:80%; font-weight:800; font-size:25px; letter-spacing:1px;" fill="#EFE7C7"><textPath href="#cn-ring" textLength="1698" lengthAdjust="spacing">CARBONARA · BURRATA · CROQUETAS · VERMUT · SOBREMESA · CÓCTELES · CARBONARA · BURRATA · CROQUETAS · VERMUT · TERRAZA · BUEN BEBER ·</textPath></text>
+    </svg>
+    <div style="position:absolute; inset:10.5%; border-radius:50%; background:#FAF6EA; padding:4.5%;">
+      <img ref="{{ plate }}" src="assets/carbonara-plato.webp" alt="Carbonara de Casanita vista desde arriba, sin nata" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
+    </div>
+    <div style="position:absolute; right:-4%; top:-2%; width:clamp(112px,11vw,164px); aspect-ratio:1/1; transform:rotate(12deg); transition:transform .35s cubic-bezier(.3,1.6,.5,1); filter:drop-shadow(5px 5px 0 #4E0B18); cursor:default;" style-hover="transform:rotate(-2deg) scale(1.06);">
+      <div style="position:absolute; inset:0; background:#FAF6EA; border-radius:24%;"></div>
+      <div style="position:absolute; inset:0; background:#FAF6EA; border-radius:24%; transform:rotate(30deg);"></div>
+      <div style="position:absolute; inset:0; background:#FAF6EA; border-radius:24%; transform:rotate(60deg);"></div>
+      <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; line-height:.95;">
+        <span style="font-weight:800; font-size:clamp(30px,3vw,44px);">{{ rating }} ★</span>
+        <span style="font-weight:700; font-size:clamp(11px,1vw,14px); letter-spacing:.04em; margin-top:4px;">{{ reviews }} RESEÑAS</span>
+        <span style="font-weight:700; font-size:clamp(11px,1vw,14px); letter-spacing:.04em;">EN GOOGLE</span>
+      </div>
+    </div>
+  </div>
+
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <a href="#la-casa" aria-label="Bajar" style="position:absolute; left:40px; bottom:40px; display:flex; flex-direction:column; align-items:center; gap:10px; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:12px; letter-spacing:.2em;">
+      <span style="writing-mode:vertical-rl; transform:rotate(180deg);">DESLIZA</span>
+      <span style="display:block; width:2px; height:48px; background:#EFE7C7;"></span>
+    </a>
+  </sc-if>
+</section>
+
+<section id="la-casa" data-screen-label="Manifiesto" style="position:relative; background:#EFE7C7; padding:clamp(190px,24vw,350px) clamp(20px,4vw,48px) clamp(96px,11vw,170px); scroll-margin-top:40px;">
+  <div style="max-width:1160px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:clamp(32px,4vw,56px);">
+    <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.24em; color:#7C1126;">LA CASA</span>
+    <p ref="{{ manifesto }}" style="margin:0; text-align:center; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(28px,3.9vw,56px); line-height:1.08; text-transform:uppercase; color:#7C1126;">
+      <sc-for list="{{ tokens }}" as="t" hint-placeholder-count="40">
+        <sc-if value="{{ t.isWord }}"><span data-tok="w" style="display:inline-block; margin-right:.2em; color:#7C1126; transition:opacity .25s ease;">{{ t.w }}</span></sc-if>
+        <sc-if value="{{ t.isPill }}"><span data-tok="p" style="display:inline-flex; align-items:center; margin-right:.2em; transition:opacity .3s ease;"><span data-pill="1" role="img" aria-label="{{ t.alt }}" title="{{ t.alt }}" style="position:relative; display:inline-flex; align-items:center; justify-content:center; width:2.5em; height:.92em; margin-top:-.06em; border-radius:999px; overflow:hidden; transform-origin:center; transition:transform .45s cubic-bezier(.3,1.5,.5,1); background:repeating-linear-gradient(135deg,#E3D8AE 0 6px,#EAE1BD 6px 12px); box-shadow:inset 0 0 0 2px #7C1126;"><sc-if value="{{ t.img }}"><img src="{{ t.img }}" alt="" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:{{ t.pos }};"></sc-if><sc-if value="{{ t.ph }}"><span style="font-family:ui-monospace,Menlo,monospace; font-size:clamp(9px,.22em,12px); font-weight:500; letter-spacing:0; color:#7C1126; text-transform:uppercase;">{{ t.ph }}</span></sc-if></span>{{ t.suffix }}</span></sc-if>
+      </sc-for>
+    </p>
+    <a href="#historia" style="align-self:flex-end; display:flex; align-items:center; gap:10px; min-height:44px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; color:#7C1126; border-bottom:2px solid #7C1126; transition:gap .25s ease;" style-hover="gap:16px;">CONOCE LA CASA <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<div data-screen-label="Franja" onMouseEnter="{{ pauseMarquee }}" onMouseLeave="{{ playMarquee }}" style="background:#7C1126; overflow:hidden; padding:clamp(16px,1.8vw,24px) 0; border-top:2px solid #4E0B18; border-bottom:2px solid #4E0B18;">
+  <div ref="{{ marquee }}" aria-label="Carbonara, vermut, sobremesa, cócteles, terraza, croquetas, buen beber" style="display:flex; width:max-content; will-change:transform;">
+    <sc-for list="{{ marqueeLoop }}" as="m" hint-placeholder-count="2">
+      <div aria-hidden="true" style="display:flex; align-items:center; gap:clamp(22px,2.6vw,40px); padding-right:clamp(22px,2.6vw,40px); font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(34px,4.4vw,64px); line-height:1; color:#EFE7C7; white-space:nowrap;">
+        <span>CARBONARA</span><span style="display:block; width:.32em; height:.32em; background:#EFE7C7; transform:rotate(45deg);"></span>
+        <span>VERMUT</span><span style="display:block; width:.32em; height:.32em; background:#EFE7C7; transform:rotate(45deg);"></span>
+        <span>SOBREMESA</span><span style="display:block; width:.32em; height:.32em; background:#EFE7C7; transform:rotate(45deg);"></span>
+        <span>CÓCTELES</span><span style="display:block; width:.32em; height:.32em; background:#EFE7C7; transform:rotate(45deg);"></span>
+        <span>TERRAZA</span><span style="display:block; width:.32em; height:.32em; background:#EFE7C7; transform:rotate(45deg);"></span>
+        <span>CROQUETAS</span><span style="display:block; width:.32em; height:.32em; background:#EFE7C7; transform:rotate(45deg);"></span>
+        <span>BUEN BEBER</span><span style="display:block; width:.32em; height:.32em; background:#EFE7C7; transform:rotate(45deg);"></span>
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+<section id="platos" data-screen-label="Platos de la casa" style="background:#EFE7C7; padding:clamp(88px,10vw,150px) 0 clamp(88px,10vw,140px); overflow:hidden; scroll-margin-top:60px;">
+  <h2 data-reveal="" style="margin:0 auto; padding:0 20px; max-width:1100px; text-align:center; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,7vw,104px); line-height:.9; letter-spacing:-.01em; color:#7C1126; text-wrap:balance;">LOS QUE NOS PIDEN<br>UNA Y OTRA VEZ.</h2>
+
+  <sc-if value="{{ galleryDesktop }}" hint-placeholder-val="{{ true }}">
+    <div style="position:relative; width:1280px; max-width:100%; height:820px; margin:120px auto 0;">
+      <div style="position:absolute; left:0; right:0; top:420px; text-align:center; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:172px; line-height:.86; letter-spacing:-.015em; color:#7C1126;">DE LA CASA</div>
+      <div data-speed="-0.05" style="position:absolute; left:50%; top:96px; width:330px; height:330px; margin-left:-165px; z-index:4;">
+        <div style="width:100%; height:100%; border-radius:50%; background:#FAF6EA; padding:14px;"><img src="assets/carbonara-plato.webp" alt="Carbonara de la casa" loading="lazy" style="width:100%; height:100%; border-radius:50%;"></div>
+        <div style="position:absolute; right:-58px; top:120px; width:128px; aspect-ratio:1/1; transform:rotate(-10deg); filter:drop-shadow(4px 4px 0 #4E0B18); transition:transform .35s cubic-bezier(.3,1.6,.5,1);" style-hover="transform:rotate(2deg) scale(1.06);">
+          <div style="position:absolute; inset:0; background:#FAF6EA; border-radius:24%;"></div>
+          <div style="position:absolute; inset:0; background:#FAF6EA; border-radius:24%; transform:rotate(30deg);"></div>
+          <div style="position:absolute; inset:0; background:#FAF6EA; border-radius:24%; transform:rotate(60deg);"></div>
+          <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:21px; line-height:.95;">HECHO<br>EN CASA</div>
+        </div>
+      </div>
+
+      <div data-speed="0.08" style="position:absolute; left:0; top:20px; width:230px; height:300px; z-index:3;">
+        <figure tabindex="0" onMouseEnter="{{ dishOver }}" onMouseLeave="{{ dishOut }}" onFocus="{{ dishOver }}" onBlur="{{ dishOut }}" style="margin:0; width:100%; height:100%; border-radius:22px; overflow:hidden; position:relative; cursor:pointer;">
+          <div data-zoom="1" style="width:100%; height:100%; overflow:hidden; transition:transform .6s cubic-bezier(.2,.7,.2,1);"><img src="assets/carbonara.webp" alt="Carbonara de Casanita servida en cuenco de cerámica azul" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:58% 46%; transform:scale(2.3); transform-origin:58% 46%;"></div>
+          <figcaption data-cap="1" style="position:absolute; left:10px; right:10px; bottom:10px; padding:14px 16px; background:#EFE7C7; border-radius:14px; opacity:0; transform:translateY(10px); transition:opacity .3s ease, transform .3s ease;">
+            <strong style="display:block; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:26px; line-height:.95; color:#7C1126;">CARBONARA</strong>
+            <span style="display:block; margin-top:4px; font-size:14px; line-height:1.35; color:#1E1414;">Sin nata, como debe ser.</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div data-speed="0.1" style="position:absolute; left:260px; top:120px; width:190px; height:240px; z-index:3;">
+        <figure tabindex="0" onMouseEnter="{{ dishOver }}" onMouseLeave="{{ dishOut }}" onFocus="{{ dishOver }}" onBlur="{{ dishOut }}" style="margin:0; width:100%; height:100%; border-radius:22px; overflow:hidden; position:relative; cursor:pointer;">
+          <div data-zoom="1" style="width:100%; height:100%; overflow:hidden; transition:transform .6s cubic-bezier(.2,.7,.2,1);"><img src="assets/croquetas.webp" alt="Croquetas caseras de Casanita" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:50% 50%;"></div>
+          <figcaption data-cap="1" style="position:absolute; left:10px; right:10px; bottom:10px; padding:14px 16px; background:#7C1126; border-radius:14px; opacity:0; transform:translateY(10px); transition:opacity .3s ease, transform .3s ease;">
+            <strong style="display:block; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:24px; line-height:.95; color:#EFE7C7;">CROQUETAS DE RABO DE TORO</strong>
+            <span style="display:block; margin-top:4px; font-size:14px; line-height:1.35; color:#EFE7C7;">Caseras. También de langostinos, chipirones o espinacas.</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div data-speed="0.04" style="position:absolute; left:0; top:480px; width:220px; height:290px; z-index:3;">
+        <figure tabindex="0" onMouseEnter="{{ dishOver }}" onMouseLeave="{{ dishOut }}" onFocus="{{ dishOver }}" onBlur="{{ dishOut }}" style="margin:0; width:100%; height:100%; border-radius:22px; overflow:hidden; position:relative; cursor:pointer;">
+          <div data-zoom="1" style="width:100%; height:100%; overflow:hidden; transition:transform .6s cubic-bezier(.2,.7,.2,1);"><img src="assets/raviolis.webp" alt="Ravioli al foie de Casanita" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:50% 50%;"></div>
+          <figcaption data-cap="1" style="position:absolute; left:10px; right:10px; bottom:10px; padding:14px 16px; background:#EFE7C7; border-radius:14px; opacity:0; transform:translateY(10px); transition:opacity .3s ease, transform .3s ease;">
+            <strong style="display:block; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:26px; line-height:.95; color:#7C1126;">RAVIOLIS DE FOIE</strong>
+            <span style="display:block; margin-top:4px; font-size:14px; line-height:1.35; color:#1E1414;">Con crema de idiazábal, aceite de trufa y manzana verde.</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div data-speed="0.06" style="position:absolute; left:1090px; top:130px; width:190px; height:260px; z-index:3;">
+        <figure tabindex="0" onMouseEnter="{{ dishOver }}" onMouseLeave="{{ dishOut }}" onFocus="{{ dishOver }}" onBlur="{{ dishOut }}" style="margin:0; width:100%; height:100%; border-radius:22px; overflow:hidden; position:relative; cursor:pointer;">
+          <div data-zoom="1" style="width:100%; height:100%; overflow:hidden; transition:transform .6s cubic-bezier(.2,.7,.2,1);"><img src="assets/burrata.webp" alt="Ensalada de burrata de Casanita" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:50% 50%;"></div>
+          <figcaption data-cap="1" style="position:absolute; left:10px; right:10px; bottom:10px; padding:14px 16px; background:#7C1126; border-radius:14px; opacity:0; transform:translateY(10px); transition:opacity .3s ease, transform .3s ease;">
+            <strong style="display:block; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:26px; line-height:.95; color:#EFE7C7;">BURRATA</strong>
+            <span style="display:block; margin-top:4px; font-size:14px; line-height:1.35; color:#EFE7C7;">En ensalada, con rúcula, cherrys, rábanos y albahaca.</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div data-speed="0.1" style="position:absolute; left:890px; top:40px; width:180px; height:230px; z-index:3;">
+        <figure tabindex="0" onMouseEnter="{{ dishOver }}" onMouseLeave="{{ dishOut }}" onFocus="{{ dishOver }}" onBlur="{{ dishOut }}" style="margin:0; width:100%; height:100%; border-radius:22px; overflow:hidden; position:relative; cursor:pointer;">
+          <div data-zoom="1" style="width:100%; height:100%; overflow:hidden; transition:transform .6s cubic-bezier(.2,.7,.2,1);"><img src="assets/porchetta.webp" alt="Porchetta de Casanita" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:50% 50%;"></div>
+          <figcaption data-cap="1" style="position:absolute; left:10px; right:10px; bottom:10px; padding:14px 16px; background:#EFE7C7; border-radius:14px; opacity:0; transform:translateY(10px); transition:opacity .3s ease, transform .3s ease;">
+            <strong style="display:block; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:26px; line-height:.95; color:#7C1126;">PORCHETTA</strong>
+            <span style="display:block; margin-top:4px; font-size:14px; line-height:1.35; color:#1E1414;">Panceta de cerdo a baja temperatura sobre patata crujiente.</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div data-speed="0.05" style="position:absolute; left:1060px; top:480px; width:220px; height:290px; z-index:3;">
+        <figure tabindex="0" onMouseEnter="{{ dishOver }}" onMouseLeave="{{ dishOut }}" onFocus="{{ dishOver }}" onBlur="{{ dishOut }}" style="margin:0; width:100%; height:100%; border-radius:22px; overflow:hidden; position:relative; cursor:pointer;">
+          <div data-zoom="1" style="width:100%; height:100%; overflow:hidden; transition:transform .6s cubic-bezier(.2,.7,.2,1);"><img src="assets/tiramisu.webp" alt="Tiramisú de Casanita" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:50% 50%;"></div>
+          <figcaption data-cap="1" style="position:absolute; left:10px; right:10px; bottom:10px; padding:14px 16px; background:#7C1126; border-radius:14px; opacity:0; transform:translateY(10px); transition:opacity .3s ease, transform .3s ease;">
+            <strong style="display:block; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:26px; line-height:.95; color:#EFE7C7;">TIRAMISÚ</strong>
+            <span style="display:block; margin-top:4px; font-size:14px; line-height:1.35; color:#EFE7C7;">El final de siempre. Si prefieres, lemon pie.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ galleryCarousel }}">
+    <div style="position:relative; margin-top:48px;">
+      <div style="text-align:center; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(64px,17vw,140px); line-height:.86; color:#7C1126; position:relative; z-index:0;">DE LA CASA</div>
+      <div ref="{{ carousel }}" onScroll="{{ onCarousel }}" class="cn-scroller" aria-label="Platos de la casa" style="position:relative; z-index:1; margin-top:32px; display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; padding:0 24px 8px; scroll-padding:0 24px; scrollbar-width:none;">
+        <sc-for list="{{ dishes }}" as="d" hint-placeholder-count="3">
+          <figure style="margin:0; flex:0 0 76%; max-width:320px; scroll-snap-align:start; display:flex; flex-direction:column; gap:12px;">
+            <div style="aspect-ratio:4/5; border-radius:22px; overflow:hidden; background:repeating-linear-gradient(135deg,#E3D8AE 0 10px,#EAE1BD 10px 20px); display:flex; align-items:flex-start; padding:16px;">
+              <sc-if value="{{ d.img }}"><img src="{{ d.img }}" alt="{{ d.alt }}" loading="lazy" style="width:calc(100% + 32px); height:calc(100% + 32px); margin:-16px; max-width:none; object-fit:cover; object-position:{{ d.pos }};"></sc-if>
+              <sc-if value="{{ d.ph }}"><span style="font-family:ui-monospace,Menlo,monospace; font-size:11px; color:#7C1126;">{{ d.ph }}</span></sc-if>
+            </div>
+            <figcaption>
+              <strong style="display:block; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:28px; line-height:.95; color:#7C1126;">{{ d.name }}</strong>
+              <span style="display:block; margin-top:4px; font-size:16px; line-height:1.4; color:#1E1414;">{{ d.desc }}</span>
+            </figcaption>
+          </figure>
+        </sc-for>
+      </div>
+      <div aria-hidden="true" style="display:flex; justify-content:center; gap:8px; margin-top:20px;">
+        <sc-for list="{{ dots }}" as="dot" hint-placeholder-count="6">
+          <span style="display:block; height:8px; border-radius:4px; transition:width .3s ease, background-color .3s ease; width:{{ dot.w }}; background:{{ dot.c }};"></span>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+
+  <div style="display:flex; justify-content:center; margin-top:clamp(40px,4vw,56px); padding:0 20px;">
+    <a href="/carta" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; border:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease, gap .25s ease;" style-hover="background:#7C1126; color:#EFE7C7; gap:18px;">VER LA CARTA COMPLETA <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<section data-screen-label="Para cada momento" style="background:#FAF6EA; padding:clamp(88px,10vw,140px) clamp(16px,3vw,40px);">
+  <div style="max-width:1360px; margin:0 auto;">
+    <h2 data-reveal="" style="margin:0 0 clamp(40px,5vw,72px); text-align:center; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,7vw,104px); line-height:.9; letter-spacing:-.01em; color:#7C1126;">PARA CADA<br>MOMENTO.</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(14px,1.6vw,24px);">
+      <article data-reveal="" style="position:relative; border-radius:24px; overflow:hidden; aspect-ratio:4/5; min-height:440px; background:#7C1126;">
+        <img src="assets/fachada-dia-vespa.jpg" alt="Fachada de Casanita a mediodía, con la Vespa blanca y las flores" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:42% 50%;">
+        <div style="position:absolute; left:12px; right:12px; bottom:12px; padding:20px 22px 22px; background:#EFE7C7; border-radius:16px; display:flex; flex-direction:column; gap:8px;">
+          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.16em; color:#7C1126;">MEDIODÍA · 12:00–16:00</span>
+          <h3 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(40px,3.6vw,54px); line-height:.9; color:#7C1126;">COMIDAS</h3>
+          <p style="margin:0; font-size:16px; line-height:1.45; color:#1E1414;">Luz de mediodía, platos al centro y sobremesa sin mirar el reloj.</p>
+        </div>
+      </article>
+      <article data-reveal="" style="position:relative; border-radius:24px; overflow:hidden; aspect-ratio:4/5; min-height:440px; background:#7C1126;">
+        <img src="assets/fachada-noche.jpg" alt="Casanita de noche, con el toldo granate y una mesa de terraza preparada" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 40%;">
+        <div style="position:absolute; left:12px; right:12px; bottom:12px; padding:20px 22px 22px; background:#7C1126; border-radius:16px; display:flex; flex-direction:column; gap:8px;">
+          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.16em; color:#EFE7C7;">NOCHE · 19:00–23:00</span>
+          <h3 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(40px,3.6vw,54px); line-height:.9; color:#EFE7C7;">CENAS</h3>
+          <p style="margin:0; font-size:16px; line-height:1.45; color:#EFE7C7;">La plaza tranquila, una vela en la mesa y lo que el chef tenga hoy fuera de carta.</p>
+        </div>
+      </article>
+      <article data-reveal="" style="position:relative; border-radius:24px; overflow:hidden; aspect-ratio:4/5; min-height:440px; background:#7C1126;">
+        <img src="assets/cocteles-terraza.webp" alt="Camarero sirviendo cócteles en la terraza de Casanita" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 35%;">
+        <div style="position:absolute; left:12px; right:12px; bottom:12px; padding:20px 22px 22px; background:#EFE7C7; border-radius:16px; display:flex; flex-direction:column; gap:8px;">
+          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.16em; color:#7C1126;">{{ terrazaLabel }}</span>
+          <h3 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(40px,3.6vw,54px); line-height:.9; color:#7C1126;">BUEN BEBER</h3>
+          <p style="margin:0; font-size:16px; line-height:1.45; color:#1E1414;">Cócteles, vermut y sobremesa en la terraza. Vacaciones sin salir del pueblo.</p>
+        </div>
+      </article>
+    </div>
+    <div style="display:flex; justify-content:center; margin-top:clamp(36px,4vw,52px);">
+      <a href="#reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">ELIGE TU MOMENTO Y RESERVA <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Para llevar" style="background:#EFE7C7; padding:clamp(28px,3vw,40px) clamp(16px,3vw,40px);">
+  <div style="max-width:1360px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px 40px; padding:clamp(24px,3vw,36px) clamp(24px,3.5vw,48px); border:2px solid #7C1126; border-radius:24px;">
+    <div style="display:flex; flex-direction:column; gap:6px; flex:1 1 320px;">
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.18em; color:#7C1126;">PARA LLEVAR</span>
+      <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(36px,4vw,56px); line-height:.9; color:#7C1126;">¿HOY MEJOR EN CASA?</h2>
+      <p style="margin:0; font-size:16px; line-height:1.5;">La misma cocina, en tu mesa. Pide por Glovo o llámanos y pasa a recogerlo.</p>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:12px;">
+      <a href="#" data-track="click_glovo" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 26px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">PEDIR EN GLOVO <span aria-hidden="true">↗</span></a>
+      <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:52px; padding:0 22px; border:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease;" style-hover="background:#7C1126; color:#EFE7C7;">LLAMAR PARA RECOGER</a>
+    </div>
+  </div>
+</section>
+
+<section id="historia" data-screen-label="Nuestra historia" style="position:relative; background:#7C1126; color:#EFE7C7; padding:clamp(88px,10vw,150px) clamp(20px,4vw,48px); overflow:hidden; scroll-margin-top:60px;">
+  <div aria-hidden="true" style="position:absolute; left:-10vw; bottom:-30vw; width:56vw; height:56vw; border:clamp(40px,6vw,96px) solid #6C0E21; border-radius:50%;"></div>
+  <div style="position:relative; max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr)); gap:clamp(48px,6vw,96px); align-items:center;">
+    <div data-reveal="" style="display:flex; flex-direction:column; gap:24px;">
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.2em;">DESDE 2020 EN VILASSAR DE MAR</span>
+      <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,6.4vw,96px); line-height:.9; letter-spacing:-.01em; color:#EFE7C7; text-wrap:balance;">UNA FAMILIA QUE COCINA PARA LA TUYA.</h2>
+      <p style="margin:0; max-width:520px; font-size:clamp(16px,1.3vw,18px); line-height:1.6; text-wrap:pretty;">Antes de Vilassar hubo una vida entera en la hostelería: temporadas en Formentera, años en Barcelona y una etapa en Brasil. En verano de 2020 abrimos Casanita en esta plaza, frente al parque, con una idea sencilla: que quien entre por la puerta se sienta uno más. Te recibimos como parte de nuestra familia.</p>
+      <p style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:18px; letter-spacing:.06em;">— [NOMBRE DEL CHEF], CHEF Y ANFITRIÓN</p>
+      <a href="#reserva" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">VEN A CONOCERNOS <span aria-hidden="true">→</span></a>
+    </div>
+    <div style="position:relative; justify-self:center; width:min(100%,480px);">
+      <div data-speed="-0.06" role="img" aria-label="Foto pendiente: el chef y el equipo de Casanita" style="aspect-ratio:4/5; border-radius:999px 999px 24px 24px; overflow:hidden; background:repeating-linear-gradient(135deg,#6C0E21 0 10px,#741024 10px 20px); display:flex; align-items:center; justify-content:center; text-align:center; padding:24px;">
+        <span style="font-family:ui-monospace,Menlo,monospace; font-size:12px; color:#EFE7C7;">[FOTO CHEF Y EQUIPO · MÁSCARA EN ARCO]</span>
+      </div>
+      <div style="position:absolute; left:-28px; bottom:40px; width:clamp(120px,11vw,150px); aspect-ratio:1/1; border-radius:50%; background:#EFE7C7; transform:rotate(-12deg); filter:drop-shadow(5px 5px 0 #4E0B18); display:flex; align-items:center; justify-content:center; transition:transform .35s cubic-bezier(.3,1.6,.5,1);" style-hover="transform:rotate(0deg) scale(1.05);">
+        <div style="position:absolute; inset:8px; border-radius:50%; border:2px dashed #7C1126;"></div>
+        <div style="text-align:center; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; line-height:.9;">
+          <span style="display:block; font-size:16px; letter-spacing:.08em;">DESDE</span>
+          <span style="display:block; font-size:clamp(38px,3.4vw,46px);">2020</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Reseñas" style="background:#EFE7C7; padding:clamp(88px,10vw,140px) 0;">
+  <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,3vw,40px); display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:32px;">
+    <h2 data-reveal="" style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,7vw,104px); line-height:.9; letter-spacing:-.01em; color:#7C1126; max-width:760px;">LO DICEN MEJOR ELLOS.</h2>
+    <div data-reveal="" style="display:flex; align-items:center; gap:20px;">
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(72px,8vw,120px); line-height:.85; color:#7C1126;">{{ rating }} ★</span>
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <span style="font-size:17px; font-weight:600; color:#1E1414;">{{ reviews }} reseñas en Google</span>
+        <a href="#" style="display:flex; align-items:center; gap:8px; min-height:32px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #7C1126; transition:gap .25s ease;" style-hover="gap:14px;">LEER TODAS EN GOOGLE <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="cn-scroller" style="max-width:1280px; margin:clamp(40px,5vw,64px) auto 0; padding:0 clamp(20px,3vw,40px) 6px; display:grid; grid-auto-flow:{{ revFlow }}; grid-auto-columns:{{ revCols }}; grid-template-columns:{{ revTpl }}; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none;">
+    <sc-for list="{{ reviewsList }}" as="r" hint-placeholder-count="6">
+      <figure data-reveal="" style="margin:0; scroll-snap-align:start; padding:28px; border-radius:22px; display:flex; flex-direction:column; justify-content:space-between; gap:28px; min-height:240px; background:{{ r.bg }}; color:{{ r.fg }};">
+        <blockquote style="margin:0; font-size:18px; line-height:1.5;">«{{ r.text }}»</blockquote>
+        <figcaption style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em;"><span>{{ r.name }}</span><span aria-label="5 estrellas" style="letter-spacing:.12em;">★★★★★</span></figcaption>
+      </figure>
+    </sc-for>
+  </div>
+</section>
+
+<section id="grupos" data-screen-label="Grupos" style="background:#7C1126; color:#EFE7C7; padding:clamp(88px,10vw,140px) clamp(20px,4vw,48px); overflow:hidden; scroll-margin-top:60px;">
+  <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr)); gap:clamp(48px,6vw,88px); align-items:center;">
+    <div style="position:relative; order:0;">
+      <div data-speed="0.05" role="img" aria-label="Foto pendiente: mesa larga de grupo vista desde arriba" style="aspect-ratio:5/4; border-radius:24px; overflow:hidden; background:repeating-linear-gradient(135deg,#6C0E21 0 10px,#741024 10px 20px); display:flex; align-items:flex-start; padding:22px;">
+        <span style="font-family:ui-monospace,Menlo,monospace; font-size:12px; color:#EFE7C7;">[FOTO MESA COMPARTIDA DESDE ARRIBA]</span>
+      </div>
+      <div style="position:absolute; right:-14px; top:-26px; width:clamp(118px,10vw,140px); aspect-ratio:1/1; transform:rotate(9deg); filter:drop-shadow(5px 5px 0 #4E0B18); transition:transform .35s cubic-bezier(.3,1.6,.5,1);" style-hover="transform:rotate(-3deg) scale(1.06);">
+        <div style="position:absolute; inset:0; background:#EFE7C7; border-radius:24%;"></div>
+        <div style="position:absolute; inset:0; background:#EFE7C7; border-radius:24%; transform:rotate(30deg);"></div>
+        <div style="position:absolute; inset:0; background:#EFE7C7; border-radius:24%; transform:rotate(60deg);"></div>
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:20px; line-height:.95;">FUERA<br>DE CARTA</div>
+      </div>
+    </div>
+    <div data-reveal="" style="display:flex; flex-direction:column; gap:24px;">
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.2em;">GRUPOS Y CELEBRACIONES</span>
+      <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,6.4vw,96px); line-height:.9; letter-spacing:-.01em; color:#EFE7C7;">¿SOIS MUCHOS? MEJOR.</h2>
+      <p style="margin:0; max-width:520px; font-size:clamp(16px,1.3vw,18px); line-height:1.6; text-wrap:pretty;">Cumpleaños, comidas familiares y reencuentros. Ponemos los platos al centro y hay opciones para cada uno: el que quiere pizza, el que no, los niños y los abuelos. Cabemos hasta [CAPACIDAD MÁXIMA DE GRUPO].</p>
+      <div style="display:flex; flex-wrap:wrap; gap:14px;">
+        <a href="#reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">RESERVAR PARA UN GRUPO <span aria-hidden="true">→</span></a>
+        <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:52px; padding:0 24px; border:2px solid #EFE7C7; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease;" style-hover="background:#EFE7C7; color:#7C1126;">LLAMAR</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reserva" data-screen-label="Reserva" style="background:#EFE7C7; padding:clamp(88px,10vw,140px) clamp(0px,3vw,40px); scroll-margin-top:40px;">
+  <div style="max-width:720px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:20px; text-align:center; padding:0 20px;">
+    <h2 data-reveal="" style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(52px,7vw,104px); line-height:.9; letter-spacing:-.01em; color:#7C1126;">RESERVA TU MESA.</h2>
+    <p style="margin:0; font-size:clamp(16px,1.3vw,18px); line-height:1.55; color:#1E1414; text-wrap:pretty;">En menos de un minuto. Si prefieres hablar con nosotros, llámanos al <a href="tel:{{ phoneTel }}" style="font-weight:700; text-decoration:underline; text-underline-offset:3px;">{{ phoneDisplay }}</a>.</p>
+  </div>
+  <div ref="{{ bookRef }}" style="max-width:720px; margin:clamp(32px,4vw,48px) auto 0; background:#FAF6EA; border:3px solid #7C1126; border-radius:{{ frameRadius }}; overflow:hidden;">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 20px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.12em;">
+      <span>CASANITA · RESERVA ONLINE</span>
+      <span style="display:flex; align-items:center; gap:8px;"><span style="width:9px; height:9px; border-radius:50%; background:{{ openDot }};"></span>{{ openShort }}</span>
+    </div>
+    <div style="position:relative; min-height:640px;">
+      <sc-if value="{{ bookNear }}">
+        <div role="region" aria-label="Módulo de reserva" style="background:#FFFFFF; padding:clamp(16px,3vw,32px);"><iframe id="vetra-reservas" src="{{ reserveEmbedUrl }}" style="width:100%; border:none; min-height:560px; display:block;"></iframe></div>
+      </sc-if>
+      <sc-if value="{{ bookFar }}" hint-placeholder-val="{{ true }}">
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:15px; color:#5A3A3A;">Cargando reservas…</div>
+      </sc-if>
+    </div>
+  </div>
+  <p style="max-width:720px; margin:18px auto 0; padding:0 20px; text-align:center; font-size:15px; color:#5A3A3A;">¿Venís en grupo grande? Llámanos y lo preparamos juntos.</p>
+</section>
+
+<section data-screen-label="Preguntas frecuentes" style="background:#FAF6EA; padding:clamp(88px,10vw,140px) clamp(20px,4vw,48px);">
+  <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr)); gap:clamp(32px,5vw,80px); align-items:start;">
+    <h2 data-reveal="" style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,6vw,88px); line-height:.9; letter-spacing:-.01em; color:#7C1126;">LO QUE SIEMPRE NOS PREGUNTÁIS.</h2>
+    <div style="display:flex; flex-direction:column; border-top:2px solid #7C1126;">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="7">
+        <div style="border-bottom:2px solid #7C1126;">
+          <h3 style="margin:0;">
+            <button type="button" onClick="{{ f.toggle }}" aria-expanded="{{ f.open }}" style="width:100%; min-height:64px; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 0; background:none; border:0; cursor:pointer; text-align:left; font-family:'DM Sans',sans-serif; font-weight:600; font-size:clamp(17px,1.4vw,20px); line-height:1.35; color:#1E1414;" style-hover="color:#7C1126;">
+              <span>{{ f.q }}</span>
+              <span aria-hidden="true" style="flex-shrink:0; width:32px; height:32px; display:flex; align-items:center; justify-content:center; border-radius:50%; background:#7C1126; color:#EFE7C7; font-size:20px; line-height:1; transition:transform .3s ease; transform:{{ f.rot }};">+</span>
+            </button>
+          </h3>
+          <sc-if value="{{ f.open }}">
+            <p style="margin:0; padding:0 48px 22px 0; font-size:16px; line-height:1.6; color:#1E1414;">{{ f.a }}</p>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="visitanos" data-screen-label="Visítanos" style="background:#EFE7C7; padding:clamp(88px,10vw,140px) clamp(20px,4vw,48px); scroll-margin-top:60px;">
+  <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr)); gap:clamp(40px,5vw,80px); align-items:stretch;">
+    <div data-reveal="" style="display:flex; flex-direction:column; gap:28px;">
+      <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(52px,7vw,104px); line-height:.9; letter-spacing:-.01em; color:#7C1126;">VISÍTANOS.</h2>
+      <div style="display:flex; flex-direction:column; gap:6px; font-size:18px; line-height:1.5;">
+        <span>{{ addressStreet }}</span>
+        <span>{{ addressCity }}</span>
+        <span style="font-size:15px; color:#5A3A3A;">En la plaza, con un parque enfrente y aparcamiento cerca.</span>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:8px 24px; font-size:17px;">
+        <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:44px; font-weight:700;">{{ phoneDisplay }}</a>
+        <a href="mailto:{{ email }}" style="display:flex; align-items:center; min-height:44px; font-weight:700;">{{ email }}</a>
+        <a href="/contacto" style="display:flex; align-items:center; min-height:44px; font-weight:700;">Escríbenos →</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div style="display:flex; align-items:center; gap:10px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.12em; color:#7C1126;">
+          <span>HORARIO</span>
+          <span style="display:flex; align-items:center; gap:8px; padding:6px 12px; border-radius:999px; background:{{ openBg }}; color:{{ openFg }};"><span style="width:8px; height:8px; border-radius:50%; background:{{ openFg }};"></span>{{ openLabel }}</span>
+        </div>
+        <div style="display:flex; flex-direction:column;">
+          <sc-for list="{{ hours }}" as="h" hint-placeholder-count="7">
+            <div style="display:flex; justify-content:space-between; gap:16px; padding:10px 12px; border-radius:8px; font-size:16px; background:{{ h.bg }}; font-weight:{{ h.fw }};">
+              <span>{{ h.day }}</span><span style="text-align:right;">{{ h.txt }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+    <div ref="{{ mapRef }}" style="display:flex; flex-direction:column; gap:14px; min-width:0;">
+      <div style="position:relative; width:100%; flex:1 1 auto; min-height:360px; border-radius:24px; overflow:hidden; background:#EFE7C7; border:2px solid #7C1126;">
+        <sc-if value="{{ mapNear }}">
+          <iframe title="Mapa: Casanita en {{ address }}" src="{{ mapsEmbedUrl }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="position:absolute; inset:0; width:100%; height:100%; border:0;"></iframe>
+        </sc-if>
+        <sc-if value="{{ mapFar }}" hint-placeholder-val="{{ true }}">
+          <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:15px; color:#5A3A3A;">Cargando mapa…</div>
+        </sc-if>
+      </div>
+      <a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 24px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">CÓMO LLEGAR <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer data-screen-label="Footer" style="background:#7C1126; color:#EFE7C7; padding:clamp(64px,7vw,96px) clamp(20px,4vw,48px) {{ footPad }};">
+  <div style="max-width:1240px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(40px,5vw,64px);">
+    <p style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(44px,7.4vw,112px); line-height:.9; letter-spacing:-.01em;">COMIDAS, CENAS<br>Y BUEN BEBER.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr)); gap:32px; font-size:15px; line-height:1.6;">
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <img src="assets/logo-beige.png" alt="Casanita" loading="lazy" style="width:150px; height:auto;">
+        <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:10px; letter-spacing:.42em; padding-left:44px;">VILASSAR</span>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:4px;">
+        <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; margin-bottom:6px;">CONTACTO</span>
+        <span>{{ address }}</span>
+        <a href="tel:{{ phoneTel }}" style="color:#EFE7C7;">{{ phoneDisplay }}</a>
+        <a href="mailto:{{ email }}" style="color:#EFE7C7;">{{ email }}</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:4px;">
+        <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; margin-bottom:6px;">HORARIO</span>
+        <sc-for list="{{ hours }}" as="h" hint-placeholder-count="7">
+          <span>{{ h.day }}: {{ h.txt }}</span>
+        </sc-for>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:4px;">
+        <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; margin-bottom:6px;">SÍGUENOS</span>
+        <a href="{{ instagramUrl }}" style="color:#EFE7C7;">Instagram</a>
+        <a href="#" style="color:#EFE7C7;">TikTok</a>
+        <a href="#" style="color:#EFE7C7;">Facebook</a>
+        <a href="#" data-track="click_glovo" target="_blank" rel="noopener" style="color:#EFE7C7; font-weight:700; margin-top:6px;">Pedir en Glovo ↗</a>
+      </div>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px 32px; padding-top:24px; border-top:2px solid #4E0B18; font-size:14px;">
+      <div style="display:flex; flex-wrap:wrap; gap:4px 20px;">
+        <a href="#" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Privacidad</a>
+        <a href="#" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Cookies</a>
+        <a href="#" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Aviso legal</a>
+        <a href="/contacto" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Contacto</a>
+        <a href="/contacto#trabaja" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px; font-weight:700;">Trabaja con nosotros</a>
+      </div>
+      <div role="group" aria-label="Idioma" style="display:flex; gap:6px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; letter-spacing:.1em;">
+        <button type="button" style="min-width:44px; min-height:44px; background:#EFE7C7; color:#7C1126; border:0; font:inherit; letter-spacing:inherit; border-radius:2px;">ES</button>
+        <button type="button" style="min-width:44px; min-height:44px; background:none; color:#EFE7C7; border:2px solid #EFE7C7; font:inherit; letter-spacing:inherit; border-radius:2px;">CA</button>
+        <button type="button" style="min-width:44px; min-height:44px; background:none; color:#EFE7C7; border:2px solid #EFE7C7; font:inherit; letter-spacing:inherit; border-radius:2px;">EN</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ showBar }}">
+  <div role="navigation" aria-label="Acciones rápidas" style="position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1.4fr 1fr; gap:8px; padding:10px 12px calc(10px + env(safe-area-inset-bottom)); background:#FAF6EA; border-top:2px solid #7C1126;">
+    <a href="#reserva" onClick="{{ closeMenu }}" style="display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">RESERVAR <span aria-hidden="true">→</span></a>
+    <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; justify-content:center; min-height:52px; background:#EFE7C7; color:#7C1126; border:2px solid #7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">LLAMAR</a>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;notaGoogle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;4,8&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Datos (a validar)&quot;},&quot;numResenas&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;+2.000&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Datos (a validar)&quot;},&quot;horarioTerraza&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Datos (a validar)&quot;},&quot;animaciones&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Movimiento&quot;},&quot;velocidadFranja&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.3,&quot;max&quot;:2.5,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Movimiento&quot;}}">
+const LIVE_API = 'https://api.vetrareserve.com/api/site/public/69bd6b22dbf226bfd19230df';
+const FALLBACK = {
+  phone: '+34605251287', email: 'info@casanitavilassar.com',
+  address: "Carrer de Ca l'Aduana, 69, 08340 Vilassar de Mar",
+  mapsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Carrer+de+ca+l%27Aduana+69,+08340+Vilassar+de+Mar',
+  reserveUrl: 'https://vetrareserve.com/casanita-vilassar',
+  schedule: { 0: [['12:00','16:00'],['19:00','23:00']], 1: [['12:00','16:00'],['19:00','23:00']], 2: [], 3: [], 4: [['12:00','16:00'],['19:00','23:00']], 5: [['12:00','16:00'],['19:00','23:00']], 6: [['12:00','16:00'],['19:00','23:00']] },
+};
+function phoneDisplayFmt(tel) {
+  const d = (tel || '').replace(/^\+34/, '');
+  const m = d.match(/^(\d{3})(\d{2})(\d{2})(\d{2})$/);
+  return m ? `${m[1]} ${m[2]} ${m[3]} ${m[4]}` : d;
+}
+function safeUrl(url, fallback, hostSuffix) {
+  try {
+    const u = new URL(url, 'https://invalid.invalid');
+    if (u.protocol !== 'https:' && u.protocol !== 'http:') return fallback;
+    if (hostSuffix && u.hostname !== hostSuffix && !u.hostname.endsWith('.' + hostSuffix)) return fallback;
+    return url;
+  } catch { return fallback; }
+}
+function scheduleFromLive(live) {
+  if (!live || !Array.isArray(live.openingHours)) return FALLBACK.schedule;
+  const sched = {};
+  live.openingHours.forEach(({ day, ranges }) => { sched[day] = (ranges || []).map(r => [r.open, r.close]); });
+  return sched;
+}
+function splitAddress(full) {
+  const parts = (full || '').split(',').map(s => s.trim()).filter(Boolean);
+  if (parts.length >= 3) return { street: `${parts[0]}, ${parts[1]}`, city: parts.slice(2).join(', ') };
+  return { street: full || '', city: '' };
+}
+const DAYS = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+const MANIFESTO = 'En Casanita el chef sale a tu mesa, te cuenta qué hay hoy fuera de carta y se acuerda de cómo te gustó la carbonara. Aquí cabe el que quiere pizza y el que no, los niños, los abuelos y el amigo que siempre llega tarde. Y cuando acabas, la terraza y un cóctel te recuerdan que no hay ninguna prisa.';
+const PILLS = {
+  chef: { alt: 'Equipo de Casanita en sala', img: 'assets/chef-sala.webp', pos: '50% 30%' },
+  carbonara: { alt: 'Carbonara de Casanita', img: 'assets/carbonara.webp', pos: '58% 47%' },
+  mesa: { alt: '[FOTO MESA LLENA]', ph: 'foto mesa' },
+  terraza: { alt: 'Terraza de Casanita de noche', img: 'assets/fachada-noche.jpg', pos: '58% 40%' },
+};
+const DISHES = [
+  { name: 'CARBONARA', desc: 'Sin nata, como debe ser.', img: 'assets/carbonara.webp', pos: '58% 47%', alt: 'Carbonara de Casanita' },
+  { name: 'CROQUETAS DE RABO DE TORO', desc: 'Caseras. También de langostinos, chipirones o espinacas con idiazábal.', img: 'assets/croquetas.webp', alt: 'Croquetas caseras de Casanita' },
+  { name: 'RAVIOLIS DE FOIE', desc: 'Con crema de idiazábal, aceite de trufa y manzana verde.', img: 'assets/raviolis.webp', alt: 'Ravioli al foie de Casanita' },
+  { name: 'BURRATA', desc: 'En ensalada, con rúcula, cherrys, rábanos y aceite de albahaca.', img: 'assets/burrata.webp', alt: 'Ensalada de burrata de Casanita' },
+  { name: 'PORCHETTA', desc: 'Panceta de cerdo a baja temperatura sobre patata crujiente.', img: 'assets/porchetta.webp', alt: 'Porchetta de Casanita' },
+  { name: 'TIRAMISÚ', desc: 'El final de siempre. Si prefieres, lemon pie.', img: 'assets/tiramisu.webp', alt: 'Tiramisú de Casanita' },
+];
+const FAQS = [
+  ['¿Tenéis opciones sin gluten?', 'Sí. Todas las pizzas se pueden pedir con masa sin gluten o con queso sin lactosa (de coco), y el coulant de praliné es sin gluten. Para el resto de platos, pregúntanos. [CONFIRMAR OTROS PLATOS]'],
+  ['¿Hay platos para niños?', '[A CONFIRMAR]'],
+  ['¿Puedo venir con un grupo grande?', 'Claro. Reserva indicando cuántos sois o llámanos al 605 25 12 87 y lo preparamos juntos. Capacidad máxima: [CAPACIDAD MÁXIMA DE GRUPO].'],
+  ['¿Se puede reservar en la terraza?', '[A CONFIRMAR: si la terraza se reserva o va por orden de llegada]'],
+  ['¿Dónde aparco?', 'Hay aparcamiento cerca de la plaza [DETALLE DEL APARCAMIENTO]. Estamos justo delante del parque.'],
+  ['¿Hacéis comida para llevar o a domicilio?', 'Sí. Puedes recoger tu pedido en el local o pedirlo a domicilio por Glovo.'],
+  ['¿Hacéis catering?', 'Sí. Escríbenos a info@casanitavilassar.com o llámanos y te contamos. [DETALLES DEL SERVICIO DE CATERING]'],
+];
+const REVIEWS = [
+  ['Desde el primer momento te hacen sentir como en casa, con una cercanía y amabilidad que se agradecen muchísimo. […] Sin duda, un lugar al que apetece volver y recomendar.', 'AMANDA G. · LOCAL GUIDE'],
+  ['¡Hemos cenado súper bien! Las pizzas, una barbaridad de buenas y caseras. El personal, muy atento y amable. Nos han tratado de 10.', 'CRISTINA R.'],
+  ['Uno de mis prefes de Vilassar. La comida, el trato y el lugar me encantan. ¡Atención a lo que ofrecen fuera de carta! Y a partir de primavera lo tengo claro: terracita.', 'MARY R. · LOCAL GUIDE'],
+  ['Lo mejor de este lugar son sus platos fuera de carta, que te canta un camarero encantador supervisado por el chef. Una terraza que no puede tener más encanto. ¡De 10!', 'C. H. · LOCAL GUIDE'],
+  ['Celebré aquí mis 40 años y todo fue genial. El sitio es súper agradable, con terraza al lado de un parque, ideal si vais con niños. ¡Muy recomendable!', 'POL C.'],
+  ['Excelente comida y atención del personal. Pasamos una tarde muy linda con mi pareja. Muy agradecidos a todo el equipo, en especial al chef por su amabilidad.', 'VALENTINA M.'],
+];
+const toMin = s => { const [h, m] = s.split(':').map(Number); return h * 60 + m; };
+
+class Component extends DCLogic {
+  injectLd() {
+    const DAYMAP = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const live = this.state.live;
+    const b = (live && live.business) || {};
+    const schedule = scheduleFromLive(live);
+    const hours = [];
+    Object.entries(schedule).forEach(([d, slots]) => slots.forEach(([o, c]) => hours.push({ '@type': 'OpeningHoursSpecification', dayOfWeek: DAYMAP[d], opens: o, closes: c })));
+    const restaurant = {
+      '@context': 'https://schema.org', '@type': 'Restaurant', name: 'Casanita', url: 'https://casanitavilassar.com/',
+      image: 'https://casanitavilassar.com/assets/fachada-dia-vespa.jpg', logo: 'https://casanitavilassar.com/assets/favicon.png',
+      telephone: b.phone || FALLBACK.phone, email: b.email || FALLBACK.email,
+      address: { '@type': 'PostalAddress', streetAddress: "Carrer de Ca l'Aduana, 69", postalCode: '08340', addressLocality: 'Vilassar de Mar', addressRegion: 'Barcelona', addressCountry: 'ES' },
+      geo: { '@type': 'GeoCoordinates', latitude: 41.505014, longitude: 2.393404 },
+      openingHoursSpecification: hours, servesCuisine: ['Italiana', 'Mediterránea'], acceptsReservations: true, priceRange: '€€',
+      menu: 'https://casanitavilassar.com/carta', sameAs: (live && Array.isArray(live.links) ? live.links.map(l => l.url) : []).filter(u => /^https?:/.test(u)),
+    };
+    const faq = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQS.filter(([, a]) => !a.includes('[')).map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) };
+    [['ld-restaurant', restaurant], ['ld-faq', faq]].forEach(([id, data]) => {
+      if (id === 'ld-faq' && !data.mainEntity.length) return;
+      let s = document.getElementById(id);
+      if (!s) { s = document.createElement('script'); s.type = 'application/ld+json'; s.id = id; document.head.appendChild(s); }
+      s.textContent = JSON.stringify(data);
+    });
+  }
+  trackSetup() {
+    window.dataLayer = window.dataLayer || [];
+    document.documentElement.lang = 'es';
+    this.onTrack = e => {
+      const a = e.target.closest && e.target.closest('a,button'); if (!a) return;
+      const href = a.getAttribute('href') || '';
+      let ev = a.dataset.track;
+      if (!ev) {
+        if (/^\/reserva(#|$)|#reserva$/.test(href)) ev = 'click_reservar';
+        else if (href.startsWith('tel:')) ev = 'click_llamar';
+        else if (/google\.com\/maps/.test(href)) ev = 'click_como_llegar';
+        else if (/^\/carta/.test(href)) ev = 'click_ver_carta';
+      }
+      if (ev) window.dataLayer.push({ event: ev, link_text: (a.textContent || '').trim().slice(0, 60), page: location.pathname });
+    };
+    document.addEventListener('click', this.onTrack, true);
+  }
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, scrolled: false, menuOpen: false, faq: -1, slide: 0, bookNear: false, mapNear: false, now: new Date(), live: null };
+  heroText = React.createRef(); ribbon = React.createRef(); plate = React.createRef(); manifesto = React.createRef();
+  marquee = React.createRef(); carousel = React.createRef(); bookRef = React.createRef(); mapRef = React.createRef();
+  mx = 0; paused = false; rot = 0;
+
+  motion() {
+    const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    return this.props.animaciones !== false && !reduced;
+  }
+
+  componentDidMount() {
+    this.trackSetup();
+    this.injectLd();
+    fetch(LIVE_API).then(r => (r.ok ? r.json() : Promise.reject())).then(data => { this.setState({ live: data }); this.injectLd(); }).catch(() => {});
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    this.onScroll = () => { const s = window.scrollY > 40, b = window.scrollY > window.innerHeight * 0.55; if (s !== this.state.scrolled || b !== this.state.pastHero) this.setState({ scrolled: s, pastHero: b }); };
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+    this.lazy = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      if (e.target === this.bookRef.current) this.setState({ bookNear: true });
+      if (e.target === this.mapRef.current) this.setState({ mapNear: true });
+      this.lazy.unobserve(e.target);
+    }), { rootMargin: '600px 0px' });
+    [this.bookRef, this.mapRef].forEach(r => r.current && this.lazy.observe(r.current));
+    this.rv = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.style.opacity = '1'; e.target.style.transform = 'none';
+      this.rv.unobserve(e.target);
+    }), { rootMargin: '0px 0px -8% 0px' });
+    this.scanReveal();
+    this.clock = setInterval(() => this.setState({ now: new Date() }), 60000);
+    const loop = () => { this.tick(); this.raf = requestAnimationFrame(loop); };
+    this.raf = requestAnimationFrame(loop);
+    this.onVetraMsg = e => {
+      if (!/^https:\/\/([a-z0-9-]+\.)?vetrareserve\.com$/.test(e.origin)) return;
+      const h = e.data && e.data.type === 'VETRA_HEIGHT' ? Number(e.data.height) : NaN;
+      if (!Number.isFinite(h)) return;
+      const el = document.getElementById('vetra-reservas');
+      if (el) el.style.height = h + 'px';
+    };
+    window.addEventListener('message', this.onVetraMsg);
+  }
+  componentDidUpdate() { this.scanReveal(); }
+  componentWillUnmount() { document.removeEventListener('click', this.onTrack, true);
+    window.removeEventListener('resize', this.onResize); window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('message', this.onVetraMsg);
+    cancelAnimationFrame(this.raf); clearInterval(this.clock); this.lazy && this.lazy.disconnect(); this.rv && this.rv.disconnect();
+    document.body.style.overflow = '';
+  }
+
+  scanReveal() {
+    if (!this.rv) return;
+    const m = this.motion();
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      if (el.dataset.rvDone) return;
+      el.dataset.rvDone = '1';
+      if (!m) return;
+      const sibs = el.parentElement ? Array.from(el.parentElement.querySelectorAll(':scope > [data-reveal]')) : [];
+      const i = Math.max(0, sibs.indexOf(el));
+      el.style.opacity = '0'; el.style.transform = 'translateY(28px)';
+      el.style.transition = `opacity .7s ease ${i * 90}ms, transform .7s cubic-bezier(.2,.7,.2,1) ${i * 90}ms`;
+      this.rv.observe(el);
+    });
+  }
+
+  tick() {
+    const m = this.motion();
+    const vh = window.innerHeight, y = window.scrollY;
+    if (m) {
+      this.rot += 0.035;
+      if (this.plate.current) this.plate.current.style.transform = `rotate(${this.rot}deg)`;
+      if (this.ribbon.current) this.ribbon.current.style.transform = `rotate(${-this.rot * 2.2}deg)`;
+      if (this.heroText.current && y < vh * 1.2) this.heroText.current.style.transform = `translateY(${y * 0.22}px)`;
+      const mq = this.marquee.current;
+      if (mq && !this.paused) {
+        const half = mq.scrollWidth / 2;
+        this.mx -= 0.9 * (this.props.velocidadFranja ?? 1);
+        if (half && -this.mx >= half) this.mx += half;
+        mq.style.transform = `translateX(${this.mx}px)`;
+      }
+      document.querySelectorAll('[data-speed]').forEach(el => {
+        const r = el.parentElement.getBoundingClientRect();
+        const c = r.top + r.height / 2 - vh / 2;
+        el.style.transform = `translateY(${Math.max(-24, Math.min(24, -c * parseFloat(el.dataset.speed))).toFixed(1)}px)`;
+      });
+    }
+    const p = this.manifesto.current;
+    if (p) {
+      const toks = p.querySelectorAll('[data-tok]');
+      const r = p.getBoundingClientRect();
+      const prog = m ? Math.min(1, Math.max(0, (vh * 0.82 - r.top) / (r.height + vh * 0.25))) : 1;
+      const lit = prog * toks.length;
+      toks.forEach((t, i) => {
+        const on = i < lit;
+        t.style.opacity = on ? '1' : '0.2';
+        const pill = t.querySelector('[data-pill]');
+        if (pill) pill.style.transform = on ? 'scale(1)' : 'scale(.55)';
+      });
+    }
+  }
+
+  openInfo() {
+    const live = this.state.live;
+    if (live && live.today && live.today.closed && live.today.closureReason) {
+      return { open: false, label: `CERRADO · ${live.today.closureReason.toUpperCase()}` };
+    }
+    const schedule = scheduleFromLive(live);
+    const d = this.state.now, day = d.getDay(), mins = d.getHours() * 60 + d.getMinutes();
+    const open = (schedule[day] || []).some(([a, b]) => mins >= toMin(a) && mins < toMin(b));
+    if (open) return { open, label: 'ABIERTO AHORA' };
+    for (let k = 0; k < 8; k++) {
+      const dd = (day + k) % 7;
+      const slot = (schedule[dd] || []).find(([a]) => k > 0 || toMin(a) > mins);
+      if (slot) return { open, label: `CERRADO · ABRE ${k === 0 ? 'HOY' : k === 1 ? 'MAÑANA' : DAYS[dd].toUpperCase()} A LAS ${slot[0]}` };
+    }
+    return { open, label: 'CERRADO' };
+  }
+  biz() {
+    const live = this.state.live;
+    const b = (live && live.business) || {};
+    const ig = live && Array.isArray(live.links) ? live.links.find(l => l.type === 'instagram') : null;
+    const addr = splitAddress(b.address || FALLBACK.address);
+    return {
+      phoneTel: b.phone || FALLBACK.phone,
+      phoneDisplay: phoneDisplayFmt(b.phone || FALLBACK.phone),
+      email: b.email || FALLBACK.email,
+      address: b.address || FALLBACK.address,
+      addressStreet: addr.street, addressCity: addr.city,
+      mapsUrl: safeUrl(b.mapsUrl || FALLBACK.mapsUrl, FALLBACK.mapsUrl, 'google.com'),
+      mapsEmbedUrl: 'https://www.google.com/maps?q=' + encodeURIComponent('Casanita Vilassar, ' + (b.address || FALLBACK.address)) + '&z=16&output=embed',
+      instagramUrl: ig ? safeUrl(ig.url, '#', 'instagram.com') : '#',
+      reserveEmbedUrl: safeUrl((live && live.reservations && live.reservations.url) || FALLBACK.reserveUrl, FALLBACK.reserveUrl, 'vetrareserve.com') + '?embed=1&lang=es',
+    };
+  }
+
+  renderVals() {
+    const { w, scrolled, menuOpen } = this.state;
+    const isMobile = w < 820;
+    const solid = scrolled && !menuOpen;
+    const tokens = [];
+    MANIFESTO.split(' ').forEach(part => {
+      const mm = part.match(/^\{(\w+)\}(.*)$/);
+      if (mm) { const pl = PILLS[mm[1]]; tokens.push({ isPill: true, alt: pl.alt, img: pl.img || '', ph: pl.img ? '' : (pl.ph || ''), pos: pl.pos || '50% 50%', suffix: mm[2] }); }
+      else tokens.push({ isWord: true, w: part });
+    });
+    const oi = this.openInfo();
+    const schedule = scheduleFromLive(this.state.live);
+    const biz = this.biz();
+    const today = this.state.now.getDay();
+    const hours = [1, 2, 3, 4, 5, 6, 0].map(d => ({
+      day: DAYS[d] + (d === today ? ' · hoy' : ''),
+      txt: (schedule[d] || []).length ? schedule[d].map(s => s.join('–')).join(' · ') : 'Cerrado',
+      bg: d === today ? '#FAF6EA' : 'transparent', fw: d === today ? 700 : 400,
+    }));
+    const toggleMenu = () => { const o = !this.state.menuOpen; document.body.style.overflow = o ? 'hidden' : ''; this.setState({ menuOpen: o }); };
+    return {
+      isMobile, isDesktop: !isMobile, menuOpen, showBar: isMobile && this.state.pastHero && !menuOpen,
+      galleryDesktop: w >= 1300, galleryCarousel: w < 1300,
+      logoBeige: !solid, logoGranate: solid,
+      hdrBg: solid ? '#EFE7C7' : 'transparent', hdrShadow: solid ? '0 2px 0 #7C1126' : 'none',
+      hdrFg: solid ? '#7C1126' : '#EFE7C7',
+      hdrBtnBg: solid ? '#7C1126' : '#EFE7C7', hdrBtnFg: solid ? '#EFE7C7' : '#7C1126',
+      toggleMenu, closeMenu: () => { document.body.style.overflow = ''; if (this.state.menuOpen) this.setState({ menuOpen: false }); },
+      rating: this.props.notaGoogle ?? '4,8', reviews: this.props.numResenas ?? '+2.000',
+      heroText: this.heroText, ribbon: this.ribbon, plate: this.plate, manifesto: this.manifesto, marquee: this.marquee,
+      carousel: this.carousel, bookRef: this.bookRef, mapRef: this.mapRef,
+      tokens, marqueeLoop: [0, 1],
+      pauseMarquee: () => { this.paused = true; }, playMarquee: () => { this.paused = false; },
+      dishOver: e => { const f = e.currentTarget; const c = f.querySelector('[data-cap]'); const z = f.querySelector('[data-zoom]'); if (c) { c.style.opacity = '1'; c.style.transform = 'none'; } if (z) z.style.transform = 'scale(1.07)'; },
+      dishOut: e => { const f = e.currentTarget; const c = f.querySelector('[data-cap]'); const z = f.querySelector('[data-zoom]'); if (c) { c.style.opacity = '0'; c.style.transform = 'translateY(10px)'; } if (z) z.style.transform = 'none'; },
+      dishes: DISHES.map(d => ({ ...d, img: d.img || '', ph: d.ph || '', pos: d.pos || '50% 50%', alt: d.alt || d.name })),
+      onCarousel: e => { const el = e.currentTarget; const card = el.firstElementChild; const step = card ? card.getBoundingClientRect().width + 14 : 1; const i = Math.round(el.scrollLeft / step); if (i !== this.state.slide) this.setState({ slide: i }); },
+      dots: DISHES.map((_, i) => ({ w: i === this.state.slide ? '28px' : '8px', c: i === this.state.slide ? '#7C1126' : '#CDBF95' })),
+      reviewsList: REVIEWS.map(([text, name], i) => ({ text, name, bg: i % 3 === 1 ? '#7C1126' : '#FAF6EA', fg: i % 3 === 1 ? '#EFE7C7' : '#1E1414' })),
+      revFlow: isMobile ? 'column' : 'row', revCols: isMobile ? '84%' : 'auto', revTpl: isMobile ? 'none' : 'repeat(3, minmax(0,1fr))',
+      faqs: FAQS.map(([q, a], i) => ({ q, a: a.replace('605 25 12 87', biz.phoneDisplay).replace('info@casanitavilassar.com', biz.email), open: this.state.faq === i, rot: this.state.faq === i ? 'rotate(45deg)' : 'none', toggle: () => this.setState(s => ({ faq: s.faq === i ? -1 : i })) })),
+      bookNear: this.state.bookNear, bookFar: !this.state.bookNear, mapNear: this.state.mapNear, mapFar: !this.state.mapNear,
+      frameRadius: isMobile ? '0px' : '20px',
+      openLabel: oi.label, openShort: oi.open ? 'ABIERTO AHORA' : 'CERRADO AHORA',
+      openBg: oi.open ? '#7C1126' : '#FAF6EA', openFg: oi.open ? '#EFE7C7' : '#7C1126', openDot: oi.open ? '#9FE0A8' : '#EFE7C7',
+      terrazaLabel: 'TERRAZA · ' + ((this.props.horarioTerraza || '').trim() || 'EN HORARIO DE COCINA').toUpperCase(),
+      hours, footPad: isMobile ? '120px' : '40px',
+      ...biz,
+    };
+  }
+}
+</script>
 </body>
 </html>
