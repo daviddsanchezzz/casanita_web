@@ -382,16 +382,16 @@ img{display:block;max-width:100%}
   <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,3vw,40px); display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:32px;">
     <h2 data-reveal="" style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,7vw,104px); line-height:.9; letter-spacing:-.01em; color:#7C1126; max-width:760px;">LO DICEN MEJOR ELLOS.</h2>
     <div data-reveal="" style="display:flex; flex-direction:{{ reviewSummaryDirection }}; align-items:{{ reviewSummaryAlign }}; gap:{{ reviewSummaryGap }}; width:{{ reviewSummaryWidth }};">
-      <span style="display:flex; flex-direction:column; align-items:flex-start; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(72px,8vw,120px); line-height:.72; color:#7C1126;"><span>{{ rating }}</span><span aria-label="estrellas" style="font-size:.74em; line-height:.85;">★</span></span>
+      <span style="display:flex; flex-direction:row; align-items:baseline; gap:.1em; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(72px,8vw,120px); line-height:.72; color:#7C1126;"><span>{{ rating }}</span><span aria-label="estrellas" style="font-size:.4em; line-height:1;">★</span></span>
       <div style="display:flex; flex-direction:column; gap:6px;">
         <span style="font-size:17px; font-weight:600; color:#1E1414;">{{ reviews }} reseñas en Google</span>
         <a href="#" style="display:flex; align-items:center; gap:8px; min-height:32px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #7C1126; transition:gap .25s ease;" style-hover="gap:14px;">LEER TODAS EN GOOGLE <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a>
       </div>
     </div>
   </div>
-  <div style="max-width:1280px; margin:clamp(40px,5vw,64px) auto 0; padding:0 clamp(20px,3vw,40px) 6px; display:grid; grid-template-columns:{{ revTpl }}; gap:16px; overflow-x:hidden;">
+  <div class="cn-scroller" style="max-width:1280px; margin:clamp(40px,5vw,64px) auto 0; padding:0 clamp(20px,3vw,40px) 6px; display:{{ revDisplay }}; grid-template-columns:{{ revTpl }}; gap:16px; overflow-x:{{ revOverflowX }}; scroll-snap-type:{{ revSnapType }}; scroll-padding:0 clamp(20px,3vw,40px); scrollbar-width:none;">
     <sc-for list="{{ reviewsList }}" as="r" hint-placeholder-count="6">
-      <figure data-reveal="" style="margin:0; min-width:0; padding:28px; border-radius:22px; display:flex; flex-direction:column; justify-content:space-between; gap:28px; min-height:240px; background:{{ r.bg }}; color:{{ r.fg }};">
+      <figure data-reveal="" style="margin:0; min-width:0; flex:{{ revCardFlex }}; scroll-snap-align:{{ revSnapAlign }}; padding:28px; border-radius:22px; display:flex; flex-direction:column; justify-content:space-between; gap:28px; min-height:240px; background:{{ r.bg }}; color:{{ r.fg }};">
         <blockquote style="margin:0; font-size:18px; line-height:1.5;">«{{ r.text }}»</blockquote>
         <figcaption style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em;"><span>{{ r.name }}</span><span aria-label="5 estrellas" style="letter-spacing:.12em;">★★★★★</span></figcaption>
       </figure>
@@ -851,7 +851,13 @@ class Component extends DCLogic {
       reviewsList: REVIEWS.map(([text, name], i) => ({ text, name, bg: i % 3 === 1 ? '#7C1126' : '#FAF6EA', fg: i % 3 === 1 ? '#EFE7C7' : '#1E1414' })),
       reviewSummaryDirection: isMobile ? 'column' : 'row', reviewSummaryAlign: isMobile ? 'flex-start' : 'center',
       reviewSummaryGap: isMobile ? '22px' : '20px', reviewSummaryWidth: isMobile ? '100%' : 'auto',
-      revTpl: isMobile ? 'minmax(0,1fr)' : 'repeat(3, minmax(0,1fr))',
+      revTpl: isMobile ? 'none' : 'repeat(3, minmax(0,1fr))',
+      revDisplay: isMobile ? 'flex' : 'grid',
+      revOverflowX: isMobile ? 'auto' : 'hidden',
+      revSnapType: isMobile ? 'x mandatory' : 'none',
+      revSnapAlign: isMobile ? 'start' : 'none',
+      revCardFlex: isMobile ? '0 0 82%' : 'initial',
+      revCardWidth: isMobile ? 'auto' : 'auto',
       faqs: FAQS.map(([q, a], i) => ({ q, a: a.replace('605 25 12 87', biz.phoneDisplay).replace('info@casanitavilassar.com', biz.email), open: this.state.faq === i, rot: this.state.faq === i ? 'rotate(45deg)' : 'none', toggle: () => this.setState(s => ({ faq: s.faq === i ? -1 : i })) })),
       bookNear: this.state.bookNear, bookFar: !this.state.bookNear, bookMinHeight: this.state.bookNear ? '0px' : '640px', mapNear: this.state.mapNear, mapFar: !this.state.mapNear,
       frameRadius: isMobile ? '0px' : '20px',
