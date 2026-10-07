@@ -38,6 +38,9 @@ body{margin:0;background:#EFE7C7;color:#1E1414;font-family:'DM Sans',system-ui,s
 a{color:#7C1126;text-decoration:none}
 a:hover{color:#4E0B18}
 img{display:block;max-width:100%}
+.cn-arrow{display:inline-block;position:relative;width:1.15em;height:.8em;flex:0 0 auto;color:inherit}
+.cn-arrow::before{content:"";position:absolute;left:.05em;right:.08em;top:50%;border-top:1.7px solid currentColor}
+.cn-arrow::after{content:"";position:absolute;right:.08em;top:50%;width:.42em;height:.42em;border-top:1.7px solid currentColor;border-right:1.7px solid currentColor;transform:translateY(-50%) rotate(45deg)}
 :focus-visible{outline:3px solid #EFE7C7;outline-offset:3px;box-shadow:0 0 0 6px #1E1414}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none !important}}
 </style>
@@ -95,7 +98,7 @@ img{display:block;max-width:100%}
       <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em;">¿SOIS MUCHOS?</span>
       <p style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(28px,2.6vw,36px); line-height:.95;">MEJOR LLÁMANOS Y LO PREPARAMOS JUNTOS.</p>
       <p style="margin:0; font-size:15px; line-height:1.5;">Cumpleaños, comidas familiares y reencuentros. Hasta [CAPACIDAD MÁXIMA DE GRUPO].</p>
-      <a href="tel:{{ phoneTel }}" style="margin-top:auto; align-self:flex-start; display:flex; align-items:center; gap:10px; min-height:48px; padding:0 22px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:gap .25s ease;" style-hover="gap:16px; color:#7C1126;">LLAMAR <span aria-hidden="true">→</span></a>
+      <a href="tel:{{ phoneTel }}" style="margin-top:auto; align-self:flex-start; display:flex; align-items:center; gap:10px; min-height:48px; padding:0 22px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:gap .25s ease;" style-hover="gap:16px; color:#7C1126;">LLAMAR <span class="cn-arrow" aria-hidden="true"></span></a>
     </div>
     <div style="display:flex; flex-direction:column; gap:12px; padding:28px; background:#FAF6EA; border-radius:22px;">
       <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">HORARIO</span>
@@ -104,7 +107,7 @@ img{display:block;max-width:100%}
           <span>{{ h.day }}: {{ h.txt }}</span>
         </sc-for>
       </div>
-      <a href="/#visitanos" style="margin-top:auto; font-weight:700; font-size:15px;">Cómo llegar →</a>
+      <a href="/#visitanos" style="display:inline-flex; align-items:center; gap:8px; margin-top:auto; font-weight:700; font-size:15px;">Cómo llegar <span class="cn-arrow" aria-hidden="true"></span></a>
     </div>
     <div style="display:flex; flex-direction:column; gap:14px; padding:28px; background:#FAF6EA; border-radius:22px;">
       <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">ANTES DE RESERVAR</span>
@@ -116,7 +119,7 @@ img{display:block;max-width:100%}
         <strong style="font-size:16px;">¿Opciones sin gluten?</strong>
         <span style="font-size:15px; line-height:1.5;">Todas las pizzas, con masa sin gluten o queso sin lactosa.</span>
       </div>
-      <a href="/carta" style="margin-top:auto; font-weight:700; font-size:15px;">Ver la carta →</a>
+      <a href="/carta" style="display:inline-flex; align-items:center; gap:8px; margin-top:auto; font-weight:700; font-size:15px;">Ver la carta <span class="cn-arrow" aria-hidden="true"></span></a>
     </div>
   </div>
 </section>

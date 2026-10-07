@@ -39,6 +39,10 @@ a{color:#7C1126;text-decoration:none}
 a:hover{color:#4E0B18}
 img{display:block;max-width:100%}
 input,select,textarea,button{font:inherit}
+.cn-arrow{display:inline-block;position:relative;width:1.15em;height:.8em;flex:0 0 auto;color:inherit}
+.cn-arrow::before{content:"";position:absolute;left:.05em;right:.08em;top:50%;border-top:1.7px solid currentColor}
+.cn-arrow::after{content:"";position:absolute;right:.08em;top:50%;width:.42em;height:.42em;border-top:1.7px solid currentColor;border-right:1.7px solid currentColor;transform:translateY(-50%) rotate(45deg)}
+.cn-arrow--back{transform:rotate(180deg)}
 :focus-visible{outline:3px solid #EFE7C7;outline-offset:3px;box-shadow:0 0 0 6px #1E1414}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none !important}}
 </style>
@@ -66,9 +70,9 @@ input,select,textarea,button{font:inherit}
           <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">EN</button>
         </div>
       </sc-if>
-      <a href="/reserva" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); background:{{ hdrBtnBg }}; color:{{ hdrBtnFg }}; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="gap:16px;">RESERVAR <span aria-hidden="true">→</span></a>
+      <a href="/reserva" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); background:{{ hdrBtnBg }}; color:{{ hdrBtnFg }}; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="gap:16px;">RESERVAR <span class="cn-arrow" aria-hidden="true"></span></a>
       <sc-if value="{{ isMobile }}">
-        <a href="/" aria-label="Volver al inicio" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; border:2px solid {{ hdrFg }}; color:{{ hdrFg }}; border-radius:2px; font-size:20px;">←</a>
+        <a href="/" aria-label="Volver al inicio" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; border:2px solid {{ hdrFg }}; color:{{ hdrFg }}; border-radius:2px; font-size:20px;"><span class="cn-arrow cn-arrow--back" aria-hidden="true"></span></a>
       </sc-if>
     </div>
   </div>
@@ -82,7 +86,7 @@ input,select,textarea,button{font:inherit}
     <h1 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(64px,10vw,150px); line-height:.86; letter-spacing:-.015em; max-width:1000px;">HABLEMOS.</h1>
     <p style="margin:0; max-width:560px; font-size:clamp(16px,1.35vw,19px); line-height:1.55; text-wrap:pretty;">Para reservar mesa, lo más rápido es la reserva online o una llamada. Para todo lo demás (grupos, catering, prensa o trabajar con nosotros), escríbenos aquí y te respondemos.</p>
     <div style="display:flex; flex-wrap:wrap; gap:14px;">
-      <a href="/reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">RESERVAR MESA <span aria-hidden="true">→</span></a>
+      <a href="/reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">RESERVAR MESA <span class="cn-arrow" aria-hidden="true"></span></a>
       <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:52px; padding:0 24px; border:2px solid #EFE7C7; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease;" style-hover="background:#EFE7C7; color:#7C1126;">LLAMAR · {{ phoneDisplay }}</a>
     </div>
   </div>
@@ -104,7 +108,7 @@ input,select,textarea,button{font:inherit}
         <div style="display:flex; flex-direction:column; gap:2px;">
           <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">DIRECCIÓN</span>
           <span>{{ addressStreet }}<br>{{ addressCity }}</span>
-          <a href="/#visitanos" style="font-weight:700; font-size:15px;">Horario y cómo llegar →</a>
+          <a href="/#visitanos" style="display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:15px;">Horario y cómo llegar <span class="cn-arrow" aria-hidden="true"></span></a>
         </div>
       </div>
     </div>
@@ -155,7 +159,7 @@ input,select,textarea,button{font:inherit}
             <span>He leído y acepto la <a href="#" style="font-weight:700; text-decoration:underline;">política de privacidad</a>.</span>
           </label>
           <sc-if value="{{ e.privacidad }}"><span style="margin-top:-12px; font-size:14px; font-weight:600; color:#7C1126;">Necesitamos que aceptes la política de privacidad.</span></sc-if>
-          <button type="submit" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; border:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; cursor:pointer; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; gap:18px;">ENVIAR MENSAJE <span aria-hidden="true">→</span></button>
+          <button type="submit" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; border:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; cursor:pointer; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; gap:18px;">ENVIAR MENSAJE <span class="cn-arrow" aria-hidden="true"></span></button>
         </form>
       </sc-if>
     </div>
@@ -227,7 +231,7 @@ input,select,textarea,button{font:inherit}
             <span>Acepto que Casanita guarde mis datos para procesos de selección, según la <a href="#" style="font-weight:700; text-decoration:underline;">política de privacidad</a>.</span>
           </label>
           <sc-if value="{{ je.privacidad }}"><span style="margin-top:-12px; font-size:14px; font-weight:600; color:#7C1126;">Necesitamos que lo aceptes para guardar tu candidatura.</span></sc-if>
-          <button type="submit" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; border:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; cursor:pointer; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; gap:18px;">ENVIAR CANDIDATURA <span aria-hidden="true">→</span></button>
+          <button type="submit" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; border:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; cursor:pointer; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; gap:18px;">ENVIAR CANDIDATURA <span class="cn-arrow" aria-hidden="true"></span></button>
         </form>
       </sc-if>
     </div>
@@ -249,7 +253,7 @@ input,select,textarea,button{font:inherit}
 
 <sc-if value="{{ isMobile }}">
   <div role="navigation" aria-label="Acciones rápidas" style="position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1.4fr 1fr; gap:8px; padding:10px 12px calc(10px + env(safe-area-inset-bottom)); background:#FAF6EA; border-top:2px solid #7C1126;">
-    <a href="/reserva" style="display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">RESERVAR <span aria-hidden="true">→</span></a>
+    <a href="/reserva" style="display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">RESERVAR <span class="cn-arrow" aria-hidden="true"></span></a>
     <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; justify-content:center; min-height:52px; background:#EFE7C7; color:#7C1126; border:2px solid #7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">LLAMAR</a>
   </div>
 </sc-if>

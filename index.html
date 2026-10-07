@@ -35,13 +35,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=DM+Sans:opsz,wght@9..40,400..700&amp;display=swap" rel="stylesheet">
 <style>
 html{scroll-behavior:smooth}
-body{margin:0;background:#EFE7C7;color:#1E1414;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;background:#EFE7C7;color:#1E1414;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 *{box-sizing:border-box}
 a{color:#7C1126;text-decoration:none}
 a:hover{color:#4E0B18}
 img{display:block;max-width:100%}
 :focus-visible{outline:3px solid #EFE7C7;outline-offset:3px;box-shadow:0 0 0 6px #1E1414}
 .cn-scroller::-webkit-scrollbar{display:none}
+.cn-arrow{display:inline-block;position:relative;width:1.15em;height:.8em;flex:0 0 auto;color:inherit}
+.cn-arrow::before{content:"";position:absolute;left:.05em;right:.08em;top:50%;border-top:1.7px solid currentColor}
+.cn-arrow::after{content:"";position:absolute;right:.08em;top:50%;width:.42em;height:.42em;border-top:1.7px solid currentColor;border-right:1.7px solid currentColor;transform:translateY(-50%) rotate(45deg)}
+.cn-arrow--external{width:.9em;height:.9em;transform:rotate(-45deg)}
+.cn-arrow--back{transform:rotate(180deg)}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none !important;animation:none !important}}
 </style>
 </helmet>
@@ -75,7 +80,7 @@ img{display:block;max-width:100%}
         </div>
       </sc-if>
       <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
-      <a href="#reserva" onClick="{{ closeMenu }}" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); background:{{ hdrBtnBg }}; color:{{ hdrBtnFg }}; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="gap:16px;">RESERVAR <span aria-hidden="true">→</span></a>
+      <a href="#reserva" onClick="{{ closeMenu }}" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); background:{{ hdrBtnBg }}; color:{{ hdrBtnFg }}; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="gap:16px;">RESERVAR <span class="cn-arrow" aria-hidden="true"></span></a>
       </sc-if>
       <sc-if value="{{ isMobile }}">
         <button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuOpen }}" aria-label="Abrir menú" style="width:44px; height:44px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; background:none; border:2px solid {{ hdrFg }}; border-radius:2px; cursor:pointer; padding:0;">
@@ -102,7 +107,7 @@ img{display:block;max-width:100%}
         <button type="button" style="min-width:48px; min-height:44px; background:none; color:#EFE7C7; border:2px solid #EFE7C7; font:inherit; letter-spacing:inherit; border-radius:2px;">CA</button>
         <button type="button" style="min-width:48px; min-height:44px; background:none; color:#EFE7C7; border:2px solid #EFE7C7; font:inherit; letter-spacing:inherit; border-radius:2px;">EN</button>
       </div>
-      <a href="#reserva" onClick="{{ closeMenu }}" style="display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">RESERVAR MESA <span aria-hidden="true">→</span></a>
+      <a href="#reserva" onClick="{{ closeMenu }}" style="display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">RESERVAR MESA <span class="cn-arrow" aria-hidden="true"></span></a>
       <a href="tel:{{ phoneTel }}" style="color:#EFE7C7; font-size:16px;">Llamar · {{ phoneDisplay }}</a>
       <p style="margin:0; font-size:15px; color:#EFE7C7;">{{ address }}</p>
     </div>
@@ -118,7 +123,7 @@ img{display:block;max-width:100%}
     <h1 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(58px,9.8vw,140px); line-height:.9; letter-spacing:-.01em; color:#EFE7C7; text-wrap:balance;">SIÉNTATE.<br>ESTÁS EN CASA.</h1>
     <p style="margin:0; max-width:560px; font-size:clamp(16px,1.35vw,19px); line-height:1.5; color:#EFE7C7; text-wrap:pretty;">Cocina mediterránea con alma italiana en el centro de Vilassar de Mar. Comidas, cenas y buen beber.</p>
     <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:14px 28px;">
-      <a href="#reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; gap:18px; color:#7C1126;">RESERVAR MESA <span aria-hidden="true">→</span></a>
+      <a href="#reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; gap:18px; color:#7C1126;">RESERVAR MESA <span class="cn-arrow" aria-hidden="true"></span></a>
       <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:44px; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:16px; letter-spacing:.08em; border-bottom:2px solid #EFE7C7;" style-hover="color:#FAF6EA;">LLAMAR · {{ phoneDisplay }}</a>
     </div>
   </div>
@@ -161,7 +166,7 @@ img{display:block;max-width:100%}
         <sc-if value="{{ t.isPill }}"><span data-tok="p" style="display:inline-flex; align-items:center; margin-right:.2em; transition:opacity .3s ease;"><span data-pill="1" role="img" aria-label="{{ t.alt }}" title="{{ t.alt }}" style="position:relative; display:inline-flex; align-items:center; justify-content:center; width:2.5em; height:.92em; margin-top:-.06em; border-radius:999px; overflow:hidden; transform-origin:center; transition:transform .45s cubic-bezier(.3,1.5,.5,1); background:repeating-linear-gradient(135deg,#E3D8AE 0 6px,#EAE1BD 6px 12px); box-shadow:inset 0 0 0 2px #7C1126;"><sc-if value="{{ t.img }}"><img src="{{ t.img }}" alt="" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:{{ t.pos }};"></sc-if><sc-if value="{{ t.ph }}"><span style="font-family:ui-monospace,Menlo,monospace; font-size:clamp(9px,.22em,12px); font-weight:500; letter-spacing:0; color:#7C1126; text-transform:uppercase;">{{ t.ph }}</span></sc-if></span>{{ t.suffix }}</span></sc-if>
       </sc-for>
     </p>
-    <a href="#historia" style="align-self:flex-end; display:flex; align-items:center; gap:10px; min-height:44px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; color:#7C1126; border-bottom:2px solid #7C1126; transition:gap .25s ease;" style-hover="gap:16px;">CONOCE LA CASA <span aria-hidden="true">→</span></a>
+    <a href="#historia" style="align-self:flex-end; display:flex; align-items:center; gap:10px; min-height:44px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; color:#7C1126; border-bottom:2px solid #7C1126; transition:gap .25s ease;" style-hover="gap:16px;">CONOCE LA CASA <span class="cn-arrow" aria-hidden="true"></span></a>
   </div>
 </section>
 
@@ -280,7 +285,7 @@ img{display:block;max-width:100%}
   </sc-if>
 
   <div style="display:flex; justify-content:center; margin-top:clamp(40px,4vw,56px); padding:0 20px;">
-    <a href="/carta" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; border:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease, gap .25s ease;" style-hover="background:#7C1126; color:#EFE7C7; gap:18px;">VER LA CARTA COMPLETA <span aria-hidden="true">→</span></a>
+    <a href="/carta" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; border:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease, gap .25s ease;" style-hover="background:#7C1126; color:#EFE7C7; gap:18px;">VER LA CARTA COMPLETA <span class="cn-arrow" aria-hidden="true"></span></a>
   </div>
 </section>
 
@@ -314,7 +319,7 @@ img{display:block;max-width:100%}
       </article>
     </div>
     <div style="display:flex; justify-content:center; margin-top:clamp(36px,4vw,52px);">
-      <a href="#reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">ELIGE TU MOMENTO Y RESERVA <span aria-hidden="true">→</span></a>
+      <a href="#reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">ELIGE TU MOMENTO Y RESERVA <span class="cn-arrow" aria-hidden="true"></span></a>
     </div>
   </div>
 </section>
@@ -327,7 +332,7 @@ img{display:block;max-width:100%}
       <p style="margin:0; font-size:16px; line-height:1.5;">La misma cocina, en tu mesa. Pide por Glovo o llámanos y pasa a recogerlo.</p>
     </div>
     <div style="display:flex; flex-wrap:wrap; gap:12px;">
-      <a href="#" data-track="click_glovo" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 26px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">PEDIR EN GLOVO <span aria-hidden="true">↗</span></a>
+      <a href="#" data-track="click_glovo" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 26px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">PEDIR EN GLOVO <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a>
       <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:52px; padding:0 22px; border:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease;" style-hover="background:#7C1126; color:#EFE7C7;">LLAMAR PARA RECOGER</a>
     </div>
   </div>
@@ -341,7 +346,7 @@ img{display:block;max-width:100%}
       <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,6.4vw,96px); line-height:.9; letter-spacing:-.01em; color:#EFE7C7; text-wrap:balance;">UNA FAMILIA QUE COCINA PARA LA TUYA.</h2>
       <p style="margin:0; max-width:520px; font-size:clamp(16px,1.3vw,18px); line-height:1.6; text-wrap:pretty;">Antes de Vilassar hubo una vida entera en la hostelería: temporadas en Formentera, años en Barcelona y una etapa en Brasil. En verano de 2020 abrimos Casanita en esta plaza, frente al parque, con una idea sencilla: que quien entre por la puerta se sienta uno más. Te recibimos como parte de nuestra familia.</p>
       <p style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:18px; letter-spacing:.06em;">— [NOMBRE DEL CHEF], CHEF Y ANFITRIÓN</p>
-      <a href="#reserva" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">VEN A CONOCERNOS <span aria-hidden="true">→</span></a>
+      <a href="#reserva" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">VEN A CONOCERNOS <span class="cn-arrow" aria-hidden="true"></span></a>
     </div>
     <div style="position:relative; justify-self:center; width:min(100%,480px);">
       <div data-speed="-0.06" role="img" aria-label="Foto pendiente: el chef y el equipo de Casanita" style="aspect-ratio:4/5; border-radius:999px 999px 24px 24px; overflow:hidden; background:repeating-linear-gradient(135deg,#6C0E21 0 10px,#741024 10px 20px); display:flex; align-items:center; justify-content:center; text-align:center; padding:24px;">
@@ -358,20 +363,20 @@ img{display:block;max-width:100%}
   </div>
 </section>
 
-<section data-screen-label="Reseñas" style="background:#EFE7C7; padding:clamp(88px,10vw,140px) 0;">
+<section data-screen-label="Reseñas" style="background:#EFE7C7; padding:clamp(88px,10vw,140px) 0; overflow:hidden;">
   <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,3vw,40px); display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:32px;">
     <h2 data-reveal="" style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,7vw,104px); line-height:.9; letter-spacing:-.01em; color:#7C1126; max-width:760px;">LO DICEN MEJOR ELLOS.</h2>
-    <div data-reveal="" style="display:flex; align-items:center; gap:20px;">
-      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(72px,8vw,120px); line-height:.85; color:#7C1126;">{{ rating }} ★</span>
+    <div data-reveal="" style="display:flex; flex-direction:{{ reviewSummaryDirection }}; align-items:{{ reviewSummaryAlign }}; gap:{{ reviewSummaryGap }}; width:{{ reviewSummaryWidth }};">
+      <span style="display:flex; flex-direction:column; align-items:flex-start; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(72px,8vw,120px); line-height:.72; color:#7C1126;"><span>{{ rating }}</span><span aria-label="estrellas" style="font-size:.74em; line-height:.85;">★</span></span>
       <div style="display:flex; flex-direction:column; gap:6px;">
         <span style="font-size:17px; font-weight:600; color:#1E1414;">{{ reviews }} reseñas en Google</span>
-        <a href="#" style="display:flex; align-items:center; gap:8px; min-height:32px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #7C1126; transition:gap .25s ease;" style-hover="gap:14px;">LEER TODAS EN GOOGLE <span aria-hidden="true">↗</span></a>
+        <a href="#" style="display:flex; align-items:center; gap:8px; min-height:32px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #7C1126; transition:gap .25s ease;" style-hover="gap:14px;">LEER TODAS EN GOOGLE <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a>
       </div>
     </div>
   </div>
-  <div class="cn-scroller" style="max-width:1280px; margin:clamp(40px,5vw,64px) auto 0; padding:0 clamp(20px,3vw,40px) 6px; display:grid; grid-auto-flow:{{ revFlow }}; grid-auto-columns:{{ revCols }}; grid-template-columns:{{ revTpl }}; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none;">
+  <div style="max-width:1280px; margin:clamp(40px,5vw,64px) auto 0; padding:0 clamp(20px,3vw,40px) 6px; display:grid; grid-template-columns:{{ revTpl }}; gap:16px; overflow-x:hidden;">
     <sc-for list="{{ reviewsList }}" as="r" hint-placeholder-count="6">
-      <figure data-reveal="" style="margin:0; scroll-snap-align:start; padding:28px; border-radius:22px; display:flex; flex-direction:column; justify-content:space-between; gap:28px; min-height:240px; background:{{ r.bg }}; color:{{ r.fg }};">
+      <figure data-reveal="" style="margin:0; min-width:0; padding:28px; border-radius:22px; display:flex; flex-direction:column; justify-content:space-between; gap:28px; min-height:240px; background:{{ r.bg }}; color:{{ r.fg }};">
         <blockquote style="margin:0; font-size:18px; line-height:1.5;">«{{ r.text }}»</blockquote>
         <figcaption style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em;"><span>{{ r.name }}</span><span aria-label="5 estrellas" style="letter-spacing:.12em;">★★★★★</span></figcaption>
       </figure>
@@ -397,7 +402,7 @@ img{display:block;max-width:100%}
       <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,6.4vw,96px); line-height:.9; letter-spacing:-.01em; color:#EFE7C7;">¿SOIS MUCHOS? MEJOR.</h2>
       <p style="margin:0; max-width:520px; font-size:clamp(16px,1.3vw,18px); line-height:1.6; text-wrap:pretty;">Cumpleaños, comidas familiares y reencuentros. Ponemos los platos al centro y hay opciones para cada uno: el que quiere pizza, el que no, los niños y los abuelos. Cabemos hasta [CAPACIDAD MÁXIMA DE GRUPO].</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px;">
-        <a href="#reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">RESERVAR PARA UN GRUPO <span aria-hidden="true">→</span></a>
+        <a href="#reserva" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">RESERVAR PARA UN GRUPO <span class="cn-arrow" aria-hidden="true"></span></a>
         <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:52px; padding:0 24px; border:2px solid #EFE7C7; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease;" style-hover="background:#EFE7C7; color:#7C1126;">LLAMAR</a>
       </div>
     </div>
@@ -459,7 +464,7 @@ img{display:block;max-width:100%}
       <div style="display:flex; flex-wrap:wrap; gap:8px 24px; font-size:17px;">
         <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:44px; font-weight:700;">{{ phoneDisplay }}</a>
         <a href="mailto:{{ email }}" style="display:flex; align-items:center; min-height:44px; font-weight:700;">{{ email }}</a>
-        <a href="/contacto" style="display:flex; align-items:center; min-height:44px; font-weight:700;">Escríbenos →</a>
+        <a href="/contacto" style="display:flex; align-items:center; gap:8px; min-height:44px; font-weight:700;">Escríbenos <span class="cn-arrow" aria-hidden="true"></span></a>
       </div>
       <div style="display:flex; flex-direction:column; gap:12px;">
         <div style="display:flex; align-items:center; gap:10px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.12em; color:#7C1126;">
@@ -484,7 +489,7 @@ img{display:block;max-width:100%}
           <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:15px; color:#5A3A3A;">Cargando mapa…</div>
         </sc-if>
       </div>
-      <a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 24px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">CÓMO LLEGAR <span aria-hidden="true">↗</span></a>
+      <a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 24px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">CÓMO LLEGAR <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a>
     </div>
   </div>
 </section>
@@ -516,7 +521,7 @@ img{display:block;max-width:100%}
         <a href="{{ instagramUrl }}" style="color:#EFE7C7;">Instagram</a>
         <a href="#" style="color:#EFE7C7;">TikTok</a>
         <a href="#" style="color:#EFE7C7;">Facebook</a>
-        <a href="#" data-track="click_glovo" target="_blank" rel="noopener" style="color:#EFE7C7; font-weight:700; margin-top:6px;">Pedir en Glovo ↗</a>
+        <a href="#" data-track="click_glovo" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; color:#EFE7C7; font-weight:700; margin-top:6px;">Pedir en Glovo <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a>
       </div>
     </div>
     <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px 32px; padding-top:24px; border-top:2px solid #4E0B18; font-size:14px;">
@@ -538,7 +543,7 @@ img{display:block;max-width:100%}
 
 <sc-if value="{{ showBar }}">
   <div role="navigation" aria-label="Acciones rápidas" style="position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1.4fr 1fr; gap:8px; padding:10px 12px calc(10px + env(safe-area-inset-bottom)); background:#FAF6EA; border-top:2px solid #7C1126;">
-    <a href="#reserva" onClick="{{ closeMenu }}" style="display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">RESERVAR <span aria-hidden="true">→</span></a>
+    <a href="#reserva" onClick="{{ closeMenu }}" style="display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">RESERVAR <span class="cn-arrow" aria-hidden="true"></span></a>
     <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; justify-content:center; min-height:52px; background:#EFE7C7; color:#7C1126; border:2px solid #7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">LLAMAR</a>
   </div>
 </sc-if>
@@ -829,7 +834,9 @@ class Component extends DCLogic {
       onCarousel: e => { const el = e.currentTarget; const card = el.firstElementChild; const step = card ? card.getBoundingClientRect().width + 14 : 1; const i = Math.round(el.scrollLeft / step); if (i !== this.state.slide) this.setState({ slide: i }); },
       dots: DISHES.map((_, i) => ({ w: i === this.state.slide ? '28px' : '8px', c: i === this.state.slide ? '#7C1126' : '#CDBF95' })),
       reviewsList: REVIEWS.map(([text, name], i) => ({ text, name, bg: i % 3 === 1 ? '#7C1126' : '#FAF6EA', fg: i % 3 === 1 ? '#EFE7C7' : '#1E1414' })),
-      revFlow: isMobile ? 'column' : 'row', revCols: isMobile ? '84%' : 'auto', revTpl: isMobile ? 'none' : 'repeat(3, minmax(0,1fr))',
+      reviewSummaryDirection: isMobile ? 'column' : 'row', reviewSummaryAlign: isMobile ? 'flex-start' : 'center',
+      reviewSummaryGap: isMobile ? '22px' : '20px', reviewSummaryWidth: isMobile ? '100%' : 'auto',
+      revTpl: isMobile ? 'minmax(0,1fr)' : 'repeat(3, minmax(0,1fr))',
       faqs: FAQS.map(([q, a], i) => ({ q, a: a.replace('605 25 12 87', biz.phoneDisplay).replace('info@casanitavilassar.com', biz.email), open: this.state.faq === i, rot: this.state.faq === i ? 'rotate(45deg)' : 'none', toggle: () => this.setState(s => ({ faq: s.faq === i ? -1 : i })) })),
       bookNear: this.state.bookNear, bookFar: !this.state.bookNear, mapNear: this.state.mapNear, mapFar: !this.state.mapNear,
       frameRadius: isMobile ? '0px' : '20px',

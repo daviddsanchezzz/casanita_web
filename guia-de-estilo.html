@@ -9,7 +9,7 @@
 <x-dc>
 <helmet>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=DM+Sans:opsz,wght@9..40,400..700&amp;display=swap" rel="stylesheet">
-<style>body{margin:0;background:#EFE7C7;color:#1E1414;font-family:'DM Sans',sans-serif}*{box-sizing:border-box}a{color:#7C1126}a:hover{color:#4E0B18}</style>
+  <style>body{margin:0;background:#EFE7C7;color:#1E1414;font-family:'DM Sans',sans-serif}*{box-sizing:border-box}a{color:#7C1126}a:hover{color:#4E0B18}.cn-arrow{display:inline-block;position:relative;width:1.15em;height:.8em;flex:0 0 auto;color:inherit}.cn-arrow::before{content:"";position:absolute;left:.05em;right:.08em;top:50%;border-top:1.7px solid currentColor}.cn-arrow::after{content:"";position:absolute;right:.08em;top:50%;width:.42em;height:.42em;border-top:1.7px solid currentColor;border-right:1.7px solid currentColor;transform:translateY(-50%) rotate(45deg)}</style>
 </helmet>
 <div style="max-width:1200px; margin:0 auto; padding:clamp(40px,6vw,80px) clamp(20px,4vw,48px); display:flex; flex-direction:column; gap:72px;">
   <header style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:24px; border-bottom:2px solid #7C1126; padding-bottom:28px;">
@@ -17,7 +17,7 @@
       <img src="assets/logo-granate.png" alt="Casanita" style="width:180px; height:auto;">
       <h1 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,7vw,96px); line-height:.9; color:#7C1126;">HOJA DE ESTILO</h1>
     </div>
-    <a href="/" style="font-weight:700;">Ver la home →</a>
+    <a href="/" style="display:inline-flex; align-items:center; gap:8px; font-weight:700;">Ver la home <span class="cn-arrow" aria-hidden="true"></span></a>
   </header>
 
   <section style="display:flex; flex-direction:column; gap:24px;">
@@ -49,12 +49,12 @@
   <section style="display:flex; flex-direction:column; gap:24px;">
     <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.2em; color:#7C1126;">03 · BOTONES Y ENLACES</h2>
     <div style="display:flex; flex-wrap:wrap; gap:18px; align-items:center;">
-      <a href="#" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; text-decoration:none; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">PRINCIPAL · RESERVAR MESA <span>→</span></a>
-      <a href="#" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; border:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; text-decoration:none; transition:background-color .25s ease, color .25s ease, gap .25s ease;" style-hover="background:#7C1126; color:#EFE7C7; gap:18px;">SECUNDARIO · VER LA CARTA <span>→</span></a>
-      <a href="#" style="display:flex; align-items:center; gap:10px; min-height:44px; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-bottom:2px solid #7C1126; text-decoration:none; transition:gap .25s ease;" style-hover="gap:16px;">ENLACE · CONOCE LA CASA <span>→</span></a>
+      <a href="#" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; text-decoration:none; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">PRINCIPAL · RESERVAR MESA <span class="cn-arrow" aria-hidden="true"></span></a>
+      <a href="#" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; border:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; text-decoration:none; transition:background-color .25s ease, color .25s ease, gap .25s ease;" style-hover="background:#7C1126; color:#EFE7C7; gap:18px;">SECUNDARIO · VER LA CARTA <span class="cn-arrow" aria-hidden="true"></span></a>
+      <a href="#" style="display:flex; align-items:center; gap:10px; min-height:44px; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-bottom:2px solid #7C1126; text-decoration:none; transition:gap .25s ease;" style-hover="gap:16px;">ENLACE · CONOCE LA CASA <span class="cn-arrow" aria-hidden="true"></span></a>
     </div>
     <div style="display:flex; flex-wrap:wrap; gap:18px; align-items:center; padding:28px; background:#7C1126; border-radius:16px;">
-      <a href="#" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; text-decoration:none;">PRINCIPAL SOBRE GRANATE <span>→</span></a>
+      <a href="#" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; text-decoration:none;">PRINCIPAL SOBRE GRANATE <span class="cn-arrow" aria-hidden="true"></span></a>
       <a href="#" style="display:flex; align-items:center; min-height:52px; padding:0 24px; border:2px solid #EFE7C7; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; text-decoration:none;">SECUNDARIO · LLAMAR</a>
     </div>
     <p style="margin:0; font-size:15px;">Radio 2 px · alto 52 px (mín. táctil 44 px) · hover: color a granate oscuro y la flecha avanza 6 px · foco: anillo beige + negro de 3/6 px.</p>
@@ -81,7 +81,7 @@
       </div>
       <span style="display:flex; align-items:center; gap:8px; padding:6px 12px; border-radius:999px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.12em;"><span style="width:8px; height:8px; border-radius:50%; background:#7C1126;"></span>ABIERTO AHORA</span>
     </div>
-    <p style="margin:0; font-size:15px;">Sello ondulado = 3 cuadrados redondeados girados 0/30/60°. Siempre ligeramente girado (6–12°), sombra plana #4E0B18 de 5 px. Iconos: no usamos iconos genéricos; solo flechas tipográficas (→ ↗), rombos de separación y la estrella ★ en la nota.</p>
+    <p style="margin:0; font-size:15px;">Sello ondulado = 3 cuadrados redondeados girados 0/30/60°. Siempre ligeramente girado (6–12°), sombra plana #4E0B18 de 5 px. Iconos: no usamos emojis; las flechas se dibujan con CSS, junto con rombos de separación y la estrella en la nota.</p>
   </section>
 
   <section style="display:flex; flex-direction:column; gap:24px;">
