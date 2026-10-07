@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>La carta · Casanita Vilassar</title>
+<meta name="description" content="Entrantes, pastas, pizzas (también sin gluten), carnes, pescados, postres y cócteles. La carta de Casanita en Vilassar de Mar.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="canonical" href="https://casanitavilassar.com/carta">
+<link rel="alternate" hreflang="es" href="https://casanitavilassar.com/es/carta">
+<link rel="alternate" hreflang="ca" href="https://casanitavilassar.com/ca/carta">
+<link rel="alternate" hreflang="en" href="https://casanitavilassar.com/en/carta">
+<link rel="alternate" hreflang="x-default" href="https://casanitavilassar.com/es/carta">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Casanita Vilassar">
+<meta property="og:title" content="La carta · Casanita Vilassar">
+<meta property="og:description" content="Entrantes, pastas, pizzas (también sin gluten), carnes, pescados, postres y cócteles. La carta de Casanita en Vilassar de Mar.">
+<meta property="og:url" content="https://casanitavilassar.com/carta">
+<meta property="og:image" content="https://casanitavilassar.com/assets/fachada-dia-vespa.jpg">
+<meta property="og:image:alt" content="Fachada de Casanita en Vilassar de Mar, con la Vespa blanca y flores">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La carta · Casanita Vilassar">
+<meta name="twitter:description" content="Entrantes, pastas, pizzas (también sin gluten), carnes, pescados, postres y cócteles. La carta de Casanita en Vilassar de Mar.">
+<meta name="twitter:image" content="https://casanitavilassar.com/assets/fachada-dia-vespa.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=DM+Sans:opsz,wght@9..40,400..700&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#EFE7C7;color:#1E1414;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#7C1126;text-decoration:none}
+a:hover{color:#4E0B18}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid #EFE7C7;outline-offset:3px;box-shadow:0 0 0 6px #1E1414}
+.cn-scroller::-webkit-scrollbar{display:none}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none !important}}
+</style>
+</helmet>
+
+<header data-screen-label="Header" style="position:fixed; top:0; left:0; right:0; z-index:50; transition:background-color .3s ease; background-color:{{ hdrBg }};">
+  <div style="max-width:1440px; margin:0 auto; height:76px; padding:0 clamp(16px,3vw,40px); display:flex; align-items:center; justify-content:space-between; gap:24px;">
+    <a href="Casanita Home.dc.html" aria-label="Casanita, inicio" style="display:flex; flex-direction:column; align-items:center; gap:3px; flex-shrink:0;">
+      <sc-if value="{{ logoBeige }}" hint-placeholder-val="{{ true }}"><img src="assets/logo-beige.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;"></sc-if>
+      <sc-if value="{{ logoGranate }}"><img src="assets/logo-granate.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;"></sc-if>
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:9px; letter-spacing:.42em; padding-left:.42em; color:{{ hdrFg }};">VILASSAR</span>
+    </a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Principal" style="display:flex; align-items:center; gap:clamp(18px,2.4vw,36px);">
+        <a href="Casanita Carta.dc.html" aria-current="page" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0; text-decoration:underline; text-underline-offset:6px; text-decoration-thickness:2px;">CARTA</a>
+        <a href="Casanita Home.dc.html#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">GRUPOS</a>
+        <a href="Casanita Home.dc.html#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">VISÍTANOS</a>
+      </nav>
+    </sc-if>
+    <div style="display:flex; align-items:center; gap:clamp(10px,1.6vw,22px);">
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+        <div role="group" aria-label="Idioma" style="display:flex; align-items:center; gap:2px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.08em; color:{{ hdrFg }};">
+          <button type="button" aria-pressed="true" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer; text-decoration:underline; text-underline-offset:4px;">ES</button><span aria-hidden="true">·</span>
+          <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">CA</button><span aria-hidden="true">·</span>
+          <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">EN</button>
+        </div>
+      </sc-if>
+      <a href="Casanita Reserva.dc.html" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); background:{{ hdrBtnBg }}; color:{{ hdrBtnFg }}; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="gap:16px;">RESERVAR <span aria-hidden="true">→</span></a>
+      <sc-if value="{{ isMobile }}">
+        <a href="Casanita Home.dc.html" aria-label="Volver al inicio" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; border:2px solid {{ hdrFg }}; color:{{ hdrFg }}; border-radius:2px; font-size:20px;">←</a>
+      </sc-if>
+    </div>
+  </div>
+</header>
+
+<main>
+<section data-screen-label="Carta · cabecera" style="position:relative; background:#7C1126; color:#EFE7C7; padding:clamp(130px,16vw,190px) clamp(20px,4vw,48px) clamp(64px,7vw,100px); overflow:hidden;">
+  <div aria-hidden="true" style="position:absolute; right:-14vw; top:-10vw; width:52vw; height:52vw; border:clamp(40px,6vw,96px) solid #6C0E21; border-radius:50%;"></div>
+  <div style="position:relative; max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr)); gap:clamp(40px,5vw,72px); align-items:center;">
+    <div style="display:flex; flex-direction:column; gap:22px;">
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.2em;">COCINA MEDITERRÁNEA CON ALMA ITALIANA</span>
+      <h1 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(72px,11vw,160px); line-height:.86; letter-spacing:-.015em;">LA CARTA.</h1>
+      <p style="margin:0; max-width:500px; font-size:clamp(16px,1.35vw,19px); line-height:1.55; text-wrap:pretty;">Mucho más que pizza. Platos para compartir en el centro de la mesa, pasta como debe ser y algo rico para cada uno. Pregunta siempre por el fuera de carta: el chef te lo cuenta en la mesa.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:14px 24px; align-items:center;">
+        <a href="Casanita Reserva.dc.html" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">RESERVAR MESA <span aria-hidden="true">→</span></a>
+        <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:44px; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #EFE7C7;" style-hover="color:#FAF6EA;">LLAMAR · {{ phoneDisplay }}</a>
+        <a href="#" data-track="click_glovo" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; min-height:44px; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #EFE7C7;" style-hover="color:#FAF6EA;">PEDIR PARA LLEVAR <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div style="position:relative; justify-self:center; width:min(100%,440px); aspect-ratio:1/1;">
+      <div style="position:absolute; inset:0; border-radius:50%; background:#FAF6EA; padding:4.5%;"><img src="assets/carbonara-plato.webp" alt="Tagliatelle carbonara de Casanita" style="width:100%; height:100%; border-radius:50%;"></div>
+      <div style="position:absolute; left:-4%; bottom:4%; width:clamp(122px,11vw,154px); aspect-ratio:1/1; transform:rotate(-10deg); filter:drop-shadow(5px 5px 0 #4E0B18); transition:transform .35s cubic-bezier(.3,1.6,.5,1);" style-hover="transform:rotate(2deg) scale(1.06);">
+        <div style="position:absolute; inset:0; background:#EFE7C7; border-radius:24%;"></div>
+        <div style="position:absolute; inset:0; background:#EFE7C7; border-radius:24%; transform:rotate(30deg);"></div>
+        <div style="position:absolute; inset:0; background:#EFE7C7; border-radius:24%; transform:rotate(60deg);"></div>
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:20px; line-height:.95;">PREGUNTA<br>POR EL FUERA<br>DE CARTA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="position:sticky; top:{{ chipsTop }}; z-index:40; background:#EFE7C7; border-bottom:2px solid #7C1126;">
+  <nav ref="{{ chipsRef }}" aria-label="Secciones de la carta" class="cn-scroller" style="max-width:1240px; margin:0 auto; padding:12px clamp(16px,4vw,48px); display:flex; gap:8px; overflow-x:auto; scrollbar-width:none;">
+    <sc-for list="{{ cats }}" as="c" hint-placeholder-count="8">
+      <a href="#{{ c.id }}" data-chip="{{ c.id }}" aria-current="{{ c.cur }}" style="flex-shrink:0; display:flex; align-items:center; min-height:44px; padding:0 18px; border:2px solid #7C1126; border-radius:999px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.08em; white-space:nowrap; transition:background-color .2s ease, color .2s ease; background:{{ c.bg }}; color:{{ c.fg }};">{{ c.label }}</a>
+    </sc-for>
+  </nav>
+</div>
+
+<div style="max-width:1240px; margin:0 auto; padding:clamp(40px,5vw,64px) clamp(20px,4vw,48px) clamp(64px,8vw,120px); display:flex; flex-direction:column; gap:clamp(72px,8vw,120px);">
+  <p style="margin:0 0 calc(-1 * clamp(40px,5vw,72px)); display:flex; align-items:center; gap:12px; font-size:15px; color:#1E1414;">{{ hintText }}</p>
+  <sc-for list="{{ sections }}" as="s" hint-placeholder-count="3">
+    <section id="{{ s.id }}" data-cat="{{ s.id }}" style="scroll-margin-top:160px; display:flex; flex-wrap:wrap; gap:clamp(24px,4vw,64px); align-items:flex-start;">
+      <div style="flex:1 1 280px; display:flex; flex-direction:column; gap:16px;">
+        <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.2em; color:#7C1126;">{{ s.num }}</span>
+        <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(56px,6.4vw,96px); line-height:.88; letter-spacing:-.01em; color:#7C1126;">{{ s.title }}</h2>
+        <p style="margin:0; max-width:360px; font-size:16px; line-height:1.55;">{{ s.intro }}</p>
+        <sc-if value="{{ s.note }}">
+          <p style="margin:6px 0 0; max-width:360px; padding:14px 16px; background:#7C1126; color:#EFE7C7; border-radius:14px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; line-height:1.35; letter-spacing:.04em;">{{ s.note }}</p>
+        </sc-if>
+      </div>
+      <div style="flex:3 1 560px; min-width:0; display:flex; flex-direction:column; gap:36px;">
+        <sc-for list="{{ s.groups }}" as="g" hint-placeholder-count="1">
+          <div style="display:flex; flex-direction:column;">
+            <sc-if value="{{ g.sub }}">
+              <h3 style="margin:0 0 12px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.18em; color:#7C1126;">{{ g.sub }}</h3>
+            </sc-if>
+            <ul style="list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr)); column-gap:40px; border-top:2px solid #7C1126;">
+              <sc-for list="{{ g.items }}" as="d" hint-placeholder-count="4">
+                <li onMouseEnter="{{ d.enter }}" onMouseMove="{{ onMove }}" onMouseLeave="{{ leave }}" style="display:flex; flex-direction:column; gap:6px; padding:18px 0 20px; border-bottom:1px solid #C9B98F;">
+                  <div style="display:flex; align-items:center; justify-content:space-between; gap:16px;">
+                    <div style="display:flex; align-items:center; flex-wrap:wrap; gap:8px 12px; min-width:0;">
+                      <sc-if value="{{ d.noPhoto }}"><h4 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(24px,2vw,28px); line-height:1; color:#7C1126; text-transform:uppercase; text-wrap:balance;">{{ d.name }}</h4></sc-if>
+                      <sc-if value="{{ d.hasPhoto }}"><h4 style="margin:0;"><button type="button" onClick="{{ d.toggle }}" aria-expanded="{{ d.expanded }}" title="{{ d.pillLabel }}" style="padding:0; background:none; border:0; cursor:pointer; text-align:left; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(24px,2vw,28px); line-height:1; color:#7C1126; text-transform:uppercase; text-wrap:balance; text-decoration:underline dotted; text-decoration-thickness:2px; text-underline-offset:6px;" style-hover="color:#4E0B18;">{{ d.name }}</button></h4></sc-if>
+                        </button>
+                      </sc-if>
+                    </div>
+                    <sc-if value="{{ d.showPrice }}"><span style="flex-shrink:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; color:#1E1414;">{{ d.price }}</span></sc-if>
+                  </div>
+                  <sc-if value="{{ d.tag }}"><span style="align-self:flex-start; padding:4px 10px; border-radius:999px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:12px; letter-spacing:.1em;">{{ d.tag }}</span></sc-if>
+                  <sc-if value="{{ d.desc }}"><p style="margin:0; font-size:16px; line-height:1.5; color:#1E1414; text-wrap:pretty;">{{ d.desc }}</p></sc-if>
+                  <sc-if value="{{ d.expanded }}">
+                    <div style="position:relative; margin-top:8px; aspect-ratio:4/3; max-width:420px; border-radius:18px; overflow:hidden; background:repeating-linear-gradient(135deg,#E3D8AE 0 10px,#EAE1BD 10px 20px);">
+                      <sc-if value="{{ d.img }}"><img src="{{ d.img }}" alt="{{ d.name }}" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:{{ d.pos }};"></sc-if>
+                      <sc-if value="{{ d.ph }}"><span style="position:absolute; left:14px; top:14px; font-family:ui-monospace,Menlo,monospace; font-size:11px; color:#7C1126;">{{ d.ph }}</span></sc-if>
+                    </div>
+                  </sc-if>
+                </li>
+              </sc-for>
+            </ul>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+  </sc-for>
+</div>
+
+<section id="cocteles" data-cat="cocteles" data-screen-label="Carta · cócteles" style="scroll-margin-top:140px; background:#7C1126; color:#EFE7C7; padding:clamp(80px,9vw,130px) 0;">
+  <div style="max-width:1240px; margin:0 auto; padding:0 clamp(20px,4vw,48px); display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:20px;">
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.2em;">07 · BUEN BEBER</span>
+      <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(56px,7vw,104px); line-height:.88; letter-spacing:-.01em;">CÓCTELES.</h2>
+    </div>
+    <p style="margin:0; max-width:380px; font-size:16px; line-height:1.55;">Para la terraza, para la sobremesa o para empezar la noche sin prisa.</p>
+  </div>
+  <div class="cn-scroller" style="max-width:1240px; margin:clamp(36px,4vw,56px) auto 0; padding:0 clamp(20px,4vw,48px) 6px; display:grid; grid-auto-flow:{{ cocFlow }}; grid-auto-columns:{{ cocCols }}; grid-template-columns:{{ cocTpl }}; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none;">
+    <sc-for list="{{ cocktails }}" as="k" hint-placeholder-count="7">
+      <figure style="margin:0; scroll-snap-align:start; display:flex; flex-direction:column; gap:12px;">
+        <div style="aspect-ratio:1/1; border-radius:22px; overflow:hidden; background:#6C0E21;">
+          <img src="{{ k.img }}" alt="{{ k.name }}" loading="lazy" style="width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.06);">
+        </div>
+        <figcaption style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(22px,1.8vw,26px); line-height:1; text-transform:uppercase;">{{ k.name }}</figcaption>
+      </figure>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="Carta · alérgenos" style="background:#FAF6EA; padding:clamp(56px,6vw,88px) clamp(20px,4vw,48px);">
+  <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:28px;">
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.16em; color:#7C1126;">SIN GLUTEN Y SIN LACTOSA</span>
+      <p style="margin:0; font-size:16px; line-height:1.55;">Todas las pizzas, con masa sin gluten o con queso sin lactosa (de coco). El coulant de praliné es sin gluten. Si tienes alguna alergia, cuéntanoslo al llegar. [INFORMACIÓN DE ALÉRGENOS]</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.16em; color:#7C1126;">FUERA DE CARTA</span>
+      <p style="margin:0; font-size:16px; line-height:1.55;">Cada semana hay platos que no están aquí. Pregunta al chef: te los cuenta en la mesa.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.16em; color:#7C1126;">PARA LLEVAR</span>
+      <p style="margin:0; font-size:16px; line-height:1.55;">Recogida en el local o a domicilio. <a href="#" data-track="click_glovo" target="_blank" rel="noopener" style="font-weight:700; text-decoration:underline;">Pedir en Glovo ↗</a></p>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Carta · reservar" style="background:#EFE7C7; padding:clamp(80px,9vw,130px) clamp(20px,4vw,48px); text-align:center;">
+  <div style="max-width:900px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:24px;">
+    <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(52px,7vw,104px); line-height:.9; letter-spacing:-.01em; color:#7C1126;">¿YA SABES QUÉ VAS A PEDIR?</h2>
+    <p style="margin:0; font-size:clamp(16px,1.3vw,18px); line-height:1.55;">Reserva en menos de un minuto o llámanos al {{ phoneDisplay }}.</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:14px;">
+      <a href="Casanita Reserva.dc.html" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; color:#EFE7C7; gap:18px;">RESERVAR MESA <span aria-hidden="true">→</span></a>
+      <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:52px; padding:0 24px; border:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease;" style-hover="background:#7C1126; color:#EFE7C7;">LLAMAR</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer style="background:#7C1126; color:#EFE7C7; padding:40px clamp(20px,4vw,48px) {{ footPad }};">
+  <div style="max-width:1240px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px 32px; font-size:14px;">
+    <img src="assets/logo-beige.png" alt="Casanita" loading="lazy" style="width:130px; height:auto;">
+    <span>{{ address }} · <a href="tel:{{ phoneTel }}" style="color:#EFE7C7;">{{ phoneDisplay }}</a></span>
+    <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:22px;">COMIDAS, CENAS Y BUEN BEBER.</span>
+  </div>
+</footer>
+
+<div ref="{{ floatRef }}" aria-hidden="true" style="position:fixed; left:0; top:0; z-index:70; width:320px; pointer-events:none; opacity:{{ pvOpacity }}; transition:opacity .2s ease;">
+  <div style="position:relative; aspect-ratio:4/3; border-radius:22px; overflow:hidden; border:6px solid #FAF6EA; transform:rotate(-3deg); background:repeating-linear-gradient(135deg,#E3D8AE 0 10px,#EAE1BD 10px 20px);">
+    <sc-if value="{{ pvImg }}"><img src="{{ pvImg }}" alt="" style="width:100%; height:100%; object-fit:cover; object-position:{{ pvPos }};"></sc-if>
+    <sc-if value="{{ pvPh }}"><span style="position:absolute; left:14px; top:14px; font-family:ui-monospace,Menlo,monospace; font-size:11px; color:#7C1126;">{{ pvPh }}</span></sc-if>
+  </div>
+</div>
+
+<sc-if value="{{ isMobile }}">
+  <div role="navigation" aria-label="Acciones rápidas" style="position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1.4fr 1fr; gap:8px; padding:10px 12px calc(10px + env(safe-area-inset-bottom)); background:#FAF6EA; border-top:2px solid #7C1126;">
+    <a href="Casanita Reserva.dc.html" style="display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">RESERVAR <span aria-hidden="true">→</span></a>
+    <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; justify-content:center; min-height:52px; background:#EFE7C7; color:#7C1126; border:2px solid #7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">LLAMAR</a>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;mostrarPrecios&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Carta&quot;}}">
+const LIVE_API = 'https://api.vetrareserve.com/api/site/public/69bd6b22dbf226bfd19230df';
+const FALLBACK = {
+  phone: '+34605251287', email: 'info@casanitavilassar.com',
+  address: "Carrer de Ca l'Aduana, 69, 08340 Vilassar de Mar",
+  mapsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Carrer+de+ca+l%27Aduana+69,+08340+Vilassar+de+Mar',
+  reserveUrl: 'https://vetrareserve.com/casanita-vilassar',
+};
+function phoneDisplayFmt(tel) {
+  const d = (tel || '').replace(/^\+34/, '');
+  const m = d.match(/^(\d{3})(\d{2})(\d{2})(\d{2})$/);
+  return m ? `${m[1]} ${m[2]} ${m[3]} ${m[4]}` : d;
+}
+const SECTIONS = [
+  { id: 'entrantes', label: 'ENTRANTES', title: 'ENTRANTES.', intro: 'Para el centro de la mesa y que cada uno pique lo suyo.', groups: [{ items: [
+    ['Focaccia', '5,90 €', 'Con cebolla, olivas, tomatitos, ajo y romero.'],
+    ['Croquetas caseras', '12,50 €', 'Langostinos, chipirones con alioli, espinacas con idiazábal o rabo de toro.', 'DE LA CASA'],
+    ['Porchetta', '13,50 €', 'Panceta de cerdo cocinada a baja temperatura sobre una base de patata crujiente.', 'DE LA CASA'],
+    ['Ensalada de burrata', '11,50 €', 'Burrata con rúcula, cherrys, rábanos y aceite de albahaca.'],
+    ['Ensalada tricolor', '9,50 €', 'Tomates con olivas, ajo, lima, menta, cilantro y rúcula.'],
+    ['Plato de mortadela de Bolonia', '10,50 €', 'Con aceite de trufa, parmesano y cebollino.'],
+    ['Steak tartar', '16,50 €', 'Solomillo de Girona picado a cuchillo al momento, con nuestro aliño casero.'],
+    ['Provolone', '12,50 €', 'Fundido al horno, con orégano y tostadas. Ideal para compartir.'],
+    ['Carpaccio de gamba de Palamós', '22,50 €', 'Con nuestro aceite infusionado con jengibre y citronela, perlas de sésamo y wasabi y rabanitos.'],
+    ['Jamón 100 % ibérico D.O. Guijuelo', '25 €', '100 g cortados a mano, con pan de coca del Maresme con tomate.'],
+  ]}]},
+  { id: 'pastas', label: 'PASTAS', title: 'PASTAS.', intro: 'Como en casa, sin atajos.', groups: [{ items: [
+    ['Tagliatelle carbonara', '15,90 €', 'La auténtica, a la romana: huevo, pecorino y guanciale. Sin nata, como debe ser.', 'LA AUTÉNTICA'],
+    ['Ravioli al foie', '17,50 €', 'Con crema de idiazábal, aceite de trufa y manzana verde.', 'DE LA CASA'],
+    ['Tortiglioni boloñesa', '13,90 €', 'La receta de la abuela, 3 h 30 min a fuego lento.'],
+    ['Pasta primavera', '15,50 €', 'Tortiglioni con mantequilla de albahaca, espárragos verdes y tomatitos cherry.'],
+    ['Tortiglioni al pesto rojo o verde', '13,90 €', 'Con salsa al pesto y parmesano.'],
+    ['Lasaña de carne o de verduras', '15,50 €', 'Con pesto rojo y mozzarella.'],
+  ]}]},
+  { id: 'pizzas', label: 'PIZZAS', title: 'PIZZAS.', intro: 'Para el que quiere pizza, que siempre hay alguno.', note: 'Todas nuestras pizzas, también con masa sin gluten o con queso sin lactosa (de coco).', groups: [
+    { sub: 'CLÁSICAS', items: [
+      ['Margherita', '10,50 €', 'Tomate, mozzarella y orégano.'],
+      ['Da Giorgio', '11,90 €', 'Tomate, mozzarella, albahaca y salsa Casanita (aceite infusionado de ajo, lima y albahaca).'],
+      ['Jamón dulce', '11,90 €', 'Tomate, mozzarella, jamón dulce y orégano.'],
+      ['Atún y cebolla', '11,90 €', 'Tomate, mozzarella, atún, cebolla y orégano.'],
+      ['5 quesos', '12,50 €', 'Tomate, mozzarella, parmesano, pecorino, gorgonzola, stracchino y emmental.'],
+      ['Pesto verde o rojo', '11,50 €', 'Tomate, mozzarella, pesto, tomates cherry y orégano.'],
+      ['Jamón serrano', '12,50 €', 'Tomate, mozzarella, jamón serrano y orégano.'],
+      ['Pepperoni', '12,90 €', 'Tomate, mozzarella, pepperoni picante, tomates cherry y orégano.'],
+      ['Salsiccia, rucola e cipolla', '11,90 €', 'Tomate, mozzarella, salchicha, cebolla y rúcula.'],
+    ]},
+    { sub: 'PREMIUM', items: [
+      ['Patatine, crema e tartufata', '12,50 €', 'Sin tomate: crema de trufa, mozzarella, patata y romero.'],
+      ['Burrata y mortadela', '14,50 €', 'Tomate, mozzarella, burrata, mortadela, parmesano, cebollino y aceite de trufa.'],
+      ['Porchetta', '14,50 €', 'Tomate, mozzarella, porchetta y tomatitos cherry.'],
+      ['Verduras de temporada', '14,50 €', 'Tomate, mozzarella, pimiento rojo y verde, calabacín, berenjena, cebolla, champiñones y tomatitos cherry.'],
+      ['Boloñesa', '13,90 €', 'Tomate, mozzarella, nuestra boloñesa y parmesano.'],
+      ['Carbonara', '15,90 €', 'Tomate, mozzarella, nuestra carbonara, guanciale y cebollino.'],
+    ]},
+  ]},
+  { id: 'carnes', label: 'CARNES', title: 'CARNES.', intro: 'Para los que vienen con hambre.', groups: [{ items: [
+    ['Tagliata', '38,50 € · 500 g', 'Solomillo de cerdo a baja temperatura, con rúcula, cherrys, higos y parmesano.', 'PLATO ESTRELLA'],
+    ['Milanesa napolitana', '16,50 €', 'Escalope de ternera con nuestro rebozado original, salsa de tomate casera, jamón dulce y mozzarella.'],
+    ['Milanesa a caballo', '19,50 €', 'Lo mismo, con un par de huevos.'],
+    ['Solomillo al foie', '29,50 € · 250 g', 'Solomillo de ternera de Girona con cebolla caramelizada y foie.'],
+  ]}]},
+  { id: 'pescados', label: 'PESCADOS', title: 'PESCADOS.', intro: 'Del mar, que lo tenemos a dos calles.', groups: [{ items: [
+    ['Vieiras con guacamole y pico de gallo', '19,50 € · 3 ud.', 'Menos es más.'],
+    ['Salmón a la Gongo', '19,50 €', 'Con guanciale y verduras salteadas, lacado con salsa hoisin.'],
+  ]}]},
+  { id: 'postres', label: 'POSTRES', title: 'POSTRES.', intro: 'Para alargar la sobremesa.', groups: [{ items: [
+    ['Tiramisú', '6,50 €', ''],
+    ['Tarta de queso idiazábal', '6,50 €', ''],
+    ['Lemon pie', '6,50 €', ''],
+    ['Coulant de praliné', '6,90 €', '', 'SIN GLUTEN'],
+  ]}]},
+];
+const COCKTAILS = [
+  ['Aperol Spritz', 'aperol-spritz'], ['Mojito de fresa', 'mojito-fresa'], ['Mojito de piña', 'mojito-pina'], ['Caipirinha', 'caipirinha'],
+  ['Caipiroska de mango', 'caipiroska-mango'], ['Margarita', 'margarita'], ['Shakerato', 'shakerato'],
+];
+const FEAT = { // platos con foto destacada
+  'entrantes:Focaccia': { img: 'assets/focaccia.webp' },
+  'entrantes:Croquetas caseras': { img: 'assets/croquetas.webp' },
+  'entrantes:Porchetta': { img: 'assets/porchetta.webp' },
+  'entrantes:Ensalada de burrata': { img: 'assets/burrata.webp' },
+  'entrantes:Plato de mortadela de Bolonia': { img: 'assets/mortadela.webp' },
+  'entrantes:Steak tartar': { img: 'assets/tartar.webp' },
+  'entrantes:Provolone': { img: 'assets/provolone.webp' },
+  'entrantes:Carpaccio de gamba de Palamós': { img: 'assets/carpaccio.webp' },
+  'entrantes:Jamón 100 % ibérico D.O. Guijuelo': { img: 'assets/jamon-iberico.webp' },
+  'entrantes:Ensalada tricolor': { img: 'assets/tricolor.webp' },
+  'pastas:Tagliatelle carbonara': { img: 'assets/carbonara.webp', pill: 'assets/carbonara-plato.webp', pos: '58% 50%' },
+  'pastas:Ravioli al foie': { img: 'assets/raviolis.webp' },
+  'pastas:Tortiglioni boloñesa': { img: 'assets/bolonyesa.webp' },
+  'pastas:Pasta primavera': { img: 'assets/primavera.webp' },
+  'pastas:Tortiglioni al pesto rojo o verde': { img: 'assets/pesto.webp' },
+  'pastas:Lasaña de carne o de verduras': { img: 'assets/lasanya.webp' },
+  'pizzas:Margherita': { img: 'assets/margherita.webp' },
+  'pizzas:Jamón dulce': { img: 'assets/jamon-dulce.webp' },
+  'pizzas:Atún y cebolla': { img: 'assets/atun-cebolla.webp' },
+  'pizzas:5 quesos': { img: 'assets/5-quesos.webp' },
+  'pizzas:Pepperoni': { img: 'assets/pepperoni.webp' },
+  'pizzas:Patatine, crema e tartufata': { img: 'assets/patatine.webp' },
+  'pizzas:Burrata y mortadela': { ph: '[FOTO PIZZA BURRATA Y MORTADELA]' },
+  'pizzas:Verduras de temporada': { img: 'assets/verduras.webp' },
+  'carnes:Tagliata': { img: 'assets/tagliata.webp' },
+  'carnes:Milanesa napolitana': { img: 'assets/milanesa.webp' },
+  'carnes:Milanesa a caballo': { img: 'assets/milanesa-caballo.webp' },
+  'carnes:Solomillo al foie': { img: 'assets/solomillo.webp' },
+  'pescados:Vieiras con guacamole y pico de gallo': { img: 'assets/vieiras.webp' },
+  'pescados:Salmón a la Gongo': { img: 'assets/salmon.webp' },
+  'postres:Tiramisú': { img: 'assets/tiramisu.webp' },
+  'postres:Tarta de queso idiazábal': { img: 'assets/tarta-queso.webp' },
+  'postres:Lemon pie': { img: 'assets/lemon-pie.webp' },
+  'postres:Coulant de praliné': { img: 'assets/coulant.webp' },
+};
+const CATS = [...SECTIONS.map(s => [s.id, s.label]), ['cocteles', 'CÓCTELES']];
+
+class Component extends DCLogic {
+  trackSetup() {
+    window.dataLayer = window.dataLayer || [];
+    document.documentElement.lang = 'es';
+    this.onTrack = e => {
+      const a = e.target.closest && e.target.closest('a,button'); if (!a) return;
+      const href = a.getAttribute('href') || '';
+      let ev = a.dataset.track;
+      if (!ev) {
+        if (/#reserva$|Reserva\.dc\.html/.test(href)) ev = 'click_reservar';
+        else if (href.startsWith('tel:')) ev = 'click_llamar';
+        else if (/google\.com\/maps/.test(href)) ev = 'click_como_llegar';
+        else if (/Carta\.dc\.html/.test(href)) ev = 'click_ver_carta';
+      }
+      if (ev) window.dataLayer.push({ event: ev, link_text: (a.textContent || '').trim().slice(0, 60), page: location.pathname });
+    };
+    document.addEventListener('click', this.onTrack, true);
+  }
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, scrolled: false, active: 'entrantes', open: null, pv: null, live: null };
+  chipsRef = React.createRef(); floatRef = React.createRef();
+  componentDidMount() {
+    this.trackSetup();
+    fetch(LIVE_API).then(r => (r.ok ? r.json() : Promise.reject())).then(data => this.setState({ live: data })).catch(() => {});
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    this.onScroll = () => {
+      const s = window.scrollY > 40;
+      let active = this.state.active;
+      document.querySelectorAll('[data-cat]').forEach(el => { if (el.getBoundingClientRect().top < 220) active = el.dataset.cat; });
+      if (s !== this.state.scrolled || active !== this.state.active) this.setState({ scrolled: s, active });
+    };
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+  componentDidUpdate(_, prev) {
+    if (prev.active !== this.state.active && this.chipsRef.current) {
+      const nav = this.chipsRef.current, chip = nav.querySelector(`[data-chip="${this.state.active}"]`);
+      if (chip) nav.scrollTo({ left: chip.offsetLeft - 24, behavior: 'smooth' });
+    }
+  }
+  componentWillUnmount() { document.removeEventListener('click', this.onTrack, true); window.removeEventListener('resize', this.onResize); window.removeEventListener('scroll', this.onScroll); }
+  biz() {
+    const live = this.state.live;
+    const b = (live && live.business) || {};
+    return {
+      phoneTel: b.phone || FALLBACK.phone,
+      phoneDisplay: phoneDisplayFmt(b.phone || FALLBACK.phone),
+      email: b.email || FALLBACK.email,
+      address: b.address || FALLBACK.address,
+      mapsUrl: b.mapsUrl || FALLBACK.mapsUrl,
+    };
+  }
+  renderVals() {
+    const { w, scrolled, active } = this.state;
+    const isMobile = w < 820;
+    const prices = this.props.mostrarPrecios !== false;
+    return {
+      ...this.biz(),
+      isMobile, isDesktop: !isMobile,
+      logoBeige: !scrolled, logoGranate: scrolled,
+      hdrBg: scrolled ? '#EFE7C7' : 'transparent', hdrFg: scrolled ? '#7C1126' : '#EFE7C7',
+      hdrBtnBg: scrolled ? '#7C1126' : '#EFE7C7', hdrBtnFg: scrolled ? '#EFE7C7' : '#7C1126',
+      chipsTop: '76px', chipsRef: this.chipsRef,
+      cats: CATS.map(([id, label]) => ({ id, label, cur: id === active ? 'true' : 'false', bg: id === active ? '#7C1126' : 'transparent', fg: id === active ? '#EFE7C7' : '#7C1126' })),
+      sections: SECTIONS.map((s, i) => ({
+        ...s, num: String(i + 1).padStart(2, '0') + ' · ' + s.label, note: s.note || '',
+        groups: s.groups.map(g => {
+          const all = g.items.map(([name, price, desc, tag]) => ({ name, price, desc: desc || '', tag: tag || '', showPrice: prices, img: (FEAT[s.id + ':' + name] || {}).img || '', ph: (FEAT[s.id + ':' + name] || {}).ph || '', pos: (FEAT[s.id + ':' + name] || {}).pos || '50% 50%' }));
+          return { sub: g.sub || '', items: all.map(d => {
+            const key = s.id + ':' + d.name, f = FEAT[key];
+            if (!f) return { ...d, hasPhoto: false, noPhoto: true, expanded: false };
+            return { ...d, hasPhoto: true, noPhoto: false, pill: f.pill || f.img || '', pillLabel: 'Ver foto: ' + d.name, expanded: this.state.open === key,
+              toggle: e => { e.stopPropagation(); this.setState(st => ({ open: st.open === key ? null : key, pv: null })); },
+              enter: isMobile ? undefined : () => { if (this.state.open !== key) this.setState({ pv: { img: f.img || '', ph: f.ph || '', pos: f.pos || '50% 50%' } }); } };
+          }) };
+        }),
+      })),
+      cocktails: COCKTAILS.map(([name, f]) => ({ name, img: `assets/coctel-${f}.png` })),
+      cocFlow: isMobile ? 'column' : 'row', cocCols: isMobile ? '62%' : 'auto', cocTpl: isMobile ? 'none' : 'repeat(4, minmax(0,1fr))',
+      footPad: isMobile ? '110px' : '40px',
+      floatRef: this.floatRef,
+      onMove: e => { const el = this.floatRef.current; if (el) el.style.transform = `translate(${Math.min(e.clientX + 28, window.innerWidth - 340)}px, ${Math.max(90, e.clientY - 130)}px)`; },
+      leave: () => { if (this.state.pv) this.setState({ pv: null }); },
+      pvOpacity: this.state.pv && !isMobile ? 1 : 0,
+      pvImg: this.state.pv ? this.state.pv.img : '', pvPh: this.state.pv ? this.state.pv.ph : '', pvPos: this.state.pv ? this.state.pv.pos : '50% 50%',
+      hintText: isMobile ? 'Los platos subrayados tienen foto: tócalos para verla.' : 'Los platos subrayados tienen foto: pasa el cursor para verla o haz clic para dejarla abierta.',
+    };
+  }
+}
+</script>
+</body>
+</html>

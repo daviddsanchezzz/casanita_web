@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Contacto · Casanita Vilassar</title>
+<meta name="description" content="Escríbenos para grupos, catering o pedidos, o envíanos tu candidatura para trabajar en Casanita, Vilassar de Mar.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="canonical" href="https://casanitavilassar.com/contacto">
+<link rel="alternate" hreflang="es" href="https://casanitavilassar.com/es/contacto">
+<link rel="alternate" hreflang="ca" href="https://casanitavilassar.com/ca/contacto">
+<link rel="alternate" hreflang="en" href="https://casanitavilassar.com/en/contacto">
+<link rel="alternate" hreflang="x-default" href="https://casanitavilassar.com/es/contacto">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Casanita Vilassar">
+<meta property="og:title" content="Contacto · Casanita Vilassar">
+<meta property="og:description" content="Escríbenos para grupos, catering o pedidos, o envíanos tu candidatura para trabajar en Casanita, Vilassar de Mar.">
+<meta property="og:url" content="https://casanitavilassar.com/contacto">
+<meta property="og:image" content="https://casanitavilassar.com/assets/fachada-dia-vespa.jpg">
+<meta property="og:image:alt" content="Fachada de Casanita en Vilassar de Mar, con la Vespa blanca y flores">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contacto · Casanita Vilassar">
+<meta name="twitter:description" content="Escríbenos para grupos, catering o pedidos, o envíanos tu candidatura para trabajar en Casanita, Vilassar de Mar.">
+<meta name="twitter:image" content="https://casanitavilassar.com/assets/fachada-dia-vespa.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=DM+Sans:opsz,wght@9..40,400..700&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#EFE7C7;color:#1E1414;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#7C1126;text-decoration:none}
+a:hover{color:#4E0B18}
+img{display:block;max-width:100%}
+input,select,textarea,button{font:inherit}
+:focus-visible{outline:3px solid #EFE7C7;outline-offset:3px;box-shadow:0 0 0 6px #1E1414}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none !important}}
+</style>
+</helmet>
+
+<header data-screen-label="Header" style="position:fixed; top:0; left:0; right:0; z-index:50; transition:background-color .3s ease; background-color:{{ hdrBg }};">
+  <div style="max-width:1440px; margin:0 auto; height:76px; padding:0 clamp(16px,3vw,40px); display:flex; align-items:center; justify-content:space-between; gap:24px;">
+    <a href="Casanita Home.dc.html" aria-label="Casanita, inicio" style="display:flex; flex-direction:column; align-items:center; gap:3px; flex-shrink:0;">
+      <sc-if value="{{ logoBeige }}" hint-placeholder-val="{{ true }}"><img src="assets/logo-beige.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;"></sc-if>
+      <sc-if value="{{ logoGranate }}"><img src="assets/logo-granate.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;"></sc-if>
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:9px; letter-spacing:.42em; padding-left:.42em; color:{{ hdrFg }};">VILASSAR</span>
+    </a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Principal" style="display:flex; align-items:center; gap:clamp(18px,2.4vw,36px);">
+        <a href="Casanita Carta.dc.html" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">CARTA</a>
+        <a href="Casanita Home.dc.html#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">GRUPOS</a>
+        <a href="Casanita Home.dc.html#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">VISÍTANOS</a>
+      </nav>
+    </sc-if>
+    <div style="display:flex; align-items:center; gap:clamp(10px,1.6vw,22px);">
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+        <div role="group" aria-label="Idioma" style="display:flex; align-items:center; gap:2px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.08em; color:{{ hdrFg }};">
+          <button type="button" aria-pressed="true" style="background:none; border:0; color:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer; text-decoration:underline; text-underline-offset:4px;">ES</button><span aria-hidden="true">·</span>
+          <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">CA</button><span aria-hidden="true">·</span>
+          <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">EN</button>
+        </div>
+      </sc-if>
+      <a href="Casanita Reserva.dc.html" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); background:{{ hdrBtnBg }}; color:{{ hdrBtnFg }}; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="gap:16px;">RESERVAR <span aria-hidden="true">→</span></a>
+      <sc-if value="{{ isMobile }}">
+        <a href="Casanita Home.dc.html" aria-label="Volver al inicio" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; border:2px solid {{ hdrFg }}; color:{{ hdrFg }}; border-radius:2px; font-size:20px;">←</a>
+      </sc-if>
+    </div>
+  </div>
+</header>
+
+<main>
+<section data-screen-label="Contacto · cabecera" style="position:relative; background:#7C1126; color:#EFE7C7; padding:clamp(130px,16vw,190px) clamp(20px,4vw,48px) clamp(64px,7vw,100px); overflow:hidden;">
+  <div aria-hidden="true" style="position:absolute; right:-16vw; bottom:-26vw; width:56vw; height:56vw; border:clamp(40px,6vw,96px) solid #6C0E21; border-radius:50%;"></div>
+  <div style="position:relative; max-width:1240px; margin:0 auto; display:flex; flex-direction:column; gap:22px;">
+    <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.2em;">CONTACTO</span>
+    <h1 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(64px,10vw,150px); line-height:.86; letter-spacing:-.015em; max-width:1000px;">HABLEMOS.</h1>
+    <p style="margin:0; max-width:560px; font-size:clamp(16px,1.35vw,19px); line-height:1.55; text-wrap:pretty;">Para reservar mesa, lo más rápido es la reserva online o una llamada. Para todo lo demás (grupos, catering, prensa o trabajar con nosotros), escríbenos aquí y te respondemos.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:14px;">
+      <a href="Casanita Reserva.dc.html" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">RESERVAR MESA <span aria-hidden="true">→</span></a>
+      <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; min-height:52px; padding:0 24px; border:2px solid #EFE7C7; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease;" style-hover="background:#EFE7C7; color:#7C1126;">LLAMAR · {{ phoneDisplay }}</a>
+    </div>
+  </div>
+</section>
+
+<section id="escribenos" data-screen-label="Contacto · formulario" style="padding:clamp(72px,9vw,130px) clamp(20px,4vw,48px); scroll-margin-top:80px;">
+  <div style="max-width:1240px; margin:0 auto; display:flex; flex-wrap:wrap; gap:clamp(40px,6vw,96px); align-items:flex-start;">
+    <div style="flex:1 1 300px; display:flex; flex-direction:column; gap:28px;">
+      <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,6vw,88px); line-height:.9; letter-spacing:-.01em; color:#7C1126;">ESCRÍBENOS.</h2>
+      <div style="display:flex; flex-direction:column; gap:18px; font-size:17px; line-height:1.5;">
+        <div style="display:flex; flex-direction:column; gap:2px;">
+          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">TELÉFONO</span>
+          <a href="tel:{{ phoneTel }}" style="font-weight:700; color:#1E1414;">{{ phoneDisplay }}</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:2px;">
+          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">EMAIL</span>
+          <a href="mailto:{{ email }}" style="font-weight:700; color:#1E1414;">{{ email }}</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:2px;">
+          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">DIRECCIÓN</span>
+          <span>{{ addressStreet }}<br>{{ addressCity }}</span>
+          <a href="Casanita Home.dc.html#visitanos" style="font-weight:700; font-size:15px;">Horario y cómo llegar →</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="flex:2 1 520px; min-width:0; background:#FAF6EA; border:2px solid #7C1126; border-radius:24px; padding:clamp(24px,3.5vw,44px);">
+      <sc-if value="{{ sentContact }}">
+        <div role="status" style="display:flex; flex-direction:column; gap:16px; align-items:flex-start; padding:24px 0;">
+          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(40px,4vw,56px); line-height:.9; color:#7C1126;">¡GRACIAS, {{ firstName }}!</span>
+          <p style="margin:0; font-size:17px; line-height:1.55;">Hemos recibido tu mensaje. Te respondemos lo antes posible [PLAZO DE RESPUESTA]. Si es urgente, llámanos al {{ phoneDisplay }}.</p>
+          <button type="button" onClick="{{ resetContact }}" style="min-height:44px; padding:0; background:none; border:0; border-bottom:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; cursor:pointer;">ENVIAR OTRO MENSAJE</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ showContactForm }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submitContact }}" novalidate="" style="display:flex; flex-direction:column; gap:22px;">
+          <fieldset style="border:0; margin:0; padding:0; display:flex; flex-direction:column; gap:12px;">
+            <legend style="padding:0; margin-bottom:12px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.14em; color:#7C1126;">¿DE QUÉ QUIERES HABLAR?</legend>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <sc-for list="{{ topics }}" as="t" hint-placeholder-count="5">
+                <button type="button" onClick="{{ t.pick }}" aria-pressed="{{ t.on }}" style="min-height:44px; padding:0 18px; border:2px solid #7C1126; border-radius:999px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.08em; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ t.bg }}; color:{{ t.fg }};">{{ t.label }}</button>
+              </sc-for>
+            </div>
+          </fieldset>
+          <sc-if value="{{ isGroupTopic }}">
+            <p style="margin:0; padding:14px 16px; background:#EFE7C7; border-radius:12px; font-size:15px; line-height:1.5;">Para grupos, cuéntanos fecha, hora aproximada y cuántos seréis. Cabemos hasta [CAPACIDAD MÁXIMA DE GRUPO].</p>
+          </sc-if>
+          <sc-if value="{{ isJobTopic }}">
+            <p style="margin:0; padding:14px 16px; background:#EFE7C7; border-radius:12px; font-size:15px; line-height:1.5;">¿Quieres trabajar con nosotros? Usa el formulario de <a href="#trabaja" style="font-weight:700; text-decoration:underline;">Trabaja con nosotros</a>, más abajo: ahí puedes adjuntar tu CV.</p>
+          </sc-if>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:16px;">
+            <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Nombre
+              <input name="nombre" autocomplete="given-name" value="{{ c.nombre }}" onChange="{{ setC }}" aria-invalid="{{ e.nombre }}" style="min-height:52px; padding:0 16px; background:#FFFFFF; border:2px solid {{ e.nombreB }}; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400;">
+              <sc-if value="{{ e.nombre }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">Dinos tu nombre.</span></sc-if>
+            </label>
+            <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Teléfono <span style="font-weight:400; font-size:13px;">(opcional)</span>
+              <input name="telefono" type="tel" autocomplete="tel" value="{{ c.telefono }}" onChange="{{ setC }}" style="min-height:52px; padding:0 16px; background:#FFFFFF; border:2px solid #C9B98F; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400;">
+            </label>
+          </div>
+          <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Email
+            <input name="email" type="email" autocomplete="email" value="{{ c.email }}" onChange="{{ setC }}" aria-invalid="{{ e.email }}" style="min-height:52px; padding:0 16px; background:#FFFFFF; border:2px solid {{ e.emailB }}; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400;">
+            <sc-if value="{{ e.email }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">Revisa el email, parece que falta algo.</span></sc-if>
+          </label>
+          <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Mensaje
+            <textarea name="mensaje" rows="5" value="{{ c.mensaje }}" onChange="{{ setC }}" aria-invalid="{{ e.mensaje }}" style="padding:14px 16px; background:#FFFFFF; border:2px solid {{ e.mensajeB }}; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400; line-height:1.5; resize:vertical;"></textarea>
+            <sc-if value="{{ e.mensaje }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">Cuéntanos algo, aunque sea corto.</span></sc-if>
+          </label>
+          <label style="display:flex; align-items:flex-start; gap:12px; font-size:14px; line-height:1.5; cursor:pointer;">
+            <input type="checkbox" name="privacidad" checked="{{ c.privacidad }}" onChange="{{ setC }}" style="width:22px; height:22px; margin:0; flex-shrink:0; accent-color:#7C1126;">
+            <span>He leído y acepto la <a href="#" style="font-weight:700; text-decoration:underline;">política de privacidad</a>.</span>
+          </label>
+          <sc-if value="{{ e.privacidad }}"><span style="margin-top:-12px; font-size:14px; font-weight:600; color:#7C1126;">Necesitamos que aceptes la política de privacidad.</span></sc-if>
+          <button type="submit" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; border:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; cursor:pointer; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; gap:18px;">ENVIAR MENSAJE <span aria-hidden="true">→</span></button>
+        </form>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<section id="trabaja" data-screen-label="Trabaja con nosotros" style="background:#7C1126; color:#EFE7C7; padding:clamp(80px,9vw,130px) clamp(20px,4vw,48px); scroll-margin-top:60px; overflow:hidden; position:relative;">
+  <div aria-hidden="true" style="position:absolute; left:-12vw; top:-20vw; width:50vw; height:50vw; border:clamp(40px,6vw,96px) solid #6C0E21; border-radius:50%;"></div>
+  <div style="position:relative; max-width:1240px; margin:0 auto; display:flex; flex-wrap:wrap; gap:clamp(40px,6vw,96px); align-items:flex-start;">
+    <div style="flex:1 1 300px; display:flex; flex-direction:column; gap:22px;">
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:14px; letter-spacing:.2em;">TRABAJA CON NOSOTROS</span>
+      <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,6vw,88px); line-height:.9; letter-spacing:-.01em;">¿TE SIENTAS CON NOSOTROS, PERO DEL OTRO LADO?</h2>
+      <p style="margin:0; max-width:440px; font-size:clamp(16px,1.3vw,18px); line-height:1.6; text-wrap:pretty;">Somos una casa pequeña y familiar. Buscamos gente a la que le guste tratar a cada cliente por su nombre. [PUESTOS ABIERTOS AHORA / TEXTO SOBRE EL EQUIPO]</p>
+      <div style="position:relative; width:min(100%,360px); aspect-ratio:4/5; border-radius:999px 999px 24px 24px; overflow:hidden; background:repeating-linear-gradient(135deg,#6C0E21 0 10px,#741024 10px 20px); display:flex; align-items:center; justify-content:center; padding:24px; text-align:center;">
+        <span style="font-family:ui-monospace,Menlo,monospace; font-size:12px; color:#EFE7C7;">[FOTO EQUIPO TRABAJANDO]</span>
+      </div>
+    </div>
+
+    <div style="flex:2 1 520px; min-width:0; background:#EFE7C7; color:#1E1414; border-radius:24px; padding:clamp(24px,3.5vw,44px);">
+      <sc-if value="{{ sentJob }}">
+        <div role="status" style="display:flex; flex-direction:column; gap:16px; align-items:flex-start; padding:24px 0;">
+          <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(40px,4vw,56px); line-height:.9; color:#7C1126;">¡RECIBIDO!</span>
+          <p style="margin:0; font-size:17px; line-height:1.55;">Gracias por querer formar parte de la casa. Guardamos tu candidatura y te llamamos si encaja con lo que buscamos.</p>
+          <button type="button" onClick="{{ resetJob }}" style="min-height:44px; padding:0; background:none; border:0; border-bottom:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; cursor:pointer;">ENVIAR OTRA CANDIDATURA</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ showJobForm }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submitJob }}" novalidate="" style="display:flex; flex-direction:column; gap:22px;">
+          <fieldset style="border:0; margin:0; padding:0;">
+            <legend style="padding:0; margin-bottom:12px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.14em; color:#7C1126;">¿DÓNDE TE VES?</legend>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <sc-for list="{{ roles }}" as="r" hint-placeholder-count="4">
+                <button type="button" onClick="{{ r.pick }}" aria-pressed="{{ r.on }}" style="min-height:44px; padding:0 18px; border:2px solid #7C1126; border-radius:999px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.08em; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ r.bg }}; color:{{ r.fg }};">{{ r.label }}</button>
+              </sc-for>
+            </div>
+            <sc-if value="{{ je.roles }}"><span style="display:block; margin-top:8px; font-size:14px; font-weight:600; color:#7C1126;">Elige al menos un puesto.</span></sc-if>
+          </fieldset>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:16px;">
+            <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Nombre y apellidos
+              <input name="nombre" autocomplete="name" value="{{ j.nombre }}" onChange="{{ setJ }}" aria-invalid="{{ je.nombre }}" style="min-height:52px; padding:0 16px; background:#FFFFFF; border:2px solid {{ je.nombreB }}; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400;">
+              <sc-if value="{{ je.nombre }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">Dinos tu nombre.</span></sc-if>
+            </label>
+            <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Teléfono
+              <input name="telefono" type="tel" autocomplete="tel" value="{{ j.telefono }}" onChange="{{ setJ }}" aria-invalid="{{ je.telefono }}" style="min-height:52px; padding:0 16px; background:#FFFFFF; border:2px solid {{ je.telefonoB }}; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400;">
+              <sc-if value="{{ je.telefono }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">Necesitamos un teléfono para llamarte.</span></sc-if>
+            </label>
+          </div>
+          <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Disponibilidad
+            <select name="disponibilidad" value="{{ j.disponibilidad }}" onChange="{{ setJ }}" style="min-height:52px; padding:0 14px; background:#FFFFFF; border:2px solid #C9B98F; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400;">
+              <option value="completa">Jornada completa</option>
+              <option value="parcial">Media jornada</option>
+              <option value="findes">Fines de semana</option>
+              <option value="temporada">Temporada de verano</option>
+            </select>
+          </label>
+          <div style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">
+            <span>CV <span style="font-weight:400; font-size:13px;">(PDF, máx. 5 MB, opcional)</span></span>
+            <label style="display:flex; align-items:center; gap:14px; min-height:64px; padding:12px 16px; background:#FFFFFF; border:2px dashed #7C1126; border-radius:8px; cursor:pointer; font-weight:400;" style-hover="background:#FAF6EA;">
+              <input type="file" accept=".pdf,.doc,.docx" onChange="{{ pickFile }}" style="position:absolute; width:1px; height:1px; opacity:0;">
+              <span style="flex-shrink:0; padding:8px 14px; background:#7C1126; color:#EFE7C7; border-radius:2px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.08em;">ADJUNTAR</span>
+              <span style="font-size:15px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{{ fileLabel }}</span>
+            </label>
+          </div>
+          <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">Cuéntanos un poco de ti <span style="font-weight:400; font-size:13px;">(opcional)</span>
+            <textarea name="mensaje" rows="4" value="{{ j.mensaje }}" onChange="{{ setJ }}" style="padding:14px 16px; background:#FFFFFF; border:2px solid #C9B98F; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400; line-height:1.5; resize:vertical;"></textarea>
+          </label>
+          <label style="display:flex; align-items:flex-start; gap:12px; font-size:14px; line-height:1.5; cursor:pointer;">
+            <input type="checkbox" name="privacidad" checked="{{ j.privacidad }}" onChange="{{ setJ }}" style="width:22px; height:22px; margin:0; flex-shrink:0; accent-color:#7C1126;">
+            <span>Acepto que Casanita guarde mis datos para procesos de selección, según la <a href="#" style="font-weight:700; text-decoration:underline;">política de privacidad</a>.</span>
+          </label>
+          <sc-if value="{{ je.privacidad }}"><span style="margin-top:-12px; font-size:14px; font-weight:600; color:#7C1126;">Necesitamos que lo aceptes para guardar tu candidatura.</span></sc-if>
+          <button type="submit" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#7C1126; color:#EFE7C7; border:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; cursor:pointer; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#4E0B18; gap:18px;">ENVIAR CANDIDATURA <span aria-hidden="true">→</span></button>
+        </form>
+      </sc-if>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer style="background:#7C1126; color:#EFE7C7; border-top:2px solid #4E0B18; padding:40px clamp(20px,4vw,48px) {{ footPad }};">
+  <div style="max-width:1240px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px 32px; font-size:14px;">
+    <img src="assets/logo-beige.png" alt="Casanita" loading="lazy" style="width:130px; height:auto;">
+    <div style="display:flex; flex-wrap:wrap; gap:4px 20px;">
+      <a href="#" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Privacidad</a>
+      <a href="#" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Cookies</a>
+      <a href="#" style="color:#EFE7C7; display:flex; align-items:center; min-height:44px;">Aviso legal</a>
+    </div>
+    <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:22px;">COMIDAS, CENAS Y BUEN BEBER.</span>
+  </div>
+</footer>
+
+<sc-if value="{{ isMobile }}">
+  <div role="navigation" aria-label="Acciones rápidas" style="position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1.4fr 1fr; gap:8px; padding:10px 12px calc(10px + env(safe-area-inset-bottom)); background:#FAF6EA; border-top:2px solid #7C1126;">
+    <a href="Casanita Reserva.dc.html" style="display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">RESERVAR <span aria-hidden="true">→</span></a>
+    <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; justify-content:center; min-height:52px; background:#EFE7C7; color:#7C1126; border:2px solid #7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">LLAMAR</a>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const LIVE_API = 'https://api.vetrareserve.com/api/site/public/69bd6b22dbf226bfd19230df';
+const FALLBACK = {
+  phone: '+34605251287', email: 'info@casanitavilassar.com',
+  address: "Carrer de Ca l'Aduana, 69, 08340 Vilassar de Mar",
+  mapsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Carrer+de+ca+l%27Aduana+69,+08340+Vilassar+de+Mar',
+  reserveUrl: 'https://vetrareserve.com/casanita-vilassar',
+};
+function phoneDisplayFmt(tel) {
+  const d = (tel || '').replace(/^\+34/, '');
+  const m = d.match(/^(\d{3})(\d{2})(\d{2})(\d{2})$/);
+  return m ? `${m[1]} ${m[2]} ${m[3]} ${m[4]}` : d;
+}
+function splitAddress(full) {
+  const parts = (full || '').split(',').map(s => s.trim()).filter(Boolean);
+  if (parts.length >= 3) return { street: `${parts[0]}, ${parts[1]}`, city: parts.slice(2).join(', ') };
+  return { street: full || '', city: '' };
+}
+const TOPICS = ['GRUPOS Y CELEBRACIONES', 'CATERING', 'PEDIDOS PARA LLEVAR', 'TRABAJO', 'OTRO'];
+const ROLES = ['SALA', 'COCINA', 'BARRA Y CÓCTELES', 'AYUDANTE'];
+const emptyC = () => ({ nombre: '', telefono: '', email: '', mensaje: '', privacidad: false });
+const emptyJ = () => ({ nombre: '', telefono: '', disponibilidad: 'completa', mensaje: '', privacidad: false });
+
+class Component extends DCLogic {
+  trackSetup() {
+    window.dataLayer = window.dataLayer || [];
+    document.documentElement.lang = 'es';
+    this.onTrack = e => {
+      const a = e.target.closest && e.target.closest('a,button'); if (!a) return;
+      const href = a.getAttribute('href') || '';
+      let ev = a.dataset.track;
+      if (!ev) {
+        if (/#reserva$|Reserva\.dc\.html/.test(href)) ev = 'click_reservar';
+        else if (href.startsWith('tel:')) ev = 'click_llamar';
+        else if (/google\.com\/maps/.test(href)) ev = 'click_como_llegar';
+        else if (/Carta\.dc\.html/.test(href)) ev = 'click_ver_carta';
+      }
+      if (ev) window.dataLayer.push({ event: ev, link_text: (a.textContent || '').trim().slice(0, 60), page: location.pathname });
+    };
+    document.addEventListener('click', this.onTrack, true);
+  }
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, scrolled: false, topic: 0, roles: [], c: emptyC(), j: emptyJ(), ce: {}, jeErr: {}, sentC: false, sentJ: false, file: '', live: null };
+  componentDidMount() {
+    this.trackSetup();
+    fetch(LIVE_API).then(r => (r.ok ? r.json() : Promise.reject())).then(data => this.setState({ live: data })).catch(() => {});
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    this.onScroll = () => { const s = window.scrollY > 40; if (s !== this.state.scrolled) this.setState({ scrolled: s }); };
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+  componentWillUnmount() { document.removeEventListener('click', this.onTrack, true); window.removeEventListener('resize', this.onResize); window.removeEventListener('scroll', this.onScroll); }
+  field(key, e) {
+    const t = e.target, v = t.type === 'checkbox' ? t.checked : t.value;
+    this.setState(s => ({ [key]: { ...s[key], [t.name]: v } }));
+  }
+  biz() {
+    const live = this.state.live;
+    const b = (live && live.business) || {};
+    const addr = splitAddress(b.address || FALLBACK.address);
+    return {
+      phoneTel: b.phone || FALLBACK.phone,
+      phoneDisplay: phoneDisplayFmt(b.phone || FALLBACK.phone),
+      email: b.email || FALLBACK.email,
+      address: b.address || FALLBACK.address,
+      addressStreet: addr.street, addressCity: addr.city,
+      mapsUrl: b.mapsUrl || FALLBACK.mapsUrl,
+    };
+  }
+  renderVals() {
+    const { w, scrolled, c, j, ce, jeErr } = this.state;
+    const isMobile = w < 820;
+    const b = (bad) => bad ? '#7C1126' : '#C9B98F';
+    return {
+      ...this.biz(),
+      isMobile, isDesktop: !isMobile,
+      logoBeige: !scrolled, logoGranate: scrolled,
+      hdrBg: scrolled ? '#EFE7C7' : 'transparent', hdrFg: scrolled ? '#7C1126' : '#EFE7C7',
+      hdrBtnBg: scrolled ? '#7C1126' : '#EFE7C7', hdrBtnFg: scrolled ? '#EFE7C7' : '#7C1126',
+      footPad: isMobile ? '110px' : '40px',
+      topics: TOPICS.map((label, i) => ({ label, on: this.state.topic === i ? 'true' : 'false', bg: this.state.topic === i ? '#7C1126' : 'transparent', fg: this.state.topic === i ? '#EFE7C7' : '#7C1126', pick: () => this.setState({ topic: i }) })),
+      isGroupTopic: this.state.topic === 0, isJobTopic: this.state.topic === 3,
+      c, setC: e => this.field('c', e),
+      e: { nombre: !!ce.nombre, email: !!ce.email, mensaje: !!ce.mensaje, privacidad: !!ce.privacidad, nombreB: b(ce.nombre), emailB: b(ce.email), mensajeB: b(ce.mensaje) },
+      submitContact: ev => {
+        ev.preventDefault();
+        const err = { nombre: !c.nombre.trim(), email: !/^\S+@\S+\.\S+$/.test(c.email), mensaje: !c.mensaje.trim(), privacidad: !c.privacidad };
+        if (Object.values(err).some(Boolean)) return this.setState({ ce: err });
+        this.setState({ ce: {}, sentC: true });
+      },
+      sentContact: this.state.sentC, showContactForm: !this.state.sentC,
+      firstName: (c.nombre.trim().split(' ')[0] || '').toUpperCase(),
+      resetContact: () => this.setState({ sentC: false, c: emptyC() }),
+      roles: ROLES.map(label => { const on = this.state.roles.includes(label); return { label, on: on ? 'true' : 'false', bg: on ? '#7C1126' : 'transparent', fg: on ? '#EFE7C7' : '#7C1126', pick: () => this.setState(s => ({ roles: on ? s.roles.filter(r => r !== label) : [...s.roles, label] })) }; }),
+      j, setJ: e => this.field('j', e),
+      je: { roles: !!jeErr.roles, nombre: !!jeErr.nombre, telefono: !!jeErr.telefono, privacidad: !!jeErr.privacidad, nombreB: b(jeErr.nombre), telefonoB: b(jeErr.telefono) },
+      pickFile: e => { const f = e.target.files && e.target.files[0]; this.setState({ file: f ? f.name : '' }); },
+      fileLabel: this.state.file || 'Ningún archivo seleccionado',
+      submitJob: ev => {
+        ev.preventDefault();
+        const err = { roles: !this.state.roles.length, nombre: !j.nombre.trim(), telefono: j.telefono.replace(/\D/g, '').length < 9, privacidad: !j.privacidad };
+        if (Object.values(err).some(Boolean)) return this.setState({ jeErr: err });
+        this.setState({ jeErr: {}, sentJ: true });
+      },
+      sentJob: this.state.sentJ, showJobForm: !this.state.sentJ,
+      resetJob: () => this.setState({ sentJ: false, j: emptyJ(), roles: [], file: '' }),
+    };
+  }
+}
+</script>
+</body>
+</html>

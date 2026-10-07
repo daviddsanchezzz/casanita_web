@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Reservar mesa · Casanita Vilassar</title>
+<meta name="description" content="Reserva tu mesa en Casanita, Vilassar de Mar, en menos de un minuto. O llámanos al 605 25 12 87.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="canonical" href="https://casanitavilassar.com/reserva">
+<link rel="alternate" hreflang="es" href="https://casanitavilassar.com/es/reserva">
+<link rel="alternate" hreflang="ca" href="https://casanitavilassar.com/ca/reserva">
+<link rel="alternate" hreflang="en" href="https://casanitavilassar.com/en/reserva">
+<link rel="alternate" hreflang="x-default" href="https://casanitavilassar.com/es/reserva">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Casanita Vilassar">
+<meta property="og:title" content="Reservar mesa · Casanita Vilassar">
+<meta property="og:description" content="Reserva tu mesa en Casanita, Vilassar de Mar, en menos de un minuto. O llámanos al 605 25 12 87.">
+<meta property="og:url" content="https://casanitavilassar.com/reserva">
+<meta property="og:image" content="https://casanitavilassar.com/assets/fachada-dia-vespa.jpg">
+<meta property="og:image:alt" content="Fachada de Casanita en Vilassar de Mar, con la Vespa blanca y flores">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reservar mesa · Casanita Vilassar">
+<meta name="twitter:description" content="Reserva tu mesa en Casanita, Vilassar de Mar, en menos de un minuto. O llámanos al 605 25 12 87.">
+<meta name="twitter:image" content="https://casanitavilassar.com/assets/fachada-dia-vespa.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=DM+Sans:opsz,wght@9..40,400..700&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#EFE7C7;color:#1E1414;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#7C1126;text-decoration:none}
+a:hover{color:#4E0B18}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid #EFE7C7;outline-offset:3px;box-shadow:0 0 0 6px #1E1414}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none !important}}
+</style>
+</helmet>
+
+<header data-screen-label="Header" style="position:sticky; top:0; z-index:50; background:#7C1126;">
+  <div style="max-width:1440px; margin:0 auto; height:76px; padding:0 clamp(16px,3vw,40px); display:flex; align-items:center; justify-content:space-between; gap:24px;">
+    <a href="Casanita Home.dc.html" aria-label="Casanita, inicio" style="display:flex; flex-direction:column; align-items:center; gap:3px; flex-shrink:0;">
+      <img src="assets/logo-beige.png" alt="Casanita" style="width:clamp(118px,11vw,150px); height:auto;">
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:9px; letter-spacing:.42em; padding-left:.42em; color:#EFE7C7;">VILASSAR</span>
+    </a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Principal" style="display:flex; align-items:center; gap:clamp(18px,2.4vw,36px);">
+        <a href="Casanita Carta.dc.html" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">CARTA</a>
+        <a href="Casanita Home.dc.html#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">GRUPOS</a>
+        <a href="Casanita Home.dc.html#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">VISÍTANOS</a>
+      </nav>
+    </sc-if>
+    <div style="display:flex; align-items:center; gap:clamp(10px,1.6vw,22px);">
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+        <div role="group" aria-label="Idioma" style="display:flex; align-items:center; gap:2px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.08em; color:#EFE7C7;">
+          <button type="button" aria-pressed="true" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer; text-decoration:underline; text-underline-offset:4px;">ES</button><span aria-hidden="true">·</span>
+          <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">CA</button><span aria-hidden="true">·</span>
+          <button type="button" aria-pressed="false" style="background:none; border:0; color:inherit; font:inherit; letter-spacing:inherit; padding:10px 4px; cursor:pointer;">EN</button>
+        </div>
+      </sc-if>
+      <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); border:2px solid #EFE7C7; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease;" style-hover="background:#EFE7C7; color:#7C1126;">LLAMAR</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section data-screen-label="Reserva · cabecera" style="position:relative; background:#7C1126; color:#EFE7C7; padding:clamp(48px,6vw,80px) clamp(20px,4vw,48px) clamp(150px,16vw,220px); overflow:hidden; text-align:center;">
+  <div aria-hidden="true" style="position:absolute; left:50%; top:30%; width:120vw; height:120vw; margin-left:-60vw; border:clamp(40px,6vw,96px) solid #6C0E21; border-radius:50%;"></div>
+  <div style="position:relative; max-width:900px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:18px;">
+    <span style="display:flex; align-items:center; gap:8px; padding:6px 14px; border-radius:999px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.12em;"><span style="width:8px; height:8px; border-radius:50%; background:#7C1126;"></span>{{ openLabel }}</span>
+    <h1 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(60px,9vw,130px); line-height:.86; letter-spacing:-.015em; text-wrap:balance;">RESERVA TU MESA.</h1>
+    <p style="margin:0; max-width:520px; font-size:clamp(16px,1.35vw,19px); line-height:1.55; text-wrap:pretty;">En menos de un minuto. Si prefieres hablar con nosotros, llámanos al <a href="tel:{{ phoneTel }}" style="color:#EFE7C7; font-weight:700; text-decoration:underline; text-underline-offset:3px;">{{ phoneDisplay }}</a>.</p>
+  </div>
+</section>
+
+<section data-screen-label="Reserva · módulo" style="position:relative; z-index:2; margin-top:calc(-1 * clamp(110px,12vw,170px)); padding:0 clamp(0px,3vw,40px);">
+  <div style="max-width:720px; margin:0 auto; background:#FAF6EA; border:3px solid #7C1126; border-radius:{{ frameRadius }}; overflow:hidden;">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 20px; background:#7C1126; color:#EFE7C7; border-bottom:3px solid #4E0B18; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.12em;">
+      <span>CASANITA · RESERVA ONLINE</span>
+      <span>CA L'ADUANA, 69</span>
+    </div>
+    <div role="region" aria-label="Módulo de reserva" style="background:#FFFFFF; padding:clamp(16px,3vw,32px);"><iframe id="vetra-reservas" src="{{ reserveEmbedUrl }}" style="width:100%; border:none; min-height:560px; display:block;"></iframe></div>
+  </div>
+</section>
+
+<section data-screen-label="Reserva · ayuda" style="padding:clamp(56px,7vw,96px) clamp(20px,4vw,48px) clamp(72px,8vw,120px);">
+  <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:16px;">
+    <div style="display:flex; flex-direction:column; gap:12px; padding:28px; background:#7C1126; color:#EFE7C7; border-radius:22px;">
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em;">¿SOIS MUCHOS?</span>
+      <p style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(28px,2.6vw,36px); line-height:.95;">MEJOR LLÁMANOS Y LO PREPARAMOS JUNTOS.</p>
+      <p style="margin:0; font-size:15px; line-height:1.5;">Cumpleaños, comidas familiares y reencuentros. Hasta [CAPACIDAD MÁXIMA DE GRUPO].</p>
+      <a href="tel:{{ phoneTel }}" style="margin-top:auto; align-self:flex-start; display:flex; align-items:center; gap:10px; min-height:48px; padding:0 22px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:gap .25s ease;" style-hover="gap:16px; color:#7C1126;">LLAMAR <span aria-hidden="true">→</span></a>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px; padding:28px; background:#FAF6EA; border-radius:22px;">
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">HORARIO</span>
+      <div style="display:flex; flex-direction:column; gap:4px; font-size:16px; line-height:1.5;">
+        <sc-for list="{{ hours }}" as="h" hint-placeholder-count="7">
+          <span>{{ h.day }}: {{ h.txt }}</span>
+        </sc-for>
+      </div>
+      <a href="Casanita Home.dc.html#visitanos" style="margin-top:auto; font-weight:700; font-size:15px;">Cómo llegar →</a>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:14px; padding:28px; background:#FAF6EA; border-radius:22px;">
+      <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:13px; letter-spacing:.16em; color:#7C1126;">ANTES DE RESERVAR</span>
+      <div style="display:flex; flex-direction:column; gap:4px;">
+        <strong style="font-size:16px;">¿Se puede reservar en la terraza?</strong>
+        <span style="font-size:15px; line-height:1.5;">[A CONFIRMAR]</span>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:4px;">
+        <strong style="font-size:16px;">¿Opciones sin gluten?</strong>
+        <span style="font-size:15px; line-height:1.5;">Todas las pizzas, con masa sin gluten o queso sin lactosa.</span>
+      </div>
+      <a href="Casanita Carta.dc.html" style="margin-top:auto; font-weight:700; font-size:15px;">Ver la carta →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer style="background:#7C1126; color:#EFE7C7; padding:40px clamp(20px,4vw,48px) {{ footPad }};">
+  <div style="max-width:1240px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px 32px; font-size:14px;">
+    <img src="assets/logo-beige.png" alt="Casanita" loading="lazy" style="width:130px; height:auto;">
+    <span>{{ address }} · <a href="tel:{{ phoneTel }}" style="color:#EFE7C7;">{{ phoneDisplay }}</a></span>
+    <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:22px;">COMIDAS, CENAS Y BUEN BEBER.</span>
+  </div>
+</footer>
+
+<sc-if value="{{ isMobile }}">
+  <div role="navigation" aria-label="Acciones rápidas" style="position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1fr; padding:10px 12px calc(10px + env(safe-area-inset-bottom)); background:#FAF6EA; border-top:2px solid #7C1126;">
+    <a href="tel:{{ phoneTel }}" style="display:flex; align-items:center; justify-content:center; min-height:52px; background:#EFE7C7; color:#7C1126; border:2px solid #7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">¿PREFIERES LLAMAR? {{ phoneDisplay }}</a>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const LIVE_API = 'https://api.vetrareserve.com/api/site/public/69bd6b22dbf226bfd19230df';
+const FALLBACK = {
+  phone: '+34605251287', email: 'info@casanitavilassar.com',
+  address: "Carrer de Ca l'Aduana, 69, 08340 Vilassar de Mar",
+  mapsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Carrer+de+ca+l%27Aduana+69,+08340+Vilassar+de+Mar',
+  reserveUrl: 'https://vetrareserve.com/casanita-vilassar',
+  schedule: { 0: [['12:00','16:00'],['19:00','23:00']], 1: [['12:00','16:00'],['19:00','23:00']], 2: [], 3: [], 4: [['12:00','16:00'],['19:00','23:00']], 5: [['12:00','16:00'],['19:00','23:00']], 6: [['12:00','16:00'],['19:00','23:00']] },
+};
+function phoneDisplayFmt(tel) {
+  const d = (tel || '').replace(/^\+34/, '');
+  const m = d.match(/^(\d{3})(\d{2})(\d{2})(\d{2})$/);
+  return m ? `${m[1]} ${m[2]} ${m[3]} ${m[4]}` : d;
+}
+function scheduleFromLive(live) {
+  if (!live || !Array.isArray(live.openingHours)) return FALLBACK.schedule;
+  const sched = {};
+  live.openingHours.forEach(({ day, ranges }) => { sched[day] = (ranges || []).map(r => [r.open, r.close]); });
+  return sched;
+}
+const DAYS = ['DOMINGO','LUNES','MARTES','MIÉRCOLES','JUEVES','VIERNES','SÁBADO'];
+const toMin = s => { const [h, m] = s.split(':').map(Number); return h * 60 + m; };
+
+class Component extends DCLogic {
+  trackSetup() {
+    window.dataLayer = window.dataLayer || [];
+    document.documentElement.lang = 'es';
+    this.onTrack = e => {
+      const a = e.target.closest && e.target.closest('a,button'); if (!a) return;
+      const href = a.getAttribute('href') || '';
+      let ev = a.dataset.track;
+      if (!ev) {
+        if (/#reserva$|Reserva\.dc\.html/.test(href)) ev = 'click_reservar';
+        else if (href.startsWith('tel:')) ev = 'click_llamar';
+        else if (/google\.com\/maps/.test(href)) ev = 'click_como_llegar';
+        else if (/Carta\.dc\.html/.test(href)) ev = 'click_ver_carta';
+      }
+      if (ev) window.dataLayer.push({ event: ev, link_text: (a.textContent || '').trim().slice(0, 60), page: location.pathname });
+    };
+    document.addEventListener('click', this.onTrack, true);
+  }
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, now: new Date(), live: null };
+  componentDidMount() {
+    this.trackSetup();
+    fetch(LIVE_API).then(r => (r.ok ? r.json() : Promise.reject())).then(data => this.setState({ live: data })).catch(() => {});
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this.onResize);
+    this.clock = setInterval(() => this.setState({ now: new Date() }), 60000);
+    this.onVetraMsg = e => {
+      if (e.data && e.data.type === 'VETRA_HEIGHT') {
+        const el = document.getElementById('vetra-reservas');
+        if (el) el.style.height = e.data.height + 'px';
+      }
+    };
+    window.addEventListener('message', this.onVetraMsg);
+  }
+  componentWillUnmount() { document.removeEventListener('click', this.onTrack, true); window.removeEventListener('resize', this.onResize); window.removeEventListener('message', this.onVetraMsg); clearInterval(this.clock); }
+  openLabel() {
+    const live = this.state.live;
+    if (live && live.today && live.today.closed && live.today.closureReason) return `CERRADO · ${live.today.closureReason.toUpperCase()}`;
+    const schedule = scheduleFromLive(live);
+    const d = this.state.now, day = d.getDay(), mins = d.getHours() * 60 + d.getMinutes();
+    if ((schedule[day] || []).some(([a, b]) => mins >= toMin(a) && mins < toMin(b))) return 'ABIERTO AHORA';
+    for (let k = 0; k < 8; k++) {
+      const dd = (day + k) % 7, slot = (schedule[dd] || []).find(([a]) => k > 0 || toMin(a) > mins);
+      if (slot) return `CERRADO · ABRE ${k === 0 ? 'HOY' : k === 1 ? 'MAÑANA' : DAYS[dd]} A LAS ${slot[0]}`;
+    }
+    return 'CERRADO';
+  }
+  biz() {
+    const live = this.state.live;
+    const b = (live && live.business) || {};
+    const ig = live && Array.isArray(live.links) ? live.links.find(l => l.type === 'instagram') : null;
+    return {
+      phoneTel: b.phone || FALLBACK.phone,
+      phoneDisplay: phoneDisplayFmt(b.phone || FALLBACK.phone),
+      email: b.email || FALLBACK.email,
+      address: b.address || FALLBACK.address,
+      mapsUrl: b.mapsUrl || FALLBACK.mapsUrl,
+      instagramUrl: (ig && ig.url) || '#',
+      reserveEmbedUrl: ((live && live.reservations && live.reservations.url) || FALLBACK.reserveUrl) + '?embed=1&lang=es',
+    };
+  }
+  hours() {
+    const schedule = scheduleFromLive(this.state.live);
+    const today = this.state.now.getDay();
+    return [1, 2, 3, 4, 5, 6, 0].map(d => ({
+      day: DAYS[d] + (d === today ? ' · HOY' : ''),
+      txt: (schedule[d] || []).length ? schedule[d].map(s => s.join('–')).join(' · ') : 'Cerrado',
+    }));
+  }
+  renderVals() {
+    const isMobile = this.state.w < 820;
+    return { isMobile, isDesktop: !isMobile, openLabel: this.openLabel(), frameRadius: isMobile ? '0px' : '20px', footPad: isMobile ? '110px' : '40px', hours: this.hours(), ...this.biz() };
+  }
+}
+</script>
+</body>
+</html>
