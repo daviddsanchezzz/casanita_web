@@ -145,7 +145,7 @@
     "hero": {
       "eyebrow": "CUINA MEDITERRÀNIA AMB ÀNIMA ITALIANA", "title": "LA CARTA.",
       "desc": "Molt més que pizza. Plats per compartir al centre de la taula, pasta com ha de ser i alguna cosa bona per a tothom. Pregunta sempre pel fora de carta: el xef t'ho explica a la taula.",
-      "stickerLine1": "PREGUNTA", "stickerLine2": "PEL FORA", "stickerLine3": "DE CARTA", "ctaLlevar": "DEMANA PER EMPORTAR"
+      "ctaLlevar": "DEMANA PER EMPORTAR"
     },
     "chipsAriaLabel": "Seccions de la carta",
     "hintMobile": "Els plats subratllats tenen foto: toca'ls per veure-la.",

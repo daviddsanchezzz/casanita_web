@@ -145,7 +145,7 @@
     "hero": {
       "eyebrow": "MEDITERRANEAN COOKING WITH AN ITALIAN SOUL", "title": "THE MENU.",
       "desc": "Much more than pizza. Dishes to share at the centre of the table, pasta the way it should be, and something good for everyone. Always ask about what's off the menu: the chef will tell you at the table.",
-      "stickerLine1": "ASK ABOUT", "stickerLine2": "WHAT'S OFF", "stickerLine3": "THE MENU", "ctaLlevar": "ORDER TAKEAWAY"
+      "ctaLlevar": "ORDER TAKEAWAY"
     },
     "chipsAriaLabel": "Menu sections",
     "hintMobile": "Underlined dishes have a photo: tap them to see it.",

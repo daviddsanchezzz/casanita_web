@@ -145,7 +145,7 @@
     "hero": {
       "eyebrow": "CUISINE MÉDITERRANÉENNE À L'ÂME ITALIENNE", "title": "LA CARTE.",
       "desc": "Bien plus que de la pizza. Des plats à partager au centre de la table, des pâtes comme il se doit, et quelque chose de bon pour chacun. Demandez toujours ce qu'il y a hors carte : le chef vous le raconte à table.",
-      "stickerLine1": "DEMANDEZ", "stickerLine2": "CE QUI EST", "stickerLine3": "HORS CARTE", "ctaLlevar": "COMMANDER À EMPORTER"
+      "ctaLlevar": "COMMANDER À EMPORTER"
     },
     "chipsAriaLabel": "Sections de la carte",
     "hintMobile": "Les plats soulignés ont une photo : touchez-les pour la voir.",

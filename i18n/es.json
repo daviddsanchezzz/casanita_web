@@ -145,7 +145,7 @@
     "hero": {
       "eyebrow": "COCINA MEDITERRÁNEA CON ALMA ITALIANA", "title": "LA CARTA.",
       "desc": "Mucho más que pizza. Platos para compartir en el centro de la mesa, pasta como debe ser y algo rico para cada uno. Pregunta siempre por el fuera de carta: el chef te lo cuenta en la mesa.",
-      "stickerLine1": "PREGUNTA", "stickerLine2": "POR EL FUERA", "stickerLine3": "DE CARTA", "ctaLlevar": "PEDIR PARA LLEVAR"
+      "ctaLlevar": "PEDIR PARA LLEVAR"
     },
     "chipsAriaLabel": "Secciones de la carta",
     "hintMobile": "Los platos subrayados tienen foto: tócalos para verla.",
