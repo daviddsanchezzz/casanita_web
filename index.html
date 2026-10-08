@@ -311,7 +311,7 @@ img{display:block;max-width:100%}
       <span style="display:flex; flex-direction:row; align-items:baseline; gap:.1em; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(72px,8vw,120px); line-height:.72; color:#7C1126;"><span>{{ rating }}</span><span aria-label="estrellas" style="font-size:.4em; line-height:1;">★</span></span>
       <div style="display:flex; flex-direction:column; gap:6px;">
         <span style="font-size:17px; font-weight:600; color:#1E1414;">{{ reviews }} {{ t.home.resenas.reseñasEnGoogle }}</span>
-        <a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; min-height:32px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #7C1126; transition:gap .25s ease;" style-hover="gap:14px;">{{ t.home.resenas.ctaLeerTodas }} <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a>
+        <a href="{{ reviewUrl }}" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; min-height:32px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #7C1126; transition:gap .25s ease;" style-hover="gap:14px;">{{ t.home.resenas.ctaLeerTodas }} <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a>
       </div>
     </div>
   </div>
@@ -502,6 +502,7 @@ function phoneDisplayFmt(tel) {
   const m = d.match(/^(\d{3})(\d{2})(\d{2})(\d{2})$/);
   return m ? `${m[1]} ${m[2]} ${m[3]} ${m[4]}` : d;
 }
+const LOCALE_TAG = { es: 'es-ES', ca: 'ca-ES', en: 'en-US', fr: 'fr-FR' };
 function safeUrl(url, fallback, hostSuffix) {
   try {
     const u = new URL(url, 'https://invalid.invalid');
@@ -638,6 +639,10 @@ class Component extends DCLogic {
       openingHoursSpecification: hours, servesCuisine: ['Italiana', 'Mediterránea'], acceptsReservations: true, priceRange: '€€',
       menu: 'https://casanitavilassar.com/carta', sameAs: (live && Array.isArray(live.links) ? live.links.map(l => l.url) : []).filter(u => /^https?:/.test(u)),
     };
+    const rev = live && live.reviews;
+    if (rev && typeof rev.rating === 'number' && typeof rev.count === 'number') {
+      restaurant.aggregateRating = { '@type': 'AggregateRating', ratingValue: rev.rating, reviewCount: rev.count };
+    }
     const faq = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: this.state.t.home.faq.items.filter(([, a]) => !a.includes('[')).map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) };
     [['ld-restaurant', restaurant], ['ld-faq', faq]].forEach(([id, data]) => {
       if (id === 'ld-faq' && !data.mainEntity.length) return;
@@ -792,6 +797,10 @@ class Component extends DCLogic {
     const b = (live && live.business) || {};
     const ig = live && Array.isArray(live.links) ? live.links.find(l => l.type === 'instagram') : null;
     const addr = splitAddress(b.address || FALLBACK.address);
+    const rev = live && live.reviews;
+    const ratingNum = rev && typeof rev.rating === 'number' && Number.isFinite(rev.rating) ? rev.rating : null;
+    const countNum = rev && typeof rev.count === 'number' && Number.isFinite(rev.count) ? rev.count : null;
+    const localeTag = LOCALE_TAG[this.state.locale] || LOCALE_TAG.es;
     return {
       phoneTel: b.phone || FALLBACK.phone,
       phoneDisplay: phoneDisplayFmt(b.phone || FALLBACK.phone),
@@ -803,6 +812,9 @@ class Component extends DCLogic {
       hasInstagram: !!ig, instagramUrl: ig ? safeUrl(ig.url, '#', 'instagram.com') : '#',
       glovoUrl: safeUrl(FALLBACK.glovoUrl, FALLBACK.glovoUrl, 'glovoapp.com'),
       reserveEmbedUrl: safeUrl((live && live.reservations && live.reservations.url) || FALLBACK.reserveUrl, FALLBACK.reserveUrl, 'vetrareserve.com') + '?embed=1&lang=' + this.state.locale,
+      rating: ratingNum !== null ? ratingNum.toLocaleString(localeTag, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : (this.props.notaGoogle ?? '4,8'),
+      reviews: countNum !== null ? countNum.toLocaleString(localeTag) : (this.props.numResenas ?? '+2.000'),
+      reviewUrl: safeUrl((rev && rev.url) || FALLBACK.mapsUrl, FALLBACK.mapsUrl, null),
     };
   }
 
@@ -844,7 +856,6 @@ class Component extends DCLogic {
       hdrFg: solid ? '#7C1126' : '#EFE7C7',
       hdrBtnBg: solid ? '#7C1126' : '#EFE7C7', hdrBtnFg: solid ? '#EFE7C7' : '#7C1126',
       toggleMenu, closeMenu: () => { document.body.style.overflow = ''; if (this.state.menuOpen) this.setState({ menuOpen: false }); },
-      rating: this.props.notaGoogle ?? '4,8', reviews: this.props.numResenas ?? '+2.000',
       heroText: this.heroText, ribbon: this.ribbon, plate: this.plate, manifesto: this.manifesto, marquee: this.marquee,
       bookRef: this.bookRef, mapRef: this.mapRef,
       tokens, marqueeLoop: [0, 1],
