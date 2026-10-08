@@ -80,7 +80,7 @@ img{display:block;max-width:100%}
     </a>
     <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
       <nav aria-label="Principal" style="display:flex; align-items:center; gap:clamp(18px,2.4vw,36px);">
-        <a href="{{ localePrefix }}/carta" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">{{ t.common.nav.carta }}</a>
+        <a href="{{ localePrefix }}/menu" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">{{ t.common.nav.carta }}</a>
         <a href="#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">{{ t.common.nav.grupos }}</a>
         <a href="#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">{{ t.common.nav.visitanos }}</a>
       </nav>
@@ -109,7 +109,7 @@ img{display:block;max-width:100%}
 <sc-if value="{{ menuOpen }}">
   <div role="dialog" aria-label="{{ t.common.cta.menu }}" style="position:fixed; inset:0; z-index:45; background:#7C1126; padding:110px 24px 120px; display:flex; flex-direction:column; justify-content:space-between; overflow:auto;">
     <nav aria-label="{{ t.common.cta.menuMovil }}" style="display:flex; flex-direction:column; gap:4px;">
-      <a href="{{ localePrefix }}/carta" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">{{ t.common.nav.carta }}</a>
+      <a href="{{ localePrefix }}/menu" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">{{ t.common.nav.carta }}</a>
 
       <a href="#grupos" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">{{ t.common.nav.grupos }}</a>
       <a href="#visitanos" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">{{ t.common.nav.visitanos }}</a>
@@ -226,7 +226,7 @@ img{display:block;max-width:100%}
   </div>
 
   <div style="display:flex; justify-content:center; margin-top:clamp(40px,4vw,56px); padding:0 20px;">
-    <a href="{{ localePrefix }}/carta" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; border:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease, gap .25s ease;" style-hover="background:#7C1126; color:#EFE7C7; gap:18px;">{{ t.home.platos.ctaVerCarta }} <span class="cn-arrow" aria-hidden="true"></span></a>
+    <a href="{{ localePrefix }}/menu" style="display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; border:2px solid #7C1126; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, color .25s ease, gap .25s ease;" style-hover="background:#7C1126; color:#EFE7C7; gap:18px;">{{ t.home.platos.ctaVerCarta }} <span class="cn-arrow" aria-hidden="true"></span></a>
   </div>
 </section>
 
@@ -640,7 +640,7 @@ class Component extends DCLogic {
       address: { '@type': 'PostalAddress', streetAddress: "Carrer de Ca l'Aduana, 69", postalCode: '08340', addressLocality: 'Vilassar de Mar', addressRegion: 'Barcelona', addressCountry: 'ES' },
       geo: { '@type': 'GeoCoordinates', latitude: 41.505014, longitude: 2.393404 },
       openingHoursSpecification: hours, servesCuisine: ['Italiana', 'Mediterránea'], acceptsReservations: true, priceRange: '€€',
-      menu: 'https://casanitavilassar.com/carta', sameAs: (live && Array.isArray(live.links) ? live.links.map(l => l.url) : []).filter(u => /^https?:/.test(u)),
+      menu: 'https://casanitavilassar.com/menu', sameAs: (live && Array.isArray(live.links) ? live.links.map(l => l.url) : []).filter(u => /^https?:/.test(u)),
     };
     const rev = live && live.reviews;
     if (rev && typeof rev.rating === 'number' && typeof rev.count === 'number') {
@@ -665,7 +665,7 @@ class Component extends DCLogic {
         if (/^\/reserva(#|$)|#reserva$/.test(href)) ev = 'click_reservar';
         else if (href.startsWith('tel:')) ev = 'click_llamar';
         else if (/google\.com\/maps/.test(href)) ev = 'click_como_llegar';
-        else if (/^\/carta/.test(href)) ev = 'click_ver_carta';
+        else if (/^\/menu/.test(href)) ev = 'click_ver_carta';
       }
       if (ev) window.dataLayer.push({ event: ev, link_text: (a.textContent || '').trim().slice(0, 60), page: location.pathname });
     };

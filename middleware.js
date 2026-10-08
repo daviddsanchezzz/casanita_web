@@ -9,7 +9,7 @@ const SEO = {
     en: { title: 'Casanita · Trattoria in Vilassar de Mar', description: 'Mediterranean cooking with an Italian soul in the heart of Vilassar de Mar. Lunch, dinner, cocktails and a terrace. Book your table in a minute.' },
     fr: { title: 'Casanita · Trattoria à Vilassar de Mar', description: "Cuisine méditerranéenne à l'âme italienne, au cœur de Vilassar de Mar. Déjeuners, dîners, cocktails et terrasse. Réservez votre table en une minute." },
   },
-  '/carta': {
+  '/menu': {
     es: { title: 'La carta · Casanita Vilassar', description: 'Entrantes, pastas, pizzas (también sin gluten), carnes, pescados, postres y cócteles. La carta de Casanita en Vilassar de Mar.' },
     ca: { title: 'La carta · Casanita Vilassar', description: 'Entrants, pastes, pizzes (també sense gluten), carns, peixos, postres i còctels. La carta de Casanita a Vilassar de Mar.' },
     en: { title: 'The Menu · Casanita Vilassar', description: "Starters, pasta, pizzas (gluten-free available), meat, fish, desserts and cocktails. Casanita's menu in Vilassar de Mar." },
