@@ -1,4 +1,10 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/menu", "destination": "/carta", "permanent": true },
+    { "source": "/ca/menu", "destination": "/ca/carta", "permanent": true },
+    { "source": "/en/menu", "destination": "/en/carta", "permanent": true },
+    { "source": "/fr/menu", "destination": "/fr/carta", "permanent": true }
+  ]
 }
