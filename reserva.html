@@ -63,7 +63,7 @@ img{display:block;max-width:100%}
     </a>
     <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
       <nav aria-label="Principal" style="display:flex; align-items:center; gap:clamp(18px,2.4vw,36px);">
-        <a href="{{ localePrefix }}/menu" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">{{ t.common.nav.carta }}</a>
+        <a href="{{ localePrefix }}/carta" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">{{ t.common.nav.carta }}</a>
         <a href="{{ localePrefix }}/#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">{{ t.common.nav.grupos }}</a>
         <a href="{{ localePrefix }}/#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:#EFE7C7; padding:12px 0;">{{ t.common.nav.visitanos }}</a>
       </nav>
@@ -128,7 +128,7 @@ img{display:block;max-width:100%}
         <strong style="font-size:16px;">{{ t.reserva.faq2Q }}</strong>
         <span style="font-size:15px; line-height:1.5;">{{ t.reserva.faq2A }}</span>
       </div>
-      <a href="{{ localePrefix }}/menu" style="display:inline-flex; align-items:center; gap:8px; margin-top:auto; font-weight:700; font-size:15px;">{{ t.reserva.ctaVerCarta }} <span class="cn-arrow" aria-hidden="true"></span></a>
+      <a href="{{ localePrefix }}/carta" style="display:inline-flex; align-items:center; gap:8px; margin-top:auto; font-weight:700; font-size:15px;">{{ t.reserva.ctaVerCarta }} <span class="cn-arrow" aria-hidden="true"></span></a>
     </div>
   </div>
 </section>
@@ -226,7 +226,7 @@ class Component extends DCLogic {
         if (/^\/reserva(#|$)|#reserva$/.test(href)) ev = 'click_reservar';
         else if (href.startsWith('tel:')) ev = 'click_llamar';
         else if (/google\.com\/maps/.test(href)) ev = 'click_como_llegar';
-        else if (/^\/menu/.test(href)) ev = 'click_ver_carta';
+        else if (/^\/carta/.test(href)) ev = 'click_ver_carta';
       }
       if (ev) window.dataLayer.push({ event: ev, link_text: (a.textContent || '').trim().slice(0, 60), page: location.pathname });
     };

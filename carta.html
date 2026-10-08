@@ -12,18 +12,18 @@
 <meta name="description" content="Entrantes, pastas, pizzas (también sin gluten), carnes, pescados, postres y cócteles. La carta de Casanita en Vilassar de Mar.">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/favicon.png">
-<link rel="canonical" href="https://casanitavilassar.com/menu">
-<link rel="alternate" hreflang="es" href="https://casanitavilassar.com/menu">
-<link rel="alternate" hreflang="ca" href="https://casanitavilassar.com/ca/menu">
-<link rel="alternate" hreflang="en" href="https://casanitavilassar.com/en/menu">
-<link rel="alternate" hreflang="fr" href="https://casanitavilassar.com/fr/menu">
-<link rel="alternate" hreflang="x-default" href="https://casanitavilassar.com/menu">
+<link rel="canonical" href="https://casanitavilassar.com/carta">
+<link rel="alternate" hreflang="es" href="https://casanitavilassar.com/carta">
+<link rel="alternate" hreflang="ca" href="https://casanitavilassar.com/ca/carta">
+<link rel="alternate" hreflang="en" href="https://casanitavilassar.com/en/carta">
+<link rel="alternate" hreflang="fr" href="https://casanitavilassar.com/fr/carta">
+<link rel="alternate" hreflang="x-default" href="https://casanitavilassar.com/carta">
 <meta property="og:type" content="restaurant">
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="Casanita Vilassar">
 <meta property="og:title" content="La carta · Casanita Vilassar">
 <meta property="og:description" content="Entrantes, pastas, pizzas (también sin gluten), carnes, pescados, postres y cócteles. La carta de Casanita en Vilassar de Mar.">
-<meta property="og:url" content="https://casanitavilassar.com/menu">
+<meta property="og:url" content="https://casanitavilassar.com/carta">
 <meta property="og:image" content="https://casanitavilassar.com/assets/fachada-dia-vespa.jpg">
 <meta property="og:image:alt" content="Fachada de Casanita en Vilassar de Mar, con la Vespa blanca y flores">
 <meta name="twitter:card" content="summary_large_image">
@@ -70,7 +70,7 @@ img{display:block;max-width:100%}
     </a>
     <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
       <nav aria-label="Principal" style="display:flex; align-items:center; gap:clamp(18px,2.4vw,36px);">
-        <a href="{{ localePrefix }}/menu" aria-current="page" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0; text-decoration:underline; text-underline-offset:6px; text-decoration-thickness:2px;">{{ t.common.nav.carta }}</a>
+        <a href="{{ localePrefix }}/carta" aria-current="page" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0; text-decoration:underline; text-underline-offset:6px; text-decoration-thickness:2px;">{{ t.common.nav.carta }}</a>
         <a href="{{ localePrefix }}/#grupos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">{{ t.common.nav.grupos }}</a>
         <a href="{{ localePrefix }}/#visitanos" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:15px; letter-spacing:.08em; color:{{ hdrFg }}; padding:12px 0;">{{ t.common.nav.visitanos }}</a>
       </nav>
@@ -97,7 +97,7 @@ img{display:block;max-width:100%}
 <sc-if value="{{ menuOpen }}">
   <div role="dialog" aria-label="{{ t.common.cta.menu }}" style="position:fixed; inset:0; z-index:45; background:#7C1126; padding:110px 24px 120px; display:flex; flex-direction:column; justify-content:space-between; overflow:auto;">
     <nav aria-label="{{ t.common.cta.menuMovil }}" style="display:flex; flex-direction:column; gap:4px;">
-      <a href="{{ localePrefix }}/menu" aria-current="page" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">{{ t.common.nav.carta }}</a>
+      <a href="{{ localePrefix }}/carta" aria-current="page" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">{{ t.common.nav.carta }}</a>
       <a href="{{ localePrefix }}/#grupos" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">{{ t.common.nav.grupos }}</a>
       <a href="{{ localePrefix }}/#visitanos" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">{{ t.common.nav.visitanos }}</a>
       <a href="{{ localePrefix }}/contacto" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">{{ t.common.nav.contacto }}</a>
@@ -349,7 +349,7 @@ class Component extends DCLogic {
         if (/^\/reserva(#|$)|#reserva$/.test(href)) ev = 'click_reservar';
         else if (href.startsWith('tel:')) ev = 'click_llamar';
         else if (/google\.com\/maps/.test(href)) ev = 'click_como_llegar';
-        else if (/^\/menu/.test(href)) ev = 'click_ver_carta';
+        else if (/^\/carta/.test(href)) ev = 'click_ver_carta';
       }
       if (ev) window.dataLayer.push({ event: ev, link_text: (a.textContent || '').trim().slice(0, 60), page: location.pathname });
     };
