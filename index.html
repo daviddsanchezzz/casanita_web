@@ -507,7 +507,10 @@ function safeUrl(url, fallback, hostSuffix) {
   try {
     const u = new URL(url, 'https://invalid.invalid');
     if (u.protocol !== 'https:' && u.protocol !== 'http:') return fallback;
-    if (hostSuffix && u.hostname !== hostSuffix && !u.hostname.endsWith('.' + hostSuffix)) return fallback;
+    if (hostSuffix) {
+      const suffixes = Array.isArray(hostSuffix) ? hostSuffix : [hostSuffix];
+      if (!suffixes.some(s => u.hostname === s || u.hostname.endsWith('.' + s))) return fallback;
+    }
     return url;
   } catch { return fallback; }
 }
@@ -814,7 +817,7 @@ class Component extends DCLogic {
       reserveEmbedUrl: safeUrl((live && live.reservations && live.reservations.url) || FALLBACK.reserveUrl, FALLBACK.reserveUrl, 'vetrareserve.com') + '?embed=1&lang=' + this.state.locale,
       rating: ratingNum !== null ? ratingNum.toLocaleString(localeTag, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : (this.props.notaGoogle ?? '4,8'),
       reviews: countNum !== null ? countNum.toLocaleString(localeTag) : (this.props.numResenas ?? '+2.000'),
-      reviewUrl: safeUrl((rev && rev.url) || FALLBACK.mapsUrl, FALLBACK.mapsUrl, null),
+      reviewUrl: safeUrl((rev && rev.url) || FALLBACK.mapsUrl, FALLBACK.mapsUrl, ['google.com', 'g.page', 'goo.gl']),
     };
   }
 

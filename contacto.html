@@ -151,7 +151,7 @@ input,select,textarea,button{font:inherit}
               <input name="nombre" autocomplete="given-name" value="{{ c.nombre }}" onChange="{{ setC }}" aria-invalid="{{ e.nombre }}" style="min-height:52px; padding:0 16px; background:#FFFFFF; border:2px solid {{ e.nombreB }}; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400;">
               <sc-if value="{{ e.nombre }}"><span style="font-size:14px; font-weight:600; color:#7C1126;">{{ t.contacto.formulario.nombreError }}</span></sc-if>
             </label>
-            <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">{{ t.contacto.formulario.telefonoFieldLabel }} <span style="font-weight:400; font-size:13px;">{{ t.contacto.formulario.opcional }}</span>
+            <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;"><span>{{ t.contacto.formulario.telefonoFieldLabel }} <span style="font-weight:400; font-size:13px;">{{ t.contacto.formulario.opcional }}</span></span>
               <input name="telefono" type="tel" autocomplete="tel" value="{{ c.telefono }}" onChange="{{ setC }}" style="min-height:52px; padding:0 16px; background:#FFFFFF; border:2px solid #C9B98F; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400;">
             </label>
           </div>
@@ -232,7 +232,7 @@ input,select,textarea,button{font:inherit}
               <span style="font-size:15px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{{ fileLabel }}</span>
             </label>
           </div>
-          <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;">{{ t.contacto.trabaja.mensajeLabel }} <span style="font-weight:400; font-size:13px;">{{ t.contacto.trabaja.opcional }}</span>
+          <label style="display:flex; flex-direction:column; gap:8px; font-weight:600; font-size:15px;"><span>{{ t.contacto.trabaja.mensajeLabel }} <span style="font-weight:400; font-size:13px;">{{ t.contacto.trabaja.opcional }}</span></span>
             <textarea name="mensaje" rows="4" value="{{ j.mensaje }}" onChange="{{ setJ }}" style="padding:14px 16px; background:#FFFFFF; border:2px solid #C9B98F; border-radius:4px; color:#1E1414; font-size:16px; font-weight:400; line-height:1.5; resize:vertical;"></textarea>
           </label>
           <label style="display:flex; align-items:flex-start; gap:12px; font-size:14px; line-height:1.5; cursor:pointer;">
