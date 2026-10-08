@@ -259,8 +259,11 @@ function safeUrl(url, fallback, hostSuffix) {
 const MENU_API = 'https://api.vetrareserve.com/api/menu/public/69bd6b22dbf226bfd19230df';
 const COCTELES_CATEGORY_ID = '6ac4ef1a04cb32c57df498a8';
 function fmtPrice(n) {
-  if (n === null || n === undefined) return '';
+  if (typeof n !== 'number' || !Number.isFinite(n)) return '';
   return (Number.isInteger(n) ? String(n) : n.toFixed(2).replace('.', ',')) + ' €';
+}
+function safeId(id, fallback) {
+  return typeof id === 'string' && /^[a-zA-Z0-9_-]{1,64}$/.test(id) ? id : fallback;
 }
 function deepMerge(base, over) {
   if (over === undefined || over === null) return base;
@@ -337,8 +340,9 @@ class Component extends DCLogic {
       fetch('/i18n/' + this.state.locale + '.json').then(r => (r.ok ? r.json() : Promise.reject())).then(data => this.setState({ t: deepMerge(T_ES, data) })).catch(() => {});
     }
     fetch(MENU_API + '?lang=' + this.state.locale).then(r => (r.ok ? r.json() : Promise.reject())).then(data => {
-      const first = data.categories.find(c => c.id !== COCTELES_CATEGORY_ID);
-      this.setState({ menu: data, active: first ? first.id : null });
+      if (!data || !Array.isArray(data.categories)) return;
+      const first = data.categories.filter(c => c.id !== COCTELES_CATEGORY_ID)[0];
+      this.setState({ menu: data, active: first ? safeId(first.id, 'cat0') : null });
     }).catch(() => {});
     this.onResize = () => this.setState({ w: window.innerWidth });
     this.onScroll = () => {
@@ -353,7 +357,7 @@ class Component extends DCLogic {
   }
   componentDidUpdate(_, prev) {
     if (prev.active !== this.state.active && this.chipsRef.current) {
-      const nav = this.chipsRef.current, chip = nav.querySelector(`[data-chip="${this.state.active}"]`);
+      const nav = this.chipsRef.current, chip = nav.querySelector(`[data-chip="${CSS.escape(String(this.state.active))}"]`);
       if (chip) nav.scrollTo({ left: chip.offsetLeft - 24, behavior: 'smooth' });
     }
   }
@@ -386,34 +390,39 @@ class Component extends DCLogic {
     const coctelCat = menu ? menu.categories.find(c => c.id === COCTELES_CATEGORY_ID) : null;
 
     const sections = foodCats.map((c, si) => {
-      const groups = (c.subcategories && c.subcategories.length) ? c.subcategories.map(sc => ({ sub: sc.name, items: sc.items })) : [{ sub: '', items: c.items }];
+      const cid = safeId(c.id, 'cat' + si);
+      const groups = (c.subcategories && c.subcategories.length) ? c.subcategories.map(sc => ({ sub: sc.name, items: sc.items || [] })) : [{ sub: '', items: c.items || [] }];
       const extrasNames = (c.extras || []).map(e => e.name);
       return {
-        id: c.id, num: String(si + 1).padStart(2, '0') + ' · ' + c.name, title: c.name + '.', intro: c.description || '',
+        id: cid, num: String(si + 1).padStart(2, '0') + ' · ' + c.name, title: c.name + '.', intro: c.description || '',
         note: extrasNames.length ? t.carta.alsoAvailable + ': ' + extrasNames.join(' · ') : '',
         groups: groups.map((g, gi) => ({
           sub: g.sub || '', items: g.items.map(d => {
-            const key = c.id + ':' + gi + ':' + d.id;
+            const key = cid + ':' + gi + ':' + d.id;
             const base = {
-              name: d.name, desc: d.description || '', price: fmtPrice(d.price), showPrice: prices && d.price !== null,
+              name: d.name, desc: d.description || '', price: fmtPrice(d.price), showPrice: prices && typeof d.price === 'number' && Number.isFinite(d.price),
               tags: (d.tags || []).map(tag => t.carta.tags[tag] || tag.toUpperCase()),
               hasAllergens: (d.allergens || []).length > 0,
               allergensText: (d.allergens || []).map(a => t.carta.allergenNames[a] || a).join(', '),
               soldOut: !!d.soldOut,
             };
-            if (!d.photo) return { ...base, hasPhoto: false, noPhoto: true, expanded: false };
-            return { ...base, hasPhoto: true, noPhoto: false, pill: d.photo, pillLabel: t.carta.pillLabelPrefix + ' ' + d.name, expanded: this.state.open === key,
+            const photo = d.photo ? safeUrl(d.photo, '', null) : '';
+            if (!photo) return { ...base, hasPhoto: false, noPhoto: true, expanded: false };
+            return { ...base, hasPhoto: true, noPhoto: false, pill: photo, pillLabel: t.carta.pillLabelPrefix + ' ' + d.name, expanded: this.state.open === key,
               toggle: e => { e.stopPropagation(); this.setState(st => ({ open: st.open === key ? null : key, pv: null })); },
-              enter: isMobile ? undefined : () => { if (this.state.open !== key) this.setState({ pv: { img: d.photo } }); } };
+              enter: isMobile ? undefined : () => { if (this.state.open !== key) this.setState({ pv: { img: photo } }); } };
           }),
         })),
       };
     });
 
-    const cats = [...foodCats.map(c => [c.id, c.name]), ...(coctelCat ? [[coctelCat.id, coctelCat.name]] : [])]
+    const cats = [...foodCats.map((c, si) => [safeId(c.id, 'cat' + si), c.name]), ...(coctelCat ? [['cocteles', coctelCat.name]] : [])]
       .map(([id, label]) => ({ id, label, cur: id === active ? 'true' : 'false', bg: id === active ? '#7C1126' : 'transparent', fg: id === active ? '#EFE7C7' : '#7C1126' }));
 
-    const cocktails = coctelCat ? coctelCat.items.map(k => ({ name: k.name, img: k.photo || '', hasPhoto: !!k.photo })) : [];
+    const cocktails = coctelCat ? (coctelCat.items || []).map(k => {
+      const img = k.photo ? safeUrl(k.photo, '', null) : '';
+      return { name: k.name, img, hasPhoto: !!img };
+    }) : [];
 
     return {
       ...this.biz(),
