@@ -290,8 +290,8 @@ img{display:block;max-width:100%}
       <a href="#reserva" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">{{ t.home.historia.cta }} <span class="cn-arrow" aria-hidden="true"></span></a>
     </div>
     <div style="position:relative; justify-self:center; width:min(100%,480px);">
-      <div data-speed="-0.06" role="img" aria-label="{{ t.home.historia.photoAlt }}" style="aspect-ratio:4/5; border-radius:999px 999px 24px 24px; overflow:hidden; background:repeating-linear-gradient(135deg,#6C0E21 0 10px,#741024 10px 20px); display:flex; align-items:center; justify-content:center; text-align:center; padding:24px;">
-        <span style="font-family:ui-monospace,Menlo,monospace; font-size:12px; color:#EFE7C7;">{{ t.home.historia.photoPlaceholder }}</span>
+      <div data-speed="-0.06" style="aspect-ratio:4/5; border-radius:999px 999px 24px 24px; overflow:hidden; background:#6C0E21;">
+        <img src="/assets/chef-benja-catering.jpg" alt="{{ t.home.historia.photoAlt }}" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:20% 35%;">
       </div>
       <div style="position:absolute; left:-28px; bottom:40px; width:clamp(120px,11vw,150px); aspect-ratio:1/1; border-radius:50%; background:#EFE7C7; transform:rotate(-12deg); filter:drop-shadow(5px 5px 0 #4E0B18); display:flex; align-items:center; justify-content:center; transition:transform .35s cubic-bezier(.3,1.6,.5,1);" style-hover="transform:rotate(0deg) scale(1.05);">
         <div style="position:absolute; inset:8px; border-radius:50%; border:2px dashed #7C1126;"></div>
@@ -590,7 +590,7 @@ const T_ES = {
     historia: {
       eyebrow: 'DESDE 2020 EN VILASSAR DE MAR', heading: 'UNA FAMILIA QUE COCINA PARA LA TUYA.',
       text: 'Antes de Vilassar hubo una vida entera en la hostelería: temporadas en Formentera, años en Barcelona y una etapa en Brasil. En verano de 2020 abrimos Casanita en esta plaza, frente al parque, con una idea sencilla: que quien entre por la puerta se sienta uno más. Te recibimos como parte de nuestra familia.',
-      signature: '— BENJA, CHEF Y ANFITRIÓN', cta: 'VEN A CONOCERNOS', photoAlt: 'Foto pendiente: el chef y el equipo de Casanita', photoPlaceholder: '[FOTO CHEF Y EQUIPO · MÁSCARA EN ARCO]', sinceLabel: 'DESDE',
+      signature: '— BENJA, CHEF Y ANFITRIÓN', cta: 'VEN A CONOCERNOS', photoAlt: 'Benja, chef y anfitrión de Casanita, preparando pinchos en la calle', sinceLabel: 'DESDE',
     },
     resenas: { heading: 'LO DICEN MEJOR ELLOS.', resenasEnGoogle: 'reseñas en Google', ctaLeerTodas: 'LEER TODAS EN GOOGLE' },
     grupos: {
