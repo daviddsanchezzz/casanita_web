@@ -129,7 +129,7 @@
         ["Es pot reservar a la terrassa?", "Sí, pots reservar a la terrassa. Indica-ho en fer la reserva."],
         ["On aparco?", "Hi ha un pàrquing a la mateixa plaça. Som just davant del parc."],
         ["Feu menjar per emportar o a domicili?", "Sí. Pots recollir la comanda al local o demanar-la a domicili per Glovo."],
-        ["Feu càtering?", "Sí. Escriu-nos a info@casanitavilassar.com o truca'ns i t'ho expliquem. [DETALLES DEL SERVICIO DE CATERING]"]
+        ["Feu càtering?", "Sí. Escriu-nos a info@casanitavilassar.com o truca'ns i t'ho expliquem."]
       ]
     },
     "visitanos": {

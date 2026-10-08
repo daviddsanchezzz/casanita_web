@@ -85,11 +85,35 @@ img{display:block;max-width:100%}
       </sc-if>
       <a href="{{ localePrefix }}/reserva" style="display:flex; align-items:center; gap:10px; min-height:44px; padding:0 clamp(16px,1.6vw,24px); background:{{ hdrBtnBg }}; color:{{ hdrBtnFg }}; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="gap:16px;">{{ t.common.cta.reservar }} <span class="cn-arrow" aria-hidden="true"></span></a>
       <sc-if value="{{ isMobile }}">
-        <a href="{{ localePrefix }}/" aria-label="{{ t.common.cta.volverInicio }}" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; border:2px solid {{ hdrFg }}; color:{{ hdrFg }}; border-radius:2px; font-size:20px;"><span class="cn-arrow cn-arrow--back" aria-hidden="true"></span></a>
+        <button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuOpen }}" aria-label="{{ t.common.cta.abrirMenu }}" style="width:44px; height:44px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; background:none; border:2px solid {{ hdrFg }}; border-radius:2px; cursor:pointer; padding:0;">
+          <span style="display:block; width:20px; height:2px; background:{{ hdrFg }};"></span>
+          <span style="display:block; width:20px; height:2px; background:{{ hdrFg }};"></span>
+        </button>
       </sc-if>
     </div>
   </div>
 </header>
+
+<sc-if value="{{ menuOpen }}">
+  <div role="dialog" aria-label="{{ t.common.cta.menu }}" style="position:fixed; inset:0; z-index:45; background:#7C1126; padding:110px 24px 120px; display:flex; flex-direction:column; justify-content:space-between; overflow:auto;">
+    <nav aria-label="{{ t.common.cta.menuMovil }}" style="display:flex; flex-direction:column; gap:4px;">
+      <a href="{{ localePrefix }}/carta" aria-current="page" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">{{ t.common.nav.carta }}</a>
+      <a href="{{ localePrefix }}/#grupos" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">{{ t.common.nav.grupos }}</a>
+      <a href="{{ localePrefix }}/#visitanos" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">{{ t.common.nav.visitanos }}</a>
+      <a href="{{ localePrefix }}/contacto" onClick="{{ closeMenu }}" style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:60px; line-height:1; color:#EFE7C7; padding:6px 0;">{{ t.common.nav.contacto }}</a>
+    </nav>
+    <div style="display:flex; flex-direction:column; gap:18px; color:#EFE7C7;">
+      <div role="group" aria-label="{{ t.common.idiomaLabel }}" style="display:flex; gap:8px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:16px; letter-spacing:.1em;">
+        <sc-for list="{{ langLinks }}" as="lg" hint-placeholder-count="4">
+          <a href="{{ lg.href }}" aria-current="{{ lg.current }}" style="min-width:48px; min-height:44px; display:flex; align-items:center; justify-content:center; background:{{ lg.mobileBg }}; color:{{ lg.mobileFg }}; border:2px solid #EFE7C7; font:inherit; letter-spacing:inherit; border-radius:2px;">{{ lg.code }}</a>
+        </sc-for>
+      </div>
+      <a href="{{ localePrefix }}/reserva" onClick="{{ closeMenu }}" style="display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:17px; letter-spacing:.08em; border-radius:2px;">{{ t.common.cta.reservarMesa }} <span class="cn-arrow" aria-hidden="true"></span></a>
+      <a href="tel:{{ phoneTel }}" style="color:#EFE7C7; font-size:16px;">{{ t.common.cta.llamarPrefix }} · {{ phoneDisplay }}</a>
+      <p style="margin:0; font-size:15px; color:#EFE7C7;">{{ address }}</p>
+    </div>
+  </div>
+</sc-if>
 
 <main>
 <section data-screen-label="Carta · cabecera" style="position:relative; background:#7C1126; color:#EFE7C7; padding:clamp(130px,16vw,190px) clamp(20px,4vw,48px) clamp(64px,7vw,100px); overflow:hidden;">
@@ -284,7 +308,7 @@ const T_ES = {
   common: {
     idiomaLabel: 'Idioma',
     nav: { carta: 'Carta', grupos: 'Grupos', visitanos: 'Visítanos', contacto: 'Contacto' },
-    cta: { reservar: 'Reservar', reservarMesa: 'Reservar mesa', llamar: 'Llamar', llamarPrefix: 'Llamar', volverInicio: 'Volver al inicio' },
+    cta: { reservar: 'Reservar', reservarMesa: 'Reservar mesa', llamar: 'Llamar', llamarPrefix: 'Llamar', abrirMenu: 'Abrir menú', menu: 'Menú', menuMovil: 'Menú móvil', volverInicio: 'Volver al inicio' },
     footer: { tagline: 'Comidas, cenas y buen beber.' },
   },
   carta: {
@@ -331,7 +355,7 @@ class Component extends DCLogic {
     };
     document.addEventListener('click', this.onTrack, true);
   }
-  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, scrolled: false, active: null, open: null, pv: null, live: null, menu: null, locale: detectLocale(), t: T_ES };
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, scrolled: false, menuOpen: false, active: null, open: null, pv: null, live: null, menu: null, locale: detectLocale(), t: T_ES };
   chipsRef = React.createRef(); floatRef = React.createRef();
   componentDidMount() {
     this.trackSetup();
@@ -384,6 +408,7 @@ class Component extends DCLogic {
     const langLinks = ['es', 'ca', 'en', 'fr'].map(code => ({
       code: code.toUpperCase(), href: LANG_BASE[code] + 'carta', current: code === locale ? 'page' : 'false',
       deco: code === locale ? 'underline' : 'none',
+      mobileBg: code === locale ? '#EFE7C7' : 'none', mobileFg: code === locale ? '#7C1126' : '#EFE7C7',
     }));
 
     const foodCats = menu ? menu.categories.filter(c => c.id !== COCTELES_CATEGORY_ID) : [];
@@ -428,6 +453,9 @@ class Component extends DCLogic {
       ...this.biz(),
       t, localePrefix: locale === 'es' ? '' : '/' + locale, langLinks,
       isMobile, isDesktop: !isMobile,
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => { const o = !this.state.menuOpen; document.body.style.overflow = o ? 'hidden' : ''; this.setState({ menuOpen: o }); },
+      closeMenu: () => { document.body.style.overflow = ''; if (this.state.menuOpen) this.setState({ menuOpen: false }); },
       logoBeige: !scrolled, logoGranate: scrolled,
       hdrBg: scrolled ? '#EFE7C7' : 'transparent', hdrFg: scrolled ? '#7C1126' : '#EFE7C7',
       hdrBtnBg: scrolled ? '#7C1126' : '#EFE7C7', hdrBtnFg: scrolled ? '#EFE7C7' : '#7C1126',

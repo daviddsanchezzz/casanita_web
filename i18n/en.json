@@ -129,7 +129,7 @@
         ["Can I book the terrace?", "Yes, you can book the terrace. Just mention it when you book."],
         ["Where can I park?", "There's parking right on the square. We're directly across from the park."],
         ["Do you do takeaway or delivery?", "Yes. You can pick up your order at the restaurant or have it delivered through Glovo."],
-        ["Do you do catering?", "Yes. Email us at info@casanitavilassar.com or call us and we'll tell you all about it. [DETALLES DEL SERVICIO DE CATERING]"]
+        ["Do you do catering?", "Yes. Email us at info@casanitavilassar.com or call us and we'll tell you all about it."]
       ]
     },
     "visitanos": {

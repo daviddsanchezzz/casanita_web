@@ -129,7 +129,7 @@
         ["¿Se puede reservar en la terraza?", "Sí, puedes reservar en la terraza. Indícalo al hacer tu reserva."],
         ["¿Dónde aparco?", "Hay un parking en la misma plaza. Estamos justo delante del parque."],
         ["¿Hacéis comida para llevar o a domicilio?", "Sí. Puedes recoger tu pedido en el local o pedirlo a domicilio por Glovo."],
-        ["¿Hacéis catering?", "Sí. Escríbenos a info@casanitavilassar.com o llámanos y te contamos. [DETALLES DEL SERVICIO DE CATERING]"]
+        ["¿Hacéis catering?", "Sí. Escríbenos a info@casanitavilassar.com o llámanos y te contamos."]
       ]
     },
     "visitanos": {
