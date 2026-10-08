@@ -151,67 +151,13 @@
     "hintMobile": "Les plats soulignés ont une photo : touchez-les pour la voir.",
     "hintDesktop": "Les plats soulignés ont une photo : survolez pour la voir, ou cliquez pour la laisser ouverte.",
     "pillLabelPrefix": "Voir la photo :",
-    "sections": [
-      { "label": "ENTRÉES", "title": "ENTRÉES.", "intro": "Pour le centre de la table, pour que chacun picore.", "note": "", "groups": [{ "sub": "", "items": [
-        { "name": "Focaccia", "desc": "Avec oignon, olives, tomates cerises, ail et romarin.", "tag": "" },
-        { "name": "Croquettes maison", "desc": "Crevettes, chipirons à l'alioli, épinards à l'idiazábal ou queue de bœuf.", "tag": "MAISON" },
-        { "name": "Porchetta", "desc": "Poitrine de porc cuite à basse température sur un lit de pomme de terre croustillante.", "tag": "MAISON" },
-        { "name": "Salade de burrata", "desc": "Burrata avec roquette, tomates cerises, radis et huile de basilic.", "tag": "" },
-        { "name": "Salade tricolore", "desc": "Tomates avec olives, ail, citron vert, menthe, coriandre et roquette.", "tag": "" },
-        { "name": "Assiette de mortadelle de Bologne", "desc": "Avec huile de truffe, parmesan et ciboulette.", "tag": "" },
-        { "name": "Steak tartare", "desc": "Filet de Gérone haché au couteau à la minute, avec notre assaisonnement maison.", "tag": "" },
-        { "name": "Provolone", "desc": "Fondu au four, avec origan et toasts. Idéal à partager.", "tag": "" },
-        { "name": "Carpaccio de gambas de Palamós", "desc": "Avec notre huile infusée au gingembre et à la citronnelle, perles de sésame et wasabi et radis.", "tag": "" },
-        { "name": "Jambon 100 % ibérique D.O. Guijuelo", "desc": "100 g coupés à la main, avec pain coca du Maresme et tomate.", "tag": "" }
-      ] }] },
-      { "label": "PÂTES", "title": "PÂTES.", "intro": "Comme à la maison, sans raccourcis.", "note": "", "groups": [{ "sub": "", "items": [
-        { "name": "Tagliatelle carbonara", "desc": "L'authentique, à la romaine : œuf, pecorino et guanciale. Sans crème, comme il se doit.", "tag": "L'AUTHENTIQUE" },
-        { "name": "Raviolis au foie gras", "desc": "Avec crème d'idiazábal, huile de truffe et pomme verte.", "tag": "MAISON" },
-        { "name": "Tortiglioni à la bolognaise", "desc": "La recette de grand-mère, 3 h 30 à feu doux.", "tag": "" },
-        { "name": "Pâtes primavera", "desc": "Tortiglioni au beurre de basilic, asperges vertes et tomates cerises.", "tag": "" },
-        { "name": "Tortiglioni au pesto rouge ou vert", "desc": "Avec sauce au pesto et parmesan.", "tag": "" },
-        { "name": "Lasagnes à la viande ou aux légumes", "desc": "Avec pesto rouge et mozzarella.", "tag": "" }
-      ] }] },
-      { "label": "PIZZAS", "title": "PIZZAS.", "intro": "Pour celui qui veut une pizza, il y en a toujours un.", "note": "Toutes nos pizzas sont aussi disponibles en pâte sans gluten ou fromage sans lactose (à base de coco).", "groups": [
-        { "sub": "CLASSIQUES", "items": [
-          { "name": "Margherita", "desc": "Tomate, mozzarella et origan.", "tag": "" },
-          { "name": "Da Giorgio", "desc": "Tomate, mozzarella, basilic et sauce Casanita (huile infusée à l'ail, au citron vert et au basilic).", "tag": "" },
-          { "name": "Jambon blanc", "desc": "Tomate, mozzarella, jambon blanc et origan.", "tag": "" },
-          { "name": "Thon et oignon", "desc": "Tomate, mozzarella, thon, oignon et origan.", "tag": "" },
-          { "name": "5 fromages", "desc": "Tomate, mozzarella, parmesan, pecorino, gorgonzola, stracchino et emmental.", "tag": "" },
-          { "name": "Pesto vert ou rouge", "desc": "Tomate, mozzarella, pesto, tomates cerises et origan.", "tag": "" },
-          { "name": "Jambon serrano", "desc": "Tomate, mozzarella, jambon serrano et origan.", "tag": "" },
-          { "name": "Pepperoni", "desc": "Tomate, mozzarella, pepperoni épicé, tomates cerises et origan.", "tag": "" },
-          { "name": "Salsiccia, rucola e cipolla", "desc": "Tomate, mozzarella, saucisse, oignon et roquette.", "tag": "" }
-        ] },
-        { "sub": "PREMIUM", "items": [
-          { "name": "Patatine, crema e tartufata", "desc": "Sans tomate : crème de truffe, mozzarella, pomme de terre et romarin.", "tag": "" },
-          { "name": "Burrata et mortadelle", "desc": "Tomate, mozzarella, burrata, mortadelle, parmesan, ciboulette et huile de truffe.", "tag": "" },
-          { "name": "Porchetta", "desc": "Tomate, mozzarella, porchetta et tomates cerises.", "tag": "" },
-          { "name": "Légumes de saison", "desc": "Tomate, mozzarella, poivron rouge et vert, courgette, aubergine, oignon, champignons et tomates cerises.", "tag": "" },
-          { "name": "Bolognaise", "desc": "Tomate, mozzarella, notre bolognaise et parmesan.", "tag": "" },
-          { "name": "Carbonara", "desc": "Tomate, mozzarella, notre carbonara, guanciale et ciboulette.", "tag": "" }
-        ] }
-      ] },
-      { "label": "VIANDES", "title": "VIANDES.", "intro": "Pour ceux qui viennent le ventre vide.", "note": "", "groups": [{ "sub": "", "items": [
-        { "name": "Tagliata", "desc": "Filet de porc basse température, avec roquette, tomates cerises, figues et parmesan.", "tag": "PLAT SIGNATURE" },
-        { "name": "Milanesa napolitaine", "desc": "Escalope de veau avec notre panure originale, sauce tomate maison, jambon blanc et mozzarella.", "tag": "" },
-        { "name": "Milanesa a caballo", "desc": "La même, avec deux œufs.", "tag": "" },
-        { "name": "Filet au foie gras", "desc": "Filet de bœuf de Gérone avec oignon caramélisé et foie gras.", "tag": "" }
-      ] }] },
-      { "label": "POISSONS", "title": "POISSONS.", "intro": "De la mer, à deux pas d'ici.", "note": "", "groups": [{ "sub": "", "items": [
-        { "name": "Noix de Saint-Jacques, guacamole et pico de gallo", "desc": "Moins, c'est plus.", "tag": "" },
-        { "name": "Saumon à la Gongo", "desc": "Avec guanciale et légumes sautés, laqué à la sauce hoisin.", "tag": "" }
-      ] }] },
-      { "label": "DESSERTS", "title": "DESSERTS.", "intro": "Pour faire durer la sobremesa.", "note": "", "groups": [{ "sub": "", "items": [
-        { "name": "Tiramisù", "desc": "", "tag": "" },
-        { "name": "Cheesecake à l'idiazábal", "desc": "", "tag": "" },
-        { "name": "Lemon pie", "desc": "", "tag": "" },
-        { "name": "Coulant au pralin", "desc": "", "tag": "SANS GLUTEN" }
-      ] }] }
-    ],
-    "cocteles": { "label": "COCKTAILS", "eyebrowWord": "BONS VERRES", "title": "COCKTAILS.", "intro": "Pour la terrasse, pour la sobremesa, ou pour commencer la soirée sans se presser." },
-    "cocktailNames": ["Aperol Spritz", "Mojito à la fraise", "Mojito à l'ananas", "Caipirinha", "Caipiroska à la mangue", "Margarita", "Shakerato"],
+    "loadingMenu": "Chargement de la carte…",
+    "allergensLabel": "Allergènes :",
+    "alsoAvailable": "Également disponible",
+    "soldOutLabel": "ÉPUISÉ",
+    "tags": { "vegetariano": "VÉGÉTARIEN", "vegano": "VÉGAN", "picante": "ÉPICÉ", "recomendado": "RECOMMANDÉ", "sin_gluten": "SANS GLUTEN" },
+    "allergenNames": { "gluten": "Gluten", "lacteos": "Lait", "huevos": "Œufs", "crustaceos": "Crustacés", "moluscos": "Mollusques", "sulfitos": "Sulfites", "mostaza": "Moutarde", "sesamo": "Sésame", "frutos_secos": "Fruits à coque", "apio": "Céleri", "pescado": "Poisson", "soja": "Soja" },
+    "cocteles": { "eyebrowWord": "BONS VERRES", "title": "COCKTAILS.", "intro": "Pour la terrasse, pour la sobremesa, ou pour commencer la soirée sans se presser." },
     "alergenos": {
       "glutenLabel": "SANS GLUTEN ET SANS LACTOSE", "glutenText": "Toutes les pizzas, en pâte sans gluten ou fromage sans lactose (à base de coco). Le coulant au pralin est sans gluten. Si vous avez une allergie, signalez-le-nous en arrivant.",
       "fueraLabel": "HORS CARTE", "fueraText": "Chaque semaine, il y a des plats qui ne figurent pas ici. Demandez au chef : il vous les raconte à table.",

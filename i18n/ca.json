@@ -151,67 +151,13 @@
     "hintMobile": "Els plats subratllats tenen foto: toca'ls per veure-la.",
     "hintDesktop": "Els plats subratllats tenen foto: passa el cursor per veure-la o fes clic per deixar-la oberta.",
     "pillLabelPrefix": "Veure foto:",
-    "sections": [
-      { "label": "ENTRANTS", "title": "ENTRANTS.", "intro": "Per al centre de la taula i que cadascú piqui el seu.", "note": "", "groups": [{ "sub": "", "items": [
-        { "name": "Focaccia", "desc": "Amb ceba, olives, tomàquets, all i romaní.", "tag": "" },
-        { "name": "Croquetes casolanes", "desc": "Llagostins, calamarsets amb allioli, espinacs amb idiazàbal o cua de brau.", "tag": "DE LA CASA" },
-        { "name": "Porchetta", "desc": "Panxa de porc cuinada a baixa temperatura sobre una base de patata cruixent.", "tag": "DE LA CASA" },
-        { "name": "Amanida de burrata", "desc": "Burrata amb rúcula, tomàquets cherry, ravenets i oli d'alfàbrega.", "tag": "" },
-        { "name": "Amanida tricolor", "desc": "Tomàquets amb olives, all, llima, menta, coriandre i rúcula.", "tag": "" },
-        { "name": "Plat de mortadel·la de Bolonya", "desc": "Amb oli de tòfona, parmesà i cibulet.", "tag": "" },
-        { "name": "Steak tartar", "desc": "Filet de Girona picat a ganivet al moment, amb el nostre amaniment casolà.", "tag": "" },
-        { "name": "Provolone", "desc": "Fos al forn, amb orenga i torrades. Ideal per compartir.", "tag": "" },
-        { "name": "Carpaccio de gamba de Palamós", "desc": "Amb el nostre oli infusionat amb gingebre i citronel·la, perles de sèsam i wasabi i ravenets.", "tag": "" },
-        { "name": "Pernil 100 % ibèric D.O. Guijuelo", "desc": "100 g tallats a mà, amb pa de coca del Maresme amb tomàquet.", "tag": "" }
-      ] }] },
-      { "label": "PASTES", "title": "PASTES.", "intro": "Com a casa, sense dreceres.", "note": "", "groups": [{ "sub": "", "items": [
-        { "name": "Tagliatelle carbonara", "desc": "L'autèntica, a la romana: ou, pecorino i guanciale. Sense nata, com ha de ser.", "tag": "L'AUTÈNTICA" },
-        { "name": "Raviolis al foie", "desc": "Amb crema d'idiazàbal, oli de tòfona i poma verda.", "tag": "DE LA CASA" },
-        { "name": "Tortiglioni a la bolonyesa", "desc": "La recepta de l'àvia, 3 h 30 min a foc lent.", "tag": "" },
-        { "name": "Pasta primavera", "desc": "Tortiglioni amb mantega d'alfàbrega, espàrrecs verds i tomàquets cherry.", "tag": "" },
-        { "name": "Tortiglioni al pesto vermell o verd", "desc": "Amb salsa al pesto i parmesà.", "tag": "" },
-        { "name": "Lasanya de carn o de verdures", "desc": "Amb pesto vermell i mozzarella.", "tag": "" }
-      ] }] },
-      { "label": "PIZZES", "title": "PIZZES.", "intro": "Per a qui vol pizza, que sempre n'hi ha algun.", "note": "Totes les nostres pizzes, també amb massa sense gluten o amb formatge sense lactosa (de coco).", "groups": [
-        { "sub": "CLÀSSIQUES", "items": [
-          { "name": "Margherita", "desc": "Tomàquet, mozzarella i orenga.", "tag": "" },
-          { "name": "Da Giorgio", "desc": "Tomàquet, mozzarella, alfàbrega i salsa Casanita (oli infusionat d'all, llima i alfàbrega).", "tag": "" },
-          { "name": "Pernil dolç", "desc": "Tomàquet, mozzarella, pernil dolç i orenga.", "tag": "" },
-          { "name": "Tonyina i ceba", "desc": "Tomàquet, mozzarella, tonyina, ceba i orenga.", "tag": "" },
-          { "name": "5 formatges", "desc": "Tomàquet, mozzarella, parmesà, pecorino, gorgonzola, stracchino i emmental.", "tag": "" },
-          { "name": "Pesto verd o vermell", "desc": "Tomàquet, mozzarella, pesto, tomàquets cherry i orenga.", "tag": "" },
-          { "name": "Pernil salat", "desc": "Tomàquet, mozzarella, pernil salat i orenga.", "tag": "" },
-          { "name": "Pepperoni", "desc": "Tomàquet, mozzarella, pepperoni picant, tomàquets cherry i orenga.", "tag": "" },
-          { "name": "Salsiccia, rucola e cipolla", "desc": "Tomàquet, mozzarella, salsitxa, ceba i rúcula.", "tag": "" }
-        ] },
-        { "sub": "PREMIUM", "items": [
-          { "name": "Patatine, crema e tartufata", "desc": "Sense tomàquet: crema de tòfona, mozzarella, patata i romaní.", "tag": "" },
-          { "name": "Burrata i mortadel·la", "desc": "Tomàquet, mozzarella, burrata, mortadel·la, parmesà, cibulet i oli de tòfona.", "tag": "" },
-          { "name": "Porchetta", "desc": "Tomàquet, mozzarella, porchetta i tomàquets cherry.", "tag": "" },
-          { "name": "Verdures de temporada", "desc": "Tomàquet, mozzarella, pebrot vermell i verd, carbassó, albergínia, ceba, xampinyons i tomàquets cherry.", "tag": "" },
-          { "name": "Bolonyesa", "desc": "Tomàquet, mozzarella, la nostra bolonyesa i parmesà.", "tag": "" },
-          { "name": "Carbonara", "desc": "Tomàquet, mozzarella, la nostra carbonara, guanciale i cibulet.", "tag": "" }
-        ] }
-      ] },
-      { "label": "CARNS", "title": "CARNS.", "intro": "Per als qui venen amb gana.", "note": "", "groups": [{ "sub": "", "items": [
-        { "name": "Tagliata", "desc": "Filet de porc a baixa temperatura, amb rúcula, tomàquets cherry, figues i parmesà.", "tag": "PLAT ESTRELLA" },
-        { "name": "Milanesa napolitana", "desc": "Escalopa de vedella amb el nostre arrebossat original, salsa de tomàquet casolana, pernil dolç i mozzarella.", "tag": "" },
-        { "name": "Milanesa a cavall", "desc": "El mateix, amb un parell d'ous.", "tag": "" },
-        { "name": "Filet al foie", "desc": "Filet de vedella de Girona amb ceba caramel·litzada i foie.", "tag": "" }
-      ] }] },
-      { "label": "PEIXOS", "title": "PEIXOS.", "intro": "Del mar, que el tenim a dos carrers.", "note": "", "groups": [{ "sub": "", "items": [
-        { "name": "Vieires amb guacamole i pico de gallo", "desc": "Menys és més.", "tag": "" },
-        { "name": "Salmó a la Gongo", "desc": "Amb guanciale i verdures saltejades, laccat amb salsa hoisin.", "tag": "" }
-      ] }] },
-      { "label": "POSTRES", "title": "POSTRES.", "intro": "Per allargar la sobretaula.", "note": "", "groups": [{ "sub": "", "items": [
-        { "name": "Tiramisú", "desc": "", "tag": "" },
-        { "name": "Pastís de formatge idiazàbal", "desc": "", "tag": "" },
-        { "name": "Lemon pie", "desc": "", "tag": "" },
-        { "name": "Coulant de pralinè", "desc": "", "tag": "SENSE GLUTEN" }
-      ] }] }
-    ],
-    "cocteles": { "label": "CÒCTELS", "eyebrowWord": "BON BEURE", "title": "CÒCTELS.", "intro": "Per a la terrassa, per a la sobretaula o per començar la nit sense presses." },
-    "cocktailNames": ["Aperol Spritz", "Mojito de maduixa", "Mojito de pinya", "Caipirinha", "Caipiroska de mango", "Margarita", "Shakerato"],
+    "loadingMenu": "Carregant la carta…",
+    "allergensLabel": "Al·lèrgens:",
+    "alsoAvailable": "També disponible",
+    "soldOutLabel": "ESGOTAT",
+    "tags": { "vegetariano": "VEGETARIÀ", "vegano": "VEGÀ", "picante": "PICANT", "recomendado": "RECOMANAT", "sin_gluten": "SENSE GLUTEN" },
+    "allergenNames": { "gluten": "Gluten", "lacteos": "Lactis", "huevos": "Ous", "crustaceos": "Crustacis", "moluscos": "Mol·luscs", "sulfitos": "Sulfits", "mostaza": "Mostassa", "sesamo": "Sèsam", "frutos_secos": "Fruits secs", "apio": "Api", "pescado": "Peix", "soja": "Soja" },
+    "cocteles": { "eyebrowWord": "BON BEURE", "title": "CÒCTELS.", "intro": "Per a la terrassa, per a la sobretaula o per començar la nit sense presses." },
     "alergenos": {
       "glutenLabel": "SENSE GLUTEN I SENSE LACTOSA", "glutenText": "Totes les pizzes, amb massa sense gluten o amb formatge sense lactosa (de coco). El coulant de pralinè és sense gluten. Si tens alguna al·lèrgia, digues-nos-ho en arribar.",
       "fueraLabel": "FORA DE CARTA", "fueraText": "Cada setmana hi ha plats que no hi són. Pregunta al xef: te'ls explica a la taula.",
