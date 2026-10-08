@@ -48,7 +48,7 @@
       "subtitle": "Mediterranean cooking with an Italian soul in the heart of Vilassar de Mar. Lunch, dinner and good drinks.",
       "scroll": "Scroll",
       "ring": "CARBONARA · BURRATA · CROQUETTES · VERMOUTH · SOBREMESA · COCKTAILS · CARBONARA · BURRATA · CROQUETTES · VERMOUTH · TERRACE · GOOD DRINKS ·",
-      "reseñas": "REVIEWS",
+      "resenas": "REVIEWS",
       "enGoogle": "ON GOOGLE"
     },
     "manifesto": {
@@ -101,7 +101,7 @@
     },
     "resenas": {
       "heading": "THEY SAY IT BETTER THAN WE DO.",
-      "reseñasEnGoogle": "reviews on Google",
+      "resenasEnGoogle": "reviews on Google",
       "ctaLeerTodas": "READ THEM ALL ON GOOGLE"
     },
     "grupos": {

@@ -48,7 +48,7 @@
       "subtitle": "Cuina mediterrània amb ànima italiana al centre de Vilassar de Mar. Dinars, sopars i bon beure.",
       "scroll": "Llisca",
       "ring": "CARBONARA · BURRATA · CROQUETES · VERMUT · SOBRETAULA · CÒCTELS · CARBONARA · BURRATA · CROQUETES · VERMUT · TERRASSA · BON BEURE ·",
-      "reseñas": "RESSENYES",
+      "resenas": "RESSENYES",
       "enGoogle": "A GOOGLE"
     },
     "manifesto": {
@@ -101,7 +101,7 @@
     },
     "resenas": {
       "heading": "ELLS HO DIUEN MILLOR.",
-      "reseñasEnGoogle": "ressenyes a Google",
+      "resenasEnGoogle": "ressenyes a Google",
       "ctaLeerTodas": "LLEGEIX-LES TOTES A GOOGLE"
     },
     "grupos": {

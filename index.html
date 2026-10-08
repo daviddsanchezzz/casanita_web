@@ -157,7 +157,7 @@ img{display:block;max-width:100%}
       <div style="position:absolute; inset:0; background:#FAF6EA; border-radius:24%; transform:rotate(60deg);"></div>
       <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; line-height:.95;">
         <span style="font-weight:800; font-size:clamp(30px,3vw,44px);">{{ rating }} ★</span>
-        <span style="font-weight:700; font-size:clamp(11px,1vw,14px); letter-spacing:.04em; margin-top:4px;">{{ reviews }} {{ t.home.hero.reseñas }}</span>
+        <span style="font-weight:700; font-size:clamp(11px,1vw,14px); letter-spacing:.04em; margin-top:4px;">{{ reviews }} {{ t.home.hero.resenas }}</span>
         <span style="font-weight:700; font-size:clamp(11px,1vw,14px); letter-spacing:.04em;">{{ t.home.hero.enGoogle }}</span>
       </div>
     </div>
@@ -310,7 +310,7 @@ img{display:block;max-width:100%}
     <div data-reveal="" style="display:flex; flex-direction:{{ reviewSummaryDirection }}; align-items:{{ reviewSummaryAlign }}; gap:{{ reviewSummaryGap }}; width:{{ reviewSummaryWidth }};">
       <span style="display:flex; flex-direction:row; align-items:baseline; gap:.1em; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(72px,8vw,120px); line-height:.72; color:#7C1126;"><span>{{ rating }}</span><span aria-label="estrellas" style="font-size:.4em; line-height:1;">★</span></span>
       <div style="display:flex; flex-direction:column; gap:6px;">
-        <span style="font-size:17px; font-weight:600; color:#1E1414;">{{ reviews }} {{ t.home.resenas.reseñasEnGoogle }}</span>
+        <span style="font-size:17px; font-weight:600; color:#1E1414;">{{ reviews }} {{ t.home.resenas.resenasEnGoogle }}</span>
         <a href="{{ reviewUrl }}" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; min-height:32px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:15px; letter-spacing:.08em; border-bottom:2px solid #7C1126; transition:gap .25s ease;" style-hover="gap:14px;">{{ t.home.resenas.ctaLeerTodas }} <span class="cn-arrow cn-arrow--external" aria-hidden="true"></span></a>
       </div>
     </div>
@@ -565,7 +565,7 @@ const T_ES = {
     open: { nowShort: 'ABIERTO AHORA', closedShort: 'CERRADO AHORA', closed: 'CERRADO', opensPrefix: 'CERRADO · ABRE', atTime: 'A LAS', today: 'HOY', tomorrow: 'MAÑANA' },
   },
   home: {
-    hero: { titleLine1: 'Siéntate.', titleLine2: 'Estás en casa.', subtitle: 'Cocina mediterránea con alma italiana en el centro de Vilassar de Mar. Comidas, cenas y buen beber.', scroll: 'Desliza', ring: 'CARBONARA · BURRATA · CROQUETAS · VERMUT · SOBREMESA · CÓCTELES · CARBONARA · BURRATA · CROQUETAS · VERMUT · TERRAZA · BUEN BEBER ·', reseñas: 'RESEÑAS', enGoogle: 'EN GOOGLE' },
+    hero: { titleLine1: 'Siéntate.', titleLine2: 'Estás en casa.', subtitle: 'Cocina mediterránea con alma italiana en el centro de Vilassar de Mar. Comidas, cenas y buen beber.', scroll: 'Desliza', ring: 'CARBONARA · BURRATA · CROQUETAS · VERMUT · SOBREMESA · CÓCTELES · CARBONARA · BURRATA · CROQUETAS · VERMUT · TERRAZA · BUEN BEBER ·', resenas: 'RESEÑAS', enGoogle: 'EN GOOGLE' },
     manifesto: { eyebrow: 'LA CASA', text: 'En Casanita el chef sale a tu mesa, te cuenta qué hay hoy fuera de carta y se acuerda de cómo te gustó la carbonara. Aquí cabe el que quiere pizza y el que no, los niños, los abuelos y el amigo que siempre llega tarde. Y cuando acabas, la terraza y un cóctel te recuerdan que no hay ninguna prisa.', cta: 'CONOCE LA CASA' },
     marquee: ['CARBONARA', 'VERMUT', 'SOBREMESA', 'CÓCTELES', 'TERRAZA', 'CROQUETAS', 'BUEN BEBER'],
     platos: {
@@ -592,7 +592,7 @@ const T_ES = {
       text: 'Antes de Vilassar hubo una vida entera en la hostelería: temporadas en Formentera, años en Barcelona y una etapa en Brasil. En verano de 2020 abrimos Casanita en esta plaza, frente al parque, con una idea sencilla: que quien entre por la puerta se sienta uno más. Te recibimos como parte de nuestra familia.',
       signature: '— BENJA, CHEF Y ANFITRIÓN', cta: 'VEN A CONOCERNOS', photoAlt: 'Foto pendiente: el chef y el equipo de Casanita', photoPlaceholder: '[FOTO CHEF Y EQUIPO · MÁSCARA EN ARCO]', sinceLabel: 'DESDE',
     },
-    resenas: { heading: 'LO DICEN MEJOR ELLOS.', reseñasEnGoogle: 'reseñas en Google', ctaLeerTodas: 'LEER TODAS EN GOOGLE' },
+    resenas: { heading: 'LO DICEN MEJOR ELLOS.', resenasEnGoogle: 'reseñas en Google', ctaLeerTodas: 'LEER TODAS EN GOOGLE' },
     grupos: {
       eyebrow: 'GRUPOS Y CELEBRACIONES', heading: '¿SOIS MUCHOS? MEJOR.',
       desc: 'Cumpleaños, comidas familiares y reencuentros. Ponemos los platos al centro y hay opciones para cada uno: el que quiere pizza, el que no, los niños y los abuelos. Cuéntanos cuántos sois y lo preparamos a tu medida.',

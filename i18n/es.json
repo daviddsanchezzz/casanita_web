@@ -48,7 +48,7 @@
       "subtitle": "Cocina mediterránea con alma italiana en el centro de Vilassar de Mar. Comidas, cenas y buen beber.",
       "scroll": "Desliza",
       "ring": "CARBONARA · BURRATA · CROQUETAS · VERMUT · SOBREMESA · CÓCTELES · CARBONARA · BURRATA · CROQUETAS · VERMUT · TERRAZA · BUEN BEBER ·",
-      "reseñas": "RESEÑAS",
+      "resenas": "RESEÑAS",
       "enGoogle": "EN GOOGLE"
     },
     "manifesto": {
@@ -101,7 +101,7 @@
     },
     "resenas": {
       "heading": "LO DICEN MEJOR ELLOS.",
-      "reseñasEnGoogle": "reseñas en Google",
+      "resenasEnGoogle": "reseñas en Google",
       "ctaLeerTodas": "LEER TODAS EN GOOGLE"
     },
     "grupos": {

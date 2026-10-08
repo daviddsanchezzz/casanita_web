@@ -48,7 +48,7 @@
       "subtitle": "Cuisine méditerranéenne à l'âme italienne au cœur de Vilassar de Mar. Déjeuners, dîners et bons verres.",
       "scroll": "Défiler",
       "ring": "CARBONARA · BURRATA · CROQUETTES · VERMOUTH · SOBREMESA · COCKTAILS · CARBONARA · BURRATA · CROQUETTES · VERMOUTH · TERRASSE · BONS VERRES ·",
-      "reseñas": "AVIS",
+      "resenas": "AVIS",
       "enGoogle": "SUR GOOGLE"
     },
     "manifesto": {
@@ -101,7 +101,7 @@
     },
     "resenas": {
       "heading": "ILS LE DISENT MIEUX QUE NOUS.",
-      "reseñasEnGoogle": "avis sur Google",
+      "resenasEnGoogle": "avis sur Google",
       "ctaLeerTodas": "LIRE TOUS LES AVIS SUR GOOGLE"
     },
     "grupos": {
