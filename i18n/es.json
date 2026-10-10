@@ -180,7 +180,7 @@
     },
     "trabaja": {
       "eyebrow": "TRABAJA CON NOSOTROS", "heading": "¿TE SIENTAS CON NOSOTROS, PERO DEL OTRO LADO?",
-      "desc": "Somos una casa pequeña y familiar. Buscamos gente a la que le guste tratar a cada cliente por su nombre. [PUESTOS ABIERTOS AHORA / TEXTO SOBRE EL EQUIPO]",
+      "desc": "Somos una casa pequeña y familiar. Buscamos gente a la que le guste tratar a cada cliente por su nombre.",
       "photoPlaceholder": "[FOTO EQUIPO TRABAJANDO]",
       "rolesLegend": "¿DÓNDE TE VES?", "roles": ["SALA", "COCINA", "BARRA Y CÓCTELES", "AYUDANTE"], "rolesError": "Elige al menos un puesto.",
       "nombreLabel": "Nombre y apellidos", "telefonoLabel": "Teléfono", "telefonoError": "Necesitamos un teléfono para llamarte.",

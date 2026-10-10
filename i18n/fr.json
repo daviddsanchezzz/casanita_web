@@ -180,7 +180,7 @@
     },
     "trabaja": {
       "eyebrow": "TRAVAILLER AVEC NOUS", "heading": "ENVIE DE VOUS ASSEOIR AVEC NOUS, MAIS DE L'AUTRE CÔTÉ ?",
-      "desc": "Nous sommes une maison petite et familiale. Nous cherchons des personnes qui aiment appeler chaque client par son prénom. [POSTES OUVERTS ACTUELLEMENT / TEXTE SUR L'ÉQUIPE]",
+      "desc": "Nous sommes une maison petite et familiale. Nous cherchons des personnes qui aiment appeler chaque client par son prénom.",
       "photoPlaceholder": "[PHOTO ÉQUIPE AU TRAVAIL]",
       "rolesLegend": "OÙ VOUS VOYEZ-VOUS ?", "roles": ["SALLE", "CUISINE", "BAR ET COCKTAILS", "AIDE"], "rolesError": "Choisissez au moins un poste.",
       "nombreLabel": "Nom et prénom", "telefonoLabel": "Téléphone", "telefonoError": "Nous avons besoin d'un numéro de téléphone pour vous appeler.",

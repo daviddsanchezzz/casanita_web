@@ -180,7 +180,7 @@
     },
     "trabaja": {
       "eyebrow": "WORK WITH US", "heading": "FANCY SITTING WITH US, BUT ON THE OTHER SIDE?",
-      "desc": "We're a small, family-run place. We're looking for people who like calling every customer by name. [CURRENT OPENINGS / TEXT ABOUT THE TEAM]",
+      "desc": "We're a small, family-run place. We're looking for people who like calling every customer by name.",
       "photoPlaceholder": "[PHOTO: TEAM AT WORK]",
       "rolesLegend": "WHERE DO YOU SEE YOURSELF?", "roles": ["FLOOR", "KITCHEN", "BAR AND COCKTAILS", "ASSISTANT"], "rolesError": "Choose at least one role.",
       "nombreLabel": "Full name", "telefonoLabel": "Phone", "telefonoError": "We need a phone number to call you.",

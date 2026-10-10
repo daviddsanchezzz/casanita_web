@@ -180,7 +180,7 @@
     },
     "trabaja": {
       "eyebrow": "TREBALLA AMB NOSALTRES", "heading": "T'ASSEUS AMB NOSALTRES, PERÒ DE L'ALTRE COSTAT?",
-      "desc": "Som una casa petita i familiar. Busquem gent a qui li agradi tractar cada client pel seu nom. [LLOCS OBERTS ARA / TEXT SOBRE L'EQUIP]",
+      "desc": "Som una casa petita i familiar. Busquem gent a qui li agradi tractar cada client pel seu nom.",
       "photoPlaceholder": "[FOTO EQUIP TREBALLANT]",
       "rolesLegend": "ON ET VEUS?", "roles": ["SALA", "CUINA", "BARRA I CÒCTELS", "AJUDANT"], "rolesError": "Tria almenys un lloc.",
       "nombreLabel": "Nom i cognoms", "telefonoLabel": "Telèfon", "telefonoError": "Necessitem un telèfon per trucar-te.",
