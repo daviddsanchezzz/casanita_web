@@ -60,8 +60,6 @@
     "platos": {
       "headingLine1": "CEUX QU'ON NOUS DEMANDE",
       "headingLine2": "ENCORE ET ENCORE.",
-      "hechoEnCasaLine1": "FAIT",
-      "hechoEnCasaLine2": "MAISON",
       "ctaVerCarta": "VOIR LA CARTE COMPLÈTE",
       "dishes": [
         { "name": "CARBONARA", "desc": "Sans crème, comme il se doit." },

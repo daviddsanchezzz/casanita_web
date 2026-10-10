@@ -60,8 +60,6 @@
     "platos": {
       "headingLine1": "LOS QUE NOS PIDEN",
       "headingLine2": "UNA Y OTRA VEZ.",
-      "hechoEnCasaLine1": "HECHO",
-      "hechoEnCasaLine2": "EN CASA",
       "ctaVerCarta": "VER LA CARTA COMPLETA",
       "dishes": [
         { "name": "CARBONARA", "desc": "Sin nata, como debe ser." },

@@ -60,8 +60,6 @@
     "platos": {
       "headingLine1": "THE ONES THEY ASK FOR",
       "headingLine2": "AGAIN AND AGAIN.",
-      "hechoEnCasaLine1": "HOME",
-      "hechoEnCasaLine2": "MADE",
       "ctaVerCarta": "SEE THE FULL MENU",
       "dishes": [
         { "name": "CARBONARA", "desc": "No cream, the way it should be." },

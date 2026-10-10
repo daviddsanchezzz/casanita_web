@@ -60,8 +60,6 @@
     "platos": {
       "headingLine1": "ELS QUE ENS DEMANEN",
       "headingLine2": "UNA I ALTRA VEGADA.",
-      "hechoEnCasaLine1": "FET",
-      "hechoEnCasaLine2": "A CASA",
       "ctaVerCarta": "VEURE LA CARTA COMPLETA",
       "dishes": [
         { "name": "CARBONARA", "desc": "Sense nata, com ha de ser." },

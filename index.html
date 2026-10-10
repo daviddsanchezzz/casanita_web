@@ -154,10 +154,8 @@ img{display:block;max-width:100%}
       <img ref="{{ plate }}" src="/assets/carbonara-plato.webp" alt="Carbonara de Casanita vista desde arriba, sin nata" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
     </div>
     <div style="position:absolute; right:-4%; top:-2%; width:clamp(112px,11vw,164px); aspect-ratio:1/1; transform:rotate(12deg); transition:transform .35s cubic-bezier(.3,1.6,.5,1); filter:drop-shadow(5px 5px 0 #4E0B18); cursor:default;" style-hover="transform:rotate(-2deg) scale(1.06);">
-      <div style="position:absolute; inset:0; background:#FAF6EA; border-radius:24%;"></div>
-      <div style="position:absolute; inset:0; background:#FAF6EA; border-radius:24%; transform:rotate(30deg);"></div>
-      <div style="position:absolute; inset:0; background:#FAF6EA; border-radius:24%; transform:rotate(60deg);"></div>
-      <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; line-height:.95;">
+      <div style="position:absolute; inset:0; background:#FAF6EA; border-radius:62% 38% 55% 45% / 48% 42% 58% 52%;"></div>
+      <div style="position:absolute; inset:0; transform:rotate(-12deg); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; line-height:.95;">
         <span style="font-weight:800; font-size:clamp(30px,3vw,44px);">{{ rating }} ★</span>
         <span style="font-weight:700; font-size:clamp(11px,1vw,14px); letter-spacing:.04em; margin-top:4px;">{{ reviews }} {{ t.home.hero.resenas }}</span>
         <span style="font-weight:700; font-size:clamp(11px,1vw,14px); letter-spacing:.04em;">{{ t.home.hero.enGoogle }}</span>
@@ -206,12 +204,6 @@ img{display:block;max-width:100%}
       <div style="position:relative; aspect-ratio:4/5; border-radius:999px 999px 24px 24px; overflow:hidden; background:repeating-linear-gradient(135deg,#E3D8AE 0 10px,#EAE1BD 10px 20px);">
         <sc-if value="{{ platoActive.img }}"><img src="{{ platoActive.img }}" alt="{{ platoActive.alt }}" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:{{ platoActive.pos }}; transition:opacity .3s ease;"></sc-if>
         <div style="position:absolute; left:16px; bottom:16px; padding:10px 20px; background:#7C1126; color:#EFE7C7; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.1em;">{{ platoActive.name }}</div>
-      </div>
-      <div style="position:absolute; right:-22px; top:-4px; width:clamp(104px,10vw,132px); aspect-ratio:1/1; transform:rotate(9deg); filter:drop-shadow(5px 5px 0 #4E0B18); transition:transform .35s cubic-bezier(.3,1.6,.5,1);" style-hover="transform:rotate(-3deg) scale(1.06);">
-        <div style="position:absolute; inset:0; background:#FAF6EA; border-radius:24%;"></div>
-        <div style="position:absolute; inset:0; background:#FAF6EA; border-radius:24%; transform:rotate(30deg);"></div>
-        <div style="position:absolute; inset:0; background:#FAF6EA; border-radius:24%; transform:rotate(60deg);"></div>
-        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:18px; line-height:.95;">{{ t.home.platos.hechoEnCasaLine1 }}<br>{{ t.home.platos.hechoEnCasaLine2 }}</div>
       </div>
     </div>
     <div style="flex:1 1 360px; max-width:520px; width:100%; display:flex; flex-direction:column; border-bottom:1px solid rgba(124,17,38,.2);">
@@ -334,10 +326,8 @@ img{display:block;max-width:100%}
         <span style="font-family:ui-monospace,Menlo,monospace; font-size:12px; color:#EFE7C7;">{{ t.home.grupos.photoPlaceholder }}</span>
       </div>
       <div style="position:absolute; right:-14px; top:-26px; width:clamp(118px,10vw,140px); aspect-ratio:1/1; transform:rotate(9deg); filter:drop-shadow(5px 5px 0 #4E0B18); transition:transform .35s cubic-bezier(.3,1.6,.5,1);" style-hover="transform:rotate(-3deg) scale(1.06);">
-        <div style="position:absolute; inset:0; background:#EFE7C7; border-radius:24%;"></div>
-        <div style="position:absolute; inset:0; background:#EFE7C7; border-radius:24%; transform:rotate(30deg);"></div>
-        <div style="position:absolute; inset:0; background:#EFE7C7; border-radius:24%; transform:rotate(60deg);"></div>
-        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:20px; line-height:.95;">{{ t.home.grupos.fueraDeCartaLine1 }}<br>{{ t.home.grupos.fueraDeCartaLine2 }}</div>
+        <div style="position:absolute; inset:0; background:#EFE7C7; border-radius:62% 38% 55% 45% / 48% 42% 58% 52%;"></div>
+        <div style="position:absolute; inset:0; transform:rotate(-9deg); display:flex; align-items:center; justify-content:center; text-align:center; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:20px; line-height:.95;">{{ t.home.grupos.fueraDeCartaLine1 }}<br>{{ t.home.grupos.fueraDeCartaLine2 }}</div>
       </div>
     </div>
     <div data-reveal="" style="display:flex; flex-direction:column; gap:24px;">
@@ -571,7 +561,7 @@ const T_ES = {
     manifesto: { eyebrow: 'LA CASA', text: 'En Casanita el chef sale a tu mesa, te cuenta qué hay hoy fuera de carta y se acuerda de cómo te gustó la carbonara. Aquí cabe el que quiere pizza y el que no, los niños, los abuelos y el amigo que siempre llega tarde. Y cuando acabas, la terraza y un cóctel te recuerdan que no hay ninguna prisa.', cta: 'CONOCE LA CASA' },
     marquee: ['CARBONARA', 'VERMUT', 'SOBREMESA', 'CÓCTELES', 'TERRAZA', 'CROQUETAS', 'BUEN BEBER'],
     platos: {
-      headingLine1: 'LOS QUE NOS PIDEN', headingLine2: 'UNA Y OTRA VEZ.', hechoEnCasaLine1: 'HECHO', hechoEnCasaLine2: 'EN CASA', ctaVerCarta: 'VER LA CARTA COMPLETA',
+      headingLine1: 'LOS QUE NOS PIDEN', headingLine2: 'UNA Y OTRA VEZ.', ctaVerCarta: 'VER LA CARTA COMPLETA',
       dishes: [
         { name: 'CARBONARA', desc: 'Sin nata, como debe ser.' },
         { name: 'CROQUETAS DE RABO DE TORO', desc: 'Caseras. También de langostinos, chipirones o espinacas con idiazábal.' },
@@ -749,7 +739,7 @@ class Component extends DCLogic {
     if (m) {
       this.rot += 0.035;
       if (this.plate.current) this.plate.current.style.transform = `rotate(${this.rot}deg)`;
-      if (this.ribbon.current) this.ribbon.current.style.transform = `rotate(${-this.rot * 2.2}deg)`;
+      if (this.ribbon.current) this.ribbon.current.style.transform = `rotate(${-this.rot * 8}deg)`;
       if (this.heroText.current && y < vh * 1.2) this.heroText.current.style.transform = `translateY(${y * 0.22}px)`;
       const mq = this.marquee.current;
       if (mq && !this.paused) {
