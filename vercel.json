@@ -5,6 +5,27 @@
     { "source": "/menu", "destination": "/carta", "permanent": true },
     { "source": "/ca/menu", "destination": "/ca/carta", "permanent": true },
     { "source": "/en/menu", "destination": "/en/carta", "permanent": true },
-    { "source": "/fr/menu", "destination": "/fr/carta", "permanent": true }
+    { "source": "/fr/menu", "destination": "/fr/carta", "permanent": true },
+
+    { "source": "/nosotros", "destination": "/", "permanent": true },
+    { "source": "/reservar", "destination": "/reserva", "permanent": true },
+
+    { "source": "/ca/inici", "destination": "/ca", "permanent": true },
+    { "source": "/ca/contacte", "destination": "/ca/contacto", "permanent": true },
+    { "source": "/ca/reservar-2", "destination": "/ca/reserva", "permanent": true },
+    { "source": "/ca/nosaltres", "destination": "/ca", "permanent": true },
+
+    { "source": "/en/home", "destination": "/en", "permanent": true },
+    { "source": "/en/contact", "destination": "/en/contacto", "permanent": true },
+    { "source": "/en/book", "destination": "/en/reserva", "permanent": true },
+    { "source": "/en/about-us", "destination": "/en", "permanent": true },
+    { "source": "/en/menu-2", "destination": "/en/carta", "permanent": true },
+
+    { "source": "/fr/accueil", "destination": "/fr", "permanent": true },
+    { "source": "/fr/accueil-2", "destination": "/fr", "permanent": true },
+    { "source": "/fr/contact-2", "destination": "/fr/contacto", "permanent": true },
+    { "source": "/fr/reserver", "destination": "/fr/reserva", "permanent": true },
+    { "source": "/fr/sur-nous", "destination": "/fr", "permanent": true },
+    { "source": "/fr/menu-3", "destination": "/fr/carta", "permanent": true }
   ]
 }
