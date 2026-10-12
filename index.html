@@ -229,7 +229,7 @@ img{display:block;max-width:100%}
     <h2 data-reveal="" style="margin:0 0 clamp(40px,5vw,72px); text-align:center; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(48px,7vw,104px); line-height:.9; letter-spacing:-.01em; color:#7C1126;">{{ t.home.momentos.headingLine1 }}<br>{{ t.home.momentos.headingLine2 }}</h2>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(14px,1.6vw,24px);">
       <article data-reveal="" style="position:relative; border-radius:24px; overflow:hidden; aspect-ratio:4/5; min-height:440px; background:#7C1126;">
-        <img src="/assets/fachada-mediterranea-trattoria.png" alt="Fachada mediterránea de Casanita Trattoria" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:42% 50%;">
+        <img src="/assets/fachada-mediterranea-trattoria.webp" alt="Fachada mediterránea de Casanita Trattoria" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:42% 50%;">
         <div style="position:absolute; left:12px; right:12px; bottom:12px; padding:20px 22px 22px; background:#EFE7C7; border-radius:16px; display:flex; flex-direction:column; gap:8px;">
           <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.16em; color:#7C1126;">{{ t.home.momentos.comidas.label }}</span>
           <h3 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(40px,3.6vw,54px); line-height:.9; color:#7C1126;">{{ t.home.momentos.comidas.title }}</h3>
@@ -237,7 +237,7 @@ img{display:block;max-width:100%}
         </div>
       </article>
       <article data-reveal="" style="position:relative; border-radius:24px; overflow:hidden; aspect-ratio:4/5; min-height:440px; background:#7C1126;">
-        <img src="/assets/restaurante-noche-estrellada.png" alt="Restaurante Casanita bajo la noche estrellada" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 40%;">
+        <img src="/assets/restaurante-noche-estrellada.webp" alt="Restaurante Casanita bajo la noche estrellada" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 40%;">
         <div style="position:absolute; left:12px; right:12px; bottom:12px; padding:20px 22px 22px; background:#7C1126; border-radius:16px; display:flex; flex-direction:column; gap:8px;">
           <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.16em; color:#EFE7C7;">{{ t.home.momentos.cenas.label }}</span>
           <h3 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(40px,3.6vw,54px); line-height:.9; color:#EFE7C7;">{{ t.home.momentos.cenas.title }}</h3>
@@ -245,7 +245,7 @@ img{display:block;max-width:100%}
         </div>
       </article>
       <article data-reveal="" style="position:relative; border-radius:24px; overflow:hidden; aspect-ratio:4/5; min-height:440px; background:#7C1126;">
-        <img src="/assets/camarero-nocturno-cocteles.png" alt="Camarero nocturno con cócteles coloridos en Casanita" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 35%;">
+        <img src="/assets/camarero-nocturno-cocteles.webp" alt="Camarero nocturno con cócteles coloridos en Casanita" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 35%;">
         <div style="position:absolute; left:12px; right:12px; bottom:12px; padding:20px 22px 22px; background:#EFE7C7; border-radius:16px; display:flex; flex-direction:column; gap:8px;">
           <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:600; font-size:13px; letter-spacing:.16em; color:#7C1126;">{{ terrazaLabel }}</span>
           <h3 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(40px,3.6vw,54px); line-height:.9; color:#7C1126;">{{ t.home.momentos.buenBeber.title }}</h3>
@@ -284,8 +284,15 @@ img{display:block;max-width:100%}
       <a href="#reserva" style="align-self:flex-start; display:flex; align-items:center; gap:12px; min-height:52px; padding:0 28px; background:#EFE7C7; color:#7C1126; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:16px; letter-spacing:.08em; border-radius:2px; transition:background-color .25s ease, gap .25s ease;" style-hover="background:#FAF6EA; color:#7C1126; gap:18px;">{{ t.home.historia.cta }} <span class="cn-arrow" aria-hidden="true"></span></a>
     </div>
     <div style="position:relative; justify-self:center; width:min(100%,480px);">
-      <div data-speed="-0.06" style="aspect-ratio:4/5; border-radius:999px 999px 24px 24px; overflow:hidden; background:#6C0E21;">
-        <img src="/assets/chef-benja-catering.jpg" alt="{{ t.home.historia.photoAlt }}" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:20% 35%;">
+      <div data-speed="-0.06" style="position:relative; aspect-ratio:4/5; border-radius:999px 999px 24px 24px; overflow:hidden; background:#6C0E21;">
+        <sc-if value="{{ historiaActive.img }}"><img src="{{ historiaActive.img }}" alt="{{ historiaActive.alt }}" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:{{ historiaActive.pos }}; transition:opacity .3s ease;"></sc-if>
+        <sc-if value="{{ historiaDots.length }}">
+          <div style="position:absolute; left:0; right:0; bottom:20px; display:flex; justify-content:center; gap:8px;">
+            <sc-for list="{{ historiaDots }}" as="d" hint-placeholder-count="2">
+              <button type="button" aria-label="Ver foto" onClick="{{ d.select }}" style="margin:0; padding:0; border:0; height:8px; width:{{ d.w }}; border-radius:999px; background:{{ d.bg }}; cursor:pointer; transition:background-color .25s ease, width .25s ease;"></button>
+            </sc-for>
+          </div>
+        </sc-if>
       </div>
       <div style="position:absolute; left:-28px; bottom:40px; width:clamp(120px,11vw,150px); aspect-ratio:1/1; border-radius:50%; background:#EFE7C7; transform:rotate(-12deg); filter:drop-shadow(5px 5px 0 #4E0B18); display:flex; align-items:center; justify-content:center; transition:transform .35s cubic-bezier(.3,1.6,.5,1);" style-hover="transform:rotate(0deg) scale(1.05);">
         <div style="position:absolute; inset:8px; border-radius:50%; border:2px dashed #7C1126;"></div>
@@ -532,6 +539,10 @@ const DISHES = [
   { img: '/assets/porchetta.webp', pos: '50% 50%' },
   { img: '/assets/tiramisu.webp', pos: '50% 50%' },
 ];
+const HISTORIA_PHOTOS = [
+  { img: '/assets/chef-benja-catering.jpg', pos: '20% 35%' },
+  { img: '/assets/historia-familia-2022.webp', pos: '50% 40%' },
+];
 function deepMerge(base, over) {
   if (over === undefined || over === null) return base;
   if (Array.isArray(base) || Array.isArray(over)) return over;
@@ -664,7 +675,7 @@ class Component extends DCLogic {
     };
     document.addEventListener('click', this.onTrack, true);
   }
-  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, scrolled: false, menuOpen: false, faq: -1, plato: 0, bookNear: false, mapNear: false, now: new Date(), live: null, locale: detectLocale(), t: T_ES };
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, scrolled: false, menuOpen: false, faq: -1, plato: 0, historia: 0, bookNear: false, mapNear: false, now: new Date(), live: null, locale: detectLocale(), t: T_ES };
   heroText = React.createRef(); ribbon = React.createRef(); plate = React.createRef(); manifesto = React.createRef();
   marquee = React.createRef(); bookRef = React.createRef(); mapRef = React.createRef();
   mx = 0; paused = false; rot = 0;
@@ -707,6 +718,9 @@ class Component extends DCLogic {
     }), { rootMargin: '0px 0px -8% 0px' });
     this.scanReveal();
     this.clock = setInterval(() => this.setState({ now: new Date() }), 60000);
+    if (HISTORIA_PHOTOS.length > 1) {
+      this.historiaClock = setInterval(() => this.setState(s => ({ historia: (s.historia + 1) % HISTORIA_PHOTOS.length })), 5000);
+    }
     const loop = () => { this.tick(); this.raf = requestAnimationFrame(loop); };
     this.raf = requestAnimationFrame(loop);
     this.onVetraMsg = e => {
@@ -722,7 +736,7 @@ class Component extends DCLogic {
   componentWillUnmount() { document.removeEventListener('click', this.onTrack, true);
     window.removeEventListener('resize', this.onResize); window.removeEventListener('scroll', this.onScroll);
     window.removeEventListener('message', this.onVetraMsg);
-    cancelAnimationFrame(this.raf); clearInterval(this.clock); this.lazy && this.lazy.disconnect(); this.rv && this.rv.disconnect();
+    cancelAnimationFrame(this.raf); clearInterval(this.clock); clearInterval(this.historiaClock); this.lazy && this.lazy.disconnect(); this.rv && this.rv.disconnect();
     document.body.style.overflow = '';
   }
 
@@ -845,6 +859,7 @@ class Component extends DCLogic {
     const toggleMenu = () => { const o = !this.state.menuOpen; document.body.style.overflow = o ? 'hidden' : ''; this.setState({ menuOpen: o }); };
     const dishesNorm = DISHES.map((d, i) => { const tr = t.home.platos.dishes[i] || {}; return { img: d.img || '', pos: d.pos || '50% 50%', name: tr.name || '', desc: tr.desc || '', alt: tr.name || '' }; });
     const platoIdx = Math.min(Math.max(this.state.plato, 0), dishesNorm.length - 1);
+    const historiaIdx = Math.min(Math.max(this.state.historia, 0), HISTORIA_PHOTOS.length - 1);
     const LANG_BASE = { es: '/', ca: '/ca/', en: '/en/', fr: '/fr/' };
     const langLinks = ['es', 'ca', 'en', 'fr'].map(code => ({
       code: code.toUpperCase(), href: LANG_BASE[code], current: code === locale ? 'page' : 'false',
@@ -869,6 +884,12 @@ class Component extends DCLogic {
         bg: i === platoIdx ? '#7C1126' : 'transparent', fg: i === platoIdx ? '#EFE7C7' : '#7C1126', fg2: i === platoIdx ? '#EFE7C7' : '#1E1414',
         select: () => this.setState({ plato: i }),
       })),
+      historiaActive: { ...HISTORIA_PHOTOS[historiaIdx], alt: t.home.historia.photoAlt },
+      historiaDots: HISTORIA_PHOTOS.length > 1 ? HISTORIA_PHOTOS.map((p, i) => ({
+        bg: i === historiaIdx ? '#EFE7C7' : 'rgba(239,231,199,.4)',
+        w: i === historiaIdx ? '22px' : '8px',
+        select: () => this.setState({ historia: i }),
+      })) : [],
       reviewsList: REVIEWS.map(([text, name], i) => ({ text, name, bg: i % 3 === 1 ? '#7C1126' : '#FAF6EA', fg: i % 3 === 1 ? '#EFE7C7' : '#1E1414' })),
       reviewSummaryDirection: isMobile ? 'column' : 'row', reviewSummaryAlign: isMobile ? 'flex-start' : 'center',
       reviewSummaryGap: isMobile ? '22px' : '20px', reviewSummaryWidth: isMobile ? '100%' : 'auto',
