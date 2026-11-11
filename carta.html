@@ -138,7 +138,7 @@ img{display:block;max-width:100%}
   <p style="margin:0; padding:clamp(56px,8vw,96px) clamp(20px,4vw,48px); text-align:center; font-size:16px; color:#5A3A3A;">{{ t.carta.loadingMenu }}</p>
 </sc-if>
 <sc-if value="{{ menuReady }}">
-<div data-menu-nav="" style="position:sticky; top:{{ chipsTop }}; z-index:40; background:#FFFFFF; border-bottom:2px solid #7C1126;">
+<div data-menu-nav="" style="position:sticky; top:{{ chipsTop }}; z-index:40; background:#EFE7C7; border-bottom:2px solid #7C1126;">
   <nav ref="{{ chipsRef }}" aria-label="{{ t.carta.chipsAriaLabel }}" class="cn-scroller" style="max-width:1240px; margin:0 auto; padding:12px clamp(16px,4vw,48px); display:flex; gap:8px; overflow-x:auto; scrollbar-width:none;">
     <sc-for list="{{ cats }}" as="c" hint-placeholder-count="8">
       <a href="#{{ c.id }}" data-chip="{{ c.id }}" aria-current="{{ c.cur }}" style="flex-shrink:0; display:flex; align-items:center; min-height:44px; padding:0 18px; border:2px solid #7C1126; border-radius:999px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.08em; white-space:nowrap; transition:background-color .2s ease, color .2s ease; background:{{ c.bg }}; color:{{ c.fg }};">{{ c.label }}</a>
@@ -216,7 +216,7 @@ img{display:block;max-width:100%}
 </section>
 </sc-if>
 
-<section data-screen-label="Carta · alérgenos" style="background:#FFFFFF; border-top:2px solid #7C1126; padding:clamp(56px,6vw,88px) clamp(20px,4vw,48px);">
+<section data-screen-label="Carta · alérgenos" style="background:#FAF6EA; padding:clamp(56px,6vw,88px) clamp(20px,4vw,48px);">
   <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:28px;">
     <div style="display:flex; flex-direction:column; gap:10px;">
       <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.16em; color:#7C1126;">{{ t.carta.alergenos.glutenLabel }}</span>
@@ -233,7 +233,7 @@ img{display:block;max-width:100%}
   </div>
 </section>
 
-<section data-screen-label="Carta · reservar" style="background:#FFFFFF; padding:clamp(80px,9vw,130px) clamp(20px,4vw,48px); text-align:center;">
+<section data-screen-label="Carta · reservar" style="background:#EFE7C7; padding:clamp(80px,9vw,130px) clamp(20px,4vw,48px); text-align:center;">
   <div style="max-width:900px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:24px;">
     <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(52px,7vw,104px); line-height:.9; letter-spacing:-.01em; color:#7C1126;">{{ t.carta.reservarCta.heading }}</h2>
     <p style="margin:0; font-size:clamp(16px,1.3vw,18px); line-height:1.55;">{{ t.carta.reservarCta.descPrefix }} {{ phoneDisplay }}.</p>
@@ -460,7 +460,7 @@ class Component extends DCLogic {
       toggleMenu: () => { const o = !this.state.menuOpen; document.body.style.overflow = o ? 'hidden' : ''; this.setState({ menuOpen: o }); },
       closeMenu: () => { document.body.style.overflow = ''; if (this.state.menuOpen) this.setState({ menuOpen: false }); },
       logoBeige: !scrolled, logoGranate: scrolled,
-      hdrBg: scrolled ? '#FFFFFF' : 'transparent', hdrFg: scrolled ? '#7C1126' : '#EFE7C7',
+      hdrBg: scrolled ? '#EFE7C7' : 'transparent', hdrFg: scrolled ? '#7C1126' : '#EFE7C7',
       hdrBtnBg: scrolled ? '#7C1126' : '#EFE7C7', hdrBtnFg: scrolled ? '#EFE7C7' : '#7C1126',
       chipsTop: '76px', chipsRef: this.chipsRef,
       menuReady: !!menu, menuLoading: !menu,
