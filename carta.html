@@ -11,8 +11,9 @@
 <helmet>
 <title>La carta · Casanita Vilassar</title>
 <meta name="description" content="Entrantes, pastas, pizzas (también sin gluten), carnes, pescados, postres y cócteles. La carta de Casanita en Vilassar de Mar.">
-<link rel="icon" type="image/png" href="/assets/favicon.png">
-<link rel="apple-touch-icon" href="/assets/favicon.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="canonical" href="https://casanitavilassar.com/carta">
 <link rel="alternate" hreflang="es" href="https://casanitavilassar.com/carta">
 <link rel="alternate" hreflang="ca" href="https://casanitavilassar.com/ca/carta">
@@ -35,7 +36,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=DM+Sans:opsz,wght@9..40,400..700&amp;display=swap" rel="stylesheet">
 <style>
 html{scroll-behavior:smooth}
-body{margin:0;background:#EFE7C7;color:#1E1414;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;background:#FFFFFF;color:#1E1414;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 *{box-sizing:border-box}
 a{color:#7C1126;text-decoration:none}
 a:hover{color:#4E0B18}
@@ -137,7 +138,7 @@ img{display:block;max-width:100%}
   <p style="margin:0; padding:clamp(56px,8vw,96px) clamp(20px,4vw,48px); text-align:center; font-size:16px; color:#5A3A3A;">{{ t.carta.loadingMenu }}</p>
 </sc-if>
 <sc-if value="{{ menuReady }}">
-<div data-menu-nav="" style="position:sticky; top:{{ chipsTop }}; z-index:40; background:#EFE7C7; border-bottom:2px solid #7C1126;">
+<div data-menu-nav="" style="position:sticky; top:{{ chipsTop }}; z-index:40; background:#FFFFFF; border-bottom:2px solid #7C1126;">
   <nav ref="{{ chipsRef }}" aria-label="{{ t.carta.chipsAriaLabel }}" class="cn-scroller" style="max-width:1240px; margin:0 auto; padding:12px clamp(16px,4vw,48px); display:flex; gap:8px; overflow-x:auto; scrollbar-width:none;">
     <sc-for list="{{ cats }}" as="c" hint-placeholder-count="8">
       <a href="#{{ c.id }}" data-chip="{{ c.id }}" aria-current="{{ c.cur }}" style="flex-shrink:0; display:flex; align-items:center; min-height:44px; padding:0 18px; border:2px solid #7C1126; border-radius:999px; font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.08em; white-space:nowrap; transition:background-color .2s ease, color .2s ease; background:{{ c.bg }}; color:{{ c.fg }};">{{ c.label }}</a>
@@ -215,7 +216,7 @@ img{display:block;max-width:100%}
 </section>
 </sc-if>
 
-<section data-screen-label="Carta · alérgenos" style="background:#FAF6EA; padding:clamp(56px,6vw,88px) clamp(20px,4vw,48px);">
+<section data-screen-label="Carta · alérgenos" style="background:#FFFFFF; border-top:2px solid #7C1126; padding:clamp(56px,6vw,88px) clamp(20px,4vw,48px);">
   <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:28px;">
     <div style="display:flex; flex-direction:column; gap:10px;">
       <span style="font-family:'Bricolage Grotesque',sans-serif; font-stretch:85%; font-weight:700; font-size:14px; letter-spacing:.16em; color:#7C1126;">{{ t.carta.alergenos.glutenLabel }}</span>
@@ -232,7 +233,7 @@ img{display:block;max-width:100%}
   </div>
 </section>
 
-<section data-screen-label="Carta · reservar" style="background:#EFE7C7; padding:clamp(80px,9vw,130px) clamp(20px,4vw,48px); text-align:center;">
+<section data-screen-label="Carta · reservar" style="background:#FFFFFF; padding:clamp(80px,9vw,130px) clamp(20px,4vw,48px); text-align:center;">
   <div style="max-width:900px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:24px;">
     <h2 style="margin:0; font-family:'Bricolage Grotesque',sans-serif; font-stretch:75%; font-weight:800; font-size:clamp(52px,7vw,104px); line-height:.9; letter-spacing:-.01em; color:#7C1126;">{{ t.carta.reservarCta.heading }}</h2>
     <p style="margin:0; font-size:clamp(16px,1.3vw,18px); line-height:1.55;">{{ t.carta.reservarCta.descPrefix }} {{ phoneDisplay }}.</p>
@@ -459,7 +460,7 @@ class Component extends DCLogic {
       toggleMenu: () => { const o = !this.state.menuOpen; document.body.style.overflow = o ? 'hidden' : ''; this.setState({ menuOpen: o }); },
       closeMenu: () => { document.body.style.overflow = ''; if (this.state.menuOpen) this.setState({ menuOpen: false }); },
       logoBeige: !scrolled, logoGranate: scrolled,
-      hdrBg: scrolled ? '#EFE7C7' : 'transparent', hdrFg: scrolled ? '#7C1126' : '#EFE7C7',
+      hdrBg: scrolled ? '#FFFFFF' : 'transparent', hdrFg: scrolled ? '#7C1126' : '#EFE7C7',
       hdrBtnBg: scrolled ? '#7C1126' : '#EFE7C7', hdrBtnFg: scrolled ? '#EFE7C7' : '#7C1126',
       chipsTop: '76px', chipsRef: this.chipsRef,
       menuReady: !!menu, menuLoading: !menu,
