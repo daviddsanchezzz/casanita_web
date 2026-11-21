@@ -287,7 +287,7 @@ const MENU_API = 'https://api.vetrareserve.com/api/menu/public/4a51f001-336d-4fc
 const COCTELES_CATEGORY_ID = '6ac4ef1a04cb32c57df498a8';
 function fmtPrice(n) {
   if (typeof n !== 'number' || !Number.isFinite(n)) return '';
-  return (Number.isInteger(n) ? String(n) : n.toFixed(2).replace('.', ',')) + ' €';
+  return (Number.isInteger(n) ? String(n) : n.toFixed(2).replace('.', ','));
 }
 function safeId(id, fallback) {
   return typeof id === 'string' && /^[a-zA-Z0-9_-]{1,64}$/.test(id) ? id : fallback;
